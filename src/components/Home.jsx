@@ -1,38 +1,77 @@
-import React from 'react';
-import { HiArrowNarrowRight } from 'react-icons/hi';
+
+import portfolioo from '../assets/portfolioo.png';
+import React, { useState } from "react";
 
 const Home = () => {
+  const [hovered, setHovered] = useState(null);
+
   return (
-    <div name='home' className='w-full h-screen bg-[#0a192f]'>
-      {/* Container */}
-      <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full '>
-
-      <p style={{color:"white", padding:"40px",fontSize:"40px"}}>ADD CERTIFICATE </p>
-        <p className='text-[#FF9533]'>Hi, my name is</p>
-
-
-       
-        <h1 className='text-4xl sm:text-7xl font-bold text-[#ccd6f6]'>
-          Mahta(Maryam) Ebrahimi
+    <div
+      name="home"
+      className="w-full h-screen flex items-center justify-end"
+      style={{
+        backgroundImage: `url(${portfolioo})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat"
+      }}
+    >
+      <div className="max-w-[1200px] px-8 flex flex-col justify-center items-center h-full w-full">
+        {/* Intro */}
+        <div className="flex flex-col items-start w-3/4">
+        <p className="text-[#FF9533] mb-4">Hi, my name is</p>
+        <h1 className="text-sm sm:text-xl font-bold text-[#ccd6f6] mb-12">
+          Mahta (Maryam) Ebrahimi
         </h1>
-        <h2 className='flex flex-col text-center text-4xl sm:text-7xl font-bold text-[#FF9533] vertical-align: baseline '>
-        Front end Developer<br/>UI/UX Designer
-        </h2>
-        <br/>
-        <p className='flex flex-col text-center text-[#8892b0] mx-auto py-8 max-w-[850px]'>
-        I craft fast, responsive,
-         and user-friendly web applications, blending clean code with great design.
-          Passionate about creating seamless digital experiences that look and feel amazing on any device.
-        </p>
-        <div>
-          
-        {/* <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600'>
-            View Work
-            <span className='group-hover:rotate-90 duration-300'>
-              <HiArrowNarrowRight className='ml-3 ' />
-            </span>
-          </button> */}
-          
+        </div>
+
+        {/* Two parts stacked on right */}
+        <div className="flex flex-row gap-10">
+          {/* Frontend Developer Section */}
+          <div
+            onMouseEnter={() => setHovered("frontend")}
+            onMouseLeave={() => setHovered(null)}
+             className={`group relative overflow-hidden shadow-md shadow-[#FF4F6F] cursor-pointer transition-all duration-100 ${
+                  hovered === "frontend"
+                    ? "w-[500px] h-[360px] rounded-xl"
+                    : "w-80 h-80 md:w-80 md:h-80 rounded-full"
+                }`}
+                        >
+            <div className="absolute inset-0 bg-gradient-to-r from-[#FF9533] to-[#ffcd80] opacity-40 group-hover:opacity-100 transition duration-1000"></div>
+            <div className="relative z-10 flex flex-col items-center justify-center h-full p-6 text-center">
+              <h2 className="text-2xl md:text-4xl font-bold text-white mb-4 leading-snug">
+                Front-end Developer
+              </h2>
+              <p className="text-navy text-sm md:text-lg">
+                {hovered === "frontend"
+                  ? "I create amazing web apps using React, Tailwind, and modern technologies. I build fast, responsive, and modern web applications with clean and scalable code."
+                  : ""}
+              </p>
+            </div>
+          </div>
+
+          {/* UI/UX Designer Section */}
+          <div
+  onMouseEnter={() => setHovered("uiux")}
+  onMouseLeave={() => setHovered(null)}
+  className={`group relative overflow-hidden shadow-md shadow-[#FF4F6F] cursor-pointer transition-all duration-100 ${
+    hovered === "uiux"
+      ? "w-[500px] h-[360px] rounded-xl"
+      : "w-60 h-60 md:w-80 md:h-80 rounded-full"
+  }`}
+>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#009DAE] to-[#00d4ff] opacity-40 group-hover:opacity-100 transition duration-1000"></div>
+            <div className="relative z-10 flex flex-col items-center justify-center h-full p-6 text-center">
+              <h2 className="text-2xl md:text-4xl font-bold text-white mb-4 leading-normal">
+                UI/UX Designer
+              </h2>
+              <p className="text-navy text-sm md:text-lg">
+                {hovered === "uiux"
+                  ? "I design user-friendly and beautiful interfaces that delight users. I design seamless, user-friendly, and beautiful interfaces that make digital experiences enjoyable."
+                  : ""}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
