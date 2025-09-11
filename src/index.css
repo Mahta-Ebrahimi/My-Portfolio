@@ -14,7 +14,9 @@
         @apply cursor-pointer
     }
 }
-
+html {
+  scroll-behavior: smooth;
+}
 .content-div {
     background-repeat: no-repeat;
     background-size: cover;

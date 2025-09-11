@@ -42,11 +42,35 @@ const Navbar = () => {
             Skills
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link to='work' smooth={true} duration={500} className='hover:font-extrabold hover:text-[#FAC813]'>
             Work
           </Link>
-        </li>
+        </li> */}
+        <li className="relative group">
+  <Link
+    to="work"
+    smooth={true}
+    duration={500}
+    className="hover:font-extrabold hover:text-[#FAC813]"
+  >
+    Work
+  </Link>
+
+  {/* Sub-menu */}
+  <ul className="absolute hidden group-hover:flex flex-col bg-[#0a192f] mt-2 rounded shadow-lg z-500 left-0">
+    <li className="py-1 px-6 min-w-[160px] hover:text-[#FF9533]">
+      <Link to="frontend"className="block w-full">
+        Front-End
+      </Link>
+    </li>
+    <li className="py-1 px-6 min-w-[160px] hover:text-[#009dae]">
+      <Link to="uiux" className="block w-full">
+        UI/UX
+      </Link>
+    </li>
+  </ul>
+</li>
         {/* <li className='hover:font-extrabold hover:text-pink-600'>
           <Link to='contact' smooth={true} duration={500}>
             Contact
