@@ -9,6 +9,12 @@ import portfolio from '../assets/portfolio1.png';
 import chat from '../assets/chat.png';
 import trainee from '../assets/trainee.png';
 import fruitApp from '../assets/fruitApp.png';
+import wordPress from '../assets/wordpress2.png';
+import novasol from '../assets/NovaScreely.png';
+import novasolFigma from '../assets/NovaFigma.png';
+// import selskabslokaleDoc from '../assets/';
+
+import selskaklocal from '../assets/UI1.png';
 // import { Link } from 'react-scroll';
 
 
@@ -246,7 +252,7 @@ const Work = () => {
   </div>
 </div>
           <div
-  style={{ backgroundImage: `url(${realEstate})` }}
+  style={{ backgroundImage: `url(${wordPress})` }}
   className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
 >
   <div className='opacity-0 group-hover:opacity-100'>
@@ -259,11 +265,11 @@ const Work = () => {
           Demo
         </button>
       </a>
-      <a href='https://github.com/your-username/your-repo' target="_blank">
+      {/* <a href='https://github.com/your-username/your-repo' target="_blank">
         <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
           Code
         </button>
-      </a>
+      </a> */}
     </div>
   </div>
 </div>
@@ -287,21 +293,21 @@ const Work = () => {
 
             {/* Grid Item */}
           <div
-            style={{ backgroundImage: `url(${newsbox})` }}
+            style={{ backgroundImage: `url(${selskaklocal})` }}
             className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
           >
             {/* Hover Effects */}
             <div className='opacity-0 group-hover:opacity-100'>
               <span className='text-2xl font-bold text-white tracking-wider'>
-                News Box
+                selskabslokale
               </span>
               <div className='pt-8 text-center'>
-                <a href='https://wonderful-beignet-22f3b4.netlify.app/'target="_blank">
-                {/* <iframe src="https://your-app.netlify.app" style="width:375px; height:667px; border:1px solid #ccc; border-radius:20px;" /> */}
+                {/* <a href={selskaklocal}target="_blank">
+                <iframe src="https://your-app.netlify.app" style="width:375px; height:667px; border:1px solid #ccc; border-radius:20px;" />
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Demo
                   </button>
-                </a>
+                </a> */}
                 <a href='https://github.com/Rangeland5499/NewsBox'target="_blank">
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Code
@@ -311,25 +317,25 @@ const Work = () => {
             </div>
           </div>
           <div
-            style={{ backgroundImage: `url(${OnlineShop})` }}
+            style={{ backgroundImage: `url(${novasolFigma})` }}
             className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
           >
             {/* Hover Effects */}
             <div className='opacity-0 group-hover:opacity-100'>
               <span className='text-2xl font-bold text-white tracking-wider'>
-                Online Shop
+                Novasol
               </span>
               <div className='pt-8 text-center'>
-                <a href='https://melodic-cuchufli-f56ece.netlify.app/' target="_blank">
+                <a href={novasol} target="_blank">
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Demo
                   </button>
                 </a>
-                <a href='https://github.com/Mahta-Ebrahimi/Online-Shop/tree/main/furniture-shop'target="_blank">
+                {/* <a href='https://github.com/Mahta-Ebrahimi/Online-Shop/tree/main/furniture-shop'target="_blank">
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Code
                   </button>
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
