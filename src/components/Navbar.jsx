@@ -6,8 +6,8 @@ import {
   FaGithub,
   FaLinkedin,
   FaFacebook,
-  FaLinkedinIn,
-  FaWhatsapp
+  FaWhatsapp,
+  FaInstagram
 } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
@@ -67,6 +67,11 @@ const Navbar = () => {
     <li className="py-1 px-6 min-w-[160px] hover:text-[#009dae]">
       <Link to="uiux" className="block w-full">
         UI/UX
+      </Link>
+    </li>
+    <li className="py-1 px-6 min-w-[160px] hover:text-[#FF4f6f]">
+      <Link to="calligraphy" className="block w-full">
+        Calligraphy
       </Link>
     </li>
   </ul>
@@ -164,6 +169,14 @@ const Navbar = () => {
               href="https://wa.me/4542796567" target="_blank" rel = "noreferrer"
             >
               WhatsApp <FaWhatsapp size={30} />
+            </a>
+          </li>
+            <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px]  bg-[#c13584]'>
+            <a
+              className='flex justify-between items-center w-full text-gray-300'
+              href='https://www.instagram.com/mahta.creative/'
+            >
+              Instagram <FaInstagram size={30} />
             </a>
           </li>
         </ul>

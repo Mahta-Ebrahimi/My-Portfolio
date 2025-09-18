@@ -13,13 +13,20 @@ import wordPress from '../assets/wordpress2.png';
 import novasol from '../assets/NovaScreely.png';
 import novasolFigma from '../assets/NovaFigma.png';
 import selskabslokaleDoc from '../assets/Ui Og grafisk design-Maryam Ebrahimi.pdf';
-
+import calligraphy1 from '../assets/1.jpg';
+import calligraphy2 from '../assets/2.jpg';
+import calligraphy3 from '../assets/3.jpg';
+import calligraphy4 from '../assets/4.jpg';
+import calligraphy5 from '../assets/5.jpg';
+import calligraphy6 from '../assets/6.jpg';
+import calligraphy7 from '../assets/7.jpg';
+import calligraphy8 from '../assets/8.jpg';
+import calligraphy9 from '../assets/9.jpg';
+import calligraphy10 from '../assets/10.jpg';
+import calligraphy11 from '../assets/11.jpg';
+import calligraphy12 from '../assets/12.jpg';
 import selskaklocal from '../assets/UI1.png';
 // import { Link } from 'react-scroll';
-
-
-
-
 const Work = () => {
   return (
     <div>
@@ -435,10 +442,32 @@ const Work = () => {
 </div> */}
 
 
+
               
         </div>
-        
+
+           <div id="calligraphy" className="mt-20">
+  <div className="pb-8 sticky top-5">
+    <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-[#FF9533] text-[#FF9533]">
+      Calligraphy
+    </p>
+    <p className="py-6">A glimpse into my artistic side</p>
+  </div>
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+  {[calligraphy1, calligraphy2, calligraphy3, calligraphy4, calligraphy5, calligraphy6, calligraphy7, calligraphy8, calligraphy9, calligraphy10,calligraphy11,calligraphy12].map((img, index) => (
+    <div key={index} className="aspect-square overflow-hidden rounded-lg shadow-lg">
+      <img
+        src={img}
+        alt={`Calligraphy ${index + 1}`}
+        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+      />
+    </div>
+  ))}
+</div>
+
+</div>
       </div>
+           
     </div>
     </div>
   );
