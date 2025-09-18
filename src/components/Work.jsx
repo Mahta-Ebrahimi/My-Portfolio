@@ -10,7 +10,17 @@ import chat from '../assets/chat.png';
 import trainee from '../assets/trainee.png';
 import fruitApp from '../assets/fruitApp.png';
 import wordPress from '../assets/wordpress2.png';
-import novasol from '../assets/NovaScreely.png';
+import Ui2 from '../assets/Ui2.png';
+import Ui2Screen from '../assets/Ui2Screen.png';
+import Ui3 from '../assets/Ui3Screen.png';
+import Ui3Screen from '../assets/ui3.png';
+import Ui4 from '../assets/Ui4.png';
+import Ui5 from '../assets/Ui5.png';
+import Ui5Screen from '../assets/Ui5Screen.png';
+import Ui6 from '../assets/Ui6.png';
+import Ui6Screen from '../assets/Ui6Screen.png';
+import Ui7 from '../assets/Ui7.png';
+import novasol from '../assets/NovasolBoth.png';
 import novasolFigma from '../assets/NovaFigma.png';
 import selskabslokaleDoc from '../assets/Ui Og grafisk design-Maryam Ebrahimi.pdf';
 import calligraphy1 from '../assets/1.jpg';
@@ -285,8 +295,8 @@ const Work = () => {
       </div>
     </div>
     <div name='work' className='w-full min-h-screen text-gray-300 bg-[#0a192f] pb-16'>
-      <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
-        <div className='pb-8 sticky top-5'id="uiux">
+      <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'id="uiux">
+        <div className='pb-8 top-5 sticky' >
           <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-[#FF9533] text-[#FF9533]'>
             UI/UX
           </p>
@@ -296,8 +306,6 @@ const Work = () => {
 {/* Container */}
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-12'>
         
-
-
             {/* Grid Item */}
           <div
             style={{ backgroundImage: `url(${selskaklocal})` }}
@@ -329,8 +337,8 @@ const Work = () => {
           >
             {/* Hover Effects */}
             <div className='opacity-0 group-hover:opacity-100'>
-              <span className='text-2xl font-bold text-white tracking-wider'>
-                Novasol
+              <span className='text-2xl font-bold text-white tracking-wider flex alingn-center justify-center'>
+                Novasol <br/>Travel Agancy
               </span>
               <div className='pt-8 text-center'>
                 <a href={novasol} target="_blank">
@@ -347,107 +355,110 @@ const Work = () => {
             </div>
           </div>
             {/* Grid Item */}
-          {/* <div
-            style={{ backgroundImage: `url(${google})` }}
+          <div
+            style={{ backgroundImage: `url(${Ui2Screen})` }}
             className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
           >
-            Hover Effects
+            {/* Hover Effects */}
             <div className='opacity-0 group-hover:opacity-100'>
               <span className='text-2xl font-bold text-white tracking-wider'>
-                Google Search <br /> React Js
+               Baya OnlineShop
               </span>
               <div className='pt-8 text-center'>
-                <a href='https://phenomenal-basbousa-c22dd3.netlify.app/'target="_blank">
+                <a href={Ui2} target="_blank">
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Demo
                   </button>
                 </a>
-                <a href='https://github.com/Rangeland5499/Google-Search-Translate-React'target="_blank">
+                {/* <a href='https://github.com/Rangeland5499/Google-Search-Translate-React'target="_blank">
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Code
                   </button>
-                </a>
+                </a> */}
               </div>
             </div>
-          </div> */}
-          {/* <div
-            style={{ backgroundImage: `url(${realEstate})` }}
+          </div>
+          <div
+            style={{ backgroundImage: `url(${Ui3})` }}
             className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
           >
-            Hover Effects
+            {/* Hover Effects */}
             <div className='opacity-0 group-hover:opacity-100'>
               <span className='text-2xl font-bold text-white tracking-wider'>
-                Vue js Application
+                Job Guide Website
               </span>
               <div className='pt-8 text-center'>
-                <a href='https://github.com/Rangeland5499/m-gler-vue'>
+                <a href={Ui3Screen}>
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Demo
                   </button>
                 </a>
-                <a href='https://github.com/Rangeland5499/m-gler-vue'target="_blank">
+                {/* <a href={Ui3Screen}target="_blank">
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Code
                   </button>
-                </a>
+                </a> */}
               </div>
             </div>
-          </div> */}
+          </div>
             {/* Grid Item */}
-          {/* <div
-            style={{ backgroundImage: `url(${WorkImg})` }}
+          <div
+            style={{ backgroundImage: `url(${Ui5Screen})` }}
             className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
           >
-            Hover Effects
+            {/* Hover Effects */}
             <div className='relative z-10 opacity-0 group-hover:opacity-100 transition duration-500'>
               <span className='text-2xl font-bold text-white tracking-wider'>
-                My Portfolio
+                Mobile Draugstore
               </span>
               <div className='pt-8 text-center'>
-                <a href='/'target="_blank">
+                <a href={Ui5}target="_blank">
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Demo
                   </button>
                 </a>
-                <a href='https://github.com/Mahta-Ebrahimi/My-Portfolio'target="_blank">
+                {/* <a href='https://github.com/Mahta-Ebrahimi/My-Portfolio'target="_blank">
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Code
                   </button>
-                </a>
+                </a> */}
               </div>
             </div>
-          </div> */}
+          </div>
         
-{/* <div
-  style={{ backgroundImage: `url(${realEstate})` }}
+<div
+  style={{ backgroundImage: `url(${Ui6Screen})` }}
   className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
 >
   <div className='opacity-0 group-hover:opacity-100'>
     <span className='text-2xl font-bold text-white tracking-wider'>
-       Trainee App
+       Drugstore
     </span>
     <div className='pt-8 text-center'>
-      <a href='https://your-demo-link.netlify.app/' target="_blank">
+      <a href={Ui7} target="_blank">
         <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
           Demo
         </button>
       </a>
-      <a href='https://github.com/Mahta-Ebrahimi/Trainee-app' target="_blank">
+      {/* <a href='https://github.com/Mahta-Ebrahimi/Trainee-app' target="_blank">
         <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
           Code
         </button>
-      </a>
+      </a> */}
     </div>
   </div>
-</div> */}
+</div>
 
 
 
               
         </div>
 
-           <div id="calligraphy" className="mt-20">
-  <div className="pb-8 sticky top-5">
+
+      </div>
+      <div name='work' className='w-full min-h-screen text-gray-300 bg-[#0a192f] pb-16'>
+  <div id="calligraphy" className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
+  <div className="pb-8 sticky top-5" >
     <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-[#FF9533] text-[#FF9533]">
       Calligraphy
     </p>

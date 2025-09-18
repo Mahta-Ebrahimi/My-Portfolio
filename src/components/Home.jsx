@@ -44,7 +44,7 @@ const Home = () => {
               </h2>
               <p className="text-[#0D1C30] text-sm md:text-lg">
                 {hovered === "frontend"
-                  ? "Front-End Developer and UI/UX Designer with experience building responsive web applications using JavaScript, React. Skilled in creating reusable component libraries (Tailwind CSS, Material UI) and Optimizing  processes through CI/CD pipelines. Collaborated with teams in Agile/Scrum environments to build fast, accessible, and SEO-friendly interfaces from design mockups."
+                  ? "Front-End Developer with experience building responsive web applications using JavaScript, React. Skilled in creating reusable component libraries (Tailwind CSS, Material UI) and Optimizing  processes through CI/CD pipelines. Collaborated with teams in Agile/Scrum environments to build fast, accessible, and SEO-friendly interfaces from design mockups."
                   : ""}
               </p>
             </div>

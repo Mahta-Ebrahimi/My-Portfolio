@@ -134,6 +134,7 @@ const Navbar = () => {
             <a
               className='flex justify-between items-center w-full text-gray-300'
               href='https://www.linkedin.com/in/maryam-mahta-ebrahimi-b3a7bb87/'
+              target="_blank"
             >
               Linkedin <FaLinkedin size={30} />
             </a>
@@ -141,7 +142,7 @@ const Navbar = () => {
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
-              href='https://github.com/Mahta-Ebrahimi'
+              href='https://github.com/Mahta-Ebrahimi'target="_blank"
             >
               Github <FaGithub size={30} />
             </a>
@@ -157,7 +158,7 @@ const Navbar = () => {
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
-              href={cv}
+              href={cv}target="_blank"
             >
               Resume <BsFillPersonLinesFill size={30} />
             </a>
@@ -174,7 +175,7 @@ const Navbar = () => {
             <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px]  bg-[#c13584]'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
-              href='https://www.instagram.com/mahta.creative/'
+              href='https://www.instagram.com/mahta.creative/' target="_blank"
             >
               Instagram <FaInstagram size={30} />
             </a>
