@@ -12,7 +12,7 @@ import fruitApp from '../assets/fruitApp.png';
 import wordPress from '../assets/wordpress2.png';
 import novasol from '../assets/NovaScreely.png';
 import novasolFigma from '../assets/NovaFigma.png';
-// import selskabslokaleDoc from '../assets/';
+import selskabslokaleDoc from '../assets/Ui Og grafisk design-Maryam Ebrahimi.pdf';
 
 import selskaklocal from '../assets/UI1.png';
 // import { Link } from 'react-scroll';
@@ -260,7 +260,7 @@ const Work = () => {
       WordPress app
     </span>
     <div className='pt-8 text-center'>
-      <a href='https://your-demo-link.netlify.app/' target="_blank">
+      <a href='https://soulimous.com/' target="_blank">
         <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
           Demo
         </button>
@@ -299,20 +299,20 @@ const Work = () => {
             {/* Hover Effects */}
             <div className='opacity-0 group-hover:opacity-100'>
               <span className='text-2xl font-bold text-white tracking-wider'>
-                selskabslokale
+                Selskabslokale
               </span>
               <div className='pt-8 text-center'>
-                {/* <a href={selskaklocal}target="_blank">
-                <iframe src="https://your-app.netlify.app" style="width:375px; height:667px; border:1px solid #ccc; border-radius:20px;" />
+                <a href={selskabslokaleDoc}target="_blank">
+                {/* <iframe src="https://your-app.netlify.app" style="width:375px; height:667px; border:1px solid #ccc; border-radius:20px;" /> */}
+                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+                    Demo
+                  </button>
+                </a>
+                {/* <a href='https://github.com/Rangeland5499/NewsBox'target="_blank">
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Demo
                   </button>
                 </a> */}
-                <a href='https://github.com/Rangeland5499/NewsBox'target="_blank">
-                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                    Code
-                  </button>
-                </a>
               </div>
             </div>
           </div>
@@ -340,11 +340,11 @@ const Work = () => {
             </div>
           </div>
             {/* Grid Item */}
-          <div
+          {/* <div
             style={{ backgroundImage: `url(${google})` }}
             className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
           >
-            {/* Hover Effects */}
+            Hover Effects
             <div className='opacity-0 group-hover:opacity-100'>
               <span className='text-2xl font-bold text-white tracking-wider'>
                 Google Search <br /> React Js
@@ -362,22 +362,22 @@ const Work = () => {
                 </a>
               </div>
             </div>
-          </div>
-          <div
+          </div> */}
+          {/* <div
             style={{ backgroundImage: `url(${realEstate})` }}
             className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
           >
-            {/* Hover Effects */}
+            Hover Effects
             <div className='opacity-0 group-hover:opacity-100'>
               <span className='text-2xl font-bold text-white tracking-wider'>
                 Vue js Application
               </span>
               <div className='pt-8 text-center'>
-                {/* <a href='https://github.com/Rangeland5499/m-gler-vue'>
+                <a href='https://github.com/Rangeland5499/m-gler-vue'>
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Demo
                   </button>
-                </a> */}
+                </a>
                 <a href='https://github.com/Rangeland5499/m-gler-vue'target="_blank">
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Code
@@ -385,13 +385,13 @@ const Work = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
             {/* Grid Item */}
-          <div
+          {/* <div
             style={{ backgroundImage: `url(${WorkImg})` }}
             className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
           >
-            {/* Hover Effects */}
+            Hover Effects
             <div className='relative z-10 opacity-0 group-hover:opacity-100 transition duration-500'>
               <span className='text-2xl font-bold text-white tracking-wider'>
                 My Portfolio
@@ -409,9 +409,9 @@ const Work = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
         
-<div
+{/* <div
   style={{ backgroundImage: `url(${realEstate})` }}
   className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
 >
@@ -420,11 +420,11 @@ const Work = () => {
        Trainee App
     </span>
     <div className='pt-8 text-center'>
-      {/* <a href='https://your-demo-link.netlify.app/' target="_blank">
+      <a href='https://your-demo-link.netlify.app/' target="_blank">
         <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
           Demo
         </button>
-      </a> */}
+      </a>
       <a href='https://github.com/Mahta-Ebrahimi/Trainee-app' target="_blank">
         <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
           Code
@@ -432,7 +432,7 @@ const Work = () => {
       </a>
     </div>
   </div>
-</div>
+</div> */}
 
 
               

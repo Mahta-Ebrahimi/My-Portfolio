@@ -19,8 +19,8 @@ const Home = () => {
       <div className="max-w-[1200px] px-8 flex flex-col justify-center items-center h-full w-full">
         {/* Intro */}
         <div className="flex flex-col items-start w-3/4">
-        <p className="text-[#FF9533] mb-4">Hi, my name is</p>
-        <h1 className="text-sm sm:text-xl font-bold text-[#ccd6f6] mb-12">
+        <p className="text-[#FF9533] mb-4 flex m-auto">Hi, my name is</p>
+        <h1 className="text-sm sm:text-xl font-bold text-[#ccd6f6] mb-6 flex m-auto">
           Mahta (Maryam) Ebrahimi
         </h1>
         </div>
@@ -42,9 +42,9 @@ const Home = () => {
               <h2 className="text-2xl md:text-4xl font-bold text-white mb-4 leading-snug">
                 Front-end Developer
               </h2>
-              <p className="text-navy text-sm md:text-lg">
+              <p className="text-[#0D1C30] text-sm md:text-lg">
                 {hovered === "frontend"
-                  ? "I create amazing web apps using React, Tailwind, and modern technologies. I build fast, responsive, and modern web applications with clean and scalable code."
+                  ? "Front-End Developer and UI/UX Designer with experience building responsive web applications using JavaScript, React. Skilled in creating reusable component libraries (Tailwind CSS, Material UI) and Optimizing  processes through CI/CD pipelines. Collaborated with teams in Agile/Scrum environments to build fast, accessible, and SEO-friendly interfaces from design mockups."
                   : ""}
               </p>
             </div>
@@ -67,7 +67,7 @@ const Home = () => {
               </h2>
               <p className="text-navy text-sm md:text-lg">
                 {hovered === "uiux"
-                  ? "I design user-friendly and beautiful interfaces that delight users. I design seamless, user-friendly, and beautiful interfaces that make digital experiences enjoyable."
+                  ? "Strong focus on UI/UX that meets real user needs, with user testing to validate design decisions and improve usability and SEO. UX methodologies and modern UI design tools are applied to create user-centered digital interfaces that are easy to navigate and enjoyable to use."
                   : ""}
               </p>
             </div>
