@@ -60,7 +60,7 @@ const About = () => {
         {/* Designer & Developer Section */}
         <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
           <div className="text-left">
-            <p className="text-4xl mt-14 font-bold text-[#FF9533]">Designer & Developer</p>
+            <p className="text-4xl mt-14 font-bold text-[#FF9533] ml-40-">Designer & Developer</p>
           </div>
           <div></div>
         </div>

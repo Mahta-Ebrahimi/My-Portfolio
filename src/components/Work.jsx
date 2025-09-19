@@ -22,6 +22,7 @@ import Ui6 from '../assets/Ui6.png';
 import Ui6Screen from '../assets/Ui6Screen.png';
 import Ui7 from '../assets/Ui7.png';
 import novasol from '../assets/NovasolBoth.png';
+import NovaDoc from '../assets/Novasol Doc.png';
 import novasolFigma from '../assets/NovaFigma.png';
 import selskabslokaleDoc from '../assets/Ui Og grafisk design-Maryam Ebrahimi.pdf';
 import calligraphy1 from '../assets/1.jpg';
@@ -392,11 +393,11 @@ const Work = () => {
                     Demo
                   </button>
                 </a>
-                {/* <a href='https://github.com/Mahta-Ebrahimi/Online-Shop/tree/main/furniture-shop'target="_blank">
+                <a href={NovaDoc} target="_blank">
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                    Code
+                    Document
                   </button>
-                </a> */}
+                </a>
               </div>
             </div>
           </div>
@@ -500,7 +501,7 @@ const Work = () => {
       </div>
       <div name='work' className='w-full min-h-screen text-gray-300 bg-[#0a192f] pb-16'>
   <div id="calligraphy" className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
-  <div className="pb-8 sticky top-5" >
+  <div className="pb-8 sticky top-5 mt-20" >
     <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-[#FF9533] text-[#FF9533]">
       Calligraphy
     </p>
