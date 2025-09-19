@@ -67,7 +67,7 @@ const Home = () => {
               </h2>
               <p className="text-navy text-sm md:text-lg">
                 {hovered === "uiux"
-                  ? "Strong focus on UI/UX that meets real user needs, with user testing to validate design decisions and improve usability and SEO. UX methodologies and modern UI design tools are applied to create user-centered digital interfaces that are easy to navigate and enjoyable to use."
+                  ? "UI/UX Designer focused on creating functional, accessible, and well-structured user experiences. I apply UX methods and modern design tools to improve usability and support SEO. My work is guided by user testing to ensure every design meets real needs and delivers a consistent user journey."
                   : ""}
               </p>
             </div>

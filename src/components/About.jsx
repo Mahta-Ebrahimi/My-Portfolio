@@ -60,13 +60,13 @@ const About = () => {
         {/* Designer & Developer Section */}
         <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
           <div className="text-left">
-            <p className="text-4xl font-bold text-[#FF9533]">Designer & Developer</p>
+            <p className="text-4xl mt-14 font-bold text-[#FF9533]">Designer & Developer</p>
           </div>
           <div></div>
         </div>
 
         {/* Bio Section */}
-        <div className="max-w-[1000px] w-full mt-8 text-justify leading-relaxed">
+        <div className="max-w-[1000px] w-3/5 mt-8 text-justify leading-relaxed text-xl">
           <p>
             I'm a Front-End Developer and UI/UX Designer who loves creating apps that are easy to use
             and designed with real people in mind. Design has always been close to me, it’s how I see

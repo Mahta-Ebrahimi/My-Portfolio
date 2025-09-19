@@ -10,7 +10,10 @@ import AWS from '../assets/aws.png';
 import GitHub from '../assets/github.png';
 import Tailwind from '../assets/tailwind.png';
 import Figma from '../assets/Figma.png';
-import Photoshop from '../assets/Figma.png';
+import Photoshop from '../assets/photoshop.png';
+import illus from '../assets/illustrator.png';
+import vue from '../assets/vueJs.png';
+
 
 const Skills = () => {
   return (
@@ -51,6 +54,19 @@ const Skills = () => {
                   <img className='w-20 mx-auto' src={Tailwind} alt="Tailwind icon" />
                   <p className='my-4'>Tailwind</p>
               </div>
+              {/* <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+                  <img className='w-20 mx-auto' src={vue} alt="Tailwind icon" />
+                  <p className='my-4'>Vue Js</p>
+              </div> */}
+              {/* <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+                  <img className='w-20 mx-auto' src={illus} alt="Tailwind icon" />
+                  <p className='my-4'>Illustarator</p>
+              </div> */}
+              {/* <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+                  <img className='w-20 mx-auto' src={Photoshop} alt="Tailwind icon" />
+                  <p className='my-4'>Photoshop</p>
+              </div> */}
+              
               <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
                   <img className='w-20 mx-auto' src={Figma} alt="Figma icon" />
                   <p className='my-4'>Figma</p>
