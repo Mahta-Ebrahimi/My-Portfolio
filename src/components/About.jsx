@@ -72,10 +72,12 @@ const About = () => {
             and designed with real people in mind. Design has always been close to me, it’s how I see
             and shape the world around me.
             <br /><br />
-            I studied Front-End Development at Roskilde Tekniske Skole and later took courses in UI/UX
-            and graphic design at ITucation Skole, plus a UI course at Redi School. These experiences
-            helped me build clean, user-friendly applications that are simple to navigate and focused
-            on what users really need.
+          I studied Front-End Development at Roskilde Tekniske Skole and later took courses in UI/UX and graphic design 
+          at ITucation Skole, which helped me build a strong connection between coding and design. These experiences gave me the confidence to work independently 
+          and create user-centered solutions. I’m also currently taking a UI course at Redi School, which has been a fantastic opportunity to deepen my expertise. 
+          Together, these programs have enabled me to build user-friendly 
+          applictions
+     that are easy to navigate and focused on real user needs.
             <br /><br />
             As a freelancer, I’ve worked on different projects and learned something new with each one.
             My background in calligraphy gives me a strong sense of shape, balance and color, adding
