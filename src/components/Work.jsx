@@ -24,6 +24,7 @@ import Ui7 from '../assets/Ui7.png';
 import novasol from '../assets/NovasolBoth.png';
 import NovaDoc from '../assets/Novasol Doc.png';
 import novasolFigma from '../assets/NovaFigma.png';
+import ipaly from '../assets/iplaymusic.png';
 import selskabslokaleDoc from '../assets/Ui Og grafisk design-Maryam Ebrahimi.pdf';
 import calligraphy1 from '../assets/1.jpg';
 import calligraphy2 from '../assets/2.jpg';
@@ -188,6 +189,34 @@ const Work = () => {
               </div>
             </div>
           </div>
+          <div
+            style={{ backgroundImage: `url(${ipaly})` }}
+            className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
+          >
+            {/* Hover Effects */}
+            <div className='flex flex-col opacity-0 group-hover:opacity-100'>
+              <span className='text-2xl font-bold text-white tracking-wider m-auto'>
+                iPlayMusic App
+              </span>
+              <span className='text-2xl font-bold text-white tracking-wider m-auto'>
+               React Js
+              </span>
+              <div className='pt-8 text-center'>
+                {/* <a href='/'target="_blank">
+                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+                    Demo
+                  </button>
+                </a> */}
+                <a href='https://github.com/rts-cmk-wu07/iplaymusic-uptempo-folk/tree/master'target="_blank">
+                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+                    Code
+                  </button>
+                </a>
+              </div>
+
+            </div>
+          </div>
+          
           <div
             style={{ backgroundImage: `url(${chat})` }}
             className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
@@ -362,7 +391,7 @@ const Work = () => {
             {/* Hover Effects */}
             <div className='opacity-0 group-hover:opacity-100'>
               <span className='text-2xl font-bold text-white tracking-wider'>
-               Broderi & Strik<br/>Dandomain Website
+               Glienke Design<br/>Dandomain Website
               </span>
               <div className='pt-8 text-center'>
                 {/* <a href={Ui2} target="_blank">
@@ -474,6 +503,34 @@ const Work = () => {
               </div>
             </div>
           </div>
+          <div
+            style={{ backgroundImage: `url(${ipaly})` }}
+            className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
+          >
+            {/* Hover Effects */}
+            <div className='flex flex-col opacity-0 group-hover:opacity-100'>
+              <span className='text-2xl font-bold text-white tracking-wider m-auto'>
+                iPlayMusic App
+              </span>
+              <span className='text-2xl font-bold text-white tracking-wider m-auto'>
+               React Js
+              </span>
+              <div className='pt-8 text-center'>
+                {/* <a href='/'target="_blank">
+                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+                    Demo
+                  </button>
+                </a> */}
+                <a href='https://github.com/rts-cmk-wu07/iplaymusic-uptempo-folk/blob/master/desc/styleguide.png'target="_blank">
+                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+                    Code
+                  </button>
+                </a>
+              </div>
+
+            </div>
+          </div>
+          
         
 <div
   style={{ backgroundImage: `url(${Ui6Screen})` }}
