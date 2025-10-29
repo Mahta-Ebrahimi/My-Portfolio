@@ -45,11 +45,11 @@ import React from 'react';
 const About = () => {
   return (
     <div name="about" className="w-full min-h-screen bg-[#0a192f] text-gray-300">
-      <div className="flex flex-col justify-start items-center w-full min-h-screen pt-40 px-4">
+      <div className="flex flex-col justify-start items-center w-full min-h-screen pt-20 sm:pt-40 px-4 sm:px-6 md:px-8">
         
         {/* Section Title */}
-        <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
-          <div className="sm:text-right pb-8 pl-4">
+        <div className="max-w-[1000px] w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="sm:text-right pb-2 sm:pb-4 pl-2 sm:pl-4">
             <p className="text-4xl font-bold inline border-b-4 border-[#FF9533] text-[#FF9533]">
               About
             </p>
@@ -58,30 +58,28 @@ const About = () => {
         </div>
 
         {/* Designer & Developer Section */}
-        <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
+        <div className="max-w-[1000px] w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="text-left">
-            <p className="text-4xl mt-14 font-bold text-[#FF9533] ml-40-">Designer & Developer</p>
+            <p className="text-3xl mt-2 sm:mt-6 font-bold w-full text-[#FF9533]">Designer & Developer</p>
           </div>
           <div></div>
         </div>
 
         {/* Bio Section */}
-        <div className="max-w-[1000px] w-3/5 mt-8 text-justify leading-relaxed text-xl">
+        <div className="w-full sm:w-4/5 md:w-3/5 max-w-[1000px] mt-6 sm:mt-8 text-justify leading-relaxed text-base sm:text-lg md:text-xl px-2 sm:px-0">
           <p>
             I'm a Front-End Developer and UI/UX Designer who loves creating apps that are easy to use
             and designed with real people in mind. Design has always been close to me, it’s how I see
             and shape the world around me.
             <br /><br />
-          I studied Front-End Development at Roskilde Tekniske Skole and later took courses in UI/UX and graphic design 
-          at ITucation Skole, which helped me build a strong connection between coding and design. These experiences gave me the confidence to work independently 
-          and create user-centered solutions. I’m also currently taking a UI course at Redi School, which has been a fantastic opportunity to deepen my expertise. 
-          Together, these programs have enabled me to build user-friendly.
-          applictions that are easy to navigate and focused on real user needs.
-
+            I studied Front-End Development at Roskilde Tekniske Skole and later took courses in UI/UX and graphic design 
+            at ITucation Skole, which helped me build a strong connection between coding and design. These experiences gave me the confidence to work independently 
+            and create user-centered solutions.<br/><br/> I’m also currently taking a UI course at Redi School, which has been a fantastic opportunity to deepen my expertise. 
+            Together, these programs have enabled me to build user-friendly applications that are easy to navigate and focused on real user needs.
             <br /><br />
             As a freelancer, I’ve worked on different projects and learned something new with each one.
             My background in calligraphy gives me a strong sense of shape, balance and color, adding
-            a creative touch to everything I design.
+            a creative touch to everything I design.<br /><br /><br /><br />
           </p>
         </div>
       </div>
@@ -90,3 +88,4 @@ const About = () => {
 };
 
 export default About;
+
