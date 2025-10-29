@@ -5,7 +5,6 @@ import {
   FaTimes,
   FaGithub,
   FaLinkedin,
-  FaFacebook,
   FaWhatsapp,
   FaInstagram
 } from 'react-icons/fa';
@@ -18,53 +17,31 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className='fixed w-full h-[80px] flex justify-between items-right pt-10 pr-20 bg-[#0a192f] text-gray-300 z-50'>
-      <div>
-        {/* <img src={Logo} alt='Logo Image' style={{ width: '50px' }} /> */}
-        {/* <h3 className=''>ME</h3> */}
-      </div>
+    <div className='fixed w-full h-[80px] flex justify-between items-center pt-10 pr-20 bg-[#0a192f] text-gray-300 z-50'>
+      <div>{/* Optional logo or initials */}</div>
 
-      {/* menu */}
-      <ul className='hidden md:flex font-bold '>
+      {/* Desktop menu */}
+      <ul className='hidden md:flex font-bold'>
         <li className='hover:font-extrabold hover:text-[#009dae]'>
-          <Link to='home' >
-            Home
-          </Link>
+          <Link to='home'>Home</Link>
         </li>
         <li className='hover:font-extrabold hover:text-[#FF9533]'>
-          <Link to='about'>
-            About
-          </Link>
+          <Link to='about'>About</Link>
         </li>
         <li className='hover:font-extrabold hover:text-[#FF4f6f]'>
-          <Link to='skills' >
-            Skills
-          </Link>
+          <Link to='skills'>Skills</Link>
         </li>
-        <li className="relative group">
-          <Link
-            to="work"
-            className="hover:font-extrabold hover:text-[#FAC813]"
-          >
-            Work
-          </Link>
-
-          {/* Sub-menu */}
-          <ul className="absolute hidden group-hover:flex flex-col bg-[#0a192f] mt-2 rounded shadow-lg z-50 left-0">
-            <li className="py-1 px-6 min-w-[160px] hover:text-[#FF9533]">
-              <Link to="frontend" className="block w-full">
-                Front-End
-              </Link>
+        <li className='relative group'>
+          <Link to='work' className='hover:font-extrabold hover:text-[#FAC813]'>Work</Link>
+          <ul className='absolute hidden group-hover:flex flex-col bg-[#0a192f] mt-2 rounded shadow-lg z-50 left-0'>
+            <li className='py-1 px-6 min-w-[160px] hover:text-[#FF9533]'>
+              <Link to='frontend' className='block w-full'>Front-End</Link>
             </li>
-            <li className="py-1 px-6 min-w-[160px] hover:text-[#009dae]">
-              <Link to="uiux" className="block w-full">
-                UI/UX
-              </Link>
+            <li className='py-1 px-6 min-w-[160px] hover:text-[#009dae]'>
+              <Link to='uiux' className='block w-full'>UI/UX</Link>
             </li>
-            <li className="py-1 px-6 min-w-[160px] hover:text-[#FF4f6f]">
-              <Link to="calligraphy" className="block w-full">
-                Calligraphy
-              </Link>
+            <li className='py-1 px-6 min-w-[160px] hover:text-[#FF4f6f]'>
+              <Link to='calligraphy' className='block w-full'>Calligraphy</Link>
             </li>
           </ul>
         </li>
@@ -76,84 +53,65 @@ const Navbar = () => {
       </div>
 
       {/* Mobile menu */}
-      <ul
-        className={
-          !nav
-            ? 'hidden'
-            : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center z-40'
-        }
-      >
+      <ul className={`${!nav ? 'hidden' : 'absolute'} top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center z-40`}>
         <li className='py-6 text-4xl hover:text-[#FF9533]'>
-          <Link onClick={handleClick} to='home'   >
-            Home
-          </Link>
+          <Link onClick={handleClick} to='home'>Home</Link>
         </li>
         <li className='py-6 text-4xl hover:text-[#FF9533]'>
-          <Link onClick={handleClick} to='about'  >
-            About
-          </Link>
+          <Link onClick={handleClick} to='about'>About</Link>
         </li>
         <li className='py-6 text-4xl hover:text-[#FF9533]'>
-          <Link onClick={handleClick} to='skills'  >
-            Skills
-          </Link>
+          <Link onClick={handleClick} to='skills'>Skills</Link>
         </li>
         <li className='py-6 text-4xl hover:text-[#F6FCFC]'>
-          <Link onClick={handleClick} to='work' smooth={true} duration={500}>
-            Work
-          </Link>
+          <Link onClick={handleClick} to='work'>Work</Link>
         </li>
+
+        {/* Divider */}
+        <div className="w-4/5 border-t border-gray-600 my-6"></div>
+
+        {/* Mobile Footer Contacts */}
+        <div className="flex flex-col items-center gap-3 text-base text-gray-300 md:hidden">
+          <p className="text-[#FF9533] font-semibold mb-2">Contact</p>
+          <a href='https://www.linkedin.com/in/maryam-mahta-ebrahimi-b3a7bb87/' target='_blank' className='hover:text-[#009dae]'>LinkedIn</a>
+          <a href='https://github.com/Mahta-Ebrahimi' target='_blank' className='hover:text-[#FF9533]'>GitHub</a>
+          <a href='mailto:mahta.ir@gmail.com' target='_blank' className='hover:text-[#FF4f6f]'>Email</a>
+          <a href={cv} target='_blank' className='hover:text-[#FAC813]'>Resume</a>
+          <a href='https://wa.me/4542796567' target='_blank' className='hover:text-[#25D366]'>WhatsApp</a>
+          <a href='https://www.instagram.com/mahta.creative/' target='_blank' className='hover:text-[#c13584]'>Instagram</a>
+        </div>
       </ul>
 
-      {/* Social icons */}
-      <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
+      {/* Desktop Social Icons */}
+      <div className='hidden lg:flex fixed flex-col top-[35%] left-0 z-40'>
         <ul>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
-            <a
-              className='flex justify-between items-center w-full text-gray-300'
-              href='https://www.linkedin.com/in/maryam-mahta-ebrahimi-b3a7bb87/'
-              target="_blank"
-            >
+            <a href='https://www.linkedin.com/in/maryam-mahta-ebrahimi-b3a7bb87/' target='_blank' className='flex justify-between items-center w-full text-gray-300'>
               Linkedin <FaLinkedin size={30} />
             </a>
           </li>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
-            <a
-              className='flex justify-between items-center w-full text-gray-300'
-              href='https://github.com/Mahta-Ebrahimi' target="_blank"
-            >
+            <a href='https://github.com/Mahta-Ebrahimi' target='_blank' className='flex justify-between items-center w-full text-gray-300'>
               Github <FaGithub size={30} />
             </a>
           </li>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
-            <a
-              className='flex justify-between items-center w-full text-gray-300'
-              href="mailto:mahta.ir@gmail.com" target="_blank" rel="noreferrer"
-            >
+            <a href='mailto:mahta.ir@gmail.com' target='_blank' rel='noreferrer' className='flex justify-between items-center w-full text-gray-300'>
               Email <HiOutlineMail size={30} />
             </a>
           </li>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
-            <a
-              className='flex justify-between items-center w-full text-gray-300'
-              href={cv} target="_blank"
-            >
+            <a href={cv} target='_blank' className='flex justify-between items-center w-full text-gray-300'>
               Resume <BsFillPersonLinesFill size={30} />
             </a>
           </li>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#25D366]'>
-            <a
-              className='flex justify-between items-center w-full text-white'
-              href="https://wa.me/4542796567" target="_blank" rel="noreferrer"
-            >
+            <a href='https://wa.me/4542796567' target='_blank' rel='noreferrer' className='flex justify-between items-center w-full text-white'>
               WhatsApp <FaWhatsapp size={30} />
             </a>
           </li>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] bg-[#c13584]'>
-            <a
-              className='flex justify-between items-center w-full text-gray-300'
-              href='https://www.instagram.com/mahta.creative/' target="_blank"
-            >
+            <a href='https://www.instagram.com/mahta.creative/' target='_blank' className='flex justify-between items-center w-full text-gray-300'>
               Instagram <FaInstagram size={30} />
             </a>
           </li>
