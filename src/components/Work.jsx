@@ -45,7 +45,7 @@ const Work = () => {
     <div>
     
     <div name='work' className='w-full min-h-screen text-gray-300 bg-[#0a192f] pb-16'>
-      <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'id="frontend">
+      <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-[90%] h-full'id="frontend">
         <div className='pb-8 sticky top-5' >
           <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-[#FF9533] text-[#FF9533]'>
             Front-end
@@ -326,7 +326,7 @@ const Work = () => {
       </div>
     </div>
     <div name='work' className='w-full min-h-screen text-gray-300 bg-[#0a192f] pb-16'>
-      <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'id="uiux">
+      <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-[90%] h-full'id="uiux">
         <div className='pb-8 top-5 sticky' >
           <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-[#FF9533] text-[#FF9533]'>
             UI/UX
@@ -557,7 +557,7 @@ const Work = () => {
         </div>
       </div>
       <div name='work' className='w-full min-h-screen text-gray-300 bg-[#0a192f] pb-16'>
-  <div id="calligraphy" className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
+  <div id="calligraphy" className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-[90%] h-full">
   <div className="pb-8 sticky top-5 mt-20" >
     <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-[#FF9533] text-[#FF9533]">
       Calligraphy
