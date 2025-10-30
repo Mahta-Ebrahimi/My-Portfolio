@@ -125,7 +125,7 @@ const Home = () => {
               <h2 className="text-xl sm:text-3xl font-bold text-white mb-4 leading-snug w-full">
                 Front-end <br/>Developer
               </h2>
-              <p className="text-[#0D1C30] text-m sm:text-l md:text-base">
+              <p className="text-[#0D1C30] text-m sm:text-l md:text-base px-2">
                 {hovered === "frontend"
                   ? "Front-End Developer with experience building responsive web applications using JavaScript, React. Skilled in creating reusable component libraries (Tailwind CSS, Material UI) and optimizing processes through CI/CD pipelines. Collaborated with teams in Agile/Scrum environments to build fast, accessible, and SEO-friendly interfaces from design mockups."
                   : ""}
@@ -137,7 +137,7 @@ const Home = () => {
           <div
             onMouseEnter={() => setHovered("uiux")}
             onMouseLeave={() => setHovered(null)}
-            className={`group relative overflow-hidden shadow-md shadow-[#FF4F6F] cursor-pointer transition-all duration-300 ${
+            className={`group relative overflow-hidden shadow-md shadow-[#FF4F6F] cursor-pointer transition-all duration-300 px-2 ${
               hovered === "uiux"
                 ? "w-[90%] sm:w-[500px] h-[360px] rounded-xl"
                 : "w-60 h-60 sm:w-80 sm:h-80 rounded-full"
