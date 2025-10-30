@@ -120,7 +120,7 @@ const Home = () => {
                 : "w-60 h-60 sm:w-80 sm:h-80 rounded-full"
             }`}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-[#FF9533] to-[#ffcd80] opacity-40 group-hover:opacity-100 transition duration-1000"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#FF9533] to-[#ffcd80] opacity-40 group-hover:opacity-100 transition duration-1000 pt-12"></div>
             <div className="relative z-10 flex flex-col items-center justify-center h-full pt-4 sm:p-6 text-center">
               <h2 className="text-xl sm:text-3xl font-bold text-white mb-4 leading-snug w-full">
                 Front-end <br/>Developer
@@ -143,7 +143,7 @@ const Home = () => {
                 : "w-60 h-60 sm:w-80 sm:h-80 rounded-full"
             }`}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-[#009DAE] to-[#00d4ff] opacity-40 group-hover:opacity-100 transition duration-1000"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#009DAE] to-[#00d4ff] opacity-40 group-hover:opacity-100 transition duration-1000 pt-12"></div>
             <div className="relative z-10 flex flex-col items-center justify-center h-full p-4 sm:p-4 text-center">
               <h2 className="text-xl sm:text-3xl font-bold text-white mb-4 leading-normal">
                 UI/UX <br/> Designer
