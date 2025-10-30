@@ -100,7 +100,7 @@ const Home = () => {
     >
       <div className="max-w-[1200px] px-4 sm:px-8 flex flex-col justify-center items-center h-full w-full">
         {/* Intro */}
-        <div className="flex flex-col items-center sm:items-start w-full sm:w-3/4 text-center sm:text-left mt-[20px]">
+        <div className="flex flex-col items-center sm:items-start w-full sm:w-3/4 text-center sm:text-left">
           <p className="text-[#FF9533] mb-2 sm:mb-4 text-sm sm:text-base m-auto">Hi, my name is</p>
           <h1 className="text-lg sm:text-2xl font-bold text-[#ccd6f6] mb-6 m-auto
           ">
