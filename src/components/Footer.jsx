@@ -11,8 +11,8 @@ import { BsFillPersonLinesFill } from 'react-icons/bs';
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#565F69] text-[#0a192f] py-12 px-6">
-  <p className="text-[#FF9533] font-semibold text-2xl text-center mb-8">Contact</p>
+    <footer className="w-[full] bg-[#565F69] text-[#0a192f] py-12 px-6">
+  <p className="text-[#FF9533]  font-semibold text-2xl text-center mb-8">Contact</p>
 
   <div className="grid grid-cols-2 md:grid-cols-3 gap-6 justify-items-center text-base sm:text-lg">
     <a href='https://www.linkedin.com/in/maryam-mahta-ebrahimi-b3a7bb87/' target='_blank' className='flex items-center gap-2 hover:text-[#009dae]'>

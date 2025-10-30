@@ -58,7 +58,7 @@ const About = () => {
         </div>
 
         {/* Designer & Developer Section */}
-        <div className="max-w-[1000px] w-full grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div className="max-w-[1000px] w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="text-left">
             <p className="text-3xl mt-2 sm:mt-6 font-bold w-full text-[#FF9533]">Designer & Developer</p>
           </div>
@@ -66,7 +66,7 @@ const About = () => {
         </div>
 
         {/* Bio Section */}
-        <div className="w-%80 sm:w-3/5 md:w-3/5 max-w-[1000px] mt-6 sm:mt-8 text-justify leading-relaxed text-base sm:text-lg md:text-xl px-2 sm:px-">
+        <div className="w-full sm:w-3/5 md:w-3/5 max-w-[1000px] mt-6 sm:mt-8 text-justify leading-relaxed text-base sm:text-lg md:text-xl px-2 sm:px-">
           <p>
             I'm a Front-End Developer and UI/UX Designer who loves creating apps that are easy to use
             and designed with real people in mind. Design has always been close to me, it’s how I see

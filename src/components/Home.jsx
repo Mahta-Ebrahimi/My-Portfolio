@@ -125,7 +125,7 @@ const Home = () => {
               <h2 className="text-xl sm:text-3xl font-bold text-white mb-4 leading-snug">
                 Front-end Developer
               </h2>
-              <p className="text-[#0D1C30] text-s sm:text-m md:text-base ">
+              <p className="text-[#0D1C30] text-s sm:text-m md:text-base">
                 {hovered === "frontend"
                   ? "Front-End Developer with experience building responsive web applications using JavaScript, React. Skilled in creating reusable component libraries (Tailwind CSS, Material UI) and optimizing processes through CI/CD pipelines. Collaborated with teams in Agile/Scrum environments to build fast, accessible, and SEO-friendly interfaces from design mockups."
                   : ""}
