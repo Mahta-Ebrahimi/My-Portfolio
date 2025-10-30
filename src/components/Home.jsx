@@ -121,13 +121,13 @@ const Home = () => {
             }`}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-[#FF9533] to-[#ffcd80] opacity-40 group-hover:opacity-100 transition duration-1000"></div>
-            <div className="relative z-10 flex flex-col items-center justify-center h-full p-4 sm:p-6 text-center">
-              <h2 className="text-xl sm:text-3xl font-bold text-white mb-4 leading-snug pt-4">
-                Front-end Developer
+            <div className="relative z-10 flex flex-col items-center justify-center h-full pt-2 sm:p-6 text-center">
+              <h2 className="text-xl sm:text-3xl font-bold text-white mb-4 leading-snug w-full">
+                Front-end <br/>Developer
               </h2>
-              <p className="text-[#0D1C30] text-m sm:text-m md:text-base">
+              <p className="text-[#0D1C30] text-m sm:text-l md:text-base">
                 {hovered === "frontend"
-                  ? "With experience building responsive web applications using JavaScript, React. Skilled in creating reusable component libraries (Tailwind CSS, Material UI) and optimizing processes through CI/CD pipelines. Collaborated with teams in Agile/Scrum environments to build fast, accessible, and SEO-friendly interfaces from design mockups."
+                  ? "Front-End Developer with experience building responsive web applications using JavaScript, React. Skilled in creating reusable component libraries (Tailwind CSS, Material UI) and optimizing processes through CI/CD pipelines. Collaborated with teams in Agile/Scrum environments to build fast, accessible, and SEO-friendly interfaces from design mockups."
                   : ""}
               </p>
             </div>
@@ -146,11 +146,11 @@ const Home = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-[#009DAE] to-[#00d4ff] opacity-40 group-hover:opacity-100 transition duration-1000"></div>
             <div className="relative z-10 flex flex-col items-center justify-center h-full p-4 sm:p-4 text-center">
               <h2 className="text-xl sm:text-3xl font-bold text-white mb-4 leading-normal">
-                UI/UX Designer
+                UI/UX <br/> Designer
               </h2>
-              <p className="text-navy text-m sm:text-m md:text-base sm:p-12">
+              <p className="text-navy text-m sm:text-l md:text-base">
                 {hovered === "uiux"
-                  ? "Focused on creating functional, accessible, and well-structured user experiences. I apply UX methods and modern design tools to improve usability and support SEO. My work is guided by user testing to ensure every design meets real needs and delivers a consistent user journey."
+                  ? "UI/UX Designer focused on creating functional, accessible, and well-structured user experiences. I apply UX methods and modern design tools to improve usability and support SEO. My work is guided by user testing to ensure every design meets real needs and delivers a consistent user journey."
                   : ""}
               </p>
             </div>
