@@ -125,7 +125,7 @@ const Home = () => {
               <h2 className="text-xl sm:text-3xl font-bold text-white mb-4 leading-snug">
                 Front-end Developer
               </h2>
-              <p className="text-[#0D1C30] text-xs sm:text-m md:text-base ">
+              <p className="text-[#0D1C30] text-s sm:text-m md:text-base ">
                 {hovered === "frontend"
                   ? "Front-End Developer with experience building responsive web applications using JavaScript, React. Skilled in creating reusable component libraries (Tailwind CSS, Material UI) and optimizing processes through CI/CD pipelines. Collaborated with teams in Agile/Scrum environments to build fast, accessible, and SEO-friendly interfaces from design mockups."
                   : ""}
@@ -148,7 +148,7 @@ const Home = () => {
               <h2 className="text-xl sm:text-3xl font-bold text-white mb-4 leading-normal">
                 UI/UX Designer
               </h2>
-              <p className="text-navy text-xs sm:text-sm md:text-base">
+              <p className="text-navy text-s sm:text-m md:text-base">
                 {hovered === "uiux"
                   ? "UI/UX Designer focused on creating functional, accessible, and well-structured user experiences. I apply UX methods and modern design tools to improve usability and support SEO. My work is guided by user testing to ensure every design meets real needs and delivers a consistent user journey."
                   : ""}
