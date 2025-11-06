@@ -6,70 +6,81 @@ import img3 from "../assets/3.jpg";
 const images = [img1, img2, img3];
 
 const Home = () => {
-  const [bgImage, setBgImage] = useState(images[0]);
+  const [bgImageIndex, setBgImageIndex] = useState(0);
+  const [fadeIn, setFadeIn] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setBgImage((prev) => {
-        const currentIndex = images.indexOf(prev);
-        const nextIndex = (currentIndex + 1) % images.length;
-        return images[nextIndex];
-      });
-    }, 5000); // Change every 5 seconds
+      setFadeIn(false);
+      setTimeout(() => {
+        setBgImageIndex((prev) => (prev + 1) % images.length);
+        setFadeIn(true);
+      }, 1000);
+    }, 20000); // change every 20 seconds
 
     return () => clearInterval(interval);
   }, []);
 
+  const currentImage = images[bgImageIndex];
+
   return (
-    <div className="w-full h-screen flex items-center justify-center bg-[#0a192f] px-4 sm:px-8">
-      <div className="flex flex-wrap items-baseline justify-center gap-4 w-full">
-        <h1
-          className="text-center font-extrabold uppercase leading-none w-full"
-          style={{
-            fontSize: "clamp(3rem, 16vw, 192px)",
-            backgroundImage: `url(${bgImage})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            backgroundClip: "text",
-            color: "transparent",
-            borderRadius: "5px",
-          }}
-        >
-          Mahta
-        </h1>
+    <div className="w-full h-screen flex flex-col items-center justify-center bg-[#0a192f] px-4 sm:px-8">
+      {/* Hero Name */}
+      <h1
+        className={`text-center font-extrabold leading-none w-full animated-text ${
+          fadeIn ? "fade-in" : "fade-out"
+        }`}
+        style={{
+          fontSize: "clamp(4rem, 20vw, 384px)",
+          letterSpacing: "-0.08em", // -8% letter spacing
+          backgroundImage: `url(${currentImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          backgroundClip: "text",
+          color: "transparent",
+          borderRadius: "5px",
+        }}
+      >
+        mahta
+      </h1>
 
-        {/* Floating Dot with fade */}
-        <span className="floating-dot"></span>
-      </div>
+      {/* Role Line — FRONT-END DEVELOPER & UI/UX DESIGNER */}
+      <p className="mt-2 text-base sm:text-lg font-medium text-gray-300 text-center tracking-wide">
+        Front-end Developer & UI/UX Designer
+      </p>
 
-      {/* Dot Animation Style */}
+      {/* Tagline */}
+      <p className="mt-2 text-lg sm:text-xl font-semibold text-[#FF9533] text-center italic tracking-tight">
+        Design with precision. Code with intention.
+      </p>
+
+      {/* Styles */}
       <style>
         {`
-          .floating-dot {
-            width: 24px;
-            height: 24px;
-            background-color: #FF9533;
-            border-radius: 50%;
-            display: inline-block;
-            position: relative;
-            top: 0.2em;
-            animation: floatFade 5s ease-in-out infinite;
+          .animated-text {
+            animation: floatTexture 20s ease-in-out infinite;
+            transition: opacity 1s ease-in-out;
           }
 
-          @keyframes floatFade {
+          .fade-in {
+            opacity: 1;
+          }
+
+          .fade-out {
+            opacity: 0.4;
+          }
+
+          @keyframes floatTexture {
             0% {
-              transform: translateY(0);
-              opacity: 0.4;
+              background-position: center 0%;
             }
             50% {
-              transform: translateY(-10px);
-              opacity: 1;
+              background-position: center 30%;
             }
             100% {
-              transform: translateY(0);
-              opacity: 0.4;
+              background-position: center 0%;
             }
           }
         `}
