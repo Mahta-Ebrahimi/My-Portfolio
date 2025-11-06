@@ -48,7 +48,7 @@ const Home = () => {
 
       {/* Role Line — FRONT-END DEVELOPER & UI/UX DESIGNER */}
       <p className="mt-2 text-base sm:text-lg font-medium text-gray-300 text-center tracking-wide">
-        Front-end Developer & UI/UX Designer
+        UI/UX Designer & Front-end Developer
       </p>
 
       {/* Tagline */}
