@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div name="about" className="w-full min-h-screen bg-[#0a192f] text-gray-300">
+    <div name="about" className="w-full min-h-screen bg-[#0a192f] text-gray-300 pb-16 sm:pb-0">
       <div className="flex flex-col justify-start items-center w-full min-h-screen pt-4 sm:pt-8 px-4 sm:px-6 md:px-8">
         
         {/* Section Title */}
@@ -24,7 +24,7 @@ const About = () => {
         </div>
 
         {/* Bio Section */}
-        <div className="w-[90%] sm:w-3/5 md:w-3/5 max-w-[1000px] mt-4 sm:mt-6 text-justify leading-relaxed text-base sm:text-lg md:text-xl px-2">
+        <div className="w-[90%] sm:w-3/5 md:w-3/5 max-w-[1000px] mt-4 sm:mt-6 mb-16 sm:mb-0 text-justify leading-relaxed text-base sm:text-lg md:text-xl px-2">
           <p>
             I'm a Front-End Developer and UI/UX Designer who loves creating apps that are easy to use
             and designed with real people in mind. Design has always been close to me — it’s how I see
