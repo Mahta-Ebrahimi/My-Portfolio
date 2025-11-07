@@ -16,7 +16,7 @@ const Home = () => {
         setBgImageIndex((prev) => (prev + 1) % images.length);
         setFadeIn(true);
       }, 1000);
-    }, 20000); // change every 20 seconds
+    }, 20000);
 
     return () => clearInterval(interval);
   }, []);
@@ -25,28 +25,49 @@ const Home = () => {
 
   return (
     <div className="w-full h-screen flex flex-col items-center justify-center bg-[#0a192f] px-4 sm:px-8">
-      {/* Hero Name */}
-      <h1
-        className={`text-center font-extrabold leading-none w-full animated-text ${
-          fadeIn ? "fade-in" : "fade-out"
-        }`}
-        style={{
-          fontSize: "clamp(4rem, 20vw, 384px)",
-          letterSpacing: "-0.08em", // -8% letter spacing
-          backgroundImage: `url(${currentImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-          backgroundClip: "text",
-          color: "transparent",
-          borderRadius: "5px",
-        }}
-      >
-        mahta
-      </h1>
+      {/* Hero Name — doubled size on mobile */}
+      <div className="w-full text-center">
+        {/* Mobile: extra large */}
+        <div className="sm:hidden">
+          <h1
+            className={`font-extrabold leading-none animated-text ${fadeIn ? "fade-in" : "fade-out"} text-[20vw]`}
+            style={{
+              letterSpacing: "-0.08em",
+              backgroundImage: `url(${currentImage})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              color: "transparent",
+              borderRadius: "5px",
+            }}
+          >
+            mahta
+          </h1>
+        </div>
 
-      {/* Role Line — FRONT-END DEVELOPER & UI/UX DESIGNER */}
+        {/* Tablet & Desktop: original size */}
+        <h1
+          className={`hidden sm:block font-extrabold leading-none animated-text ${fadeIn ? "fade-in" : "fade-out"}`}
+          style={{
+            fontSize: "clamp(4rem, 20vw, 384px)",
+            letterSpacing: "-0.08em",
+            backgroundImage: `url(${currentImage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
+            color: "transparent",
+            borderRadius: "5px",
+          }}
+        >
+          mahta
+        </h1>
+      </div>
+
+      {/* Role Line */}
       <p className="mt-2 text-base sm:text-lg font-medium text-gray-300 text-center tracking-wide">
         UI/UX Designer & Front-end Developer
       </p>

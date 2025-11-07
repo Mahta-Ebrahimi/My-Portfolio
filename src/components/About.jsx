@@ -6,25 +6,28 @@ const About = () => {
       <div className="flex flex-col justify-start items-center w-full min-h-screen pt-4 sm:pt-8 px-4 sm:px-6 md:px-8">
         
         {/* Section Title */}
-        <div className="max-w-[1000px] w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="sm:text-right pb-2 sm:pb-4 pl-2 sm:pl-4">
-            <p className="text-4xl font-bold inline border-b-4 border-[#FF9533] text-[#FF9533]">
-              About
-            </p>
-          </div>
-          <div></div>
-        </div>
+        <div className="max-w-[1000px] w-full flex flex-col items-center">
+          <p className="text-4xl font-bold inline border-b-4 border-[#FF9533] text-[#FF9533] mb-4">
+            About
+          </p>
 
-        {/* Designer & Developer Section */}
-        <div className="max-w-[1000px] w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="text-left">
-            <p className="text-3xl mt-2 sm:mt-4 font-bold text-[#FF9533]">Designer & Developer</p>
-          </div>
-          <div></div>
+          {/* Role Title — Centered under "About" */}
+          <p className="text-2xl sm:text-3xl font-bold text-[#FF9533] text-center leading-snug">
+            {/* Mobile: stacked lines */}
+            <span className="block sm:hidden">Front-End Developer</span>
+            <span className="block sm:hidden">UI/UX Designer</span>
+
+            {/* Desktop: single line with divider */}
+            <span className="hidden sm:inline-flex items-center justify-center gap-4">
+              <span>Front-End Developer</span>
+              <span className="w-8 h-0.5 bg-[#FF9533]"></span>
+              <span>UI/UX Designer</span>
+            </span>
+          </p>
         </div>
 
         {/* Bio Section */}
-        <div className="w-[90%] sm:w-3/5 md:w-3/5 max-w-[1000px] mt-4 sm:mt-6 mb-16 sm:mb-0 text-justify leading-relaxed text-base sm:text-lg md:text-xl px-2">
+        <div className="w-[90%] sm:w-3/5 md:w-3/5 max-w-[1000px] mt-6 mb-16 sm:mb-0 text-justify leading-relaxed text-base sm:text-lg md:text-xl px-2">
           <p>
             I'm a Front-End Developer and UI/UX Designer who loves creating apps that are easy to use
             and designed with real people in mind. Design has always been close to me — it’s how I see
