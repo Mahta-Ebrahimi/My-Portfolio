@@ -50,24 +50,24 @@ const Navbar = () => {
 
         {/* Mobile menu */}
         <ul className={`${!nav ? 'hidden' : 'absolute'} pb-8 top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center z-40`}>
-          <li className='py-6 text-4xl hover:text-[#009dae]'>
+          {/* <li className='py-6 text-4xl hover:text-[#009dae]'>
             <Link onClick={handleClick} to='home' smooth={true} duration={500}>Home</Link>
-          </li>
-          <li className='py-6 text-4xl hover:text-[#FF9533]'>
+          </li> */}
+          <li className='py-6 text-3xl hover:text-[#FF9533]'>
             <Link onClick={handleClick} to='about' smooth={true} duration={500}>About</Link>
           </li>
-          <li className='py-6 text-4xl hover:text-[#FF4f6f]'>
+          <li className='py-6 text-3xl hover:text-[#FF4f6f]'>
             <Link onClick={handleClick} to='skills' smooth={true} duration={500}>Skills</Link>
           </li>
-          <li className='py-6 text-4xl hover:text-[#FF9533]'>
+          <li className='py-6 text-3xl hover:text-[#FF9533]'>
             <Link onClick={handleClick} to='frontend' smooth={true} duration={500}>Front-End</Link>
           </li>
-          <li className='py-6 text-4xl hover:text-[#009dae]'>
+          <li className='py-6 text-3xl hover:text-[#009dae]'>
             <Link onClick={handleClick} to='uiux' smooth={true} duration={500}>UI/UX</Link>
           </li>
-          <li className='py-6 text-4xl hover:text-[#FF4f6f]'>
+          {/* <li className='py-6 text-3xl hover:text-[#FF4f6f]'>
             <Link onClick={handleClick} to='calligraphy' smooth={true} duration={500}>Calligraphy</Link>
-          </li>
+          </li> */}
         </ul>
 
         {/* Desktop Social Icons */}
