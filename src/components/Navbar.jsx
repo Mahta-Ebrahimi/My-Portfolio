@@ -23,9 +23,9 @@ const Navbar = () => {
 
         {/* Desktop menu */}
         <ul className='hidden md:flex font-bold gap-6'>
-          <li className='hover:font-extrabold hover:text-[#009dae]'>
+          {/* <li className='hover:font-extrabold hover:text-[#009dae]'>
             <Link to='home' smooth={true} duration={500}>Home</Link>
-          </li>
+          </li> */}
           <li className='hover:font-extrabold hover:text-[#FF9533]'>
             <Link to='about' smooth={true} duration={500}>About</Link>
           </li>
@@ -38,9 +38,9 @@ const Navbar = () => {
           <li className='hover:font-extrabold hover:text-[#009dae]'>
             <Link to='uiux' smooth={true} duration={500}>UI/UX</Link>
           </li>
-          <li className='hover:font-extrabold hover:text-[#FF4f6f]'>
+          {/* <li className='hover:font-extrabold hover:text-[#FF4f6f]'>
             <Link to='calligraphy' smooth={true} duration={500}>Calligraphy</Link>
-          </li>
+          </li> */}
         </ul>
 
         {/* Hamburger */}

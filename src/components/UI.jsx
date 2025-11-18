@@ -1,0 +1,296 @@
+import React from 'react';
+import WorkImg from '../assets/workImg.jpeg';
+import google from "../assets/google.png";
+import newsbox from "../assets/newsbox.png"
+import realEstate from '../assets/realestate.jpg';
+import OnlineShop from '../assets/OnlineShop.png';
+import search from '../assets/search.png';
+import portfolio from '../assets/portfolio1.png';
+import chat from '../assets/chat.png';
+import trainee from '../assets/trainee.png';
+import fruitApp from '../assets/fruitApp.png';
+import wordPress from '../assets/wordpress2.png';
+import GlienkeScreen from '../assets/GlienkeScreen.png';
+import Ui2 from '../assets/Ui2.png';
+import Ui2Screen from '../assets/Ui2Screen.png';
+import Ui3 from '../assets/Ui3Screen.png';
+import Ui3Screen from '../assets/ui3.png';
+import Ui4 from '../assets/Ui4.png';
+import Ui5 from '../assets/Ui5.png';
+import Ui5Screen from '../assets/Ui5Screen.png';
+import Ui6 from '../assets/Ui6.png';
+import Ui6Screen from '../assets/Ui6Screen.png';
+import Ui7 from '../assets/Ui7.png';
+import novasol from '../assets/NovasolBoth.png';
+import NovaDoc from '../assets/Novasol Doc.png';
+import novasolFigma from '../assets/NovaFigma.png';
+import ipaly from '../assets/iplaymusic.png';
+import selskabslokaleDoc from '../assets/Ui Og grafisk design-Maryam Ebrahimi.pdf';
+import calligraphy1 from '../assets/1.jpg';
+import calligraphy2 from '../assets/2.jpg';
+import calligraphy3 from '../assets/3.jpg';
+import calligraphy4 from '../assets/4.jpg';
+import calligraphy5 from '../assets/5.jpg';
+import calligraphy6 from '../assets/6.jpg';
+import calligraphy7 from '../assets/7.jpg';
+import calligraphy8 from '../assets/8.jpg';
+import calligraphy9 from '../assets/9.jpg';
+import calligraphy10 from '../assets/10.jpg';
+import calligraphy11 from '../assets/11.jpg';
+import calligraphy12 from '../assets/12.jpg';
+import selskaklocal from '../assets/UI1.png';
+const Ui = () => {
+  return (
+    <div>
+    
+    <div name='work' className='w-full min-h-screen text-gray-300 bg-[#0a192f] pb-16'>
+      
+    </div>
+    <div name='work' className='w-full min-h-screen text-gray-300 bg-[#0a192f] pb-16'>
+      <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-[90%] h-full'id="uiux">
+        <div className='pb-8 top-5 sticky' >
+          <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-[#FF9533] text-[#FF9533]'>
+            UI/UX
+          </p>
+          {/* <p className='py-6'>Check out some of creations!</p> */}
+        </div>
+
+{/* Container */}
+        <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-12'>
+        
+            {/* Grid Item */}
+          <div
+            style={{ backgroundImage: `url(${selskaklocal})` }}
+            className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
+          >
+            {/* Hover Effects */}
+            <div className='opacity-0 group-hover:opacity-100 flex flex-col align-center justify-center m-10'>
+              <span className='text-2xl font-bold text-white tracking-wider'>
+                Selskabslokale<br/>UI/UX test Redesign 
+              </span>
+              <div className='pt-8 text-center'>
+                <a href={selskabslokaleDoc}target="_blank">
+                {/* <iframe src="https://your-app.netlify.app" style="width:375px; height:667px; border:1px solid #ccc; border-radius:20px;" /> */}
+                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+                    Document
+                  </button>
+                </a>
+                {/* <a href='https://github.com/Rangeland5499/NewsBox'target="_blank">
+                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+                    Demo
+                  </button>
+                </a> */}
+              </div>
+            </div>
+          </div>
+ <div className="shadow-md rounded-md flex flex-col items-center mx-auto p-4 bg-gray-100 max-w-sm">
+  {/* Image slightly smaller */}
+  <img 
+    src={novasolFigma} 
+    alt="Novasol Travel Agency Figma design" 
+    className="w-40 h-24 object-cover rounded-md mb-4"
+  />
+
+  {/* Title */}
+  <span className="text-lg font-bold text-gray-800 text-center mb-4 leading-tight">
+    Novasol <br /> Travel Agency <br /> Figma design
+  </span>
+
+  {/* Buttons stacked vertically */}
+  <div className="flex flex-col items-center space-y-3 w-full">
+    <a href={novasol} target="_blank">
+      <button className="w-36 text-center rounded-lg px-3 py-2 bg-white text-gray-700 font-semibold text-sm shadow">
+        Demo
+      </button>
+    </a>
+    <a href={NovaDoc} target="_blank">
+      <button className="w-36 text-center rounded-lg px-3 py-2 bg-white text-gray-700 font-semibold text-sm shadow">
+        Document
+      </button>
+    </a>
+  </div>
+</div>
+
+
+
+
+
+<div
+  style={{ backgroundImage: `url(${wordPress})` }}
+  className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
+>
+  <div className='opacity-0 group-hover:opacity-100'>
+    <span className='text-2xl font-bold text-white tracking-wider'>
+      WordPress app
+    </span>
+    <div className='pt-8 text-center'>
+      <a href='https://soulimous.com/' target="_blank">
+        <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+          Demo
+        </button>
+      </a>
+      {/* <a href='https://github.com/your-username/your-repo' target="_blank">
+        <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+          Code
+        </button>
+      </a> */}
+    </div>
+  </div>
+</div>
+<div
+            style={{ backgroundImage: `url(${GlienkeScreen})` }}
+            className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
+          >
+            {/* Hover Effects */}
+            <div className='opacity-0 group-hover:opacity-100'>
+              <span className='text-2xl font-bold text-white tracking-wider'>
+               Glienke Design<br/>Dandomain Website
+              </span>
+              <div className='pt-8 text-center'>
+                {/* <a href={Ui2} target="_blank">
+                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+                    Demo
+                  </button>
+                </a> */}
+                <a href='https://www.glienkedesign.dk/shop/glienke-design-72s1.html'target="_blank">
+                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+                    Demo
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          
+       
+            {/* Grid Item */}
+          <div
+            style={{ backgroundImage: `url(${Ui2Screen})` }}
+            className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
+          >
+            {/* Hover Effects */}
+            <div className='opacity-0 group-hover:opacity-100'>
+              <span className='text-2xl font-bold text-white tracking-wider'>
+               Baya OnlineShop<br/>Figma design
+              </span>
+              <div className='pt-8 text-center'>
+                <a href={Ui2} target="_blank">
+                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+                    Demo
+                  </button>
+                </a>
+                {/* <a href='https://github.com/Rangeland5499/Google-Search-Translate-React'target="_blank">
+                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+                    Code
+                  </button>
+                </a> */}
+              </div>
+            </div>
+          </div>
+          <div
+            style={{ backgroundImage: `url(${Ui3})` }}
+            className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
+          >
+            {/* Hover Effects */}
+            <div className='opacity-0 group-hover:opacity-100'>
+              <span className='text-2xl font-bold text-white tracking-wider'>
+                Job Guide Website<br/>Figma Design
+              </span>
+              <div className='pt-8 text-center'target="_blank">
+                <a href={Ui3Screen} target="_blank">
+                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+                    Demo
+                  </button>
+                </a>
+                {/* <a href={Ui3Screen}target="_blank">
+                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+                    Code
+                  </button>
+                </a> */}
+              </div>
+            </div>
+          </div>
+            {/* Grid Item */}
+          <div
+            style={{ backgroundImage: `url(${Ui5Screen})` }}
+            className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
+          >
+            {/* Hover Effects */}
+            <div className='relative z-10 opacity-0 group-hover:opacity-100 transition duration-500'>
+              <span className='text-2xl font-bold text-white tracking-wider'>
+                Mobile Draugstore<br/>Figma Design
+              </span>
+              <div className='pt-8 text-center'>
+                <a href={Ui5}target="_blank">
+                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+                    Demo
+                  </button>
+                </a>
+                {/* <a href='https://github.com/Mahta-Ebrahimi/My-Portfolio'target="_blank">
+                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+                    Code
+                  </button>
+                </a> */}
+              </div>
+            </div>
+          </div>
+          <div
+            style={{ backgroundImage: `url(${ipaly})` }}
+            className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
+          >
+            {/* Hover Effects */}
+            <div className='flex flex-col opacity-0 group-hover:opacity-100'>
+              <span className='text-2xl font-bold text-white tracking-wider m-auto'>
+                iPlayMusic App
+              </span>
+              <span className='text-2xl font-bold text-white tracking-wider m-auto'>
+               React Js
+              </span>
+              <div className='pt-8 text-center'>
+                {/* <a href='/'target="_blank">
+                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+                    Demo
+                  </button>
+                </a> */}
+                <a href='https://github.com/rts-cmk-wu07/iplaymusic-uptempo-folk/blob/master/desc/styleguide.png'target="_blank">
+                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+                    Code
+                  </button>
+                </a>
+              </div>
+
+            </div>
+          </div>
+          
+        
+<div
+  style={{ backgroundImage: `url(${Ui6Screen})` }}
+  className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
+>
+  <div className='opacity-0 group-hover:opacity-100'>
+    <span className='text-2xl font-bold text-white tracking-wider'>
+       Drugstore<br/>Figma Design
+    </span>
+    <div className='pt-8 text-center'>
+      <a href={Ui7} target="_blank">
+        <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+          Demo
+        </button>
+      </a>
+      {/* <a href='https://github.com/Mahta-Ebrahimi/Trainee-app' target="_blank">
+        <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+          Code
+        </button>
+      </a> */}
+    </div>
+  </div>
+</div>        
+        </div>
+      </div>
+           
+    </div>
+    </div>
+  );
+};
+
+export default Ui;
