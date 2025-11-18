@@ -45,328 +45,275 @@ const Work = () => {
     <div>
     
     <div name='work' className='w-full min-h-screen text-gray-300 bg-[#0a192f] pb-16'>
-      <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-[90%] h-full'id="frontend">
+      <div className='max-w-[1000px] mx-auto p-8 flex flex-col justify-center w-[90%] h-full'id="frontend">
         <div className='pb-8 sticky top-5' >
           <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-[#FF9533] text-[#FF9533]'>
             Front-end
           </p>
-          <p className='py-6'>Check out some of creations!</p>
-        </div>
-
-{/* Container */}
-        <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-12'>
-        
-
-
-            {/* Grid Item */}
-          <div
-            style={{ backgroundImage: `url(${newsbox})` }}
-            className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div '
-          >
-            {/* Hover Effects */}
-            <div className='opacity-0 group-hover:opacity-100 flex flex-col'>
-              <span className='text-2xl font-bold text-white tracking-wider m-auto'>
-                News Box
-              </span>
-              <span className='text-2xl font-bold text-white tracking-wider m-auto'>
-                React Js
-              </span>
-              <div className='pt-8 text-center'>
-                <a href='https://wonderful-beignet-22f3b4.netlify.app/'target="_blank">
-                {/* <iframe src="https://your-app.netlify.app" style="width:375px; height:667px; border:1px solid #ccc; border-radius:20px;" /> */}
-                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                    Demo
-                  </button>
-                </a>
-                <a href='https://github.com/Rangeland5499/NewsBox'target="_blank">
-                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                    Code
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div
-            style={{ backgroundImage: `url(${OnlineShop})` }}
-            className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
-          >
-            {/* Hover Effects */}
-            <div className='opacity-0 group-hover:opacity-100 flex flex-col'>
-              <span className='text-2xl font-bold text-white tracking-wider m-auto'>
-                Online Shop
-              </span>
-              <span className='text-2xl font-bold text-white tracking-wider m-auto'>
-                React Js
-              </span>
-              <div className='pt-8 text-center'>
-                <a href='https://melodic-cuchufli-f56ece.netlify.app/' target="_blank">
-                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                    Demo
-                  </button>
-                </a>
-                <a href='https://github.com/Mahta-Ebrahimi/Online-Shop/tree/main/furniture-shop'target="_blank">
-                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                    Code
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-            {/* Grid Item */}
-          <div
-            style={{ backgroundImage: `url(${search})` }}
-            className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
-          >
-            {/* Hover Effects */}
-            <div className='opacity-0 group-hover:opacity-100 flex flex-col'>
-              <span className='text-2xl font-bold text-white tracking-wider m-auto'>
-                Google Search
-              </span>
-               <span className='text-2xl font-bold text-white tracking-wider m-auto'>
-                React Js
-              </span>
-              <div className='pt-8 text-center'>
-                <a href='https://phenomenal-basbousa-c22dd3.netlify.app/'target="_blank">
-                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                    Demo
-                  </button>
-                </a>
-                <a href='https://github.com/Rangeland5499/Google-Search-Translate-React'target="_blank">
-                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                    Code
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div
-            style={{ backgroundImage: `url(${realEstate})` }}
-            className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
-          >
-            {/* Hover Effects */}
-            <div className='opacity-0 group-hover:opacity-100'>
-              <span className='text-2xl font-bold text-white tracking-wider'>
-                Vue js Application
-              </span>
-              <div className='pt-8 text-center'>
-                {/* <a href='https://github.com/Rangeland5499/m-gler-vue'>
-                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                    Demo
-                  </button>
-                </a> */}
-                <a href='https://github.com/Rangeland5499/m-gler-vue'target="_blank">
-                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                    Code
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-            {/* Grid Item */}
-          <div
-            style={{ backgroundImage: `url(${portfolio})` }}
-            className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
-          >
-            {/* Hover Effects */}
-            <div className='relative z-10 opacity-0 flex flex-col group-hover:opacity-100 transition duration-500'>
-              <span className='text-2xl font-bold text-white tracking-wider m-auto'>
-                My Portfolio
-              </span>
-              <span className='text-2xl font-bold text-white tracking-wider m-auto'>
-                React js
-              </span>
-              <div className='pt-8 text-center'>
-                <a href='/'target="_blank">
-                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                    Demo
-                  </button>
-                </a>
-                <a href='https://github.com/Mahta-Ebrahimi/My-Portfolio'target="_blank">
-                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                    Code
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div
-            style={{ backgroundImage: `url(${ipaly})` }}
-            className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
-          >
-            {/* Hover Effects */}
-            <div className='flex flex-col opacity-0 group-hover:opacity-100'>
-              <span className='text-2xl font-bold text-white tracking-wider m-auto'>
-                iPlayMusic App
-              </span>
-              <span className='text-2xl font-bold text-white tracking-wider m-auto'>
-               React Js
-              </span>
-              <div className='pt-8 text-center'>
-                {/* <a href='/'target="_blank">
-                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                    Demo
-                  </button>
-                </a> */}
-                <a href='https://github.com/rts-cmk-wu07/iplaymusic-uptempo-folk/tree/master'target="_blank">
-                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                    Code
-                  </button>
-                </a>
-              </div>
-
-            </div>
-          </div>
           
-          <div
-            style={{ backgroundImage: `url(${chat})` }}
-            className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
-          >
-            {/* Hover Effects */}
-            <div className='flex flex-col opacity-0 group-hover:opacity-100'>
-              <span className='text-2xl font-bold text-white tracking-wider m-auto'>
-                Chat Interface
-              </span>
-              <span className='text-2xl font-bold text-white tracking-wider m-auto'>
-               React Js
-              </span>
-              <div className='pt-8 text-center'>
-                {/* <a href='/'target="_blank">
-                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                    Demo
-                  </button>
-                </a> */}
-                <a href='https://github.com/Mahta-Ebrahimi/chat-interface-main'target="_blank">
-                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                    Code
-                  </button>
-                </a>
-              </div>
-
-            </div>
-          </div>
-
-
-<div
-  style={{ backgroundImage: `url(${trainee})` }}
-  className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
->
-  <div className='opacity-0 group-hover:opacity-100 flex flex-col'>
-    <span className='text-2xl font-bold text-white tracking-wider m-auto'>
-       Trainee App
-    </span>
-      <span className='text-2xl font-bold text-white tracking-wider m-auto'>
-       React Js
-    </span>
-    <div className='pt-8 text-center'>
-      {/* <a href='https://your-demo-link.netlify.app/' target="_blank">
-        <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-          Demo
-        </button>
-      </a> */}
-      <a href='https://github.com/Mahta-Ebrahimi/Trainee-app' target="_blank">
-        <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-          Code
-        </button>
-      </a>
-    </div>
-  </div>
-</div>
-
-
-          <div
-  style={{ backgroundImage: `url(${fruitApp})` }}
-  className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
->
-  <div className='opacity-0 group-hover:opacity-100 flex flex-col'>
-    <span className='text-2xl font-bold text-white tracking-wider m-auto'>
-       Fruit Shop App
-    </span>
-    <span className='text-2xl font-bold text-white tracking-wider m-auto'>
-       React Js
-    </span>
-    <div className='pt-8 text-center'>
-      {/* <a href='https://your-demo-link.netlify.app/' target="_blank">
-        <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-          Demo
-        </button>
-      </a> */}
-      <a href='https://github.com/Mahta-Ebrahimi/FruitApp-site' target="_blank">
-        <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-          Code
-        </button>
-      </a>
-    </div>
-    
-  </div>
-</div>
-          <div
-  style={{ backgroundImage: `url(${wordPress})` }}
-  className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
->
-  <div className='opacity-0 group-hover:opacity-100'>
-    <span className='text-2xl font-bold text-white tracking-wider'>
-      WordPress app
-    </span>
-    <div className='pt-8 text-center'>
-      <a href='https://soulimous.com/' target="_blank">
-        <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-          Demo
-        </button>
-      </a>
-      {/* <a href='https://github.com/your-username/your-repo' target="_blank">
-        <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-          Code
-        </button>
-      </a> */}
-    </div>
-  </div>
-</div>
-        </div>
-        
-      </div>
-    </div>
-    <div name='work' className='w-full min-h-screen text-gray-300 bg-[#0a192f] pb-16'>
-      <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-[90%] h-full'id="uiux">
-        <div className='pb-8 top-5 sticky' >
-          <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-[#FF9533] text-[#FF9533]'>
-            UI/UX
-          </p>
-          {/* <p className='py-6'>Check out some of creations!</p> */}
         </div>
 
 {/* Container */}
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-12'>
         
+
+
             {/* Grid Item */}
-          <div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#1e3a8a]">
+          <div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
   {/* Project Title */}
   <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
-    Selskabslokale – UI/UX Test Redesign
+    News Box – React Js
   </h2>
 
   {/* Image section */}
   <div
-    style={{ backgroundImage: `url(${selskaklocal})` }}
+    style={{ backgroundImage: `url(${newsbox})` }}
     className="w-full h-72 bg-cover bg-center rounded-t-md"
   ></div>
 
   {/* Buttons stacked vertically */}
   <div className="flex flex-col items-center space-y-3 w-full py-4">
-    <a href={selskabslokaleDoc} target="_blank">
+    <a href="https://wonderful-beignet-22f3b4.netlify.app/" target="_blank">
       <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
-        Document
+        Demo
       </button>
     </a>
-    {/* Uncomment if you want Demo too */}
-    {/* <a href="https://github.com/Rangeland5499/NewsBox" target="_blank">
+    <a href="https://github.com/Rangeland5499/NewsBox" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Code
+      </button>
+    </a>
+  </div>
+</div>
+
+          <div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
+  {/* Project Title */}
+  <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
+    Online Shop – React Js
+  </h2>
+
+  {/* Image section */}
+  <div
+    style={{ backgroundImage: `url(${OnlineShop})` }}
+    className="w-full h-72 bg-cover bg-center rounded-t-md"
+  ></div>
+
+  {/* Buttons stacked vertically */}
+  <div className="flex flex-col items-center space-y-3 w-full py-4">
+    <a href="https://melodic-cuchufli-f56ece.netlify.app/" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Demo
+      </button>
+    </a>
+    <a href="https://github.com/Mahta-Ebrahimi/Online-Shop/tree/main/furniture-shop" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Code
+      </button>
+    </a>
+  </div>
+</div>
+
+            {/* Grid Item */}
+          <div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
+  {/* Project Title */}
+  <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
+    Google Search – React Js
+  </h2>
+
+  {/* Image section */}
+  <div
+    style={{ backgroundImage: `url(${search})` }}
+    className="w-full h-72 bg-cover bg-center rounded-t-md"
+  ></div>
+
+  {/* Buttons stacked vertically */}
+  <div className="flex flex-col items-center space-y-3 w-full py-4">
+    <a href="https://phenomenal-basbousa-c22dd3.netlify.app/" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Demo
+      </button>
+    </a>
+    <a href="https://github.com/Rangeland5499/Google-Search-Translate-React" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Code
+      </button>
+    </a>
+  </div>
+</div>
+
+          <div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
+  {/* Project Title */}
+  <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
+    Vue.js Application – Real Estate
+  </h2>
+
+  {/* Image section */}
+  <div
+    style={{ backgroundImage: `url(${realEstate})` }}
+    className="w-full h-72 bg-cover bg-center rounded-t-md"
+  ></div>
+
+  {/* Buttons stacked vertically */}
+  <div className="flex flex-col items-center space-y-3 w-full py-4">
+    {/* Uncomment if you want Demo button */}
+    {/* <a href="https://github.com/Rangeland5499/m-gler-vue" target="_blank">
       <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
         Demo
       </button>
     </a> */}
+    <a href="https://github.com/Rangeland5499/m-gler-vue" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Code
+      </button>
+    </a>
   </div>
 </div>
 
-<div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#1e3a8a]">
+            {/* Grid Item */}
+          <div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
+  {/* Project Title */}
+  <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
+    My Portfolio – React Js
+  </h2>
+
+  {/* Image section */}
+  <div
+    style={{ backgroundImage: `url(${portfolio})` }}
+    className="w-full h-72 bg-cover bg-center rounded-t-md"
+  ></div>
+
+  {/* Buttons stacked vertically */}
+  <div className="flex flex-col items-center space-y-3 w-full py-4">
+    <a href="/" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Demo
+      </button>
+    </a>
+    <a href="https://github.com/Mahta-Ebrahimi/My-Portfolio" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Code
+      </button>
+    </a>
+  </div>
+</div>
+<div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
+  {/* Project Title */}
+  <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
+    iPlayMusic App – React Js
+  </h2>
+
+  {/* Image section */}
+  <div
+    style={{ backgroundImage: `url(${ipaly})` }}
+    className="w-full h-72 bg-cover bg-center rounded-t-md"
+  ></div>
+
+  {/* Buttons stacked vertically */}
+  <div className="flex flex-col items-center space-y-3 w-full py-4">
+    {/* Uncomment if you want Demo button */}
+    {/* <a href="/" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Demo
+      </button>
+    </a> */}
+    <a href="https://github.com/rts-cmk-wu07/iplaymusic-uptempo-folk/tree/master" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Code
+      </button>
+    </a>
+  </div>
+</div>
+
+          
+          <div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
+  {/* Project Title */}
+  <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
+    Chat Interface – React Js
+  </h2>
+
+  {/* Image section */}
+  <div
+    style={{ backgroundImage: `url(${chat})` }}
+    className="w-full h-72 bg-cover bg-center rounded-t-md"
+  ></div>
+
+  {/* Buttons stacked vertically */}
+  <div className="flex flex-col items-center space-y-3 w-full py-4">
+    {/* Uncomment if you want Demo button */}
+    {/* <a href="/" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Demo
+      </button>
+    </a> */}
+    <a href="https://github.com/Mahta-Ebrahimi/chat-interface-main" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Code
+      </button>
+    </a>
+  </div>
+</div>
+
+
+
+<div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
+  {/* Project Title */}
+  <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
+    Trainee App – React Js
+  </h2>
+
+  {/* Image section */}
+  <div
+    style={{ backgroundImage: `url(${trainee})` }}
+    className="w-full h-72 bg-cover bg-center rounded-t-md"
+  ></div>
+
+  {/* Buttons stacked vertically */}
+  <div className="flex flex-col items-center space-y-3 w-full py-4">
+    {/* Uncomment if you want Demo button */}
+    {/* <a href="https://your-demo-link.netlify.app/" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Demo
+      </button>
+    </a> */}
+    <a href="https://github.com/Mahta-Ebrahimi/Trainee-app" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Code
+      </button>
+    </a>
+  </div>
+</div>
+
+
+
+<div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
+  {/* Project Title */}
+  <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
+    Fruit Shop App – React Js
+  </h2>
+
+  {/* Image section */}
+  <div
+    style={{ backgroundImage: `url(${fruitApp})` }}
+    className="w-full h-72 bg-cover bg-center rounded-t-md"
+  ></div>
+
+  {/* Buttons stacked vertically */}
+  <div className="flex flex-col items-center space-y-3 w-full py-4">
+    {/* Uncomment if you want Demo button */}
+    {/* <a href="https://your-demo-link.netlify.app/" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Demo
+      </button>
+    </a> */}
+    <a href="https://github.com/Mahta-Ebrahimi/FruitApp-site" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Code
+      </button>
+    </a>
+  </div>
+</div>
+
+<div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
   {/* Project Title */}
   <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
     WordPress App
@@ -394,7 +341,80 @@ const Work = () => {
   </div>
 </div>
 
-<div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#1e3a8a]">
+        </div>
+        
+      </div>
+    </div>
+    <div name='work' className='w-full min-h-screen text-gray-300 bg-[#0a192f] pb-16'>
+      <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-[90%] h-full'id="uiux">
+        <div className='pb-8 top-5 sticky' >
+          <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-[#FF9533] text-[#FF9533]'>
+            UI/UX
+          </p>
+          {/* <p className='py-6'>Check out some of creations!</p> */}
+        </div>
+
+{/* Container */}
+        <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-12'>
+        
+            {/* Grid Item */}
+          <div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
+  {/* Project Title */}
+  <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
+    Selskabslokale – UI/UX Test Redesign
+  </h2>
+
+  {/* Image section */}
+  <div
+    style={{ backgroundImage: `url(${selskaklocal})` }}
+    className="w-full h-72 bg-cover bg-center rounded-t-md"
+  ></div>
+
+  {/* Buttons stacked vertically */}
+  <div className="flex flex-col items-center space-y-3 w-full py-4">
+    <a href={selskabslokaleDoc} target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Document
+      </button>
+    </a>
+    {/* Uncomment if you want Demo too */}
+    {/* <a href="https://github.com/Rangeland5499/NewsBox" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Demo
+      </button>
+    </a> */}
+  </div>
+</div>
+
+<div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
+  {/* Project Title */}
+  <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
+    WordPress App
+  </h2>
+
+  {/* Image section */}
+  <div
+    style={{ backgroundImage: `url(${wordPress})` }}
+    className="w-full h-72 bg-cover bg-center rounded-t-md"
+  ></div>
+
+  {/* Buttons stacked vertically */}
+  <div className="flex flex-col items-center space-y-3 w-full py-4">
+    <a href="https://soulimous.com/" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Demo
+      </button>
+    </a>
+    {/* Uncomment if you want Code button too */}
+    {/* <a href="https://github.com/your-username/your-repo" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Code
+      </button>
+    </a> */}
+  </div>
+</div>
+
+<div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
   {/* Project Title */}
   <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
     Glienke Design – Dandomain Website
@@ -426,7 +446,7 @@ const Work = () => {
 
 
 {/* Card Section */}
-<div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#1e3a8a]">
+<div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
   {/* Project Title */}
   <h2 className="text-l font-bold text-white tracking-wide text-center mb-2
    mt-4">
