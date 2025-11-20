@@ -22,7 +22,7 @@ import Ui6 from '../assets/Ui6.png';
 import Ui6Screen from '../assets/Ui6Screen.png';
 import Ui7 from '../assets/Ui7.png';
 import novasol from '../assets/NovasolBoth.png';
-import NovaDoc from '../assets/Novasol Doc.png';
+import NovaDoc from '../assets/novasol.pdf';
 import novasolFigma from '../assets/NovaFigma.png';
 import ipaly from '../assets/iplaymusic.png';
 import selskabslokaleDoc from '../assets/Ui Og grafisk design-Maryam Ebrahimi.pdf';
