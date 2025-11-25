@@ -39,6 +39,7 @@ import calligraphy10 from '../assets/10.jpg';
 import calligraphy11 from '../assets/11.jpg';
 import calligraphy12 from '../assets/12.jpg';
 import selskaklocal from '../assets/UI1.png';
+import danskeBank from '../assets/danskeBank.png';
 // import { Link } from 'react-scroll';
 const Work = () => {
   return (
@@ -55,9 +56,7 @@ const Work = () => {
 
 {/* Container */}
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-12'>
-        
-
-
+      
             {/* Grid Item */}
           <div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
   {/* Project Title */}
@@ -85,7 +84,32 @@ const Work = () => {
     </a>
   </div>
 </div>
+      <div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
+  {/* Project Title */}
+  <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
+    Danske Bank DevSecAI- React Js
+  </h2>
 
+  {/* Image section */}
+  <div 
+    style={{ backgroundImage: `url(${danskeBank})` }}
+    className="w-full h-72 bg-cover bg-center rounded-t-md"
+  ></div>
+
+  {/* Buttons stacked vertically */}
+  <div className="flex flex-col items-center space-y-3 w-full py-4">
+    <a href="https://danske-bank-workflow-demo.vercel.app/" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Demo
+      </button>
+    </a>
+    <a href="https://github.com/Mahta-Ebrahimi/Danske-Bank-Workflow-Demo" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Code
+      </button>
+    </a>
+  </div>
+</div>
           <div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
   {/* Project Title */}
   <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
