@@ -164,6 +164,32 @@ const Work = () => {
     </a>
   </div>
 </div>
+         <div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
+  {/* Project Title */}
+  <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
+    My Portfolio – React Js
+  </h2>
+
+  {/* Image section */}
+  <div
+    style={{ backgroundImage: `url(${portfolio})` }}
+    className="w-full h-72 bg-cover bg-center rounded-t-md"
+  ></div>
+
+  {/* Buttons stacked vertically */}
+  <div className="flex flex-col items-center space-y-3 w-full py-4">
+    <a href="/" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Demo
+      </button>
+    </a>
+    <a href="https://github.com/Mahta-Ebrahimi/My-Portfolio" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Code
+      </button>
+    </a>
+  </div>
+</div>
 
           <div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
   {/* Project Title */}
@@ -194,32 +220,7 @@ const Work = () => {
 </div>
 
             {/* Grid Item */}
-          <div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
-  {/* Project Title */}
-  <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
-    My Portfolio – React Js
-  </h2>
-
-  {/* Image section */}
-  <div
-    style={{ backgroundImage: `url(${portfolio})` }}
-    className="w-full h-72 bg-cover bg-center rounded-t-md"
-  ></div>
-
-  {/* Buttons stacked vertically */}
-  <div className="flex flex-col items-center space-y-3 w-full py-4">
-    <a href="/" target="_blank">
-      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
-        Demo
-      </button>
-    </a>
-    <a href="https://github.com/Mahta-Ebrahimi/My-Portfolio" target="_blank">
-      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
-        Code
-      </button>
-    </a>
-  </div>
-</div>
+ 
 <div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
   {/* Project Title */}
   <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
