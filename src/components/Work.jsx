@@ -47,12 +47,12 @@ const Work = () => {
     
     <div name='work' className='w-full min-h-screen text-gray-300 bg-[#0a192f] pb-16'>
       <div className='max-w-[1000px] mx-auto p-8 flex flex-col justify-center w-[90%] h-full'id="frontend">
-        <div className='pb-8 sticky top-5' >
-          <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-[#FF9533] text-[#FF9533]'>
-            Front-end
-          </p>
-          
-        </div>
+        <div className='pb-8 sticky top-5 flex justify-center'>
+  <p className='text-4xl font-bold border-b-4 border-[#FF9533] text-[#FF9533] text-center'>
+    Front-end
+  </p>
+</div>
+
 
 {/* Container */}
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-12'>
@@ -372,12 +372,13 @@ const Work = () => {
     </div>
     <div name='work' className='w-full min-h-screen text-gray-300 bg-[#0a192f] pb-16'>
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-[90%] h-full'id="uiux">
-        <div className='pb-8 top-5 sticky' >
-          <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-[#FF9533] text-[#FF9533]'>
-            UI/UX
-          </p>
-          {/* <p className='py-6'>Check out some of creations!</p> */}
-        </div>
+        <div className='pb-8 top-5 sticky flex justify-center'>
+  <p className='text-4xl font-bold border-b-4 border-[#FF9533] text-[#FF9533] text-center'>
+    UI/UX
+  </p>
+  {/* <p className='py-6'>Check out some of creations!</p> */}
+</div>
+
 
 {/* Container */}
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-12'>
