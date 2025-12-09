@@ -26,6 +26,8 @@ import NovaDoc from '../assets/novasol.pdf';
 import novasolFigma from '../assets/NovaFigma.png';
 import ipaly from '../assets/iplaymusic.png';
 import selskabslokaleDoc from '../assets/Ui Og grafisk design-Maryam Ebrahimi.pdf';
+import pawpal from '../assets/Pawpal.png';
+import PawpalDoc from '../assets/Pawpalstory.pdf'
 import calligraphy1 from '../assets/1.jpg';
 import calligraphy2 from '../assets/2.jpg';
 import calligraphy3 from '../assets/3.jpg';
@@ -387,7 +389,7 @@ const Work = () => {
           <div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
   {/* Project Title */}
   <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
-    Selskabslokale – UI/UX Test Redesign
+    Selskabslokale – UI/UX Redesign
   </h2>
 
   {/* Image section */}
@@ -411,11 +413,65 @@ const Work = () => {
     </a> */}
   </div>
 </div>
+          <div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
+  {/* Project Title */}
+  <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
+    Dog Sitter app – UI/UX Design
+  </h2>
+
+  {/* Image section */}
+  <div
+    style={{ backgroundImage: `url(${pawpal})` }}
+    className="w-full h-72 bg-cover bg-center rounded-t-md"
+  ></div>
+
+  {/* Buttons stacked vertically */}
+  <div className="flex flex-col items-center space-y-3 w-full py-4">
+    <a href={PawpalDoc} target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Document
+      </button>
+    </a>
+    {/* Uncomment if you want Demo too */}
+    <a href="https://www.figma.com/proto/hr07ubZBbbWwdw2kWrwJGD/Mahta-Ebrahimi?page-id=37%3A23&node-id=368-5100&viewport=-1711%2C344%2C0.19&t=ybD6V9CZArU0y5vi-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=254%3A641&show-proto-sidebar=1" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Demo
+      </button>
+    </a>
+  </div>
+</div>
+<div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
+  {/* Project Title */}
+  <h2 className="text-l font-bold text-white tracking-wide text-center mb-2
+   mt-4">
+    Travel Agency Redesign
+  </h2>
+
+  {/* Image section */}
+  <div
+    style={{ backgroundImage: `url(${novasolFigma})` }}
+    className="w-full h-72 bg-cover bg-center rounded-t-md"
+  ></div>
+
+  {/* Buttons stacked vertically */}
+  <div className="flex flex-col items-center space-y-3 w-full py-4">
+    <a href="https://www.figma.com/proto/PEZSnKDt63mPmeIKPUEbTB/Din-m%C3%83%C2%A6gler--2-?page-id=63%3A0&node-id=420-23&starting-point-node-id=420%3A23&t=COlUHCgSLO1qCgTY-1" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Demo
+      </button>
+    </a>
+    <a href={NovaDoc} target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Document
+      </button>
+    </a>
+  </div>
+</div>
 
 <div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
   {/* Project Title */}
   <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
-    WordPress App
+    WordPress App- Design and develop
   </h2>
 
   {/* Image section */}
@@ -443,7 +499,7 @@ const Work = () => {
 <div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
   {/* Project Title */}
   <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
-    Glienke Design – Dandomain Website
+    Glienke Design – Redesign Website
   </h2>
 
   {/* Image section */}
@@ -472,33 +528,7 @@ const Work = () => {
 
 
 {/* Card Section */}
-<div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
-  {/* Project Title */}
-  <h2 className="text-l font-bold text-white tracking-wide text-center mb-2
-   mt-4">
-    Travel Agency Redesign
-  </h2>
 
-  {/* Image section */}
-  <div
-    style={{ backgroundImage: `url(${novasolFigma})` }}
-    className="w-full h-72 bg-cover bg-center rounded-t-md"
-  ></div>
-
-  {/* Buttons stacked vertically */}
-  <div className="flex flex-col items-center space-y-3 w-full py-4">
-    <a href="https://www.figma.com/proto/PEZSnKDt63mPmeIKPUEbTB/Din-m%C3%83%C2%A6gler--2-?page-id=63%3A0&node-id=420-23&starting-point-node-id=420%3A23&t=COlUHCgSLO1qCgTY-1" target="_blank">
-      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
-        Demo
-      </button>
-    </a>
-    <a href={NovaDoc} target="_blank">
-      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
-        Document
-      </button>
-    </a>
-  </div>
-</div>
 
 
           

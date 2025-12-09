@@ -92,6 +92,7 @@ const Navbar = () => {
               <a href={cv} target='_blank' className='flex justify-between items-center w-full text-gray-300'>
                 Resume <BsFillPersonLinesFill size={30} />
               </a>
+              
             </li>
             <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#25D366]'>
               <a href='https://wa.me/4542796567' target='_blank' rel='noreferrer' className='flex justify-between items-center w-full text-white'>
