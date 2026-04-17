@@ -69,7 +69,7 @@ const Home = () => {
 
       {/* Role Line */}
       <p className="mt-2 text-base sm:text-lg font-medium text-gray-300 text-center tracking-wide">
-        Maryam Mahta Ebrahimi
+        Mahta Ebrahimi
       </p>
       <p className="mt-2 text-base sm:text-lg font-medium text-gray-300 text-center tracking-wide">
         Front-end Developer &  UI/UX Designer 

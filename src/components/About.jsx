@@ -26,9 +26,9 @@ const About = () => {
             <span className="block sm:hidden">Front-End Developer</span>
             <span className="block sm:hidden">UI/UX Designer</span>
             <span className="hidden sm:inline-flex items-center justify-center gap-4">
-              <span>Front-End Developer</span>
-              <span className="w-8 h-0.5 bg-[#FF9533]"></span>
               <span>UI/UX Designer</span>
+              <span className="w-8 h-0.5 bg-[#FF9533]"></span>
+              <span>Front-End Developer</span>
             </span>
           </p>
         </div>
@@ -42,16 +42,13 @@ const About = () => {
           {/* Under: Bio */}
           <div className="text-justify leading-relaxed text-base sm:text-lg md:text-xl px-2 space-y-6">
             <p>
-    I’m a Front‑End Developer and UI/UX Designer who loves making apps easy, clear, and enjoyable for people.
+    I’m a UI/UX Designer and Front‑End Developer who loves making apps easy, clear, and enjoyable for people.
   </p>
 
   <p>
-    I also focus on DevSecOps, building security into my work from the start, using CI/CD practices, and writing safe code. This way, the apps I create are not just easy to use but also strong and reliable.
+    My work sits at the intersection of design, development, and intelligent automation. I integrate AI-powered logic into my projects, so the products I build don't just look right, they think ahead.
   </p>
 
-  <p>
-   Freelance work and calligraphy sharpened my eye for balance, color, and detail, adding a creative edge to every design.
-  </p>
           </div>
         </div>
       </div>
