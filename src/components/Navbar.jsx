@@ -32,12 +32,13 @@ const Navbar = () => {
           <li className='hover:font-extrabold hover:text-[#FF4f6f]'>
             <Link to='skills' smooth={true} duration={500}>Skills</Link>
           </li>
-          <li className='hover:font-extrabold hover:text-[#FF9533]'>
-            <Link to='frontend' smooth={true} duration={500}>Front-End</Link>
-          </li>
           <li className='hover:font-extrabold hover:text-[#009dae]'>
             <Link to='uiux' smooth={true} duration={500}>UI/UX</Link>
           </li>
+          <li className='hover:font-extrabold hover:text-[#FF9533]'>
+            <Link to='frontend' smooth={true} duration={500}>Front-End</Link>
+          </li>
+          
           {/* <li className='hover:font-extrabold hover:text-[#FF4f6f]'>
             <Link to='calligraphy' smooth={true} duration={500}>Calligraphy</Link>
           </li> */}
@@ -59,12 +60,13 @@ const Navbar = () => {
           <li className='py-6 text-3xl hover:text-[#FF4f6f]'>
             <Link onClick={handleClick} to='skills' smooth={true} duration={500}>Skills</Link>
           </li>
-          <li className='py-6 text-3xl hover:text-[#FF9533]'>
-            <Link onClick={handleClick} to='frontend' smooth={true} duration={500}>Front-End</Link>
-          </li>
           <li className='py-6 text-3xl hover:text-[#009dae]'>
             <Link onClick={handleClick} to='uiux' smooth={true} duration={500}>UI/UX</Link>
           </li>
+          <li className='py-6 text-3xl hover:text-[#FF9533]'>
+            <Link onClick={handleClick} to='frontend' smooth={true} duration={500}>Front-End</Link>
+          </li>
+          
           {/* <li className='py-6 text-3xl hover:text-[#FF4f6f]'>
             <Link onClick={handleClick} to='calligraphy' smooth={true} duration={500}>Calligraphy</Link>
           </li> */}

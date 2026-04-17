@@ -46,6 +46,198 @@ import danskeBank from '../assets/danskeBank.png';
 const Work = () => {
   return (
     <div>
+
+      <div name='work' className='w-full min-h-screen text-gray-300 bg-[#0a192f] pb-16'>
+      <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-[90%] h-full'id="uiux">
+        <div className='pb-8 top-5 sticky flex justify-center'>
+  <p className='text-4xl font-bold border-b-4 border-[#FF9533] text-[#FF9533] text-center'>
+    UI/UX
+  </p>
+  {/* <p className='py-6'>Check out some of creations!</p> */}
+</div>
+
+
+{/* Container */}
+        <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-12'>
+        
+            {/* Grid Item */}
+          <div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
+  {/* Project Title */}
+  <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
+    Selskabslokale – UI/UX Redesign
+  </h2>
+
+  {/* Image section */}
+  <div
+    style={{ backgroundImage: `url(${selskaklocal})` }}
+    className="w-full h-72 bg-cover bg-center rounded-t-md"
+  ></div>
+
+  {/* Buttons stacked vertically */}
+  <div className="flex flex-col items-center space-y-3 w-full py-4">
+    <a href={selskabslokaleDoc} target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Document
+      </button>
+    </a>
+    {/* Uncomment if you want Demo too */}
+    {/* <a href="https://github.com/Rangeland5499/NewsBox" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Demo
+      </button>
+    </a> */}
+  </div>
+</div>
+          <div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
+  {/* Project Title */}
+  <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
+    Dog Sitter app – UI/UX Design
+  </h2>
+
+  {/* Image section */}
+  <div
+    style={{ backgroundImage: `url(${pawpal})` }}
+    className="w-full h-72 bg-cover bg-center rounded-t-md"
+  ></div>
+
+  {/* Buttons stacked vertically */}
+  <div className="flex flex-col items-center space-y-3 w-full py-4">
+    <a href={PawpalDoc} target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Document
+      </button>
+    </a>
+    {/* Uncomment if you want Demo too */}
+    <a href="https://www.figma.com/proto/hr07ubZBbbWwdw2kWrwJGD/Mahta-Ebrahimi?page-id=37%3A23&node-id=368-5100&viewport=-1711%2C344%2C0.19&t=ybD6V9CZArU0y5vi-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=254%3A641&show-proto-sidebar=1" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Demo
+      </button>
+    </a>
+  </div>
+</div>
+<div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
+  {/* Project Title */}
+  <h2 className="text-l font-bold text-white tracking-wide text-center mb-2
+   mt-4">
+    Travel Agency Redesign
+  </h2>
+
+  {/* Image section */}
+  <div
+    style={{ backgroundImage: `url(${novasolFigma})` }}
+    className="w-full h-72 bg-cover bg-center rounded-t-md"
+  ></div>
+
+  {/* Buttons stacked vertically */}
+  <div className="flex flex-col items-center space-y-3 w-full py-4">
+    <a href="https://www.figma.com/proto/PEZSnKDt63mPmeIKPUEbTB/Din-m%C3%83%C2%A6gler--2-?page-id=63%3A0&node-id=420-23&starting-point-node-id=420%3A23&t=COlUHCgSLO1qCgTY-1" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Demo
+      </button>
+    </a>
+    <a href={NovaDoc} target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Document
+      </button>
+    </a>
+  </div>
+</div>
+
+<div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
+  {/* Project Title */}
+  <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
+    WordPress App- Design and develop
+  </h2>
+
+  {/* Image section */}
+  <div
+    style={{ backgroundImage: `url(${wordPress})` }}
+    className="w-full h-72 bg-cover bg-center rounded-t-md"
+  ></div>
+
+  {/* Buttons stacked vertically */}
+  <div className="flex flex-col items-center space-y-3 w-full py-4">
+    <a href="https://soulimous.com/" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Demo
+      </button>
+    </a>
+    {/* Uncomment if you want Code button too */}
+    {/* <a href="https://github.com/your-username/your-repo" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Code
+      </button>
+    </a> */}
+  </div>
+</div>
+
+<div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
+  {/* Project Title */}
+  <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
+    Glienke Design – Redesign Website
+  </h2>
+
+  {/* Image section */}
+  <div
+    style={{ backgroundImage: `url(${GlienkeScreen})` }}
+    className="w-full h-72 bg-cover bg-center rounded-t-md"
+  ></div>
+
+  {/* Buttons stacked vertically */}
+  <div className="flex flex-col items-center space-y-3 w-full py-4">
+    <a href="https://www.glienkedesign.dk/shop/glienke-design-72s1.html" target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Demo
+      </button>
+    </a>
+    {/* Uncomment if you want another button (e.g., Code or Document) */}
+    {/* <a href={Ui2} target="_blank">
+      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
+        Code
+      </button>
+    </a> */}
+  </div>
+</div>
+
+         {/* Project Title outside the section */}
+
+
+{/* Card Section */}
+
+
+
+          
+       
+         
+          
+        
+       
+        </div>
+      </div>
+      {/* <div name='work' className='w-full min-h-screen text-gray-300 bg-[#0a192f] pb-16'>
+  <div id="calligraphy" className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-[90%] h-full">
+  <div className="pb-8 sticky top-5 mt-20" >
+    <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-[#FF9533] text-[#FF9533]">
+      Calligraphy
+    </p>
+    <p className="py-6">A glimpse into my artistic side</p>
+  </div>
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+  {[calligraphy1, calligraphy2, calligraphy3, calligraphy4, calligraphy5, calligraphy6, calligraphy7, calligraphy8, calligraphy9, calligraphy10,calligraphy11,calligraphy12].map((img, index) => (
+    <div key={index} className="aspect-square overflow-hidden rounded-lg shadow-lg">
+      <img
+        src={img}
+        alt={`Calligraphy ${index + 1}`}
+        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+      />
+    </div>
+  ))}
+</div>
+
+</div>
+      </div> */}
+           
+    </div>
     
     <div name='work' className='w-full min-h-screen text-gray-300 bg-[#0a192f] pb-16'>
       <div className='max-w-[1000px] mx-auto p-8 flex flex-col justify-center w-[90%] h-full'id="frontend">
@@ -252,33 +444,32 @@ const Work = () => {
 </div>
 
           
-          <div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
-  {/* Project Title */}
+          {/* <div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
+  
   <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
     Chat Interface – React Js
   </h2>
 
-  {/* Image section */}
+  
   <div
     style={{ backgroundImage: `url(${chat})` }}
     className="w-full h-72 bg-cover bg-center rounded-t-md"
   ></div>
 
-  {/* Buttons stacked vertically */}
+
   <div className="flex flex-col items-center space-y-3 w-full py-4">
-    {/* Uncomment if you want Demo button */}
-    {/* <a href="/" target="_blank">
+    <a href="/" target="_blank">
       <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
         Demo
       </button>
-    </a> */}
+    </a>
     <a href="https://github.com/Mahta-Ebrahimi/chat-interface-main" target="_blank">
       <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
         Code
       </button>
     </a>
   </div>
-</div>
+</div> */}
 
 
 
@@ -372,197 +563,7 @@ const Work = () => {
         
       </div>
     </div>
-    <div name='work' className='w-full min-h-screen text-gray-300 bg-[#0a192f] pb-16'>
-      <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-[90%] h-full'id="uiux">
-        <div className='pb-8 top-5 sticky flex justify-center'>
-  <p className='text-4xl font-bold border-b-4 border-[#FF9533] text-[#FF9533] text-center'>
-    UI/UX
-  </p>
-  {/* <p className='py-6'>Check out some of creations!</p> */}
-</div>
-
-
-{/* Container */}
-        <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-12'>
-        
-            {/* Grid Item */}
-          <div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
-  {/* Project Title */}
-  <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
-    Selskabslokale – UI/UX Redesign
-  </h2>
-
-  {/* Image section */}
-  <div
-    style={{ backgroundImage: `url(${selskaklocal})` }}
-    className="w-full h-72 bg-cover bg-center rounded-t-md"
-  ></div>
-
-  {/* Buttons stacked vertically */}
-  <div className="flex flex-col items-center space-y-3 w-full py-4">
-    <a href={selskabslokaleDoc} target="_blank">
-      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
-        Document
-      </button>
-    </a>
-    {/* Uncomment if you want Demo too */}
-    {/* <a href="https://github.com/Rangeland5499/NewsBox" target="_blank">
-      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
-        Demo
-      </button>
-    </a> */}
-  </div>
-</div>
-          <div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
-  {/* Project Title */}
-  <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
-    Dog Sitter app – UI/UX Design
-  </h2>
-
-  {/* Image section */}
-  <div
-    style={{ backgroundImage: `url(${pawpal})` }}
-    className="w-full h-72 bg-cover bg-center rounded-t-md"
-  ></div>
-
-  {/* Buttons stacked vertically */}
-  <div className="flex flex-col items-center space-y-3 w-full py-4">
-    <a href={PawpalDoc} target="_blank">
-      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
-        Document
-      </button>
-    </a>
-    {/* Uncomment if you want Demo too */}
-    <a href="https://www.figma.com/proto/hr07ubZBbbWwdw2kWrwJGD/Mahta-Ebrahimi?page-id=37%3A23&node-id=368-5100&viewport=-1711%2C344%2C0.19&t=ybD6V9CZArU0y5vi-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=254%3A641&show-proto-sidebar=1" target="_blank">
-      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
-        Demo
-      </button>
-    </a>
-  </div>
-</div>
-<div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
-  {/* Project Title */}
-  <h2 className="text-l font-bold text-white tracking-wide text-center mb-2
-   mt-4">
-    Travel Agency Redesign
-  </h2>
-
-  {/* Image section */}
-  <div
-    style={{ backgroundImage: `url(${novasolFigma})` }}
-    className="w-full h-72 bg-cover bg-center rounded-t-md"
-  ></div>
-
-  {/* Buttons stacked vertically */}
-  <div className="flex flex-col items-center space-y-3 w-full py-4">
-    <a href="https://www.figma.com/proto/PEZSnKDt63mPmeIKPUEbTB/Din-m%C3%83%C2%A6gler--2-?page-id=63%3A0&node-id=420-23&starting-point-node-id=420%3A23&t=COlUHCgSLO1qCgTY-1" target="_blank">
-      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
-        Demo
-      </button>
-    </a>
-    <a href={NovaDoc} target="_blank">
-      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
-        Document
-      </button>
-    </a>
-  </div>
-</div>
-
-<div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
-  {/* Project Title */}
-  <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
-    WordPress App- Design and develop
-  </h2>
-
-  {/* Image section */}
-  <div
-    style={{ backgroundImage: `url(${wordPress})` }}
-    className="w-full h-72 bg-cover bg-center rounded-t-md"
-  ></div>
-
-  {/* Buttons stacked vertically */}
-  <div className="flex flex-col items-center space-y-3 w-full py-4">
-    <a href="https://soulimous.com/" target="_blank">
-      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
-        Demo
-      </button>
-    </a>
-    {/* Uncomment if you want Code button too */}
-    {/* <a href="https://github.com/your-username/your-repo" target="_blank">
-      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
-        Code
-      </button>
-    </a> */}
-  </div>
-</div>
-
-<div className="shadow-m shadow-[#1e3a8a] container rounded-md flex flex-col items-center mx-auto content-div max-w-md bg-[#0f1f4d]">
-  {/* Project Title */}
-  <h2 className="text-l font-bold text-white tracking-wide text-center mb-2 mt-4">
-    Glienke Design – Redesign Website
-  </h2>
-
-  {/* Image section */}
-  <div
-    style={{ backgroundImage: `url(${GlienkeScreen})` }}
-    className="w-full h-72 bg-cover bg-center rounded-t-md"
-  ></div>
-
-  {/* Buttons stacked vertically */}
-  <div className="flex flex-col items-center space-y-3 w-full py-4">
-    <a href="https://www.glienkedesign.dk/shop/glienke-design-72s1.html" target="_blank">
-      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
-        Demo
-      </button>
-    </a>
-    {/* Uncomment if you want another button (e.g., Code or Document) */}
-    {/* <a href={Ui2} target="_blank">
-      <button className="w-40 text-center rounded-lg px-4 py-2 bg-white text-gray-700 font-bold text-base shadow-md">
-        Code
-      </button>
-    </a> */}
-  </div>
-</div>
-
-         {/* Project Title outside the section */}
-
-
-{/* Card Section */}
-
-
-
-          
-       
-         
-          
-        
-       
-        </div>
-      </div>
-      {/* <div name='work' className='w-full min-h-screen text-gray-300 bg-[#0a192f] pb-16'>
-  <div id="calligraphy" className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-[90%] h-full">
-  <div className="pb-8 sticky top-5 mt-20" >
-    <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-[#FF9533] text-[#FF9533]">
-      Calligraphy
-    </p>
-    <p className="py-6">A glimpse into my artistic side</p>
-  </div>
-<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-  {[calligraphy1, calligraphy2, calligraphy3, calligraphy4, calligraphy5, calligraphy6, calligraphy7, calligraphy8, calligraphy9, calligraphy10,calligraphy11,calligraphy12].map((img, index) => (
-    <div key={index} className="aspect-square overflow-hidden rounded-lg shadow-lg">
-      <img
-        src={img}
-        alt={`Calligraphy ${index + 1}`}
-        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-      />
-    </div>
-  ))}
-</div>
-
-</div>
-      </div> */}
-           
-    </div>
+    
     </div>
   );
 };
