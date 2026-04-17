@@ -63,7 +63,7 @@ const Home = () => {
             borderRadius: "5px",
           }}
         >
-          mahta
+          Mahta
         </h1>
       </div>
 
