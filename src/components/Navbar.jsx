@@ -76,12 +76,12 @@ const Navbar = () => {
         <div className='hidden lg:flex fixed flex-col top-[35%] left-0 z-40'>
           <ul>
             <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
-              <a href='https://www.linkedin.com/in/maryam-mahta-ebrahimi-b3a7bb87/' target='_blank' className='flex justify-between items-center w-full text-gray-300'>
+              <a href='https://www.linkedin.com/in/maryam-mahta-ebrahimi-b3a7bb87/' target='_blank' rel="noreferrer" className='flex justify-between items-center w-full text-gray-300'>
                 Linkedin <FaLinkedin size={30} />
               </a>
             </li>
             <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
-              <a href='https://github.com/Mahta-Ebrahimi' target='_blank' className='flex justify-between items-center w-full text-gray-300'>
+              <a href='https://github.com/Mahta-Ebrahimi' target='_blank' rel="noreferrer" className='flex justify-between items-center w-full text-gray-300'>
                 Github <FaGithub size={30} />
               </a>
             </li>
@@ -91,7 +91,7 @@ const Navbar = () => {
               </a>
             </li>
             <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
-              <a href={cv} target='_blank' className='flex justify-between items-center w-full text-gray-300'>
+              <a href={cv} target='_blank' rel="noreferrer" className='flex justify-between items-center w-full text-gray-300'>
                 Resume <BsFillPersonLinesFill size={30} />
               </a>
               
@@ -102,7 +102,7 @@ const Navbar = () => {
               </a>
             </li>
             <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] bg-[#c13584]'>
-              <a href='https://www.instagram.com/mahta.creative/' target='_blank' className='flex justify-between items-center w-full text-gray-300'>
+              <a href='https://www.instagram.com/mahta.creative/' target='_blank'rel="noreferrer" className='flex justify-between items-center w-full text-gray-300'>
                 Instagram <FaInstagram size={30} />
               </a>
             </li>
