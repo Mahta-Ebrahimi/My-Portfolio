@@ -3,11 +3,12 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 @layer base {
     body {
-        @apply font-[Raleway];
-        
+        font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+        @apply bg-black text-gray-100;
     }
     li {
         @apply px-4;
@@ -17,6 +18,88 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Optimize canvas for smooth scrolling */
+canvas {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Prevent layout shifts */
+#home canvas, #skills canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Seamless section blending — no borders, just ambient shadow */
+#about, #skills, #work, #footer {
+  position: relative;
+}
+#about::after, #skills::after, #work::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 160px;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
+  pointer-events: none;
+  z-index: 2;
+}
+/* Subtle green glow at the top of each section — feels separated but no hard border */
+#about::before, #skills::before, #work::before, #footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: radial-gradient(ellipse 35% 100% at 50% 0%, rgba(0, 229, 160, 0.03) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+#about > *, #skills > *, #work > *, #footer > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes scrollShot {
+  0%         { transform: translateY(0); }
+  45%, 55%   { transform: translateY(-58%); }
+  100%       { transform: translateY(0); }
+}
+/* About section responsive float */
+.about-image {
+  width: 100%;
+  float: none;
+  margin-right: 0;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 768px) {
+  .about-image {
+    float: left;
+    width: 280px;
+    margin-right: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+.drop-cap {
+  float: left;
+  font-weight: 700;
+  color: #00E5A0;
+  line-height: 0.82;
+  margin-right: 4px;
+  margin-top: 0;
+  font-size: 3.5rem;
+}
+@media (min-width: 768px) {
+  .drop-cap {
+    font-size: 5.25rem;
+  }
+}
+
 .content-div {
     background-repeat: no-repeat;
     background-size: cover;

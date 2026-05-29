@@ -1,56 +1,75 @@
 import React from 'react';
-import myImage from '../assets/myImage.jpg'; // <-- replace with your actual image path
+import myImage from '../assets/myImage.jpg';
 
 const About = () => {
   return (
     <div
       name="about"
-      className="w-full min-h-screen bg-[#0a192f] text-gray-300 pb-16 sm:pb-16"
+      id="about"
+      className="w-full bg-black text-gray-300 py-12 md:py-20 px-6"
     >
-      <div className="flex flex-col justify-start items-center w-full min-h-screen pt-4 sm:pt-8 px-8 sm:px-6 md:px-8">
-         <div className="flex justify-center">
-            <img
-              src={myImage}
-              alt="Profile"
-              className="rounded-lg shadow-lg w-2/3 sm:w-1/2 md:w-1/3 object-cover"
-            />
-          </div>
-        {/* Section Title */}
-        <div className="max-w-[1000px] w-full flex flex-col items-center">
-          {/* <p className="text-4xl font-bold inline border-b-4 border-[#FF9533] text-[#FF9533] mb-4">
-            About
+      <div className="max-w-[860px] mx-auto">
+
+        {/* Image — stacks on mobile, floats left on desktop */}
+        <div className="about-image border border-[#2A2A2A]">
+          <img
+            src={myImage}
+            alt="Mahta Ebrahimi"
+            className="w-full block object-cover grayscale"
+          />
+        </div>
+
+        {/* Bio text */}
+        <div className="leading-relaxed text-[#9CA3AF] text-sm sm:text-base space-y-5 text-justify">
+
+          {/* Drop cap first paragraph */}
+          <p>
+            <span className="drop-cap">M</span>
+            ahta Ebrahimi is a UI/UX Designer, Front-End Developer, and
+            AI-integrated workflow designer based in Copenhagen, Denmark.
+            I sit at the intersection of design, code, and intelligent automation, 
+            building products that don't just look right, they work smart.
+          </p>
+
+          <p>
+            I actively use AI tools across every stage of my work, from
+            accelerating research and generating design iterations to writing
+            cleaner code faster. 
+            {/* Beyond using AI, I design the workflows behind
+            it: mapping automation logic, building AI-assisted user flows, and
+            creating interfaces that make AI capabilities accessible and
+            intuitive for real users. */}
+          </p>
+
+          <p>
+            I studied front-end development formally and hold three certified
+            UI/UX design qualifications. That combination lets me take a project
+            from the first sketch to a shipped, working product entirely on my
+            own, research, design, automation logic, and production code.
+          </p>
+
+          <p>
+            You can explore some of my projects here. Each one follows the same principle:<br/> understand the user,
+             design with intention, build cleanly, and let AI handle what it does best.
+          </p>
+{/* 
+          <p>
+            As a freelancer I take projects from early discovery to polished
+            delivery, leading UX, writing production code, or designing the
+            AI automation layer that connects them. That end-to-end range means
+            faster delivery and fewer gaps between idea and product.
           </p> */}
 
-          {/* Role Title */}
-          <p className="text-2xl sm:text-3xl font-bold text-[#FF9533] text-center leading-snug pt-8">
-            <span className="block sm:hidden">Front-End Developer</span>
-            <span className="block sm:hidden">UI/UX Designer</span>
-            <span className="hidden sm:inline-flex items-center justify-center gap-4">
-              <span>UI/UX Designer</span>
-              <span className="w-8 h-0.5 bg-[#FF9533]"></span>
-              <span>Front-End Developer</span>
-            </span>
-          </p>
         </div>
 
-        {/* Image on Top + Text Underneath */}
-        <div className="max-w-[800px] w-full flex flex-col items-center mt-8 gap-6">
-          
-          {/* Top: Image */}
-         
+        {/* Clear float */}
+        <div style={{ clear: 'both' }} />
 
-          {/* Under: Bio */}
-          <div className="text-justify leading-relaxed text-base sm:text-lg md:text-xl px-2 space-y-6">
-            <p>
-    I’m a UI/UX Designer and Front‑End Developer who loves making apps easy, clear, and enjoyable for people.
-  </p>
+        {/* Role line */}
+        <p className="mt-8 text-xs sm:text-sm font-bold tracking-[0.25em] uppercase text-[#444]">
+          UI/UX Designer &nbsp;·&nbsp; Front-End Developer &nbsp;·&nbsp; AI Workflow Designer &nbsp;·&nbsp; Copenhagen
+        </p>
 
-  <p>
-    My work sits at the intersection of design, development, and intelligent automation. I integrate AI-powered logic into my projects, so the products I build don't just look right, they think ahead.
-  </p>
-
-          </div>
-        </div>
       </div>
     </div>
   );

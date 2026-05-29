@@ -11,12 +11,29 @@ import { BsFillPersonLinesFill } from 'react-icons/bs';
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#060f1c] text-gray-100 py-20 px-6">
-      <p className="text-[#FF9533] font-semibold text-2xl text-center mb-12">Contact</p>
-
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-8 justify-items-center text-base sm:text-lg mb-12">
+    <div 
+    name="footer"
+    id="footer"
+    className="w-full bg-black text-gray-100 py-12 md:py-20 px-4 sm:px-6">
+      <div className="max-w-[640px] mx-auto text-center mb-14">
+        <p className="text-[#FF9533] font-semibold text-2xl mb-4">Let's Work Together</p>
+        <p className="text-[#9CA3AF] text-base leading-relaxed mb-2">
+          I'm currently available for new projects and would love to hear what you're building.
+          Whether it's a product redesign, a new digital experience, or a front-end build from scratch,
+          reach out with as much detail as you can about the scope, timeline, and budget,
+          and let's find out if we're a good fit.
+        </p>
         <a
-          href="https://www.linkedin.com/in/maryam-mahta-ebrahimi-b3a7bb87/"
+          href="mailto:mahta.ir@gmail.com"
+          className="inline-block mt-6 px-8 py-3 text-sm font-bold border border-[#FF9533] text-[#FF9533] hover:bg-[#FF9533] hover:text-black transition-colors tracking-wider"
+        >
+          Get In Touch
+        </a>
+      </div>
+
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 justify-items-center text-sm sm:text-base mb-10">
+        <a
+          href="https://www.linkedin.com/in/mahta-ebrahimi-b3a7bb87/"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 hover:text-[#009dae]"
@@ -73,7 +90,7 @@ const Footer = () => {
       <p className="text-center text-sm text-gray-500">
         © {new Date().getFullYear()} Mahta Ebrahimi. All rights reserved.
       </p>
-    </footer>
+    </div>
   );
 };
 
