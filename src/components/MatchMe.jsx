@@ -171,10 +171,10 @@ export default function MatchMe() {
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>01 — Overview</p>
             <h1 className="text-4xl font-bold text-white mb-2 leading-tight">MatchMe</h1>
             <p className="text-xl text-[#6B7280] font-light mb-6">Find any helper. Matched by AI.</p>
-            <div className="rounded-2xl overflow-hidden mb-8 bg-[#111]">
+            <div className="rounded-2xl overflow-hidden mb-8 bg-[#F0F0F0] p-3">
               <img src={MatchMeHIFI} alt="MatchMe App" className="w-full object-cover" />
             </div>
-            <p className="text-[#9CA3AF] leading-7 mb-8 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               MatchMe is a universal AI-powered service matchmaking app. Users can find babysitters, tutors, fitness trainers, cleaners, handymen, pet sitters, elderly care helpers, and more — all matched by AI based on personality, availability, location, and need. Designed end-to-end in Figma from research to hi-fi prototype.
             </p>
             <div className="grid grid-cols-3 gap-4">
@@ -195,10 +195,10 @@ export default function MatchMe() {
           <section id="problem" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>02 — The Problem &amp; Solution</p>
             <h2 className="text-2xl font-bold text-white mb-6 leading-snug">Finding the Right Helper Shouldn't Require Five Different Apps</h2>
-            <p className="text-[#9CA3AF] leading-7 mb-6 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-6 text-lg">
               People need different kinds of help at different times — a babysitter this week, a personal trainer next month, a handyman on Saturday. Existing platforms are siloed by category, rely on manual filters, and offer zero intelligence about whether a helper is actually a good fit for <em>you</em>.
             </p>
-            <p className="text-[#9CA3AF] leading-7 mb-8 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               MatchMe solves this with a single AI-powered platform that learns what each user needs through a short onboarding quiz, then surfaces the right helpers across any service type — scored for compatibility, not just proximity.
             </p>
             <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#374151] mb-3">AI Features</p>
@@ -207,8 +207,8 @@ export default function MatchMe() {
                 <div key={title} className="bg-[#111] rounded-xl p-5 flex gap-4 items-start border border-[#222]">
                   <span className="text-2xl shrink-0 mt-0.5">{icon}</span>
                   <div>
-                    <p className="text-white text-sm font-semibold mb-1">{title}</p>
-                    <p className="text-[#6B7280] text-xs leading-relaxed">{desc}</p>
+                    <p className="text-white text-[15px] font-semibold mb-1">{title}</p>
+                    <p className="text-[#6B7280] text-base leading-relaxed">{desc}</p>
                   </div>
                 </div>
               ))}
@@ -219,8 +219,8 @@ export default function MatchMe() {
                 <div key={title} className="bg-[#111] rounded-xl p-5 flex gap-4 items-start border border-[#222]">
                   <span className="text-2xl shrink-0 mt-0.5">{icon}</span>
                   <div>
-                    <p className="text-white text-sm font-semibold mb-1">{title}</p>
-                    <p className="text-[#6B7280] text-xs leading-relaxed">{desc}</p>
+                    <p className="text-white text-[15px] font-semibold mb-1">{title}</p>
+                    <p className="text-[#6B7280] text-base leading-relaxed">{desc}</p>
                   </div>
                 </div>
               ))}
@@ -240,14 +240,14 @@ export default function MatchMe() {
               {PERSONAS.map(({ name, age, role, goals, pain }) => (
                 <div key={name} className="bg-[#111] rounded-xl p-6 border border-[#222]">
                   <div className="mb-5">
-                    <p className="text-white font-bold text-sm">{name}, {age}</p>
-                    <p className="text-xs mt-0.5" style={{ color: ACCENT }}>{role}</p>
+                    <p className="text-white font-bold text-[15px]">{name}, {age}</p>
+                    <p className="text-sm mt-0.5" style={{ color: ACCENT }}>{role}</p>
                   </div>
                   <div className="mb-4">
                     <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#374151] mb-2">Goals</p>
                     <ul className="space-y-1.5">
                       {goals.map(g => (
-                        <li key={g} className="text-xs text-[#9CA3AF] flex gap-2 leading-tight">
+                        <li key={g} className="text-base text-[#9CA3AF] flex gap-2 leading-snug">
                           <span style={{ color: ACCENT }} className="shrink-0">+</span>{g}
                         </li>
                       ))}
@@ -257,7 +257,7 @@ export default function MatchMe() {
                     <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#374151] mb-2">Pain Points</p>
                     <ul className="space-y-1.5">
                       {pain.map(p => (
-                        <li key={p} className="text-xs text-[#9CA3AF] flex gap-2 leading-tight">
+                        <li key={p} className="text-base text-[#9CA3AF] flex gap-2 leading-snug">
                           <span className="text-red-400 shrink-0">−</span>{p}
                         </li>
                       ))}
@@ -268,7 +268,7 @@ export default function MatchMe() {
             </div>
             <div className="bg-[#080808] border border-[#1A1A1A] rounded-xl p-6">
               <p className="text-xs font-bold uppercase tracking-[0.15em] mb-2" style={{ color: ACCENT }}>Key Design Insight</p>
-              <p className="text-[#D1D5DB] text-sm leading-relaxed">
+              <p className="text-[#D1D5DB] text-base leading-relaxed">
                 Both personas don't want to search — they want to be matched. The AI layer has to remove the effort of filtering entirely, replacing it with a confident, explained recommendation the user can act on immediately.
               </p>
             </div>
@@ -278,7 +278,7 @@ export default function MatchMe() {
           <section id="visual" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>04 — Design System &amp; Component Library</p>
             <h2 className="text-2xl font-bold text-white mb-4">AI-First Design Principles</h2>
-            <p className="text-[#9CA3AF] leading-7 mb-8 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               The design system was built around one constraint: AI decisions must be surfaced, not hidden. Every component that presents a recommendation includes the reasoning behind it — score, matched criteria, and why this helper fits this user specifically.
             </p>
             <div className="grid grid-cols-2 gap-3 mb-6">
@@ -286,8 +286,8 @@ export default function MatchMe() {
                 <div key={title} className="flex items-start gap-4 bg-[#111] rounded-xl p-4 border border-[#222]">
                   <span className="text-lg shrink-0 mt-0.5" style={{ color: ACCENT }}>{icon}</span>
                   <div>
-                    <p className="text-white text-sm font-semibold mb-1">{title}</p>
-                    <p className="text-[#6B7280] text-xs leading-relaxed">{desc}</p>
+                    <p className="text-white text-[15px] font-semibold mb-1">{title}</p>
+                    <p className="text-[#6B7280] text-base leading-relaxed">{desc}</p>
                   </div>
                 </div>
               ))}
@@ -306,7 +306,7 @@ export default function MatchMe() {
           <section id="wireframes" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>05 — Wireframes</p>
             <h2 className="text-2xl font-bold text-white mb-4">Low-Fidelity Screens</h2>
-            <p className="text-[#9CA3AF] leading-7 mb-6 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-6 text-lg">
               Wireframes mapped the AI-assisted user journey before any visual design. Key flows: AI onboarding quiz, match feed with scores, helper profile with AI summary, booking and calendar, in-app messaging with conversation assistant, and payment.
             </p>
             <div className="bg-[#111] rounded-xl p-8 flex flex-col items-center justify-center text-center border border-[#222]" style={{ minHeight: '200px' }}>
@@ -318,15 +318,15 @@ export default function MatchMe() {
           <section id="hifi" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>05 — Hi-Fi Design</p>
             <h2 className="text-2xl font-bold text-white mb-4">Final Screens &amp; Prototype</h2>
-            <p className="text-[#9CA3AF] leading-7 mb-6 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-6 text-lg">
               High-fidelity screens show the full AI-powered flow: the onboarding quiz that builds a user profile, the match feed with AI best-fit scores and reasoning, helper profiles with AI-generated summaries, booking with calendar availability, in-chat AI conversation prompts, and in-app payment.
             </p>
-            <div className="bg-[#111] rounded-xl p-8 flex flex-col items-center justify-center text-center mb-8 border border-[#222]" style={{ minHeight: '200px' }}>
+            <div className="bg-[#F5F5F5] rounded-xl p-4 flex flex-col items-center justify-center text-center mb-8 border border-[#E0E0E0]" style={{ minHeight: '200px' }}>
               <img src={MatchMeHIFI} alt="MatchMe Hi-Fi Design" className="w-full object-cover" />
             </div>
             <div className="border p-8 text-center" style={{ background: '#2D0A1A', borderColor: `${ACCENT}25` }}>
               <p className="text-xs font-mono tracking-[0.2em] uppercase mb-2" style={{ color: ACCENT }}>Try MatchMe in Figma</p>
-              <p className="text-[#6B7280] text-sm mb-6 leading-relaxed">Full clickable prototype — AI onboarding quiz, match feed with best-fit scores, booking, and messaging</p>
+              <p className="text-[#6B7280] text-base mb-6 leading-relaxed">Full clickable prototype — AI onboarding quiz, match feed with best-fit scores, booking, and messaging</p>
               <a
                 href="https://www.figma.com/proto/cGnfgwa8uCDZeKk6yCyURy/Match-Me?node-id=1-2208&viewport=1060%2C-1165%2C0.19&t=xOfO6RXWl1PniIrH-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2208&page-id=0%3A1&show-proto-sidebar=1"
                 target="_blank"
@@ -347,8 +347,8 @@ export default function MatchMe() {
               {LEARNINGS.map(({ num, title, desc }) => (
                 <div key={num} className="bg-[#111] rounded-xl p-6 border border-[#222]">
                   <p className="text-4xl font-bold text-[#374151]/50 font-mono mb-4 leading-none">{num}</p>
-                  <p className="text-white font-semibold text-sm mb-3 leading-snug">{title}</p>
-                  <p className="text-[#6B7280] text-xs leading-relaxed">{desc}</p>
+                  <p className="text-white font-semibold text-[15px] mb-3 leading-snug">{title}</p>
+                  <p className="text-[#6B7280] text-base leading-relaxed">{desc}</p>
                 </div>
               ))}
             </div>

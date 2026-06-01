@@ -169,10 +169,10 @@ export default function SecureFlow() {
           <section id="problem" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>02 — The Problem &amp; Solution</p>
             <h2 className="text-2xl font-bold text-white mb-6 leading-snug">AI can handle the threats. The gap is who's accountable for the call.</h2>
-            <p className="text-[#9CA3AF] leading-7 mb-6 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-6 text-lg">
               Security analysts handle hundreds of AI-generated alerts every shift. The core tension: AI can detect and respond to threats autonomously, but organizations require human accountability before any report reaches leadership.
             </p>
-            <p className="text-[#9CA3AF] leading-7 mb-8 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               DetectAI Security is an AI security oversight platform designed for Level 3 automation — where AI detects threats and responds autonomously, and analysts verify decisions after the fact rather than approving them upfront. The result is full-speed AI automation with preserved human accountability.
             </p>
             <div className="grid grid-cols-3 gap-4">
@@ -189,10 +189,10 @@ export default function SecureFlow() {
           <section id="problem" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>02 — The Problem &amp; Solution</p>
             <h2 className="text-2xl font-bold text-white mb-6 leading-snug">AI can handle the threats. The gap is who's accountable for the call.</h2>
-            <p className="text-[#9CA3AF] leading-7 mb-6 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-6 text-lg">
               Security analysts handle hundreds of AI-generated alerts every shift. The core tension: AI can detect and respond to threats autonomously, but organizations require human accountability before any report reaches leadership.
             </p>
-            <p className="text-[#9CA3AF] leading-7 mb-8 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               Existing tools sit at the extremes. Full automation moves fast but leaves no one accountable. Manual approval loops preserve accountability but collapse under alert volume, forcing analysts to rubber-stamp decisions they haven't genuinely reviewed. DetectAI Security operates at <strong className="text-white">Level 3</strong> — AI acts first, humans verify after, and every certified report has an analyst's name attached.
             </p>
 
@@ -202,7 +202,7 @@ export default function SecureFlow() {
                 <p className="text-xs uppercase tracking-[0.15em] text-red-400 mb-3 font-bold">The Broken Extremes</p>
                 <ul className="space-y-2">
                   {['Full automation — fast, zero accountability', 'Manual approval — accountable, completely unscalable', 'Alert fatigue — 200+ actions per shift, no triage logic', 'No decision trail — AI acts, no one knows why'].map(p => (
-                    <li key={p} className="text-xs text-[#9CA3AF] flex gap-2 leading-tight">
+                    <li key={p} className="text-base text-[#9CA3AF] flex gap-2 leading-snug">
                       <span className="text-red-400 shrink-0 mt-0.5">−</span>{p}
                     </li>
                   ))}
@@ -212,7 +212,7 @@ export default function SecureFlow() {
                 <p className="text-xs uppercase tracking-[0.15em] mb-3 font-bold" style={{ color: ACCENT }}>DetectAI Security's Level 3</p>
                 <ul className="space-y-2">
                   {['AI detects, isolates, reports — autonomously', 'Full decision trail surfaced for fast review', 'Analysts certify, not approve — minutes not hours', 'Named attribution on every certified output'].map(p => (
-                    <li key={p} className="text-xs text-[#9CA3AF] flex gap-2 leading-tight">
+                    <li key={p} className="text-base text-[#9CA3AF] flex gap-2 leading-snug">
                       <span className="shrink-0 mt-0.5" style={{ color: ACCENT }}>+</span>{p}
                     </li>
                   ))}
@@ -225,8 +225,8 @@ export default function SecureFlow() {
                 <div key={title} className="bg-[#111] rounded-xl p-5 flex gap-4 items-start border border-[#222]">
                   <span className="text-2xl shrink-0 mt-0.5">{icon}</span>
                   <div>
-                    <p className="text-white text-sm font-semibold mb-1">{title}</p>
-                    <p className="text-[#6B7280] text-xs leading-relaxed">{desc}</p>
+                    <p className="text-white text-[15px] font-semibold mb-1">{title}</p>
+                    <p className="text-[#6B7280] text-base leading-relaxed">{desc}</p>
                   </div>
                 </div>
               ))}
@@ -241,14 +241,14 @@ export default function SecureFlow() {
               {PERSONAS.map(({ name, role, goals, pain }) => (
                 <div key={name} className="bg-[#111] rounded-xl p-6 border border-[#222]">
                   <div className="mb-5">
-                    <p className="text-white font-bold text-sm">{name}</p>
-                    <p className="text-xs mt-0.5" style={{ color: ACCENT }}>{role}</p>
+                    <p className="text-white font-bold text-[15px]">{name}</p>
+                    <p className="text-sm mt-0.5" style={{ color: ACCENT }}>{role}</p>
                   </div>
                   <div className="mb-4">
                     <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#374151] mb-2">Goals</p>
                     <ul className="space-y-1.5">
                       {goals.map(g => (
-                        <li key={g} className="text-xs text-[#9CA3AF] flex gap-2 leading-tight">
+                        <li key={g} className="text-base text-[#9CA3AF] flex gap-2 leading-snug">
                           <span className="shrink-0" style={{ color: ACCENT }}>+</span>{g}
                         </li>
                       ))}
@@ -258,7 +258,7 @@ export default function SecureFlow() {
                     <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#374151] mb-2">Pain Points</p>
                     <ul className="space-y-1.5">
                       {pain.map(p => (
-                        <li key={p} className="text-xs text-[#9CA3AF] flex gap-2 leading-tight">
+                        <li key={p} className="text-base text-[#9CA3AF] flex gap-2 leading-snug">
                           <span className="text-red-400 shrink-0">−</span>{p}
                         </li>
                       ))}
@@ -269,7 +269,7 @@ export default function SecureFlow() {
             </div>
             <div className="bg-[#080808] border border-[#1A1A1A] rounded-xl p-6">
               <p className="text-xs font-bold uppercase tracking-[0.15em] mb-2" style={{ color: ACCENT }}>Core Design Tension</p>
-              <p className="text-[#D1D5DB] text-sm leading-relaxed">
+              <p className="text-[#D1D5DB] text-base leading-relaxed">
                 Both users need the same thing from opposite directions. The analyst needs AI to handle volume so they can focus on judgment. The CISO needs proof that judgment was applied before anything gets certified. The design had to serve both without compromise.
               </p>
             </div>
@@ -279,7 +279,7 @@ export default function SecureFlow() {
           <section id="visual" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>04 — Visual Direction</p>
             <h2 className="text-2xl font-bold text-white mb-4">Designed for high-stakes, high-speed environments</h2>
-            <p className="text-[#9CA3AF] leading-7 mb-8 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               Security operations centers are dark, dense, and fast-moving. The interface needed to feel native to that environment — not a consumer product that was adapted. Deep blacks, a tight typographic system, and a strict color hierarchy were non-negotiable.
             </p>
             <div className="grid grid-cols-2 gap-3 mb-6">
@@ -287,8 +287,8 @@ export default function SecureFlow() {
                 <div key={title} className="flex items-start gap-4 bg-[#111] rounded-xl p-4 border border-[#222]">
                   <span className="text-lg shrink-0 mt-0.5" style={{ color: ACCENT }}>{icon}</span>
                   <div>
-                    <p className="text-white text-sm font-semibold mb-1">{title}</p>
-                    <p className="text-[#6B7280] text-xs leading-relaxed">{desc}</p>
+                    <p className="text-white text-[15px] font-semibold mb-1">{title}</p>
+                    <p className="text-[#6B7280] text-base leading-relaxed">{desc}</p>
                   </div>
                 </div>
               ))}
@@ -334,11 +334,11 @@ export default function SecureFlow() {
           <section id="wireframes" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>05 — Wireframes</p>
             <h2 className="text-2xl font-bold text-white mb-4">Low-Fidelity Screens</h2>
-            <p className="text-[#9CA3AF] leading-7 mb-6 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-6 text-lg">
               Wireframes mapped the full analyst workflow before any visual styling. The priority was information hierarchy — what does an analyst need to see the moment they open a flagged alert, and in what order does the AI's decision trail need to be surfaced?
             </p>
 
-            <div className="border border-[#1A1A1A] overflow-hidden mb-6 bg-[#F5F5F5]">
+            <div className="border border-[#E0E0E0] overflow-hidden mb-6 bg-[#F5F5F5] p-3">
               <img
                 src={lofisecureflow}
                 alt="DetectAI Security Low-Fidelity Wireframes"
@@ -357,10 +357,10 @@ export default function SecureFlow() {
           <section id="hifi" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>06 — Hi-Fi Design</p>
             <h2 className="text-2xl font-bold text-white mb-4">Final Screens &amp; Prototype</h2>
-            <p className="text-[#9CA3AF] leading-7 mb-6 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-6 text-lg">
               High-fidelity screens are in progress — applying the full dark design system, semantic color hierarchy, and interactive states across all analyst workflows.
             </p>
-             <div className="border border-[#1A1A1A] overflow-hidden mb-6 bg-[#F5F5F5]">
+             <div className="border border-[#E0E0E0] overflow-hidden mb-6 bg-[#F5F5F5] p-3">
               <img
                 src={HIFIDetectAI}
                 alt="DetectAI Security High-Fidelity Screens"
@@ -369,7 +369,7 @@ export default function SecureFlow() {
             </div>
             <div className="border p-8 text-center" style={{ background: '#071619', borderColor: ACCENT + '25' }}>
               <p className="text-xs font-mono tracking-[0.2em] uppercase mb-2" style={{ color: ACCENT }}>Try DetectAI Security in Figma</p>
-              <p className="text-[#6B7280] text-sm mb-6 leading-relaxed">Full clickable prototype — dashboard, alert detail, AI decision trail, and analyst certification flow</p>
+              <p className="text-[#6B7280] text-base mb-6 leading-relaxed">Full clickable prototype — dashboard, alert detail, AI decision trail, and analyst certification flow</p>
               <a
                 href="https://www.figma.com/proto/x99rmVrbCpOXjIsGERz6r8/Detect-AI-Security?node-id=119-2928&viewport=-1132%2C-2663%2C0.47&t=KftzYpuQktPqZlFd-1&scaling=scale-down&content-scaling=fixed&page-id=15%3A11"
                 target="_blank"
@@ -390,8 +390,8 @@ export default function SecureFlow() {
               {LEARNINGS.map(({ num, title, desc }) => (
                 <div key={num} className="bg-[#111] rounded-xl p-6 border border-[#222]">
                   <p className="text-4xl font-bold text-[#374151]/50 font-mono mb-4 leading-none">{num}</p>
-                  <p className="text-white font-semibold text-sm mb-3 leading-snug">{title}</p>
-                  <p className="text-[#6B7280] text-xs leading-relaxed">{desc}</p>
+                  <p className="text-white font-semibold text-[15px] mb-3 leading-snug">{title}</p>
+                  <p className="text-[#6B7280] text-base leading-relaxed">{desc}</p>
                 </div>
               ))}
             </div>

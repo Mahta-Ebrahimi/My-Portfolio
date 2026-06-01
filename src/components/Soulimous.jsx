@@ -119,10 +119,10 @@ export default function Soulimous() {
           <p className="text-xs font-bold tracking-[0.25em] uppercase mb-2" style={{ color: ACCENT }}>01 — Overview</p>
           <h1 className="text-4xl font-bold text-white mb-2">Soulimous</h1>
           <p className="text-[#6B7280] text-sm mb-6">WordPress Design & Development · Artist Website</p>
-          <div className="w-full overflow-hidden border border-[#1A1A1A] mb-6">
+          <div className="w-full overflow-hidden border border-[#E0E0E0] mb-6 bg-[#F5F5F5] p-3">
             <img src={wordPress} alt="Soulimous" className="w-full h-auto object-cover" />
           </div>
-          <p className="text-[#9CA3AF] leading-relaxed">
+          <p className="text-[#9CA3AF] leading-relaxed text-lg">
             A complete WordPress website designed and developed for Soulimous, an artist.
             The project focused on creating a visual online presence that reflects the artist's
             identity — showcasing their work, personality, and story through a clean,
@@ -160,7 +160,7 @@ export default function Soulimous() {
                 <span className="font-mono text-xs mt-0.5 shrink-0" style={{ color: ACCENT }}>
                   {String(i + 1).padStart(2, '0')}
                 </span>
-                <span className="text-[#9CA3AF] text-sm">{f}</span>
+                <span className="text-[#9CA3AF] text-base">{f}</span>
               </li>
             ))}
           </ul>

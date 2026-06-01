@@ -181,11 +181,11 @@ export default function Portfolio() {
             <h1 className="text-4xl font-bold text-white mb-2 leading-tight">My Portfolio</h1>
             <p className="text-xl text-[#6B7280] font-light mb-6">Designed in Figma. Built in React.</p>
 
-            <div className="overflow-hidden border border-[#1A1A1A] mb-8 rounded-lg">
+            <div className="overflow-hidden border border-[#E0E0E0] mb-8 rounded-lg bg-[#F5F5F5] p-3">
               <img src={portfolio1} alt="Portfolio Screenshot" className="w-full object-cover" />
             </div>
 
-            <p className="text-[#9CA3AF] leading-7 mb-8 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               This portfolio is the one project where I owned every decision — from the first wireframe
               in Figma to the final deployed component in React. It is both a design artifact and a
               working codebase, and the constraints of each discipline directly shaped the other.
@@ -209,7 +209,7 @@ export default function Portfolio() {
           <section id="design" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>02 — Design Process</p>
             <h2 className="text-2xl font-bold text-white mb-4">UI/UX Thinking</h2>
-            <p className="text-[#9CA3AF] leading-7 mb-8 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               The design started with a clear audience problem: a portfolio needs to speak to two very
               different readers — a designer and a developer — without losing either. The solution was
               an explicit filter system and per-project case study pages that can go as deep as needed.
@@ -219,8 +219,8 @@ export default function Portfolio() {
               {DESIGN_DECISIONS.map(({ icon, title, desc }) => (
                 <div key={title} className="bg-[#111] rounded-xl p-5 border border-[#222]">
                   <span className="text-lg mb-3 block" style={{ color: ACCENT }}>{icon}</span>
-                  <p className="text-white text-sm font-semibold mb-2">{title}</p>
-                  <p className="text-[#6B7280] text-xs leading-relaxed">{desc}</p>
+                  <p className="text-white text-[15px] font-semibold mb-2">{title}</p>
+                  <p className="text-[#6B7280] text-base leading-relaxed">{desc}</p>
                 </div>
               ))}
             </div>
@@ -240,7 +240,7 @@ export default function Portfolio() {
           <section id="frontend" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>03 — Frontend Build</p>
             <h2 className="text-2xl font-bold text-white mb-4">React Architecture</h2>
-            <p className="text-[#9CA3AF] leading-7 mb-8 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               The codebase is a single-page React application with client-side routing. Each project
               detail page is an independent component — same layout shell, different content and accent
               color — keeping code DRY while allowing complete per-project customization.
@@ -254,7 +254,7 @@ export default function Portfolio() {
                   <div key={name} className="bg-[#0D0D0D] border border-[#1A1A1A] px-4 py-3 flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0" style={{ background: ACCENT }} />
                     <div>
-                      <p className="text-white text-[12px] font-semibold">{name}</p>
+                      <p className="text-white text-sm font-semibold">{name}</p>
                       <p className="text-[#4B5563] text-xs leading-relaxed mt-0.5">{note}</p>
                     </div>
                   </div>
@@ -269,7 +269,7 @@ export default function Portfolio() {
                 {COMPONENTS.map(({ name, desc }, i) => (
                   <li key={name} className={`flex items-start gap-4 py-4 ${i < COMPONENTS.length - 1 ? 'border-b border-[#111]' : ''}`}>
                     <code className="text-xs font-mono shrink-0 mt-0.5" style={{ color: ACCENT }}>{name}</code>
-                    <p className="text-[#9CA3AF] text-[12px] leading-relaxed">{desc}</p>
+                    <p className="text-[#9CA3AF] text-base leading-relaxed">{desc}</p>
                   </li>
                 ))}
               </ul>
@@ -285,8 +285,8 @@ export default function Portfolio() {
                 <li key={num} className={`flex items-start gap-5 py-5 ${i < FEATURES.length - 1 ? 'border-b border-[#111]' : ''}`}>
                   <span className="font-mono text-xs shrink-0 mt-0.5 tabular-nums" style={{ color: ACCENT }}>{num}</span>
                   <div>
-                    <p className="text-white text-sm font-semibold mb-1">{title}</p>
-                    <p className="text-[#6B7280] text-[12px] leading-relaxed">{desc}</p>
+                    <p className="text-white text-[15px] font-semibold mb-1">{title}</p>
+                    <p className="text-[#6B7280] text-base leading-relaxed">{desc}</p>
                   </div>
                 </li>
               ))}
@@ -301,8 +301,8 @@ export default function Portfolio() {
               {LEARNINGS.map(({ num, title, desc }) => (
                 <div key={num} className="bg-[#111] rounded-xl p-6 border border-[#222]">
                   <p className="text-4xl font-bold font-mono mb-4 leading-none" style={{ color: '#1A1A2E' }}>{num}</p>
-                  <p className="text-white font-semibold text-sm mb-3 leading-snug">{title}</p>
-                  <p className="text-[#6B7280] text-xs leading-relaxed">{desc}</p>
+                  <p className="text-white font-semibold text-[15px] mb-3 leading-snug">{title}</p>
+                  <p className="text-[#6B7280] text-base leading-relaxed">{desc}</p>
                 </div>
               ))}
             </div>
@@ -310,7 +310,7 @@ export default function Portfolio() {
             {/* GitHub CTA */}
             <div className="rounded-xl p-8 text-center border mb-12" style={{ borderColor: ACCENT + '33', background: '#0a0614' }}>
               <p className="text-xs font-mono tracking-[0.2em] uppercase mb-2" style={{ color: ACCENT }}>Source Code</p>
-              <p className="text-[#6B7280] text-sm mb-6 leading-relaxed">
+              <p className="text-[#6B7280] text-base mb-6 leading-relaxed">
                 Full source available on GitHub — React components, Tailwind config, routing setup
               </p>
               <a

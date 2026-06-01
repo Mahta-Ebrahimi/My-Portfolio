@@ -156,10 +156,10 @@ export default function Novasol() {
             <p className="text-xs font-mono tracking-[0.2em] text-[#60A5FA] uppercase mb-3">01 — Overview</p>
             <h1 className="text-4xl font-bold text-white mb-2 leading-tight">Novasol</h1>
             <p className="text-xl text-[#6B7280] font-light mb-6">Travel Agency Redesign</p>
-            <div className="rounded-2xl overflow-hidden mb-8 bg-[#111]">
+            <div className="rounded-2xl overflow-hidden mb-8 bg-[#F0F0F0] p-3">
               <img src={novasolFigma} alt="Novasol Redesign" className="w-full object-cover" />
             </div>
-            <p className="text-[#9CA3AF] leading-7 mb-8 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               A complete UI/UX redesign for Novasol travel agency — modernising the booking experience and visual identity to better match how users actually discover and book holiday destinations.
             </p>
             <div className="grid grid-cols-3 gap-4">
@@ -176,7 +176,7 @@ export default function Novasol() {
           <section id="problem" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] text-[#60A5FA] uppercase mb-3">02 — The Problem &amp; Solution</p>
             <h2 className="text-2xl font-bold text-white mb-6 leading-snug">Booking a Holiday Shouldn't Feel Like Work</h2>
-            <p className="text-[#9CA3AF] leading-7 mb-8 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               The original Novasol site had an outdated visual identity and a fragmented booking flow that caused users to drop off before completing a reservation. The redesign aimed to make destination discovery beautiful and conversion frictionless.
             </p>
             <div className="grid grid-cols-2 gap-4 mb-8">
@@ -184,8 +184,8 @@ export default function Novasol() {
                 <div key={title} className="bg-[#111] rounded-xl p-5 flex gap-4 items-start border border-[#222]">
                   <span className="text-2xl shrink-0 mt-0.5">{icon}</span>
                   <div>
-                    <p className="text-white text-sm font-semibold mb-1">{title}</p>
-                    <p className="text-[#6B7280] text-xs leading-relaxed">{desc}</p>
+                    <p className="text-white text-[15px] font-semibold mb-1">{title}</p>
+                    <p className="text-[#6B7280] text-base leading-relaxed">{desc}</p>
                   </div>
                 </div>
               ))}
@@ -216,14 +216,14 @@ export default function Novasol() {
               ].map(({ name, role, goals, pain }) => (
                 <div key={name} className="bg-[#111] rounded-xl p-6 border border-[#222]">
                   <div className="mb-5">
-                    <p className="text-white font-bold text-sm">{name}</p>
-                    <p className="text-[#60A5FA] text-xs mt-0.5">{role}</p>
+                    <p className="text-white font-bold text-[15px]">{name}</p>
+                    <p className="text-[#60A5FA] text-sm mt-0.5">{role}</p>
                   </div>
                   <div className="mb-4">
                     <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#374151] mb-2">Goals</p>
                     <ul className="space-y-1.5">
                       {goals.map(g => (
-                        <li key={g} className="text-xs text-[#9CA3AF] flex gap-2 leading-tight">
+                        <li key={g} className="text-base text-[#9CA3AF] flex gap-2 leading-snug">
                           <span className="text-[#60A5FA] shrink-0">+</span>{g}
                         </li>
                       ))}
@@ -233,7 +233,7 @@ export default function Novasol() {
                     <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#374151] mb-2">Pain Points</p>
                     <ul className="space-y-1.5">
                       {pain.map(p => (
-                        <li key={p} className="text-xs text-[#9CA3AF] flex gap-2 leading-tight">
+                        <li key={p} className="text-base text-[#9CA3AF] flex gap-2 leading-snug">
                           <span className="text-red-400 shrink-0">−</span>{p}
                         </li>
                       ))}
@@ -244,7 +244,7 @@ export default function Novasol() {
             </div>
             <div className="bg-[#080808] border border-[#1A1A1A] rounded-xl p-6">
               <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#60A5FA] mb-2">Key Design Insight</p>
-              <p className="text-[#D1D5DB] text-sm leading-relaxed">
+              <p className="text-[#D1D5DB] text-base leading-relaxed">
                 Both personas abandon at the same point: when the booking form becomes complex. Reducing steps and showing progress was the highest-impact improvement.
               </p>
             </div>
@@ -254,7 +254,7 @@ export default function Novasol() {
           <section id="visual" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] text-[#60A5FA] uppercase mb-3">04 — Visual Direction</p>
             <h2 className="text-2xl font-bold text-white mb-4">Design Approach</h2>
-            <p className="text-[#9CA3AF] leading-7 mb-8 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               Navy and gold convey heritage and trust, while sand tones bring warmth. Full-bleed destination photography replaces dense text, letting visuals do the selling.
             </p>
             <div className="grid grid-cols-2 gap-3 mb-6">
@@ -262,8 +262,8 @@ export default function Novasol() {
                 <div key={title} className="flex items-start gap-4 bg-[#111] rounded-xl p-4 border border-[#222]">
                   <span className="text-[#60A5FA] text-lg shrink-0 mt-0.5">{icon}</span>
                   <div>
-                    <p className="text-white text-sm font-semibold mb-1">{title}</p>
-                    <p className="text-[#6B7280] text-xs leading-relaxed">{desc}</p>
+                    <p className="text-white text-[15px] font-semibold mb-1">{title}</p>
+                    <p className="text-[#6B7280] text-base leading-relaxed">{desc}</p>
                   </div>
                 </div>
               ))}
@@ -285,7 +285,7 @@ export default function Novasol() {
           <section id="wireframes" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] text-[#60A5FA] uppercase mb-3">05 — Wireframes</p>
             <h2 className="text-2xl font-bold text-white mb-4">Low-Fidelity Screens</h2>
-            <p className="text-[#9CA3AF] leading-7 mb-6 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-6 text-lg">
               Lo-fi wireframes established the information hierarchy before any visual polish. Homepage, search results, listing detail, and checkout flow were mapped first.
             </p>
             <div className="bg-[#111] rounded-xl p-8 flex flex-col items-center justify-center text-center border border-[#222]" style={{ minHeight: '200px' }}>
@@ -298,7 +298,7 @@ export default function Novasol() {
           <section id="hifi" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] text-[#60A5FA] uppercase mb-3">06 — Final Design</p>
             <h2 className="text-2xl font-bold text-white mb-4">Hi-Fi Screens &amp; Prototype</h2>
-            <p className="text-[#9CA3AF] leading-7 mb-6 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-6 text-lg">
               High-fidelity screens applied the full design system — typography, colour tokens, photography guidelines, and interactive states. The Figma prototype covers the complete booking journey.
             </p>
             <div className="bg-[#111] rounded-xl p-8 flex flex-col items-center justify-center text-center mb-8 border border-[#222]" style={{ minHeight: '200px' }}>
@@ -307,7 +307,7 @@ export default function Novasol() {
             </div>
             <div className="bg-[#080808] border border-[#60A5FA]/25 rounded-xl p-8 text-center">
               <p className="text-xs font-mono tracking-[0.2em] text-[#60A5FA] uppercase mb-2">View in Figma</p>
-              <p className="text-[#6B7280] text-sm mb-6 leading-relaxed">Interactive prototype with full booking flow</p>
+              <p className="text-[#6B7280] text-base mb-6 leading-relaxed">Interactive prototype with full booking flow</p>
               <a
                 href="https://www.figma.com/proto/PEZSnKDt63mPmeIKPUEbTB/Din-m%C3%83%C2%A6gler--2-?page-id=63%3A0&node-id=420-23&starting-point-node-id=420%3A23&t=COlUHCgSLO1qCgTY-1"
                 target="_blank" rel="noopener noreferrer"
@@ -326,8 +326,8 @@ export default function Novasol() {
               {LEARNINGS.map(({ num, title, desc }) => (
                 <div key={num} className="bg-[#111] rounded-xl p-6 border border-[#222]">
                   <p className="text-4xl font-bold text-[#374151]/50 font-mono mb-4 leading-none">{num}</p>
-                  <p className="text-white font-semibold text-sm mb-3 leading-snug">{title}</p>
-                  <p className="text-[#6B7280] text-xs leading-relaxed">{desc}</p>
+                  <p className="text-white font-semibold text-[15px] mb-3 leading-snug">{title}</p>
+                  <p className="text-[#6B7280] text-base leading-relaxed">{desc}</p>
                 </div>
               ))}
             </div>

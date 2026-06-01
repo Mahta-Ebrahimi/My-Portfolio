@@ -165,10 +165,10 @@ export default function PawPal() {
             <p className="text-xs font-mono tracking-[0.2em] text-[#4ADE80] uppercase mb-3">01 — Overview</p>
             <h1 className="text-4xl font-bold text-white mb-2 leading-tight">PawPal</h1>
             <p className="text-xl text-[#6B7280] font-light mb-6">Peace for owners. Care for dogs.</p>
-            <div className="rounded-2xl overflow-hidden mb-8 bg-[#111]">
+            <div className="rounded-2xl overflow-hidden mb-8 bg-[#F0F0F0] p-3">
               <img src={pawpalImg} alt="PawPal App" className="w-full object-cover" />
             </div>
-            <p className="text-[#9CA3AF] leading-7 mb-8 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               A mobile app connecting dog owners with trusted local sitters — designed from research to hi-fi prototype with a complete user-centered process.
             </p>
             <div className="grid grid-cols-3 gap-4">
@@ -185,7 +185,7 @@ export default function PawPal() {
           <section id="problem" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] text-[#4ADE80] uppercase mb-3">02 — The Problem &amp; Solution</p>
             <h2 className="text-2xl font-bold text-white mb-6 leading-snug">Finding the Right Sitter Should Feel Safe</h2>
-            <p className="text-[#9CA3AF] leading-7 mb-8 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               Dog owners struggle to find trusted sitters quickly. Existing solutions feel untrustworthy — leaving pet owners anxious when they leave home. The challenge was to design a mobile experience that feels safe, simple, and personal.
             </p>
             <div className="grid grid-cols-2 gap-4 mb-8">
@@ -193,8 +193,8 @@ export default function PawPal() {
                 <div key={title} className="bg-[#111] rounded-xl p-5 flex gap-4 items-start border border-[#222]">
                   <span className="text-2xl shrink-0 mt-0.5">{icon}</span>
                   <div>
-                    <p className="text-white text-sm font-semibold mb-1">{title}</p>
-                    <p className="text-[#6B7280] text-xs leading-relaxed">{desc}</p>
+                    <p className="text-white text-[15px] font-semibold mb-1">{title}</p>
+                    <p className="text-[#6B7280] text-base leading-relaxed">{desc}</p>
                   </div>
                 </div>
               ))}
@@ -214,14 +214,14 @@ export default function PawPal() {
               {PERSONAS.map(({ name, age, role, goals, pain }) => (
                 <div key={name} className="bg-[#111] rounded-xl p-6 border border-[#222]">
                   <div className="mb-5">
-                    <p className="text-white font-bold text-sm">{name}, {age}</p>
-                    <p className="text-[#4ADE80] text-xs mt-0.5">{role}</p>
+                    <p className="text-white font-bold text-[15px]">{name}, {age}</p>
+                    <p className="text-[#4ADE80] text-sm mt-0.5">{role}</p>
                   </div>
                   <div className="mb-4">
                     <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#374151] mb-2">Goals</p>
                     <ul className="space-y-1.5">
                       {goals.map(g => (
-                        <li key={g} className="text-xs text-[#9CA3AF] flex gap-2 leading-tight">
+                        <li key={g} className="text-base text-[#9CA3AF] flex gap-2 leading-snug">
                           <span className="text-[#4ADE80] shrink-0">+</span>{g}
                         </li>
                       ))}
@@ -231,7 +231,7 @@ export default function PawPal() {
                     <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#374151] mb-2">Pain Points</p>
                     <ul className="space-y-1.5">
                       {pain.map(p => (
-                        <li key={p} className="text-xs text-[#9CA3AF] flex gap-2 leading-tight">
+                        <li key={p} className="text-base text-[#9CA3AF] flex gap-2 leading-snug">
                           <span className="text-red-400 shrink-0">−</span>{p}
                         </li>
                       ))}
@@ -242,7 +242,7 @@ export default function PawPal() {
             </div>
             <div className="bg-[#080808] border border-[#1A1A1A] rounded-xl p-6">
               <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#4ADE80] mb-2">Key Design Insight</p>
-              <p className="text-[#D1D5DB] text-sm leading-relaxed">
+              <p className="text-[#D1D5DB] text-base leading-relaxed">
                 Both personas share one core need: <em>trust</em>. Every design decision — navigation, typography, copy, imagery — was evaluated through this single lens first.
               </p>
             </div>
@@ -252,7 +252,7 @@ export default function PawPal() {
           <section id="visual" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] text-[#4ADE80] uppercase mb-3">04 — Design System & Component Library</p>
             <h2 className="text-2xl font-bold text-white mb-4">Design Approach</h2>
-            <p className="text-[#9CA3AF] leading-7 mb-8 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               Soft greens and earthy tones create a calm, friendly atmosphere — reassuring for pet owners anxious about leaving their dogs. Playful illustration pairs with clean UI.
             </p>
             <div className="grid grid-cols-2 gap-3 mb-6">
@@ -260,8 +260,8 @@ export default function PawPal() {
                 <div key={title} className="flex items-start gap-4 bg-[#111] rounded-xl p-4 border border-[#222]">
                   <span className="text-[#4ADE80] text-lg shrink-0 mt-0.5">{icon}</span>
                   <div>
-                    <p className="text-white text-sm font-semibold mb-1">{title}</p>
-                    <p className="text-[#6B7280] text-xs leading-relaxed">{desc}</p>
+                    <p className="text-white text-[15px] font-semibold mb-1">{title}</p>
+                    <p className="text-[#6B7280] text-base leading-relaxed">{desc}</p>
                   </div>
                 </div>
               ))}
@@ -290,10 +290,10 @@ export default function PawPal() {
           <section id="wireframes" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] text-[#4ADE80] uppercase mb-3">05 — Wireframes</p>
             <h2 className="text-2xl font-bold text-white mb-4">Low-Fidelity Screens</h2>
-            <p className="text-[#9CA3AF] leading-7 mb-6 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-6 text-lg">
               Wireframes focused on information hierarchy and navigation patterns before any visual design. Key flows: onboarding, sitter search, profile view, booking form, messaging, payment.
             </p>
-            <div className="bg-[#111] rounded-xl p-8 flex flex-col items-center justify-center text-center mb-6 border border-[#222]" style={{ minHeight: '200px' }}>
+            <div className="bg-[#F5F5F5] rounded-xl p-4 flex flex-col items-center justify-center text-center mb-6 border border-[#E0E0E0]" style={{ minHeight: '200px' }}>
                <img
                 src={LoFIPawpal}
                 alt="DetectAI Security Low-Fidelity Wireframes"
@@ -301,7 +301,7 @@ export default function PawPal() {
               />
               
             </div>
-            <div className="bg-[#111] rounded-xl p-8 flex flex-col items-center justify-center text-center mb-6 border border-[#222]" style={{ minHeight: '180px' }}>
+            <div className="bg-[#F5F5F5] rounded-xl p-4 flex flex-col items-center justify-center text-center mb-6 border border-[#E0E0E0]" style={{ minHeight: '180px' }}>
              <img src={pawpalComponents} alt="PawPal App" className="w-full object-cover" />
             </div>
            
@@ -311,16 +311,16 @@ export default function PawPal() {
           <section id="hifi" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] text-[#4ADE80] uppercase mb-3">06 — Hi-Fi Design</p>
             <h2 className="text-2xl font-bold text-white mb-4">Final Screens &amp; Prototype</h2>
-            <p className="text-[#9CA3AF] leading-7 mb-6 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-6 text-lg">
               High-fidelity screens combining the design system, real content, and micro-interactions. The prototype demonstrates the complete user journey from onboarding to booking confirmation.
             </p>
-            <div className="bg-[#111] rounded-xl p-8 flex flex-col items-center justify-center text-center mb-8 border border-[#222]" style={{ minHeight: '200px' }}>
+            <div className="bg-[#F5F5F5] rounded-xl p-4 flex flex-col items-center justify-center text-center mb-8 border border-[#E0E0E0]" style={{ minHeight: '200px' }}>
                       <img src={pawpalImg} alt="PawPal App" className="w-full object-cover" />
 
             </div>
             <div className="bg-[#080808] border border-[#4ADE80]/25 rounded-xl p-8 text-center">
               <p className="text-xs font-mono tracking-[0.2em] text-[#4ADE80] uppercase mb-2">Try PawPal in Figma</p>
-              <p className="text-[#6B7280] text-sm mb-6 leading-relaxed">Full clickable prototype — onboarding, sitter search, booking, and messaging interactions</p>
+              <p className="text-[#6B7280] text-base mb-6 leading-relaxed">Full clickable prototype — onboarding, sitter search, booking, and messaging interactions</p>
               <a href="https://www.figma.com/proto/hr07ubZBbbWwdw2kWrwJGD/Mahta-Ebrahimi?node-id=326-4264&t=vM5OXkdmQE4ws2pv-1&scaling=min-zoom&content-scaling=fixed&page-id=37%3A23&starting-point-node-id=326%3A4415&show-proto-sidebar=1" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[#4ADE80] text-[#0D1117] font-bold px-8 py-3 rounded-lg hover:bg-[#22C55E] transition-colors text-sm">
                 <FaExternalLinkAlt style={{ fontSize: '11px' }} />
@@ -333,10 +333,10 @@ export default function PawPal() {
           <section id="design-system" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] text-[#4ADE80] uppercase mb-3">07 — Design System</p>
             <h2 className="text-2xl font-bold text-white mb-4">Component Library</h2>
-            <p className="text-[#9CA3AF] leading-7 mb-6 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-6 text-lg">
               Complete component library — forms, offer cards, booking flows, payment screens, navigation bars, system elements. Built for consistency and developer handoff.
             </p>
-            <div className="bg-[#111] rounded-xl p-8 flex flex-col items-center justify-center text-center mb-6 border border-[#222]" style={{ minHeight: '180px' }}>
+            <div className="bg-[#F5F5F5] rounded-xl p-4 flex flex-col items-center justify-center text-center mb-6 border border-[#E0E0E0]" style={{ minHeight: '180px' }}>
              <img src={pawpalComponents} alt="PawPal App" className="w-full object-cover" />
             </div>
             <div className="flex flex-wrap gap-2">
@@ -356,8 +356,8 @@ export default function PawPal() {
               {LEARNINGS.map(({ num, title, desc }) => (
                 <div key={num} className="bg-[#111] rounded-xl p-6 border border-[#222]">
                   <p className="text-4xl font-bold text-[#374151]/50 font-mono mb-4 leading-none">{num}</p>
-                  <p className="text-white font-semibold text-sm mb-3 leading-snug">{title}</p>
-                  <p className="text-[#6B7280] text-xs leading-relaxed">{desc}</p>
+                  <p className="text-white font-semibold text-[15px] mb-3 leading-snug">{title}</p>
+                  <p className="text-[#6B7280] text-base leading-relaxed">{desc}</p>
                 </div>
               ))}
             </div>

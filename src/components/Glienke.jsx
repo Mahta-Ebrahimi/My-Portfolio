@@ -119,10 +119,10 @@ export default function Glienke() {
           <p className="text-xs font-bold tracking-[0.25em] uppercase mb-2" style={{ color: ACCENT }}>01 — Overview</p>
           <h1 className="text-4xl font-bold text-white mb-2">Glienke Design</h1>
           <p className="text-[#6B7280] text-sm mb-6">Website Redesign · Frontend Development</p>
-          <div className="w-full overflow-hidden border border-[#1A1A1A] mb-6">
+          <div className="w-full overflow-hidden border border-[#E0E0E0] mb-6 bg-[#F5F5F5] p-3">
             <img src={GlienkeScreen} alt="Glienke Design" className="w-full h-auto object-cover" />
           </div>
-          <p className="text-[#9CA3AF] leading-relaxed">
+          <p className="text-[#9CA3AF] leading-relaxed text-lg">
             A complete website redesign for Glienke Design, focusing on modernizing the online
             presence and improving user experience. The project involved creating a cleaner,
             more professional layout that effectively showcases their design portfolio while
@@ -160,7 +160,7 @@ export default function Glienke() {
                 <span className="font-mono text-xs mt-0.5 shrink-0" style={{ color: ACCENT }}>
                   {String(i + 1).padStart(2, '0')}
                 </span>
-                <span className="text-[#9CA3AF] text-sm">{f}</span>
+                <span className="text-[#9CA3AF] text-base">{f}</span>
               </li>
             ))}
           </ul>

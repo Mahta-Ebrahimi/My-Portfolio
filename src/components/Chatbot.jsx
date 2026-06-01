@@ -193,13 +193,13 @@ export default function Chatbot() {
             <h1 className="text-4xl font-bold text-white mb-2 leading-tight">AI Chatbot App</h1>
             <p className="text-xl text-[#6B7280] font-light mb-6">Two bots. One interface. Built from scratch.</p>
 
-            <div className="bg-gray-200 overflow-hidden border border-[#1A1A1A] mb-8 rounded-lg">
+            <div className="bg-[#F0F0F0] overflow-hidden border border-[#E0E0E0] mb-8 rounded-lg">
               <div className='p-2'>
                   <img src={chatbotImg} alt="AI Chatbot App" className="w-full object-cover" />
               </div>
             </div>
 
-            <p className="text-[#9CA3AF] leading-7 mb-8 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               A full-stack chatbot application with two distinct AI assistants in a single interface.
               One is a general-purpose AI connected to GPT-4o mini. The other is a personal bot
               loaded with my background, skills, and project history, built specifically so recruiters
@@ -224,7 +224,7 @@ export default function Chatbot() {
           <section id="design" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>02 — Design & UX</p>
             <h2 className="text-2xl font-bold text-white mb-4">Chat Interface Design</h2>
-            <p className="text-[#9CA3AF] leading-7 mb-8 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               The design challenge was making two completely different bots feel natural inside a
               single product. Each bot has its own visual identity while sharing the same core layout,
               the user always knows where they are without needing instructions.
@@ -234,8 +234,8 @@ export default function Chatbot() {
               {DESIGN_DECISIONS.map(({ icon, title, desc }) => (
                 <div key={title} className="bg-[#111] rounded-xl p-5 border border-[#222]">
                   <span className="text-lg mb-3 block" style={{ color: ACCENT }}>{icon}</span>
-                  <p className="text-white text-sm font-semibold mb-2">{title}</p>
-                  <p className="text-[#6B7280] text-xs leading-relaxed">{desc}</p>
+                  <p className="text-white text-[15px] font-semibold mb-2">{title}</p>
+                  <p className="text-[#6B7280] text-base leading-relaxed">{desc}</p>
                 </div>
               ))}
             </div>
@@ -252,7 +252,7 @@ export default function Chatbot() {
           <section id="architecture" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>03 — Architecture</p>
             <h2 className="text-2xl font-bold text-white mb-4">Root / Client / Server</h2>
-            <p className="text-[#9CA3AF] leading-7 mb-8 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               The app is structured as a three-layer monorepo. Each layer has its own responsibilities,
               dependencies, and scripts — making it easy to develop, test, and scale each part
               independently without tangling concerns.
@@ -282,8 +282,8 @@ export default function Chatbot() {
                 <li key={num} className={`flex items-start gap-5 py-5 ${i < FEATURES.length - 1 ? 'border-b border-[#111]' : ''}`}>
                   <span className="font-mono text-xs shrink-0 mt-0.5 tabular-nums" style={{ color: ACCENT }}>{num}</span>
                   <div>
-                    <p className="text-white text-sm font-semibold mb-1">{title}</p>
-                    <p className="text-[#6B7280] text-[12px] leading-relaxed">{desc}</p>
+                    <p className="text-white text-[15px] font-semibold mb-1">{title}</p>
+                    <p className="text-[#6B7280] text-base leading-relaxed">{desc}</p>
                   </div>
                 </li>
               ))}
@@ -294,7 +294,7 @@ export default function Chatbot() {
           <section id="bots" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>04 — The Two Bots</p>
             <h2 className="text-2xl font-bold text-white mb-4">Meet the Assistants</h2>
-            <p className="text-[#9CA3AF] leading-7 mb-8 text-[15px]">
+            <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               Both bots share the same React frontend and Express backend, but are driven by
               completely different data sources and serve different purposes.
             </p>
@@ -306,13 +306,13 @@ export default function Chatbot() {
                     <span className="text-xs font-bold px-2 py-1 rounded font-mono" style={{ color, background: color + '18' }}>
                       {tag}
                     </span>
-                    <p className="text-white font-bold text-sm mt-3">{name}</p>
+                    <p className="text-white font-bold text-[15px] mt-3">{name}</p>
                   </div>
                   <div className="px-5 py-4">
-                    <p className="text-[#6B7280] text-xs leading-relaxed mb-4">{desc}</p>
+                    <p className="text-[#6B7280] text-base leading-relaxed mb-4">{desc}</p>
                     <ul className="space-y-2">
                       {points.map(pt => (
-                        <li key={pt} className="flex items-start gap-2 text-xs text-[#9CA3AF]">
+                        <li key={pt} className="flex items-start gap-2 text-sm text-[#9CA3AF]">
                           <span style={{ color }}>+</span>{pt}
                         </li>
                       ))}
@@ -331,8 +331,8 @@ export default function Chatbot() {
               {LEARNINGS.map(({ num, title, desc }) => (
                 <div key={num} className="bg-[#111] rounded-xl p-6 border border-[#222]">
                   <p className="text-4xl font-bold font-mono mb-4 leading-none" style={{ color: '#0a1520' }}>{num}</p>
-                  <p className="text-white font-semibold text-sm mb-3 leading-snug">{title}</p>
-                  <p className="text-[#6B7280] text-xs leading-relaxed">{desc}</p>
+                  <p className="text-white font-semibold text-[15px] mb-3 leading-snug">{title}</p>
+                  <p className="text-[#6B7280] text-base leading-relaxed">{desc}</p>
                 </div>
               ))}
             </div>
@@ -340,7 +340,7 @@ export default function Chatbot() {
             {/* CTAs */}
             <div className="rounded-xl p-8 border mb-12" style={{ borderColor: ACCENT + '33', background: '#020d14' }}>
               <p className="text-xs font-mono tracking-[0.2em] uppercase mb-2" style={{ color: ACCENT }}>Try It</p>
-              <p className="text-[#6B7280] text-sm mb-6 leading-relaxed">
+              <p className="text-[#6B7280] text-base mb-6 leading-relaxed">
                 Explore the source code or launch the app and ask the personal bot anything about me.
               </p>
               <div className="flex gap-3">
