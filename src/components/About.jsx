@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import myImage from '../assets/myImage.jpg';
 
 const About = () => {
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <div
       name="about"
       id="about"
-      className="w-full bg-black text-gray-300 py-12 md:py-20 px-6"
+      className="w-full bg-black text-gray-300 py-12 md:py-20 px-8 md:px-6"
     >
       <div className="max-w-[860px] mx-auto">
 
@@ -20,7 +22,7 @@ const About = () => {
         </div>
 
         {/* Bio text */}
-        <div className="leading-relaxed text-[#9CA3AF] text-sm sm:text-base space-y-5 text-justify">
+        <div className="leading-loose text-[#D1D5DB] text-base sm:text-lg space-y-6 text-justify">
 
           {/* Drop cap first paragraph */}
           <p>
@@ -34,28 +36,36 @@ const About = () => {
             I also design the systems around AI: defining automation logic, shaping AI‑driven user journeys, and creating interfaces that make complex AI behavior feel simple and human‑centered
           </p>
 
-          <p>
-            I studied front‑end development formally and hold three certified UI/UX design qualifications. This combination allows me to take a project from the first sketch to 
+          <p className={`${expanded ? 'block' : 'hidden'} sm:block`}>
+            I studied front‑end development formally and hold three certified UI/UX design qualifications. This combination allows me to take a project from the first sketch to
             a fully shipped product — including research, UX, UI, design systems, automation logic, and production‑ready code.
           </p>
 
-          <p>
+          <p className={`${expanded ? 'block' : 'hidden'} sm:block`}>
             You can explore some of my projects here. Each one follows the same principle:<br/> understand the user,
              design with intention, build cleanly, and let AI handle what it does best.
           </p>
 
-          <p>
+          <p className={`${expanded ? 'block' : 'hidden'} sm:block`}>
            I take projects from discovery to delivery: leading UX, applying design systems,
             designing the AI automation layer, and writing front‑end code. End‑to‑end ownership means faster results and fewer gaps between idea and product.
           </p>
 
         </div>
 
+        {/* Read more / Show less — mobile only */}
+        <button
+          onClick={() => setExpanded(!expanded)}
+          className="sm:hidden mt-6 flex items-center gap-2 text-sm font-semibold text-[#00E5A0] hover:text-white transition-colors"
+        >
+          {expanded ? 'Show less ↑' : 'Read more ↓'}
+        </button>
+
         {/* Clear float */}
         <div style={{ clear: 'both' }} />
 
         {/* Role line */}
-        <p className="mt-8 text-xs sm:text-sm font-bold tracking-[0.25em] uppercase text-[#444]">
+        <p className="mt-8 text-sm sm:text-base font-bold tracking-[0.25em] uppercase text-[#6B7280]">
           UI/UX Designer &nbsp;·&nbsp; Front-End Developer &nbsp;·&nbsp; AI Workflow Designer &nbsp;·&nbsp; Copenhagen
         </p>
 

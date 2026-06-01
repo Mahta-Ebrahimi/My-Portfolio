@@ -42,14 +42,17 @@ const Home = () => {
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      const fontSize = Math.min(380, Math.max(64, window.innerWidth * 0.2));
+      const isMobile = window.innerWidth < 640;
+      const fontSize = isMobile
+        ? Math.min(130, Math.max(80, window.innerWidth * 0.33))
+        : Math.min(380, Math.max(120, window.innerWidth * 0.2));
       const cx = canvas.width / 2;
       const cy = canvas.height / 2;
 
       ctx.font = `900 ${fontSize}px Raleway, sans-serif`;
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
-      if ('letterSpacing' in ctx) ctx.letterSpacing = `${-0.13 * fontSize}px`;
+      if ('letterSpacing' in ctx) ctx.letterSpacing = `${(isMobile ? -0.05 : -0.13) * fontSize}px`;
 
       // ── Step 1: solid white letter base so text always reads ──────
       ctx.fillStyle = "rgba(255, 255, 255, 0.92)";
@@ -69,8 +72,9 @@ const Home = () => {
           p.x += (mdx / mdist) * force;
           p.y += (mdy / mdist) * force;
         }
-        p.x += p.vx;
-        p.y += p.vy;
+        const speed = isMobile ? 0.35 : 1;
+        p.x += p.vx * speed;
+        p.y += p.vy * speed;
         p.phase += 0.045;
         if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
         if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
@@ -140,7 +144,7 @@ const Home = () => {
 
       {/* Name + tagline */}
       <div
-        className="absolute bottom-20 text-center z-20"
+        className="absolute text-center z-20 top-[62%] sm:top-auto sm:bottom-20"
         style={{ fontFamily: "Raleway, sans-serif" }}
       >
         <p className="text-gray-300 text-base sm:text-xl font-medium">Mahta Ebrahimi</p>

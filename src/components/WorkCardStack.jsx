@@ -68,12 +68,12 @@ const WorkCardStack = ({ activeProject, projects, activeIndex }) => {
           </div>
 
           {/* Category */}
-          <p className="text-xs uppercase tracking-widest text-[#555] mb-3">
+          <p className="text-sm uppercase tracking-widest text-[#555] mb-3">
             {activeProject.category}
           </p>
 
           {/* Title */}
-          <h3 className="text-xl font-bold text-white mb-5">
+          <h3 className="text-2xl font-bold text-white mb-5">
             {activeProject.title}
           </h3>
 
@@ -126,7 +126,7 @@ const WorkCardStack = ({ activeProject, projects, activeIndex }) => {
             {activeProject.tools.map((tool, idx) => (
               <span
                 key={idx}
-                className="text-xs px-3 py-1.5 border border-[#333] text-[#888]"
+                className="text-sm px-3 py-1.5 border border-[#333] text-[#888]"
               >
                 {tool}
               </span>
@@ -140,7 +140,7 @@ const WorkCardStack = ({ activeProject, projects, activeIndex }) => {
                 ? window.open(activeProject.route, "_blank")
                 : navigate(activeProject.route)
             }
-            className="mt-3 px-6 py-2.5 text-xs font-bold tracking-wider border bg-white text-black border-white hover:bg-[#FF9533] hover:border-[#FF9533] hover:text-white transition-colors"
+            className="mt-3 px-6 py-2.5 text-sm font-bold tracking-wider border bg-white text-black border-white hover:bg-[#FF9533] hover:border-[#FF9533] hover:text-white transition-colors"
           >
             {activeProject.external ? "View Live →" : "View Project →"}
           </button>

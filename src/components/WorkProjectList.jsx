@@ -30,10 +30,10 @@ const WorkProjectList = ({ projects, activeIndex, setActiveIndex }) => {
 
               {/* Title + category */}
               <div className='flex-1 min-w-0 px-4 py-4'>
-                <h4 className={`text-sm font-bold leading-tight truncate ${isActive ? 'text-white' : 'text-[#666]'}`}>
+                <h4 className={`text-base font-bold leading-tight truncate ${isActive ? 'text-white' : 'text-[#666]'}`}>
                   {project.title}
                 </h4>
-                <p className='text-xs text-[#444] mt-0.5'>{project.category}</p>
+                <p className='text-sm text-[#555] mt-0.5'>{project.category}</p>
               </div>
 
               {/* Arrow */}
