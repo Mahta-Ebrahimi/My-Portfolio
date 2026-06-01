@@ -265,8 +265,8 @@ const Work = () => {
 
         {/* Two Column Layout */}
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12'>
-          {/* LEFT COLUMN: 3D Stacked Cards + Navigation */}
-          <div className='flex flex-col'>
+          {/* LEFT COLUMN: 3D Stacked Cards + Navigation — appears second on mobile */}
+          <div className='flex flex-col order-2 lg:order-1'>
             <WorkCardStack
               activeProject={activeProject}
               projects={filteredProjects}
@@ -299,12 +299,14 @@ const Work = () => {
             </div>
           </div>
 
-          {/* RIGHT COLUMN: Project List */}
-          <WorkProjectList
-            projects={filteredProjects}
-            activeIndex={activeIndex}
-            setActiveIndex={setActiveIndex}
-          />
+          {/* RIGHT COLUMN: Project List — appears first on mobile */}
+          <div className='order-1 lg:order-2'>
+            <WorkProjectList
+              projects={filteredProjects}
+              activeIndex={activeIndex}
+              setActiveIndex={setActiveIndex}
+            />
+          </div>
         </div>
 
       </div>

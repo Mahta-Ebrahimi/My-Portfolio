@@ -51,16 +51,16 @@ export default function Soulimous() {
               {/* <span style={{ fontSize: '14px' }}>🛍️</span> */}
               <h2 className="text-white font-bold text-[14px] leading-tight">Soulimous</h2>
             </div>
-            <p className="text-[#4B5563] text-[11px] mb-3">Artist Website · WordPress</p>
+            <p className="text-[#4B5563] text-xs mb-3">Artist Website · WordPress</p>
             <div className="flex gap-2 flex-wrap">
-              <span className="text-[10px] px-2 py-1 border" style={{ color: ACCENT, borderColor: ACCENT + '44', background: '#1a0a00' }}>WordPress</span>
-              <span className="text-[10px] bg-[#0D0D0D] text-[#4B5563] px-2 py-1 border border-[#1A1A1A]">2024</span>
+              <span className="text-xs px-2 py-1 border" style={{ color: ACCENT, borderColor: ACCENT + '44', background: '#1a0a00' }}>WordPress</span>
+              <span className="text-xs bg-[#0D0D0D] text-[#4B5563] px-2 py-1 border border-[#1A1A1A]">2024</span>
             </div>
           </div>
 
           {/* Table of contents */}
           <nav className="flex-1 px-4 py-5">
-            <p className="text-[9px] font-bold tracking-[0.2em] uppercase text-[#2A2A2A] mb-3 px-1">
+            <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#2A2A2A] mb-3 px-1">
               Contents
             </p>
             <ul className="space-y-0.5">
@@ -72,10 +72,10 @@ export default function Soulimous() {
                       onClick={() => scrollTo(id)}
                       className={`w-full flex items-center gap-3 px-2 py-[7px] rounded-lg text-left transition-all duration-150 group ${on ? 'bg-[#111]' : 'hover:bg-[#0D0D0D]'}`}
                     >
-                      <span className="font-mono text-[9px] shrink-0 tabular-nums" style={{ color: on ? ACCENT : '#2A2A2A' }}>
+                      <span className="font-mono text-xs shrink-0 tabular-nums" style={{ color: on ? ACCENT : '#2A2A2A' }}>
                         {num}
                       </span>
-                      <span className={`text-[11px] font-medium leading-tight ${on ? 'text-white' : 'text-[#6B7280] group-hover:text-[#9CA3AF]'}`}>
+                      <span className={`text-xs font-medium leading-tight ${on ? 'text-white' : 'text-[#6B7280] group-hover:text-[#9CA3AF]'}`}>
                         {label}
                       </span>
                       {on && <div className="ml-auto w-[3px] h-4 rounded-full shrink-0" style={{ background: ACCENT }} />}
@@ -90,19 +90,19 @@ export default function Soulimous() {
           <div className="px-5 pt-4 pb-6 border-t border-[#1A1A1A] space-y-4">
             <div className="space-y-2">
               <div>
-                <p className="text-[9px] uppercase tracking-widest text-[#2A2A2A] mb-0.5">Role</p>
-                <p className="text-[11px] text-[#9CA3AF]">Web Developer & Designer</p>
+                <p className="text-xs uppercase tracking-widest text-[#2A2A2A] mb-0.5">Role</p>
+                <p className="text-xs text-[#9CA3AF]">Web Developer & Designer</p>
               </div>
               {/* <div>
-                <p className="text-[9px] uppercase tracking-widest text-[#2A2A2A] mb-0.5">Duration</p>
-                <p className="text-[11px] text-[#9CA3AF]">2 months</p>
+                <p className="text-xs uppercase tracking-widest text-[#2A2A2A] mb-0.5">Duration</p>
+                <p className="text-xs text-[#9CA3AF]">2 months</p>
               </div> */}
             </div>
             <a
               href="https://soulimous.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full py-2 text-[11px] font-bold border transition-colors"
+              className="flex items-center justify-center gap-2 w-full py-2 text-xs font-bold border transition-colors"
               style={{ color: ACCENT, borderColor: ACCENT + '66' }}
             >
               <FaExternalLinkAlt size={9} /> View Website
@@ -116,7 +116,7 @@ export default function Soulimous() {
 
         {/* Overview */}
         <section id="overview" className="mb-16 scroll-mt-24">
-          <p className="text-[11px] font-bold tracking-[0.25em] uppercase mb-2" style={{ color: ACCENT }}>01 — Overview</p>
+          <p className="text-xs font-bold tracking-[0.25em] uppercase mb-2" style={{ color: ACCENT }}>01 — Overview</p>
           <h1 className="text-4xl font-bold text-white mb-2">Soulimous</h1>
           <p className="text-[#6B7280] text-sm mb-6">WordPress Design & Development · Artist Website</p>
           <div className="w-full overflow-hidden border border-[#1A1A1A] mb-6">
@@ -132,13 +132,13 @@ export default function Soulimous() {
 
         {/* Technologies */}
         <section id="technologies" className="mb-16 scroll-mt-24">
-          <p className="text-[11px] font-bold tracking-[0.25em] uppercase mb-4" style={{ color: ACCENT }}>02 — Technologies</p>
+          <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: ACCENT }}>02 — Technologies</p>
           <h2 className="text-2xl font-bold text-white mb-6">Stack & Tools</h2>
           <div className="grid grid-cols-2 gap-3">
             {['WordPress', 'HTML / CSS', 'JavaScript', 'Responsive Design'].map((tech) => (
               <div key={tech} className="bg-[#0D0D0D] border border-[#1A1A1A] px-4 py-3 flex items-center gap-3">
                 <div className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: ACCENT }} />
-                <span className="text-[13px] text-[#9CA3AF] font-medium">{tech}</span>
+                <span className="text-sm text-[#9CA3AF] font-medium">{tech}</span>
               </div>
             ))}
           </div>
@@ -146,7 +146,7 @@ export default function Soulimous() {
 
         {/* Features */}
         <section id="features" className="mb-16 scroll-mt-24">
-          <p className="text-[11px] font-bold tracking-[0.25em] uppercase mb-4" style={{ color: ACCENT }}>03 — Key Features</p>
+          <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: ACCENT }}>03 — Key Features</p>
           <h2 className="text-2xl font-bold text-white mb-6">What Was Built</h2>
           <ul className="space-y-3">
             {[
@@ -157,7 +157,7 @@ export default function Soulimous() {
               'Content management via WordPress CMS',
             ].map((f, i) => (
               <li key={i} className="flex items-start gap-3 border-b border-[#111] pb-3">
-                <span className="font-mono text-[10px] mt-0.5 shrink-0" style={{ color: ACCENT }}>
+                <span className="font-mono text-xs mt-0.5 shrink-0" style={{ color: ACCENT }}>
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 <span className="text-[#9CA3AF] text-sm">{f}</span>
@@ -168,7 +168,7 @@ export default function Soulimous() {
 
         {/* Live Website */}
         <section id="website" className="mb-16 scroll-mt-24">
-          <p className="text-[11px] font-bold tracking-[0.25em] uppercase mb-4" style={{ color: ACCENT }}>04 — Live Website</p>
+          <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: ACCENT }}>04 — Live Website</p>
           <h2 className="text-2xl font-bold text-white mb-6">See It Live</h2>
           <div className="bg-[#0D0D0D] border border-[#1A1A1A] p-6 flex items-center justify-between">
             <div>

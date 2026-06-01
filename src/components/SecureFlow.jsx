@@ -86,17 +86,17 @@ export default function SecureFlow() {
           <div className="px-5 pt-6 pb-5 border-b border-[#1A1A1A]">
             <div className="flex items-center gap-2 mb-1">
               {/* <span style={{ fontSize: '14px' }}>🔐</span> */}
-              <h2 className="text-white font-bold text-[13px] leading-tight">Detect AI Security</h2>
+              <h2 className="text-white font-bold text-sm leading-tight">Detect AI Security</h2>
             </div>
-            <p className="text-[#4B5563] text-[11px] mb-3">AI Security Platform · UI/UX</p>
+            <p className="text-[#4B5563] text-xs mb-3">AI Security Platform · UI/UX</p>
             <div className="flex gap-2">
-              <span className="text-[10px] px-2 py-1 rounded-md border" style={{ background: '#071619', color: ACCENT, borderColor: ACCENT + '33' }}>Figma</span>
-              {/* <span className="text-[10px] bg-[#0D0D0D] text-[#4B5563] px-2 py-1 rounded-md border border-[#1A1A1A]">2025</span> */}
+              <span className="text-xs px-2 py-1 rounded-md border" style={{ background: '#071619', color: ACCENT, borderColor: ACCENT + '33' }}>Figma</span>
+              {/* <span className="text-xs bg-[#0D0D0D] text-[#4B5563] px-2 py-1 rounded-md border border-[#1A1A1A]">2025</span> */}
             </div>
           </div>
 
           <nav className="flex-1 px-4 py-5">
-            <p className="text-[9px] font-bold tracking-[0.2em] uppercase text-[#1A2A2A] mb-3 px-1">Contents</p>
+            <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#1A2A2A] mb-3 px-1">Contents</p>
             <ul className="space-y-0.5">
               {SECTIONS.map(({ id, num, label }) => {
                 const on = active === id;
@@ -106,10 +106,10 @@ export default function SecureFlow() {
                       onClick={() => scrollTo(id)}
                       className={`w-full flex items-center gap-3 px-2 py-[7px] rounded-lg text-left transition-all duration-150 group ${on ? 'bg-[#111]' : 'hover:bg-[#0D0D0D]'}`}
                     >
-                      <span className={`font-mono text-[9px] shrink-0 tabular-nums`} style={{ color: on ? ACCENT : '#1F3030' }}>
+                      <span className={`font-mono text-xs shrink-0 tabular-nums`} style={{ color: on ? ACCENT : '#1F3030' }}>
                         {num}
                       </span>
-                      <span className={`text-[11px] font-medium leading-tight ${on ? 'text-white' : 'text-[#6B7280] group-hover:text-[#9CA3AF]'}`}>
+                      <span className={`text-xs font-medium leading-tight ${on ? 'text-white' : 'text-[#6B7280] group-hover:text-[#9CA3AF]'}`}>
                         {label}
                       </span>
                       {on && <div className="ml-auto w-[3px] h-4 rounded-full shrink-0" style={{ background: ACCENT }} />}
@@ -122,14 +122,14 @@ export default function SecureFlow() {
 
           <div className="px-5 pt-4 pb-6 border-t border-[#1A1A1A] space-y-3">
             <div>
-              <p className="text-[9px] uppercase tracking-widest text-[#1A2A2A] mb-1">Role</p>
-              <p className="text-[11px] text-[#9CA3AF] leading-tight">UI/UX Designer</p>
+              <p className="text-xs uppercase tracking-widest text-[#1A2A2A] mb-1">Role</p>
+              <p className="text-xs text-[#9CA3AF] leading-tight">UI/UX Designer</p>
             </div>
             <a
               href="https://www.figma.com/proto/x99rmVrbCpOXjIsGERz6r8/Detect-AI-Security?node-id=119-2928&t=XcUaykmv6BsMdlzP-1&scaling=scale-down&content-scaling=fixed&page-id=15%3A11"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full text-[#0D1117] text-[11px] font-bold py-2 rounded-lg hover:opacity-90 transition-opacity"
+              className="flex items-center justify-center gap-2 w-full text-[#0D1117] text-xs font-bold py-2 rounded-lg hover:opacity-90 transition-opacity"
               style={{ background: ACCENT }}
             >
               <FaExternalLinkAlt style={{ fontSize: '9px' }} /> View Prototype
@@ -144,7 +144,7 @@ export default function SecureFlow() {
 
           {/* 01 — Overview */}
           <section id="overview" className="mb-20">
-            <p className="text-[11px] font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>01 — Overview</p>
+            <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>01 — Overview</p>
             <h1 className="text-4xl font-bold text-white mb-2 leading-tight">Detect AI Security</h1>
             <p className="text-xl text-[#6B7280] font-light mb-6">AI acts. Humans certify. Accountability stays intact.</p>
 
@@ -167,7 +167,7 @@ export default function SecureFlow() {
 
           {/* 02 — Problem & Solution */}
           <section id="problem" className="mb-20">
-            <p className="text-[11px] font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>02 — The Problem &amp; Solution</p>
+            <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>02 — The Problem &amp; Solution</p>
             <h2 className="text-2xl font-bold text-white mb-6 leading-snug">AI can handle the threats. The gap is who's accountable for the call.</h2>
             <p className="text-[#9CA3AF] leading-7 mb-6 text-[15px]">
               Security analysts handle hundreds of AI-generated alerts every shift. The core tension: AI can detect and respond to threats autonomously, but organizations require human accountability before any report reaches leadership.
@@ -179,7 +179,7 @@ export default function SecureFlow() {
               {[{ value: 'L3', label: 'Automation Level' }, { value: 'AI-first', label: 'Approach' }, { value: 'Figma', label: 'Tool' }].map(({ value, label }) => (
                 <div key={label} className="bg-[#111] rounded-xl p-6 text-center border border-[#222]">
                   <p className="text-xl font-bold mb-2" style={{ color: ACCENT }}>{value}</p>
-                  <p className="text-[10px] uppercase tracking-wider text-[#6B7280]">{label}</p>
+                  <p className="text-xs uppercase tracking-wider text-[#6B7280]">{label}</p>
                 </div>
               ))}
             </div>
@@ -187,7 +187,7 @@ export default function SecureFlow() {
 
           {/* 02 — Problem & Solution */}
           <section id="problem" className="mb-20">
-            <p className="text-[11px] font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>02 — The Problem &amp; Solution</p>
+            <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>02 — The Problem &amp; Solution</p>
             <h2 className="text-2xl font-bold text-white mb-6 leading-snug">AI can handle the threats. The gap is who's accountable for the call.</h2>
             <p className="text-[#9CA3AF] leading-7 mb-6 text-[15px]">
               Security analysts handle hundreds of AI-generated alerts every shift. The core tension: AI can detect and respond to threats autonomously, but organizations require human accountability before any report reaches leadership.
@@ -199,20 +199,20 @@ export default function SecureFlow() {
             {/* Two-column problem/solution split */}
             <div className="grid grid-cols-2 gap-4 mb-8">
               <div className="bg-[#111] rounded-xl p-5 border border-[#1A1A1A]">
-                <p className="text-[9px] uppercase tracking-[0.15em] text-red-400 mb-3 font-bold">The Broken Extremes</p>
+                <p className="text-xs uppercase tracking-[0.15em] text-red-400 mb-3 font-bold">The Broken Extremes</p>
                 <ul className="space-y-2">
                   {['Full automation — fast, zero accountability', 'Manual approval — accountable, completely unscalable', 'Alert fatigue — 200+ actions per shift, no triage logic', 'No decision trail — AI acts, no one knows why'].map(p => (
-                    <li key={p} className="text-[11px] text-[#9CA3AF] flex gap-2 leading-tight">
+                    <li key={p} className="text-xs text-[#9CA3AF] flex gap-2 leading-tight">
                       <span className="text-red-400 shrink-0 mt-0.5">−</span>{p}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="bg-[#111] rounded-xl p-5 border" style={{ borderColor: ACCENT + '33' }}>
-                <p className="text-[9px] uppercase tracking-[0.15em] mb-3 font-bold" style={{ color: ACCENT }}>DetectAI Security's Level 3</p>
+                <p className="text-xs uppercase tracking-[0.15em] mb-3 font-bold" style={{ color: ACCENT }}>DetectAI Security's Level 3</p>
                 <ul className="space-y-2">
                   {['AI detects, isolates, reports — autonomously', 'Full decision trail surfaced for fast review', 'Analysts certify, not approve — minutes not hours', 'Named attribution on every certified output'].map(p => (
-                    <li key={p} className="text-[11px] text-[#9CA3AF] flex gap-2 leading-tight">
+                    <li key={p} className="text-xs text-[#9CA3AF] flex gap-2 leading-tight">
                       <span className="shrink-0 mt-0.5" style={{ color: ACCENT }}>+</span>{p}
                     </li>
                   ))}
@@ -235,30 +235,30 @@ export default function SecureFlow() {
 
           {/* 03 — Research */}
           <section id="research" className="mb-20">
-            <p className="text-[11px] font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>03 — Research</p>
+            <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>03 — Research</p>
             <h2 className="text-2xl font-bold text-white mb-6">Who lives inside this problem every day</h2>
             <div className="grid grid-cols-2 gap-4 mb-6">
               {PERSONAS.map(({ name, role, goals, pain }) => (
                 <div key={name} className="bg-[#111] rounded-xl p-6 border border-[#222]">
                   <div className="mb-5">
                     <p className="text-white font-bold text-sm">{name}</p>
-                    <p className="text-[11px] mt-0.5" style={{ color: ACCENT }}>{role}</p>
+                    <p className="text-xs mt-0.5" style={{ color: ACCENT }}>{role}</p>
                   </div>
                   <div className="mb-4">
-                    <p className="text-[9px] font-bold uppercase tracking-[0.15em] text-[#374151] mb-2">Goals</p>
+                    <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#374151] mb-2">Goals</p>
                     <ul className="space-y-1.5">
                       {goals.map(g => (
-                        <li key={g} className="text-[11px] text-[#9CA3AF] flex gap-2 leading-tight">
+                        <li key={g} className="text-xs text-[#9CA3AF] flex gap-2 leading-tight">
                           <span className="shrink-0" style={{ color: ACCENT }}>+</span>{g}
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div>
-                    <p className="text-[9px] font-bold uppercase tracking-[0.15em] text-[#374151] mb-2">Pain Points</p>
+                    <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#374151] mb-2">Pain Points</p>
                     <ul className="space-y-1.5">
                       {pain.map(p => (
-                        <li key={p} className="text-[11px] text-[#9CA3AF] flex gap-2 leading-tight">
+                        <li key={p} className="text-xs text-[#9CA3AF] flex gap-2 leading-tight">
                           <span className="text-red-400 shrink-0">−</span>{p}
                         </li>
                       ))}
@@ -268,7 +268,7 @@ export default function SecureFlow() {
               ))}
             </div>
             <div className="bg-[#080808] border border-[#1A1A1A] rounded-xl p-6">
-              <p className="text-[10px] font-bold uppercase tracking-[0.15em] mb-2" style={{ color: ACCENT }}>Core Design Tension</p>
+              <p className="text-xs font-bold uppercase tracking-[0.15em] mb-2" style={{ color: ACCENT }}>Core Design Tension</p>
               <p className="text-[#D1D5DB] text-sm leading-relaxed">
                 Both users need the same thing from opposite directions. The analyst needs AI to handle volume so they can focus on judgment. The CISO needs proof that judgment was applied before anything gets certified. The design had to serve both without compromise.
               </p>
@@ -277,7 +277,7 @@ export default function SecureFlow() {
 
           {/* 04 — Visual Direction */}
           <section id="visual" className="mb-20">
-            <p className="text-[11px] font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>04 — Visual Direction</p>
+            <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>04 — Visual Direction</p>
             <h2 className="text-2xl font-bold text-white mb-4">Designed for high-stakes, high-speed environments</h2>
             <p className="text-[#9CA3AF] leading-7 mb-8 text-[15px]">
               Security operations centers are dark, dense, and fast-moving. The interface needed to feel native to that environment — not a consumer product that was adapted. Deep blacks, a tight typographic system, and a strict color hierarchy were non-negotiable.
@@ -288,13 +288,13 @@ export default function SecureFlow() {
                   <span className="text-lg shrink-0 mt-0.5" style={{ color: ACCENT }}>{icon}</span>
                   <div>
                     <p className="text-white text-sm font-semibold mb-1">{title}</p>
-                    <p className="text-[#6B7280] text-[11px] leading-relaxed">{desc}</p>
+                    <p className="text-[#6B7280] text-xs leading-relaxed">{desc}</p>
                   </div>
                 </div>
               ))}
             </div>
             <div className="bg-[#BFD3D7] rounded-xl p-6 border border-[#222]">
-              <p className="text-[9px] font-bold uppercase tracking-[0.15em] text-[#374151] mb-4">Color System — Semantic by Design</p>
+              <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#374151] mb-4">Color System — Semantic by Design</p>
               <div className="flex gap-4">
                 <img
                 src={ColorPallete}
@@ -310,14 +310,14 @@ export default function SecureFlow() {
                 ].map(({ hex, label }) => (
                   <div key={label} className="flex flex-col items-center gap-2">
                     <div className="w-12 h-12 rounded-xl border border-white/10" style={{ backgroundColor: hex }} />
-                    <p className="text-[9px] text-[#6B7280] text-center leading-tight">{label}</p>
+                    <p className="text-xs text-[#6B7280] text-center leading-tight">{label}</p>
                   </div>
                 ))} */}
               </div>
             </div>
 
             <div className="bg-[#BFD3D7] rounded-xl p-6 border border-[#222] mt-4">
-              <p className="text-[9px] font-bold uppercase tracking-[0.15em] text-[#374151] mb-4">Component Library</p>
+              <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#374151] mb-4">Component Library</p>
               <div className="flex gap-4">
                 <img
                 src={Componentlibrary}
@@ -332,7 +332,7 @@ export default function SecureFlow() {
 
           {/* 05 — Wireframes */}
           <section id="wireframes" className="mb-20">
-            <p className="text-[11px] font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>05 — Wireframes</p>
+            <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>05 — Wireframes</p>
             <h2 className="text-2xl font-bold text-white mb-4">Low-Fidelity Screens</h2>
             <p className="text-[#9CA3AF] leading-7 mb-6 text-[15px]">
               Wireframes mapped the full analyst workflow before any visual styling. The priority was information hierarchy — what does an analyst need to see the moment they open a flagged alert, and in what order does the AI's decision trail need to be surfaced?
@@ -355,7 +355,7 @@ export default function SecureFlow() {
 
           {/* 06 — Hi-Fi Design */}
           <section id="hifi" className="mb-20">
-            <p className="text-[11px] font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>06 — Hi-Fi Design</p>
+            <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>06 — Hi-Fi Design</p>
             <h2 className="text-2xl font-bold text-white mb-4">Final Screens &amp; Prototype</h2>
             <p className="text-[#9CA3AF] leading-7 mb-6 text-[15px]">
               High-fidelity screens are in progress — applying the full dark design system, semantic color hierarchy, and interactive states across all analyst workflows.
@@ -368,7 +368,7 @@ export default function SecureFlow() {
               />
             </div>
             <div className="border p-8 text-center" style={{ background: '#071619', borderColor: ACCENT + '25' }}>
-              <p className="text-[11px] font-mono tracking-[0.2em] uppercase mb-2" style={{ color: ACCENT }}>Try DetectAI Security in Figma</p>
+              <p className="text-xs font-mono tracking-[0.2em] uppercase mb-2" style={{ color: ACCENT }}>Try DetectAI Security in Figma</p>
               <p className="text-[#6B7280] text-sm mb-6 leading-relaxed">Full clickable prototype — dashboard, alert detail, AI decision trail, and analyst certification flow</p>
               <a
                 href="https://www.figma.com/proto/x99rmVrbCpOXjIsGERz6r8/Detect-AI-Security?node-id=119-2928&viewport=-1132%2C-2663%2C0.47&t=KftzYpuQktPqZlFd-1&scaling=scale-down&content-scaling=fixed&page-id=15%3A11"
@@ -384,7 +384,7 @@ export default function SecureFlow() {
 
           {/* 07 — Key Learnings */}
           <section id="learnings" className="mb-8">
-            <p className="text-[11px] font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>07 — Reflection</p>
+            <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>07 — Reflection</p>
             <h2 className="text-2xl font-bold text-white mb-8">Key Learnings</h2>
             <div className="grid grid-cols-3 gap-4 mb-12">
               {LEARNINGS.map(({ num, title, desc }) => (

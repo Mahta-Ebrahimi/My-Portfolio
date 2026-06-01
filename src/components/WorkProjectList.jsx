@@ -18,11 +18,10 @@ const WorkProjectList = ({ projects, activeIndex, setActiveIndex }) => {
             >
               {/* Badge column — fixed width so all badges align */}
               <div
-                className='shrink-0 flex items-center justify-center px-3 py-4'
-                style={{ width: 'clamp(90px, 25vw, 140px)' }}
+                className='shrink-0 flex items-center justify-center px-2 py-4 w-[130px]'
               >
                 <span
-                  className='text-[10px] font-mono font-bold tracking-wider px-2 py-1 border w-full text-center'
+                  className='text-xs font-mono font-bold px-2 border w-full text-center leading-tight whitespace-normal flex items-center justify-center h-[40px]'
                   style={{ color: accentColor, borderColor: accentColor + '44' }}
                 >
                   {project.badge}
@@ -34,7 +33,7 @@ const WorkProjectList = ({ projects, activeIndex, setActiveIndex }) => {
                 <h4 className={`text-sm font-bold leading-tight truncate ${isActive ? 'text-white' : 'text-[#666]'}`}>
                   {project.title}
                 </h4>
-                <p className='text-[11px] text-[#444] mt-0.5'>{project.category}</p>
+                <p className='text-xs text-[#444] mt-0.5'>{project.category}</p>
               </div>
 
               {/* Arrow */}

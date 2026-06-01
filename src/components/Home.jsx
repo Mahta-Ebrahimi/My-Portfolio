@@ -16,7 +16,7 @@ const Home = () => {
     window.addEventListener("resize", setSize);
 
     const mouse = { x: -9999, y: -9999 };
-    const MOUSE_RADIUS = 120;
+    const MOUSE_RADIUS = 200;
     const onMouseMove = (e) => { mouse.x = e.clientX; mouse.y = e.clientY; };
     const onMouseLeave = () => { mouse.x = -9999; mouse.y = -9999; };
     window.addEventListener("mousemove", onMouseMove);
@@ -30,8 +30,8 @@ const Home = () => {
       particles = Array.from({ length: PARTICLE_COUNT }, () => ({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.35,
-        vy: (Math.random() - 0.5) * 0.35,
+        vx: (Math.random() - 0.5) * 3.5,
+        vy: (Math.random() - 0.5) * 3.5,
         phase: Math.random() * Math.PI * 2,
         size: 1.8 + Math.random() * 2,
       }));
@@ -65,13 +65,13 @@ const Home = () => {
         const mdy = p.y - mouse.y;
         const mdist = Math.sqrt(mdx * mdx + mdy * mdy);
         if (mdist < MOUSE_RADIUS && mdist > 0) {
-          const force = (MOUSE_RADIUS - mdist) / MOUSE_RADIUS * 2.5;
+          const force = (MOUSE_RADIUS - mdist) / MOUSE_RADIUS * 14;
           p.x += (mdx / mdist) * force;
           p.y += (mdy / mdist) * force;
         }
         p.x += p.vx;
         p.y += p.vy;
-        p.phase += 0.018;
+        p.phase += 0.045;
         if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
         if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
       });
@@ -131,11 +131,6 @@ const Home = () => {
   return (
     <div className="relative w-full h-screen bg-black flex items-center justify-center overflow-hidden">
 
-      {/* Ambient glow behind text */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-[60%] h-[40%] bg-[#00E5A0]/10 blur-[100px] rounded-full ai-wave" />
-      </div>
-
       {/* Canvas — neural mesh clipped to "Mahta" */}
       <canvas
         ref={canvasRef}
@@ -157,14 +152,6 @@ const Home = () => {
         </p>
       </div>
 
-      <style>{`
-        @keyframes aiWave {
-          0%   { transform: translateX(-8%); }
-          50%  { transform: translateX(8%);  }
-          100% { transform: translateX(-8%); }
-        }
-        .ai-wave { animation: aiWave 12s ease-in-out infinite; }
-      `}</style>
     </div>
   );
 };

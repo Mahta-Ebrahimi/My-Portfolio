@@ -25,40 +25,29 @@ const About = () => {
           {/* Drop cap first paragraph */}
           <p>
             <span className="drop-cap">M</span>
-            ahta Ebrahimi is a UI/UX Designer, Front-End Developer, and
-            AI-integrated workflow designer based in Copenhagen, Denmark.
-            I sit at the intersection of design, code, and intelligent automation, 
-            building products that don't just look right, they work smart.
+            ahta Ebrahimi is a UI/UX Designer, Front‑End Developer, and AI‑integrated workflow designer based in Copenhagen, Denmark.
+             I work at the intersection of design, code, and intelligent automation — creating products that not only look right but work smart.
           </p>
 
           <p>
-            I actively use AI tools across every stage of my work, from
-            accelerating research and generating design iterations to writing
-            cleaner code faster. 
-            {/* Beyond using AI, I design the workflows behind
-            it: mapping automation logic, building AI-assisted user flows, and
-            creating interfaces that make AI capabilities accessible and
-            intuitive for real users. */}
+           AI is part of my daily workflow, helping me accelerate research, explore design directions, and write clean, reliable code.
+            I also design the systems around AI: defining automation logic, shaping AI‑driven user journeys, and creating interfaces that make complex AI behavior feel simple and human‑centered
           </p>
 
           <p>
-            I studied front-end development formally and hold three certified
-            UI/UX design qualifications. That combination lets me take a project
-            from the first sketch to a shipped, working product entirely on my
-            own, research, design, automation logic, and production code.
+            I studied front‑end development formally and hold three certified UI/UX design qualifications. This combination allows me to take a project from the first sketch to 
+            a fully shipped product — including research, UX, UI, design systems, automation logic, and production‑ready code.
           </p>
 
           <p>
             You can explore some of my projects here. Each one follows the same principle:<br/> understand the user,
              design with intention, build cleanly, and let AI handle what it does best.
           </p>
-{/* 
+
           <p>
-            As a freelancer I take projects from early discovery to polished
-            delivery, leading UX, writing production code, or designing the
-            AI automation layer that connects them. That end-to-end range means
-            faster delivery and fewer gaps between idea and product.
-          </p> */}
+           I take projects from discovery to delivery: leading UX, applying design systems,
+            designing the AI automation layer, and writing front‑end code. End‑to‑end ownership means faster results and fewer gaps between idea and product.
+          </p>
 
         </div>
 

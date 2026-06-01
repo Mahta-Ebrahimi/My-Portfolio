@@ -107,12 +107,12 @@ export default function Portfolio() {
               <span style={{ fontSize: '14px' }}>◈</span>
               <h2 className="text-white font-bold text-[14px] leading-tight">Portfolio</h2>
             </div>
-            <p className="text-[#4B5563] text-[11px] mb-3">UI/UX + Frontend · 2024</p>
+            <p className="text-[#4B5563] text-xs mb-3">UI/UX + Frontend · 2024</p>
             <div className="flex gap-2 flex-wrap">
-              <span className="text-[10px] px-2 py-1 border" style={{ color: ACCENT, borderColor: ACCENT + '44', background: '#0e0a1a' }}>
+              <span className="text-xs px-2 py-1 border" style={{ color: ACCENT, borderColor: ACCENT + '44', background: '#0e0a1a' }}>
                 React
               </span>
-              <span className="text-[10px] px-2 py-1 border" style={{ color: ACCENT, borderColor: ACCENT + '44', background: '#0e0a1a' }}>
+              <span className="text-xs px-2 py-1 border" style={{ color: ACCENT, borderColor: ACCENT + '44', background: '#0e0a1a' }}>
                 Figma
               </span>
             </div>
@@ -120,7 +120,7 @@ export default function Portfolio() {
 
           {/* Table of contents */}
           <nav className="flex-1 px-4 py-5">
-            <p className="text-[9px] font-bold tracking-[0.2em] uppercase mb-3 px-1" style={{ color: '#2A2A2A' }}>
+            <p className="text-xs font-bold tracking-[0.2em] uppercase mb-3 px-1" style={{ color: '#2A2A2A' }}>
               Contents
             </p>
             <ul className="space-y-0.5">
@@ -132,10 +132,10 @@ export default function Portfolio() {
                       onClick={() => scrollTo(id)}
                       className={`w-full flex items-center gap-3 px-2 py-[7px] rounded-lg text-left transition-all duration-150 group ${on ? 'bg-[#111]' : 'hover:bg-[#0D0D0D]'}`}
                     >
-                      <span className="font-mono text-[9px] shrink-0 tabular-nums" style={{ color: on ? ACCENT : '#2A2A2A' }}>
+                      <span className="font-mono text-xs shrink-0 tabular-nums" style={{ color: on ? ACCENT : '#2A2A2A' }}>
                         {num}
                       </span>
-                      <span className={`text-[11px] font-medium leading-tight ${on ? 'text-white' : 'text-[#6B7280] group-hover:text-[#9CA3AF]'}`}>
+                      <span className={`text-xs font-medium leading-tight ${on ? 'text-white' : 'text-[#6B7280] group-hover:text-[#9CA3AF]'}`}>
                         {label}
                       </span>
                       {on && <div className="ml-auto w-[3px] h-4 rounded-full shrink-0" style={{ background: ACCENT }} />}
@@ -150,19 +150,19 @@ export default function Portfolio() {
           <div className="px-5 pt-4 pb-6 border-t border-[#1A1A1A] space-y-3">
             <div className="space-y-2">
               <div>
-                <p className="text-[9px] uppercase tracking-widest text-[#2A2A2A] mb-0.5">Role</p>
-                <p className="text-[11px] text-[#9CA3AF]">UI/UX Designer & Frontend Dev</p>
+                <p className="text-xs uppercase tracking-widest text-[#2A2A2A] mb-0.5">Role</p>
+                <p className="text-xs text-[#9CA3AF]">UI/UX Designer & Frontend Dev</p>
               </div>
               <div>
-                <p className="text-[9px] uppercase tracking-widest text-[#2A2A2A] mb-0.5">Stack</p>
-                <p className="text-[11px] text-[#9CA3AF]">React · Tailwind · Figma</p>
+                <p className="text-xs uppercase tracking-widest text-[#2A2A2A] mb-0.5">Stack</p>
+                <p className="text-xs text-[#9CA3AF]">React · Tailwind · Figma</p>
               </div>
             </div>
             <a
               href="https://github.com/Mahta-Ebrahimi/My-Portfolio"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full py-2 text-[11px] font-bold border transition-colors hover:text-white hover:border-white"
+              className="flex items-center justify-center gap-2 w-full py-2 text-xs font-bold border transition-colors hover:text-white hover:border-white"
               style={{ color: ACCENT, borderColor: ACCENT + '66' }}
             >
               <FaGithub size={11} /> GitHub
@@ -177,7 +177,7 @@ export default function Portfolio() {
 
           {/* 01 — Overview */}
           <section id="overview" className="mb-20">
-            <p className="text-[11px] font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>01 — Overview</p>
+            <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>01 — Overview</p>
             <h1 className="text-4xl font-bold text-white mb-2 leading-tight">My Portfolio</h1>
             <p className="text-xl text-[#6B7280] font-light mb-6">Designed in Figma. Built in React.</p>
 
@@ -199,7 +199,7 @@ export default function Portfolio() {
               ].map(({ value, label }) => (
                 <div key={label} className="bg-[#111] rounded-xl p-6 text-center border border-[#222]">
                   <p className="text-2xl font-bold mb-2" style={{ color: ACCENT }}>{value}</p>
-                  <p className="text-[10px] uppercase tracking-wider text-[#6B7280]">{label}</p>
+                  <p className="text-xs uppercase tracking-wider text-[#6B7280]">{label}</p>
                 </div>
               ))}
             </div>
@@ -207,7 +207,7 @@ export default function Portfolio() {
 
           {/* 02 — Design Process */}
           <section id="design" className="mb-20">
-            <p className="text-[11px] font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>02 — Design Process</p>
+            <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>02 — Design Process</p>
             <h2 className="text-2xl font-bold text-white mb-4">UI/UX Thinking</h2>
             <p className="text-[#9CA3AF] leading-7 mb-8 text-[15px]">
               The design started with a clear audience problem: a portfolio needs to speak to two very
@@ -238,7 +238,7 @@ export default function Portfolio() {
 
           {/* 03 — Frontend Build */}
           <section id="frontend" className="mb-20">
-            <p className="text-[11px] font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>03 — Frontend Build</p>
+            <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>03 — Frontend Build</p>
             <h2 className="text-2xl font-bold text-white mb-4">React Architecture</h2>
             <p className="text-[#9CA3AF] leading-7 mb-8 text-[15px]">
               The codebase is a single-page React application with client-side routing. Each project
@@ -248,14 +248,14 @@ export default function Portfolio() {
 
             {/* Tech stack */}
             <div className="mb-8">
-              <p className="text-[9px] font-bold uppercase tracking-[0.15em] text-[#374151] mb-4">Stack</p>
+              <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#374151] mb-4">Stack</p>
               <div className="grid grid-cols-2 gap-3">
                 {TECH_STACK.map(({ name, note }) => (
                   <div key={name} className="bg-[#0D0D0D] border border-[#1A1A1A] px-4 py-3 flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0" style={{ background: ACCENT }} />
                     <div>
                       <p className="text-white text-[12px] font-semibold">{name}</p>
-                      <p className="text-[#4B5563] text-[10px] leading-relaxed mt-0.5">{note}</p>
+                      <p className="text-[#4B5563] text-xs leading-relaxed mt-0.5">{note}</p>
                     </div>
                   </div>
                 ))}
@@ -264,11 +264,11 @@ export default function Portfolio() {
 
             {/* Key components */}
             <div>
-              <p className="text-[9px] font-bold uppercase tracking-[0.15em] text-[#374151] mb-4">Key Components</p>
+              <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#374151] mb-4">Key Components</p>
               <ul className="space-y-0">
                 {COMPONENTS.map(({ name, desc }, i) => (
                   <li key={name} className={`flex items-start gap-4 py-4 ${i < COMPONENTS.length - 1 ? 'border-b border-[#111]' : ''}`}>
-                    <code className="text-[11px] font-mono shrink-0 mt-0.5" style={{ color: ACCENT }}>{name}</code>
+                    <code className="text-xs font-mono shrink-0 mt-0.5" style={{ color: ACCENT }}>{name}</code>
                     <p className="text-[#9CA3AF] text-[12px] leading-relaxed">{desc}</p>
                   </li>
                 ))}
@@ -278,12 +278,12 @@ export default function Portfolio() {
 
           {/* 04 — Key Features */}
           <section id="features" className="mb-20">
-            <p className="text-[11px] font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>04 — Key Features</p>
+            <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>04 — Key Features</p>
             <h2 className="text-2xl font-bold text-white mb-8">What Makes It Work</h2>
             <ul className="space-y-0">
               {FEATURES.map(({ num, title, desc }, i) => (
                 <li key={num} className={`flex items-start gap-5 py-5 ${i < FEATURES.length - 1 ? 'border-b border-[#111]' : ''}`}>
-                  <span className="font-mono text-[11px] shrink-0 mt-0.5 tabular-nums" style={{ color: ACCENT }}>{num}</span>
+                  <span className="font-mono text-xs shrink-0 mt-0.5 tabular-nums" style={{ color: ACCENT }}>{num}</span>
                   <div>
                     <p className="text-white text-sm font-semibold mb-1">{title}</p>
                     <p className="text-[#6B7280] text-[12px] leading-relaxed">{desc}</p>
@@ -295,7 +295,7 @@ export default function Portfolio() {
 
           {/* 05 — Reflection */}
           <section id="reflection" className="mb-8">
-            <p className="text-[11px] font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>05 — Reflection</p>
+            <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>05 — Reflection</p>
             <h2 className="text-2xl font-bold text-white mb-8">Key Learnings</h2>
             <div className="grid grid-cols-3 gap-4 mb-12">
               {LEARNINGS.map(({ num, title, desc }) => (
@@ -309,7 +309,7 @@ export default function Portfolio() {
 
             {/* GitHub CTA */}
             <div className="rounded-xl p-8 text-center border mb-12" style={{ borderColor: ACCENT + '33', background: '#0a0614' }}>
-              <p className="text-[11px] font-mono tracking-[0.2em] uppercase mb-2" style={{ color: ACCENT }}>Source Code</p>
+              <p className="text-xs font-mono tracking-[0.2em] uppercase mb-2" style={{ color: ACCENT }}>Source Code</p>
               <p className="text-[#6B7280] text-sm mb-6 leading-relaxed">
                 Full source available on GitHub — React components, Tailwind config, routing setup
               </p>
