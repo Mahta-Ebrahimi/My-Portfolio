@@ -96,7 +96,7 @@ export default function Portfolio() {
     <div className="flex bg-black min-h-screen" style={{ paddingTop: '80px' }}>
 
       {/* ═══ SIDEBAR ═══════════════════════════════════════════════ */}
-      <div className="w-[200px] shrink-0 bg-[#080808] border-r border-[#1A1A1A]">
+      <div className="hidden lg:block w-[200px] shrink-0 bg-[#080808] border-r border-[#1A1A1A]">
         <div
           className="sticky flex flex-col overflow-y-auto"
           style={{ top: '80px', height: 'calc(100vh - 80px)' }}
@@ -173,13 +173,13 @@ export default function Portfolio() {
 
       {/* ═══ MAIN CONTENT ══════════════════════════════════════════ */}
       <main className="flex-1 min-w-0">
-        <div className="max-w-[720px] mx-auto px-8 py-12 pb-24">
+        <div className="max-w-[720px] mx-auto px-4 sm:px-8 py-8 sm:py-12 pb-24">
 
           {/* 01 — Overview */}
           <section id="overview" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>01 — Overview</p>
-            <h1 className="text-4xl font-bold text-white mb-2 leading-tight">My Portfolio</h1>
-            <p className="text-xl text-[#6B7280] font-light mb-6">Designed in Figma. Built in React.</p>
+            <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2 leading-tight">My Portfolio</h1>
+            <p className="text-lg sm:text-xl text-[#6B7280] font-light mb-6">Designed in Figma. Built in React.</p>
 
             <div className="overflow-hidden border border-[#E0E0E0] mb-8 rounded-lg bg-[#F5F5F5] p-3">
               <img src={portfolio1} alt="Portfolio Screenshot" className="w-full object-cover" />
@@ -191,7 +191,7 @@ export default function Portfolio() {
               working codebase, and the constraints of each discipline directly shaped the other.
             </p>
 
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
                 { value: '100%', label: 'Custom — no UI library' },
                 { value: '2', label: 'Disciplines: Design + Dev' },
@@ -208,14 +208,14 @@ export default function Portfolio() {
           {/* 02 — Design Process */}
           <section id="design" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>02 — Design Process</p>
-            <h2 className="text-2xl font-bold text-white mb-4">UI/UX Thinking</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">UI/UX Thinking</h2>
             <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               The design started with a clear audience problem: a portfolio needs to speak to two very
               different readers — a designer and a developer — without losing either. The solution was
               an explicit filter system and per-project case study pages that can go as deep as needed.
             </p>
 
-            <div className="grid grid-cols-2 gap-4 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               {DESIGN_DECISIONS.map(({ icon, title, desc }) => (
                 <div key={title} className="bg-[#111] rounded-xl p-5 border border-[#222]">
                   <span className="text-lg mb-3 block" style={{ color: ACCENT }}>{icon}</span>
@@ -239,7 +239,7 @@ export default function Portfolio() {
           {/* 03 — Frontend Build */}
           <section id="frontend" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>03 — Frontend Build</p>
-            <h2 className="text-2xl font-bold text-white mb-4">React Architecture</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">React Architecture</h2>
             <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               The codebase is a single-page React application with client-side routing. Each project
               detail page is an independent component — same layout shell, different content and accent
@@ -249,7 +249,7 @@ export default function Portfolio() {
             {/* Tech stack */}
             <div className="mb-8">
               <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#374151] mb-4">Stack</p>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {TECH_STACK.map(({ name, note }) => (
                   <div key={name} className="bg-[#0D0D0D] border border-[#1A1A1A] px-4 py-3 flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0" style={{ background: ACCENT }} />
@@ -279,7 +279,7 @@ export default function Portfolio() {
           {/* 04 — Key Features */}
           <section id="features" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>04 — Key Features</p>
-            <h2 className="text-2xl font-bold text-white mb-8">What Makes It Work</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-8">What Makes It Work</h2>
             <ul className="space-y-0">
               {FEATURES.map(({ num, title, desc }, i) => (
                 <li key={num} className={`flex items-start gap-5 py-5 ${i < FEATURES.length - 1 ? 'border-b border-[#111]' : ''}`}>
@@ -296,8 +296,8 @@ export default function Portfolio() {
           {/* 05 — Reflection */}
           <section id="reflection" className="mb-8">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>05 — Reflection</p>
-            <h2 className="text-2xl font-bold text-white mb-8">Key Learnings</h2>
-            <div className="grid grid-cols-3 gap-4 mb-12">
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-8">Key Learnings</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
               {LEARNINGS.map(({ num, title, desc }) => (
                 <div key={num} className="bg-[#111] rounded-xl p-6 border border-[#222]">
                   <p className="text-4xl font-bold font-mono mb-4 leading-none" style={{ color: '#1A1A2E' }}>{num}</p>
@@ -308,7 +308,7 @@ export default function Portfolio() {
             </div>
 
             {/* GitHub CTA */}
-            <div className="rounded-xl p-8 text-center border mb-12" style={{ borderColor: ACCENT + '33', background: '#0a0614' }}>
+            <div className="rounded-xl p-8 text-center border mb-12 bg-[#0a0614]" style={{ borderColor: ACCENT + '33' }}>
               <p className="text-xs font-mono tracking-[0.2em] uppercase mb-2" style={{ color: ACCENT }}>Source Code</p>
               <p className="text-[#6B7280] text-base mb-6 leading-relaxed">
                 Full source available on GitHub — React components, Tailwind config, routing setup

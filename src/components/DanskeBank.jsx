@@ -100,13 +100,13 @@ const DanskeBank = () => {
 
         {/* Description */}
         <div className="bg-[#111] rounded-lg p-8 mb-8 shadow-xl">
-          <h2 className="text-2xl font-bold text-white mb-4">Project Overview</h2>
+          <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">Project Overview</h2>
           <p className="leading-relaxed">{projectData.fullDescription}</p>
         </div>
 
         {/* Technologies */}
         <div className="bg-[#111] rounded-lg p-8 mb-8 shadow-xl">
-          <h2 className="text-2xl font-bold text-white mb-4">Technologies Used</h2>
+          <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">Technologies Used</h2>
           <div className="flex flex-wrap gap-3">
             {projectData.technologies.map((tech, index) => (
               <span
@@ -121,7 +121,7 @@ const DanskeBank = () => {
 
         {/* Features */}
         <div className="bg-[#111] rounded-lg p-8 mb-8 shadow-xl">
-          <h2 className="text-2xl font-bold text-white mb-4">Key Features</h2>
+          <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">Key Features</h2>
           <ul className="space-y-3">
             {projectData.features.map((feature, index) => (
               <li key={index} className="flex items-start gap-3">

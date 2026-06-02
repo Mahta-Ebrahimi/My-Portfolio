@@ -80,7 +80,7 @@ export default function SecureFlow() {
     <div className="flex bg-black min-h-screen" style={{ paddingTop: '80px' }}>
 
       {/* ═══ SIDEBAR ══════════════════════════════════════════════ */}
-      <div className="w-[200px] shrink-0 bg-[#080808] border-r border-[#1A1A1A]">
+      <div className="hidden lg:block w-[200px] shrink-0 bg-[#080808] border-r border-[#1A1A1A]">
         <div className="sticky flex flex-col overflow-y-auto" style={{ top: '80px', height: 'calc(100vh - 80px)' }}>
 
           <div className="px-5 pt-6 pb-5 border-b border-[#1A1A1A]">
@@ -140,13 +140,13 @@ export default function SecureFlow() {
 
       {/* ═══ MAIN CONTENT ════════════════════════════════════════ */}
       <main className="flex-1 min-w-0">
-        <div className="max-w-[720px] mx-auto px-8 py-12 pb-24">
+        <div className="max-w-[720px] mx-auto px-4 sm:px-8 py-8 sm:py-12 pb-24">
 
           {/* 01 — Overview */}
           <section id="overview" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>01 — Overview</p>
-            <h1 className="text-4xl font-bold text-white mb-2 leading-tight">Detect AI Security</h1>
-            <p className="text-xl text-[#6B7280] font-light mb-6">AI acts. Humans certify. Accountability stays intact.</p>
+            <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2 leading-tight">Detect AI Security</h1>
+            <p className="text-lg sm:text-xl text-[#6B7280] font-light mb-6">AI acts. Humans certify. Accountability stays intact.</p>
 
             {/* Hero visual — abstract cyber grid */}
             <div className="mb-8 border border-[#1A1A1A] overflow-hidden" style={{ background: '#BFD3D7', minHeight: '280px', position: 'relative' }}>
@@ -168,14 +168,14 @@ export default function SecureFlow() {
           {/* 02 — Problem & Solution */}
           <section id="problem" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>02 — The Problem &amp; Solution</p>
-            <h2 className="text-2xl font-bold text-white mb-6 leading-snug">AI can handle the threats. The gap is who's accountable for the call.</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-6 leading-snug">AI can handle the threats. The gap is who's accountable for the call.</h2>
             <p className="text-[#9CA3AF] leading-7 mb-6 text-lg">
               Security analysts handle hundreds of AI-generated alerts every shift. The core tension: AI can detect and respond to threats autonomously, but organizations require human accountability before any report reaches leadership.
             </p>
             <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               DetectAI Security is an AI security oversight platform designed for Level 3 automation — where AI detects threats and responds autonomously, and analysts verify decisions after the fact rather than approving them upfront. The result is full-speed AI automation with preserved human accountability.
             </p>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[{ value: 'L3', label: 'Automation Level' }, { value: 'AI-first', label: 'Approach' }, { value: 'Figma', label: 'Tool' }].map(({ value, label }) => (
                 <div key={label} className="bg-[#111] rounded-xl p-6 text-center border border-[#222]">
                   <p className="text-xl font-bold mb-2" style={{ color: ACCENT }}>{value}</p>
@@ -188,7 +188,7 @@ export default function SecureFlow() {
           {/* 02 — Problem & Solution */}
           <section id="problem" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>02 — The Problem &amp; Solution</p>
-            <h2 className="text-2xl font-bold text-white mb-6 leading-snug">AI can handle the threats. The gap is who's accountable for the call.</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-6 leading-snug">AI can handle the threats. The gap is who's accountable for the call.</h2>
             <p className="text-[#9CA3AF] leading-7 mb-6 text-lg">
               Security analysts handle hundreds of AI-generated alerts every shift. The core tension: AI can detect and respond to threats autonomously, but organizations require human accountability before any report reaches leadership.
             </p>
@@ -197,7 +197,7 @@ export default function SecureFlow() {
             </p>
 
             {/* Two-column problem/solution split */}
-            <div className="grid grid-cols-2 gap-4 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               <div className="bg-[#111] rounded-xl p-5 border border-[#1A1A1A]">
                 <p className="text-xs uppercase tracking-[0.15em] text-red-400 mb-3 font-bold">The Broken Extremes</p>
                 <ul className="space-y-2">
@@ -220,7 +220,7 @@ export default function SecureFlow() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {FEATURES.map(({ icon, title, desc }) => (
                 <div key={title} className="bg-[#111] rounded-xl p-5 flex gap-4 items-start border border-[#222]">
                   <span className="text-2xl shrink-0 mt-0.5">{icon}</span>
@@ -236,8 +236,8 @@ export default function SecureFlow() {
           {/* 03 — Research */}
           <section id="research" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>03 — Research</p>
-            <h2 className="text-2xl font-bold text-white mb-6">Who lives inside this problem every day</h2>
-            <div className="grid grid-cols-2 gap-4 mb-6">
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-6">Who lives inside this problem every day</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
               {PERSONAS.map(({ name, role, goals, pain }) => (
                 <div key={name} className="bg-[#111] rounded-xl p-6 border border-[#222]">
                   <div className="mb-5">
@@ -278,11 +278,11 @@ export default function SecureFlow() {
           {/* 04 — Visual Direction */}
           <section id="visual" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>04 — Visual Direction</p>
-            <h2 className="text-2xl font-bold text-white mb-4">Designed for high-stakes, high-speed environments</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">Designed for high-stakes, high-speed environments</h2>
             <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               Security operations centers are dark, dense, and fast-moving. The interface needed to feel native to that environment — not a consumer product that was adapted. Deep blacks, a tight typographic system, and a strict color hierarchy were non-negotiable.
             </p>
-            <div className="grid grid-cols-2 gap-3 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
               {PRINCIPLES.map(({ icon, title, desc }) => (
                 <div key={title} className="flex items-start gap-4 bg-[#111] rounded-xl p-4 border border-[#222]">
                   <span className="text-lg shrink-0 mt-0.5" style={{ color: ACCENT }}>{icon}</span>
@@ -333,7 +333,7 @@ export default function SecureFlow() {
           {/* 05 — Wireframes */}
           <section id="wireframes" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>05 — Wireframes</p>
-            <h2 className="text-2xl font-bold text-white mb-4">Low-Fidelity Screens</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">Low-Fidelity Screens</h2>
             <p className="text-[#9CA3AF] leading-7 mb-6 text-lg">
               Wireframes mapped the full analyst workflow before any visual styling. The priority was information hierarchy — what does an analyst need to see the moment they open a flagged alert, and in what order does the AI's decision trail need to be surfaced?
             </p>
@@ -356,7 +356,7 @@ export default function SecureFlow() {
           {/* 06 — Hi-Fi Design */}
           <section id="hifi" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>06 — Hi-Fi Design</p>
-            <h2 className="text-2xl font-bold text-white mb-4">Final Screens &amp; Prototype</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">Final Screens &amp; Prototype</h2>
             <p className="text-[#9CA3AF] leading-7 mb-6 text-lg">
               High-fidelity screens are in progress — applying the full dark design system, semantic color hierarchy, and interactive states across all analyst workflows.
             </p>
@@ -367,7 +367,7 @@ export default function SecureFlow() {
                 className="w-full block"
               />
             </div>
-            <div className="border p-8 text-center" style={{ background: '#071619', borderColor: ACCENT + '25' }}>
+            <div className="border p-8 text-center bg-[#071619]" style={{ borderColor: ACCENT + '25' }}>
               <p className="text-xs font-mono tracking-[0.2em] uppercase mb-2" style={{ color: ACCENT }}>Try DetectAI Security in Figma</p>
               <p className="text-[#6B7280] text-base mb-6 leading-relaxed">Full clickable prototype — dashboard, alert detail, AI decision trail, and analyst certification flow</p>
               <a
@@ -385,8 +385,8 @@ export default function SecureFlow() {
           {/* 07 — Key Learnings */}
           <section id="learnings" className="mb-8">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>07 — Reflection</p>
-            <h2 className="text-2xl font-bold text-white mb-8">Key Learnings</h2>
-            <div className="grid grid-cols-3 gap-4 mb-12">
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-8">Key Learnings</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
               {LEARNINGS.map(({ num, title, desc }) => (
                 <div key={num} className="bg-[#111] rounded-xl p-6 border border-[#222]">
                   <p className="text-4xl font-bold text-[#374151]/50 font-mono mb-4 leading-none">{num}</p>

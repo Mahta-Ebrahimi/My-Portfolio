@@ -1,7 +1,14 @@
 import React, { useEffect, useRef } from "react";
+import { useTheme } from "../context/ThemeContext";
 
 const Home = () => {
   const canvasRef = useRef(null);
+  const { isDark } = useTheme();
+  const isDarkRef = useRef(isDark);
+
+  useEffect(() => {
+    isDarkRef.current = isDark;
+  }, [isDark]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -54,8 +61,10 @@ const Home = () => {
       ctx.textBaseline = "middle";
       if ('letterSpacing' in ctx) ctx.letterSpacing = `${(isMobile ? -0.05 : -0.13) * fontSize}px`;
 
-      // ── Step 1: solid white letter base so text always reads ──────
-      ctx.fillStyle = "rgba(255, 255, 255, 0.92)";
+      // ── Step 1: letter base colour adapts to theme ───────────────
+      ctx.fillStyle = isDarkRef.current
+        ? "rgba(255, 255, 255, 0.92)"
+        : "rgba(15, 15, 15, 0.88)";
       ctx.fillText("Mahta", cx, cy);
 
       // ── Step 2: draw mesh into an offscreen region then composite ─
@@ -147,8 +156,8 @@ const Home = () => {
         className="absolute text-center z-20 top-[62%] sm:top-auto sm:bottom-20"
         style={{ fontFamily: "Raleway, sans-serif" }}
       >
-        <p className="text-gray-300 text-base sm:text-xl font-medium">Mahta Ebrahimi</p>
-        <p className="text-gray-300 text-base sm:text-xl font-medium">
+        <p className={`text-base sm:text-xl font-medium ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>Mahta Ebrahimi</p>
+        <p className={`text-base sm:text-xl font-medium ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
           UI/UX Designer &nbsp;·&nbsp; Frontend Developer &nbsp;·&nbsp; AI Workflow Designer
         </p>
         <p className="mt-2 text-[#FF9533] text-lg sm:text-2xl font-semibold italic">

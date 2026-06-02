@@ -19,6 +19,20 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Work list scrollbar */
+.lg\:overflow-y-auto::-webkit-scrollbar        { width: 4px; }
+.lg\:overflow-y-auto::-webkit-scrollbar-track  { background: transparent; }
+.lg\:overflow-y-auto::-webkit-scrollbar-thumb  { background: #333; border-radius: 2px; }
+html.light .lg\:overflow-y-auto::-webkit-scrollbar-thumb { background: #c5c1bb; }
+
+/* Dark mode — lift pure black to a softer near-black */
+html:not(.light) body {
+  background-color: #111111;
+}
+html:not(.light) .bg-black {
+  background-color: #111111 !important;
+}
+
 /* Optimize canvas for smooth scrolling */
 canvas {
   will-change: transform;
@@ -112,6 +126,98 @@ canvas {
     background-image: linear-gradient(
         to right,
         rgba(112, 157, 255, 0.8),
-        hsla(242, 74%, 61%, 0.8)   
+        hsla(242, 74%, 61%, 0.8)
     )!important;
 }
+
+/* ═══════════════════════════════════════════════════════════
+   LIGHT MODE — applied when <html class="light">
+═══════════════════════════════════════════════════════════ */
+
+html.light body {
+  background-color: #f8f7f4;
+  color: #0f0f0f;
+}
+
+/* ── Backgrounds ─────────────────────────────────────────── */
+html.light .bg-black              { background-color: #f8f7f4 !important; }
+html.light .bg-\[\#111\]          { background-color: #ffffff !important; }
+html.light .bg-\[\#0D0D0D\]       { background-color: #f0ede7 !important; }
+html.light .bg-\[\#0A0A0A\]       { background-color: #f5f5f5 !important; }
+html.light .bg-\[\#080808\]       { background-color: #eceae5 !important; }
+html.light .bg-\[\#040F0A\]       { background-color: #f0fdf8 !important; }
+html.light .bg-\[\#071619\]       { background-color: #e8f4f7 !important; }
+html.light .bg-\[\#2D0A1A\]       { background-color: #fdf2f7 !important; }
+html.light .bg-\[\#0a1520\]       { background-color: #e8f0f8 !important; }
+html.light .bg-\[\#020d14\]       { background-color: #e8f0f8 !important; }
+html.light .bg-\[\#0a0614\]       { background-color: #f0edf8 !important; }
+html.light .bg-\[\#1a0a00\]       { background-color: #fff7ef !important; }
+html.light .bg-\[\#1C1508\]       { background-color: #fdf8ef !important; }
+html.light .bg-\[\#0F1B2D\]       { background-color: #eef4ff !important; }
+html.light .bg-\[\#0e0a1a\]       { background-color: #f5f0ff !important; }
+html.light .bg-\[\#2D0A1A\]       { background-color: #fdf2f7 !important; }
+
+/* ── Text ────────────────────────────────────────────────── */
+html.light .text-white            { color: #111111 !important; }
+html.light .text-gray-100         { color: #1a1a1a !important; }
+html.light .text-gray-200         { color: #374151 !important; }
+html.light .text-gray-300         { color: #4b5563 !important; }
+html.light .text-\[\#D1D5DB\]     { color: #374151 !important; }
+html.light .text-\[\#9CA3AF\]     { color: #374151 !important; }
+html.light .text-\[\#6B7280\]     { color: #4b5563 !important; }
+html.light .text-\[\#4B5563\]     { color: #6b7280 !important; }
+html.light .text-\[\#374151\]     { color: #6b7280 !important; }
+html.light .text-\[\#2A2A2A\]     { color: #9ca3af !important; }
+html.light .text-\[\#444\]        { color: #9ca3af !important; }
+html.light .text-\[\#9a9393\]     { color: #6b7280 !important; }
+html.light .text-\[\#b2a8a8\]     { color: #6b7280 !important; }
+html.light .text-\[\#b2c1db\]     { color: #4b5563 !important; }
+/* Very dark decorative labels — make subtly visible */
+html.light .text-\[\#1A2A2A\],
+html.light .text-\[\#1F2D1A\],
+html.light .text-\[\#1F3030\],
+html.light .text-\[\#2D1220\],
+html.light .text-\[\#2D0A1A\],
+html.light .text-\[\#1A1A2A\]     { color: #9ca3af !important; }
+
+/* ── Borders ─────────────────────────────────────────────── */
+html.light .border-\[\#1A1A1A\]   { border-color: #c5c1bb !important; }
+html.light .border-\[\#111\]      { border-color: #e0ddd8 !important; }
+html.light .border-\[\#222\]      { border-color: #c8c4be !important; }
+html.light .border-\[\#2A2A2A\]   { border-color: #b0aaa4 !important; }
+html.light .border-\[\#333\]      { border-color: #9ca3af !important; }
+
+/* ── Section fade gradients ──────────────────────────────── */
+html.light #about::after,
+html.light #skills::after,
+html.light #work::after {
+  background: linear-gradient(to bottom, transparent, rgba(248, 247, 244, 0.8));
+}
+html.light #about::before,
+html.light #skills::before,
+html.light #work::before,
+html.light #footer::before {
+  opacity: 0.1;
+}
+
+/* ── Additional dark shades (Work section) ───────────────── */
+html.light .bg-\[\#1A1A1A\]       { background-color: #e5e7eb !important; }
+html.light .bg-\[\#1E1E1E\]       { background-color: #ece9e4 !important; }
+html.light .bg-\[\#051a0f\]       { background-color: #edfaf5 !important; }  /* active green row */
+html.light .bg-\[\#1a0e00\]       { background-color: #fff5eb !important; }  /* active orange row */
+html.light .bg-\[\#0a3520\]                        { background-color: #e0f5ec !important; }
+html.light .bg-\[\#351800\]                        { background-color: #fff0e0 !important; }
+/* Full accent on hover + white title text */
+html.light .hover\:bg-\[\#0a3520\]:hover           { background-color: #007a52 !important; }
+html.light .hover\:bg-\[\#351800\]:hover            { background-color: #c46200 !important; }
+html.light .group:hover .group-hover\:text-\[\#111111\] { color: #ffffff !important; }
+html.light .text-\[\#1A1A1A\]     { color: #e0ddd8 !important; }
+html.light .text-\[\#555\]        { color: #4b5563 !important; }
+html.light .text-\[\#666\]        { color: #4b5563 !important; }
+html.light .text-\[\#888\]        { color: #4b5563 !important; }
+html.light .text-\[\#999\]        { color: #6b7280 !important; }
+html.light .text-\[\#333\]        { color: #d1d5db !important; }
+html.light .border-\[\#1E1E1E\]   { border-color: #d1d5db !important; }
+html.light .border-\[\#444\]      { border-color: #b0aaa4 !important; }
+html.light .border-\[\#555\]      { border-color: #9ca3af !important; }
+html.light .text-gray-500         { color: #4b5563 !important; }

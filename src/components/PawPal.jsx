@@ -90,7 +90,7 @@ export default function PawPal() {
 
       {/* ═══ SIDEBAR WRAPPER — full-height, not sticky ═══════════ */}
       {/* The wrapper stretches full page height so bg fills completely */}
-      <div className="w-[200px] shrink-0 bg-[#080808] border-r border-[#1A1A1A]">
+      <div className="hidden lg:block w-[200px] shrink-0 bg-[#080808] border-r border-[#1A1A1A]">
         {/* Inner sticky panel — stays in viewport */}
         <div
           className="sticky flex flex-col overflow-y-auto"
@@ -158,20 +158,20 @@ export default function PawPal() {
 
       {/* ═══ MAIN CONTENT ════════════════════════════════════════ */}
       <main className="flex-1 min-w-0">
-        <div className="max-w-[720px] mx-auto px-8 py-12 pb-24">
+        <div className="max-w-[720px] mx-auto px-4 sm:px-8 py-8 sm:py-12 pb-24">
 
           {/* 01 — Overview */}
           <section id="overview" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] text-[#4ADE80] uppercase mb-3">01 — Overview</p>
-            <h1 className="text-4xl font-bold text-white mb-2 leading-tight">PawPal</h1>
-            <p className="text-xl text-[#6B7280] font-light mb-6">Peace for owners. Care for dogs.</p>
+            <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2 leading-tight">PawPal</h1>
+            <p className="text-lg sm:text-xl text-[#6B7280] font-light mb-6">Peace for owners. Care for dogs.</p>
             <div className="rounded-2xl overflow-hidden mb-8 bg-[#F0F0F0] p-3">
               <img src={pawpalImg} alt="PawPal App" className="w-full object-cover" />
             </div>
             <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               A mobile app connecting dog owners with trusted local sitters — designed from research to hi-fi prototype with a complete user-centered process.
             </p>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[{ value: '2', label: 'User Personas' }, { value: '20+', label: 'Design Iterations' }, { value: '1', label: 'User in Prototype' }].map(({ value, label }) => (
                 <div key={label} className="bg-[#111] rounded-xl p-6 text-center border border-[#222]">
                   <p className="text-3xl font-bold text-[#4ADE80] mb-2">{value}</p>
@@ -184,11 +184,11 @@ export default function PawPal() {
           {/* 02 — Problem & Solution */}
           <section id="problem" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] text-[#4ADE80] uppercase mb-3">02 — The Problem &amp; Solution</p>
-            <h2 className="text-2xl font-bold text-white mb-6 leading-snug">Finding the Right Sitter Should Feel Safe</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-6 leading-snug">Finding the Right Sitter Should Feel Safe</h2>
             <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               Dog owners struggle to find trusted sitters quickly. Existing solutions feel untrustworthy — leaving pet owners anxious when they leave home. The challenge was to design a mobile experience that feels safe, simple, and personal.
             </p>
-            <div className="grid grid-cols-2 gap-4 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               {FEATURES.map(({ icon, title, desc }) => (
                 <div key={title} className="bg-[#111] rounded-xl p-5 flex gap-4 items-start border border-[#222]">
                   <span className="text-2xl shrink-0 mt-0.5">{icon}</span>
@@ -209,8 +209,8 @@ export default function PawPal() {
           {/* 03 — Research */}
           <section id="research" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] text-[#4ADE80] uppercase mb-3">03 — Research</p>
-            <h2 className="text-2xl font-bold text-white mb-6">Understanding Users</h2>
-            <div className="grid grid-cols-2 gap-4 mb-6">
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-6">Understanding Users</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
               {PERSONAS.map(({ name, age, role, goals, pain }) => (
                 <div key={name} className="bg-[#111] rounded-xl p-6 border border-[#222]">
                   <div className="mb-5">
@@ -251,11 +251,11 @@ export default function PawPal() {
           {/* 04 — Visual Direction */}
           <section id="visual" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] text-[#4ADE80] uppercase mb-3">04 — Design System & Component Library</p>
-            <h2 className="text-2xl font-bold text-white mb-4">Design Approach</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">Design Approach</h2>
             <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               Soft greens and earthy tones create a calm, friendly atmosphere — reassuring for pet owners anxious about leaving their dogs. Playful illustration pairs with clean UI.
             </p>
-            <div className="grid grid-cols-2 gap-3 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
               {PRINCIPLES.map(({ icon, title, desc }) => (
                 <div key={title} className="flex items-start gap-4 bg-[#111] rounded-xl p-4 border border-[#222]">
                   <span className="text-[#4ADE80] text-lg shrink-0 mt-0.5">{icon}</span>
@@ -289,7 +289,7 @@ export default function PawPal() {
           {/* 05 — Wireframes */}
           <section id="wireframes" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] text-[#4ADE80] uppercase mb-3">05 — Wireframes</p>
-            <h2 className="text-2xl font-bold text-white mb-4">Low-Fidelity Screens</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">Low-Fidelity Screens</h2>
             <p className="text-[#9CA3AF] leading-7 mb-6 text-lg">
               Wireframes focused on information hierarchy and navigation patterns before any visual design. Key flows: onboarding, sitter search, profile view, booking form, messaging, payment.
             </p>
@@ -310,7 +310,7 @@ export default function PawPal() {
           {/* 06 — Hi-Fi Design */}
           <section id="hifi" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] text-[#4ADE80] uppercase mb-3">06 — Hi-Fi Design</p>
-            <h2 className="text-2xl font-bold text-white mb-4">Final Screens &amp; Prototype</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">Final Screens &amp; Prototype</h2>
             <p className="text-[#9CA3AF] leading-7 mb-6 text-lg">
               High-fidelity screens combining the design system, real content, and micro-interactions. The prototype demonstrates the complete user journey from onboarding to booking confirmation.
             </p>
@@ -332,7 +332,7 @@ export default function PawPal() {
           {/* 07 — Design System
           <section id="design-system" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] text-[#4ADE80] uppercase mb-3">07 — Design System</p>
-            <h2 className="text-2xl font-bold text-white mb-4">Component Library</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">Component Library</h2>
             <p className="text-[#9CA3AF] leading-7 mb-6 text-lg">
               Complete component library — forms, offer cards, booking flows, payment screens, navigation bars, system elements. Built for consistency and developer handoff.
             </p>
@@ -351,8 +351,8 @@ export default function PawPal() {
           {/* 07 — Key Learnings */}
           <section id="learnings" className="mb-8">
             <p className="text-xs font-mono tracking-[0.2em] text-[#4ADE80] uppercase mb-3">07 — Reflection</p>
-            <h2 className="text-2xl font-bold text-white mb-8">Key Learnings</h2>
-            <div className="grid grid-cols-3 gap-4 mb-12">
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-8">Key Learnings</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
               {LEARNINGS.map(({ num, title, desc }) => (
                 <div key={num} className="bg-[#111] rounded-xl p-6 border border-[#222]">
                   <p className="text-4xl font-bold text-[#374151]/50 font-mono mb-4 leading-none">{num}</p>

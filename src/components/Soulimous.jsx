@@ -40,7 +40,7 @@ export default function Soulimous() {
     <div className="flex bg-black min-h-screen" style={{ paddingTop: '80px' }}>
 
       {/* ═══ SIDEBAR WRAPPER ═══════════════════════════════════════ */}
-      <div className="w-[200px] shrink-0 bg-[#080808] border-r border-[#1A1A1A]">
+      <div className="hidden lg:block w-[200px] shrink-0 bg-[#080808] border-r border-[#1A1A1A]">
         <div
           className="sticky flex flex-col overflow-y-auto"
           style={{ top: '80px', height: 'calc(100vh - 80px)' }}
@@ -112,12 +112,12 @@ export default function Soulimous() {
       </div>
 
       {/* ═══ MAIN CONTENT ══════════════════════════════════════════ */}
-      <main className="flex-1 min-w-0 max-w-[800px] mx-auto px-8 py-12">
+      <main className="flex-1 min-w-0 max-w-[800px] mx-auto px-4 sm:px-8 py-8 sm:py-12">
 
         {/* Overview */}
         <section id="overview" className="mb-16 scroll-mt-24">
           <p className="text-xs font-bold tracking-[0.25em] uppercase mb-2" style={{ color: ACCENT }}>01 — Overview</p>
-          <h1 className="text-4xl font-bold text-white mb-2">Soulimous</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2">Soulimous</h1>
           <p className="text-[#6B7280] text-sm mb-6">WordPress Design & Development · Artist Website</p>
           <div className="w-full overflow-hidden border border-[#E0E0E0] mb-6 bg-[#F5F5F5] p-3">
             <img src={wordPress} alt="Soulimous" className="w-full h-auto object-cover" />
@@ -133,8 +133,8 @@ export default function Soulimous() {
         {/* Technologies */}
         <section id="technologies" className="mb-16 scroll-mt-24">
           <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: ACCENT }}>02 — Technologies</p>
-          <h2 className="text-2xl font-bold text-white mb-6">Stack & Tools</h2>
-          <div className="grid grid-cols-2 gap-3">
+          <h2 className="text-xl sm:text-2xl font-bold text-white mb-6">Stack & Tools</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {['WordPress', 'HTML / CSS', 'JavaScript', 'Responsive Design'].map((tech) => (
               <div key={tech} className="bg-[#0D0D0D] border border-[#1A1A1A] px-4 py-3 flex items-center gap-3">
                 <div className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: ACCENT }} />
@@ -147,7 +147,7 @@ export default function Soulimous() {
         {/* Features */}
         <section id="features" className="mb-16 scroll-mt-24">
           <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: ACCENT }}>03 — Key Features</p>
-          <h2 className="text-2xl font-bold text-white mb-6">What Was Built</h2>
+          <h2 className="text-xl sm:text-2xl font-bold text-white mb-6">What Was Built</h2>
           <ul className="space-y-3">
             {[
               'Custom WordPress theme development',
@@ -169,8 +169,8 @@ export default function Soulimous() {
         {/* Live Website */}
         <section id="website" className="mb-16 scroll-mt-24">
           <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: ACCENT }}>04 — Live Website</p>
-          <h2 className="text-2xl font-bold text-white mb-6">See It Live</h2>
-          <div className="bg-[#0D0D0D] border border-[#1A1A1A] p-6 flex items-center justify-between">
+          <h2 className="text-xl sm:text-2xl font-bold text-white mb-6">See It Live</h2>
+          <div className="bg-[#0D0D0D] border border-[#1A1A1A] p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <div>
               <p className="text-white font-bold text-sm mb-1">Soulimous</p>
               <p className="text-[#4B5563] text-xs">soulimous.com</p>

@@ -85,7 +85,7 @@ export default function MatchMe() {
     <div className="flex bg-black min-h-screen" style={{ paddingTop: '80px' }}>
 
       {/* ═══ SIDEBAR ═══════════════════════════════════════════════ */}
-      <div className="w-[200px] shrink-0 bg-[#080808] border-r border-[#1A1A1A]">
+      <div className="hidden lg:block w-[200px] shrink-0 bg-[#080808] border-r border-[#1A1A1A]">
         <div
           className="sticky flex flex-col overflow-y-auto"
           style={{ top: '80px', height: 'calc(100vh - 80px)' }}
@@ -164,20 +164,20 @@ export default function MatchMe() {
 
       {/* ═══ MAIN CONTENT ═══════════════════════════════════════════ */}
       <main className="flex-1 min-w-0">
-        <div className="max-w-[720px] mx-auto px-8 py-12 pb-24">
+        <div className="max-w-[720px] mx-auto px-4 sm:px-8 py-8 sm:py-12 pb-24">
 
           {/* 01 — Overview */}
           <section id="overview" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>01 — Overview</p>
-            <h1 className="text-4xl font-bold text-white mb-2 leading-tight">MatchMe</h1>
-            <p className="text-xl text-[#6B7280] font-light mb-6">Find any helper. Matched by AI.</p>
+            <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2 leading-tight">MatchMe</h1>
+            <p className="text-lg sm:text-xl text-[#6B7280] font-light mb-6">Find any helper. Matched by AI.</p>
             <div className="rounded-2xl overflow-hidden mb-8 bg-[#F0F0F0] p-3">
               <img src={MatchMeHIFI} alt="MatchMe App" className="w-full object-cover" />
             </div>
             <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               MatchMe is a universal AI-powered service matchmaking app. Users can find babysitters, tutors, fitness trainers, cleaners, handymen, pet sitters, elderly care helpers, and more — all matched by AI based on personality, availability, location, and need. Designed end-to-end in Figma from research to hi-fi prototype.
             </p>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
                 { value: '10+', label: 'Service Categories' },
                 { value: '6', label: 'AI Features' },
@@ -194,7 +194,7 @@ export default function MatchMe() {
           {/* 02 — Problem & Solution */}
           <section id="problem" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>02 — The Problem &amp; Solution</p>
-            <h2 className="text-2xl font-bold text-white mb-6 leading-snug">Finding the Right Helper Shouldn't Require Five Different Apps</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-6 leading-snug">Finding the Right Helper Shouldn't Require Five Different Apps</h2>
             <p className="text-[#9CA3AF] leading-7 mb-6 text-lg">
               People need different kinds of help at different times — a babysitter this week, a personal trainer next month, a handyman on Saturday. Existing platforms are siloed by category, rely on manual filters, and offer zero intelligence about whether a helper is actually a good fit for <em>you</em>.
             </p>
@@ -202,7 +202,7 @@ export default function MatchMe() {
               MatchMe solves this with a single AI-powered platform that learns what each user needs through a short onboarding quiz, then surfaces the right helpers across any service type — scored for compatibility, not just proximity.
             </p>
             <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#374151] mb-3">AI Features</p>
-            <div className="grid grid-cols-2 gap-4 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               {AI_FEATURES.map(({ icon, title, desc }) => (
                 <div key={title} className="bg-[#111] rounded-xl p-5 flex gap-4 items-start border border-[#222]">
                   <span className="text-2xl shrink-0 mt-0.5">{icon}</span>
@@ -214,7 +214,7 @@ export default function MatchMe() {
               ))}
             </div>
             <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#374151] mb-3">Core Platform Features</p>
-            <div className="grid grid-cols-2 gap-4 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               {STANDARD_FEATURES.map(({ icon, title, desc }) => (
                 <div key={title} className="bg-[#111] rounded-xl p-5 flex gap-4 items-start border border-[#222]">
                   <span className="text-2xl shrink-0 mt-0.5">{icon}</span>
@@ -235,8 +235,8 @@ export default function MatchMe() {
           {/* 03 — Research */}
           <section id="research" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>03 — Research</p>
-            <h2 className="text-2xl font-bold text-white mb-6">Who Needs MatchMe</h2>
-            <div className="grid grid-cols-2 gap-4 mb-6">
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-6">Who Needs MatchMe</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
               {PERSONAS.map(({ name, age, role, goals, pain }) => (
                 <div key={name} className="bg-[#111] rounded-xl p-6 border border-[#222]">
                   <div className="mb-5">
@@ -277,11 +277,11 @@ export default function MatchMe() {
           {/* 04 — Design System & Component Library */}
           <section id="visual" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>04 — Design System &amp; Component Library</p>
-            <h2 className="text-2xl font-bold text-white mb-4">AI-First Design Principles</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">AI-First Design Principles</h2>
             <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               The design system was built around one constraint: AI decisions must be surfaced, not hidden. Every component that presents a recommendation includes the reasoning behind it — score, matched criteria, and why this helper fits this user specifically.
             </p>
-            <div className="grid grid-cols-2 gap-3 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
               {PRINCIPLES.map(({ icon, title, desc }) => (
                 <div key={title} className="flex items-start gap-4 bg-[#111] rounded-xl p-4 border border-[#222]">
                   <span className="text-lg shrink-0 mt-0.5" style={{ color: ACCENT }}>{icon}</span>
@@ -305,7 +305,7 @@ export default function MatchMe() {
           {/* 05 — Wireframes
           <section id="wireframes" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>05 — Wireframes</p>
-            <h2 className="text-2xl font-bold text-white mb-4">Low-Fidelity Screens</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">Low-Fidelity Screens</h2>
             <p className="text-[#9CA3AF] leading-7 mb-6 text-lg">
               Wireframes mapped the AI-assisted user journey before any visual design. Key flows: AI onboarding quiz, match feed with scores, helper profile with AI summary, booking and calendar, in-app messaging with conversation assistant, and payment.
             </p>
@@ -317,14 +317,14 @@ export default function MatchMe() {
           {/* 06 — Hi-Fi Design */}
           <section id="hifi" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>05 — Hi-Fi Design</p>
-            <h2 className="text-2xl font-bold text-white mb-4">Final Screens &amp; Prototype</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">Final Screens &amp; Prototype</h2>
             <p className="text-[#9CA3AF] leading-7 mb-6 text-lg">
               High-fidelity screens show the full AI-powered flow: the onboarding quiz that builds a user profile, the match feed with AI best-fit scores and reasoning, helper profiles with AI-generated summaries, booking with calendar availability, in-chat AI conversation prompts, and in-app payment.
             </p>
             <div className="bg-[#F5F5F5] rounded-xl p-4 flex flex-col items-center justify-center text-center mb-8 border border-[#E0E0E0]" style={{ minHeight: '200px' }}>
               <img src={MatchMeHIFI} alt="MatchMe Hi-Fi Design" className="w-full object-cover" />
             </div>
-            <div className="border p-8 text-center" style={{ background: '#2D0A1A', borderColor: `${ACCENT}25` }}>
+            <div className="border p-8 text-center bg-[#2D0A1A]" style={{ borderColor: `${ACCENT}25` }}>
               <p className="text-xs font-mono tracking-[0.2em] uppercase mb-2" style={{ color: ACCENT }}>Try MatchMe in Figma</p>
               <p className="text-[#6B7280] text-base mb-6 leading-relaxed">Full clickable prototype — AI onboarding quiz, match feed with best-fit scores, booking, and messaging</p>
               <a
@@ -342,8 +342,8 @@ export default function MatchMe() {
           {/* 07 — Key Learnings */}
           <section id="learnings" className="mb-8">
             <p className="text-xs font-mono tracking-[0.2em] uppercase mb-3" style={{ color: ACCENT }}>07 — Reflection</p>
-            <h2 className="text-2xl font-bold text-white mb-8">Key Learnings</h2>
-            <div className="grid grid-cols-3 gap-4 mb-12">
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-8">Key Learnings</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
               {LEARNINGS.map(({ num, title, desc }) => (
                 <div key={num} className="bg-[#111] rounded-xl p-6 border border-[#222]">
                   <p className="text-4xl font-bold text-[#374151]/50 font-mono mb-4 leading-none">{num}</p>

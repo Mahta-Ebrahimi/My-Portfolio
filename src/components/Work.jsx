@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import danskeBank from '../assets/danskeBank.png';
 import pawpal from '../assets/HIFIPawpal.png';
 import novasolFigma from '../assets/NovaFigma.png';
@@ -56,19 +56,8 @@ const projects = [
     type: 'uiux',
     route: '/work/pawpal'
   },
-   {
+     {
     id: 4,
-    title: 'My Portfolio',
-    category: 'UX/UI + React',
-    badge: 'UX/UI + React',
-    badgeColor: '#A78BFA',
-    tools: ['Figma', 'React', 'Tailwind'],
-    image: portfolio1,
-    type: ['uiux', 'frontend'],
-    route: '/work/portfolio'
-  },
-    {
-    id: 5,
     title: 'AI Chatbot App',
     category: 'UX/UI + Full-Stack + AI',
     badge: 'AI + Full-Stack',
@@ -78,6 +67,18 @@ const projects = [
     type: ['uiux', 'frontend'],
     route: '/work/chatbot'
   },
+   {
+    id: 5,
+    title: 'My Portfolio',
+    category: 'UX/UI + React',
+    badge: 'UX/UI + React',
+    badgeColor: '#A78BFA',
+    tools: ['Figma', 'React', 'Tailwind'],
+    image: portfolio1,
+    type: ['uiux', 'frontend'],
+    route: '/work/portfolio'
+  },
+ 
    {
     id: 6,
     title: 'Selskabslokale',
@@ -114,17 +115,17 @@ const projects = [
   // },
  
   
-  {
-    id: 8,
-    title: 'Glienke Design',
-    category: 'Frontend Dev',
-    badge: 'Frontend Dev',
-    badgeColor: '#000',
-    tools: ['HTML', 'CSS', 'JavaScript'],
-    image: GlienkeScreen,
-    type: 'frontend',
-    route: '/work/glienke'
-  },
+  // {
+  //   id: 8,
+  //   title: 'Glienke Design',
+  //   category: 'Frontend Dev',
+  //   badge: 'Frontend Dev',
+  //   badgeColor: '#000',
+  //   tools: ['HTML', 'CSS', 'JavaScript'],
+  //   image: GlienkeScreen,
+  //   type: 'frontend',
+  //   route: '/work/glienke'
+  // },
   {
     id: 9,
     title: 'Soulimous',
@@ -253,6 +254,17 @@ const Work = () => {
   };
 
   const activeProject = filteredProjects[activeIndex];
+  const cardRef = useRef(null);
+  const [cardHeight, setCardHeight] = useState(null);
+
+  useEffect(() => {
+    const measure = () => {
+      if (cardRef.current) setCardHeight(cardRef.current.offsetHeight);
+    };
+    measure();
+    window.addEventListener('resize', measure);
+    return () => window.removeEventListener('resize', measure);
+  }, [activeIndex, filter]);
 
   return (
     <div name='work' id='work' className='w-full min-h-screen bg-black pb-16'>
@@ -267,11 +279,13 @@ const Work = () => {
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12'>
           {/* LEFT COLUMN: 3D Stacked Cards + Navigation — appears second on mobile */}
           <div className='flex flex-col order-2 lg:order-1'>
-            <WorkCardStack
-              activeProject={activeProject}
-              projects={filteredProjects}
-              activeIndex={activeIndex}
-            />
+            <div ref={cardRef}>
+              <WorkCardStack
+                activeProject={activeProject}
+                projects={filteredProjects}
+                activeIndex={activeIndex}
+              />
+            </div>
 
             {/* Navigation arrows + dots — below the card */}
             <div className='flex items-center justify-center gap-4 mt-6'>
@@ -305,6 +319,7 @@ const Work = () => {
               projects={filteredProjects}
               activeIndex={activeIndex}
               setActiveIndex={setActiveIndex}
+              cardHeight={cardHeight}
             />
           </div>
         </div>

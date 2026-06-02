@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTheme } from '../context/ThemeContext';
 
 const WorkCardStack = ({ activeProject, projects, activeIndex }) => {
   const [cardHovered, setCardHovered] = useState(false);
   const navigate = useNavigate();
+  const { isDark } = useTheme();
   const isAI = activeProject.badgeColor === '#00E5A0';
 
   return (
@@ -38,21 +40,28 @@ const WorkCardStack = ({ activeProject, projects, activeIndex }) => {
           ) : null
         )}
 
-        {/* Active card */}
+        {/* Active card — entire card is clickable */}
         <div
-          className="relative bg-[#111] p-6 transition-all duration-500"
+          className="relative bg-[#111] p-6 cursor-pointer transition-all duration-300"
           style={{
             zIndex: 10,
-            border: "1.5px solid #222",
-            boxShadow: isAI
-              ? "0 0 35px rgba(0, 229, 160, 0.22)"
-              : "0 0 35px rgba(255,255,255,0.04)",
+            border: cardHovered
+              ? `1.5px solid ${isAI ? '#00E5A0' : '#FF9533'}`
+              : isDark ? "1.5px solid #555555" : "1.5px solid #d1d5db",
+            boxShadow: cardHovered
+              ? isAI ? "0 0 35px rgba(0, 229, 160, 0.30)" : "0 0 35px rgba(255, 149, 51, 0.25)"
+              : isAI ? "0 0 35px rgba(0, 229, 160, 0.22)" : isDark ? "0 0 35px rgba(255,255,255,0.04)" : "0 0 20px rgba(0,0,0,0.06)",
           }}
+          onClick={() =>
+            activeProject.external
+              ? window.open(activeProject.route, "_blank")
+              : navigate(activeProject.route)
+          }
           onMouseEnter={() => setCardHovered(true)}
           onMouseLeave={() => setCardHovered(false)}
         >
           {/* Badge */}
-          <div className="flex justify-between items-start mb-4">
+          <div className="mb-4">
             <span
               className="text-xs px-2 py-1 border"
               style={{
@@ -62,30 +71,26 @@ const WorkCardStack = ({ activeProject, projects, activeIndex }) => {
             >
               {activeProject.badge}
             </span>
-            <span className="text-7xl font-bold text-[#1A1A1A]">
-              {String(activeProject.id).padStart(2, "0")}
-            </span>
           </div>
 
           {/* Category */}
-          <p className="text-sm uppercase tracking-widest text-[#555] mb-3">
+          <p className="text-sm uppercase tracking-widest text-[#555] mb-2">
             {activeProject.category}
           </p>
 
           {/* Title */}
-          <h3 className="text-2xl font-bold text-white mb-5">
+          <h3 className="text-2xl font-bold text-white mb-4">
             {activeProject.title}
           </h3>
 
           {/* Screen mockup */}
-          <div className="bg-[#0A0A0A] border border-[#222] rounded-lg overflow-hidden mb-6">
+          <div className="bg-[#0A0A0A] border border-[#222] rounded-lg overflow-hidden mb-4">
             <div className="bg-[#1A1A1A] px-3 py-1.5 flex gap-1.5">
               <div className="w-2 h-2 rounded-full bg-red-500/70"></div>
               <div className="w-2 h-2 rounded-full bg-yellow-500/70"></div>
               <div className="w-2 h-2 rounded-full bg-green-500/70"></div>
             </div>
 
-            {/* Shorter + slower scroll-shot + bottom padding */}
             <div
               className="relative overflow-hidden"
               style={{ height: "clamp(120px, 24vw, 180px)" }}
@@ -95,24 +100,21 @@ const WorkCardStack = ({ activeProject, projects, activeIndex }) => {
                 alt={activeProject.title}
                 style={{
                   width: "100%",
-                  height: "auto",
+                  height: "100%",
+                  objectFit: "cover",
+                  objectPosition: "top center",
                   display: "block",
-                  transformOrigin: "top center",
-                  animation: cardHovered
-                    ? "scrollShotSlow 14s ease-in-out infinite"
-                    : "none",
+                  transition: "transform 14s ease-in-out",
+                  transform: cardHovered ? "translateY(-15%)" : "translateY(0)",
                 }}
               />
-
-              {/* Invisible padding to allow more scroll */}
-              <div style={{ height: "60px" }}></div>
 
               {/* Overlay */}
               <div
                 style={{
                   position: "absolute",
                   inset: 0,
-                  backgroundColor: "rgba(0,0,0,0.55)",
+                  backgroundColor: "rgba(0,0,0,0.5)",
                   opacity: cardHovered ? 0 : 1,
                   transition: "opacity 600ms ease",
                   pointerEvents: "none",
@@ -122,41 +124,18 @@ const WorkCardStack = ({ activeProject, projects, activeIndex }) => {
           </div>
 
           {/* Tool pills */}
-          <div className="flex flex-wrap gap-3 mb-6">
+          <div className="flex flex-wrap gap-2">
             {activeProject.tools.map((tool, idx) => (
               <span
                 key={idx}
-                className="text-sm px-3 py-1.5 border border-[#333] text-[#888]"
+                className="text-xs px-2.5 py-1 border border-[#333] text-[#888]"
               >
                 {tool}
               </span>
             ))}
           </div>
-
-          {/* CTA */}
-          <button
-            onClick={() =>
-              activeProject.external
-                ? window.open(activeProject.route, "_blank")
-                : navigate(activeProject.route)
-            }
-            className="mt-3 px-6 py-2.5 text-sm font-bold tracking-wider border bg-white text-black border-white hover:bg-[#FF9533] hover:border-[#FF9533] hover:text-white transition-colors"
-          >
-            {activeProject.external ? "View Live →" : "View Project →"}
-          </button>
         </div>
       </div>
-
-      {/* Slower + shorter scroll animation */}
-      <style>
-        {`
-          @keyframes scrollShotSlow {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-20%); }
-            100% { transform: translateY(0); }
-          }
-        `}
-      </style>
     </div>
   );
 };

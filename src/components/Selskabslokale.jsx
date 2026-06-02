@@ -70,7 +70,7 @@ export default function Selskabslokale() {
     <div className="flex bg-black min-h-screen" style={{ paddingTop: '80px' }}>
 
       {/* ═══ SIDEBAR WRAPPER — full-height background ═══════════ */}
-      <div className="w-[200px] shrink-0 bg-[#080808] border-r border-[#1A1A1A]">
+      <div className="hidden lg:block w-[200px] shrink-0 bg-[#080808] border-r border-[#1A1A1A]">
         <div
           className="sticky flex flex-col overflow-y-auto"
           style={{ top: '80px', height: 'calc(100vh - 80px)' }}
@@ -140,20 +140,20 @@ export default function Selskabslokale() {
 
       {/* ═══ MAIN CONTENT ════════════════════════════════════════ */}
       <main className="flex-1 min-w-0">
-        <div className="max-w-[720px] mx-auto px-8 py-12 pb-24">
+        <div className="max-w-[720px] mx-auto px-4 sm:px-8 py-8 sm:py-12 pb-24">
 
           {/* 01 — Overview */}
           <section id="overview" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] text-[#C9A96E] uppercase mb-3">01 — Overview</p>
-            <h1 className="text-4xl font-bold text-white mb-2 leading-tight">Selskabslokale</h1>
-            <p className="text-xl text-[#6B7280] font-light mb-6">Venue Rental Platform · UI/UX Redesign</p>
+            <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2 leading-tight">Selskabslokale</h1>
+            <p className="text-lg sm:text-xl text-[#6B7280] font-light mb-6">Venue Rental Platform · UI/UX Redesign</p>
             <div className="rounded-2xl overflow-hidden mb-8 bg-[#F0F0F0] p-3">
               <img src={selskaklocal} alt="Selskabslokale Redesign" className="w-full object-cover" />
             </div>
             <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               A complete UI/UX redesign for a venue rental platform serving events and celebrations, making it easier to discover, evaluate, and enquire about the perfect venue.
             </p>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[{ value: 'Figma', label: 'Tool' }, { value: 'Danish', label: 'Language' }].map(({ value, label }) => (
                 <div key={label} className="bg-[#111] rounded-xl p-6 text-center border border-[#222]">
                   <p className="text-xl font-bold text-[#C9A96E] mb-2">{value}</p>
@@ -166,11 +166,11 @@ export default function Selskabslokale() {
           {/* 02 — Problem & Solution */}
           <section id="problem" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] text-[#C9A96E] uppercase mb-3">02 — The Problem &amp; Solution</p>
-            <h2 className="text-2xl font-bold text-white mb-6 leading-snug">Finding the Perfect Venue Should Feel Special</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-6 leading-snug">Finding the Perfect Venue Should Feel Special</h2>
             <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               The existing platform had a cluttered layout, poor imagery presentation, and a confusing enquiry flow — making users lose confidence in the venues listed. The redesign centred on trust, elegance, and a clear path from discovery to enquiry.
             </p>
-            <div className="grid grid-cols-2 gap-4 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               {FEATURES.map(({ icon, title, desc }) => (
                 <div key={title} className="bg-[#111] rounded-xl p-5 flex gap-4 items-start border border-[#222]">
                   <span className="text-2xl shrink-0 mt-0.5">{icon}</span>
@@ -191,8 +191,8 @@ export default function Selskabslokale() {
           {/* 03 — Research */}
           <section id="research" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] text-[#C9A96E] uppercase mb-3">03 — Research</p>
-            <h2 className="text-2xl font-bold text-white mb-6">Understanding the Event Planner</h2>
-            <div className="grid grid-cols-2 gap-4 mb-6">
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-6">Understanding the Event Planner</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
               {[
                 {
                   name: 'The Private Host', role: '35–55 · Birthday / Anniversary',
@@ -244,11 +244,11 @@ export default function Selskabslokale() {
           {/* 04 — Visual Direction */}
           <section id="visual" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] text-[#C9A96E] uppercase mb-3">04 — Visual Direction</p>
-            <h2 className="text-2xl font-bold text-white mb-4">Design Approach</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">Design Approach</h2>
             <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               Charcoal and gold carry a premium, celebratory feel without being ostentatious. Generous white space lets the venue imagery breathe and speak for itself.
             </p>
-            <div className="grid grid-cols-2 gap-3 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
               {PRINCIPLES.map(({ icon, title, desc }) => (
                 <div key={title} className="flex items-start gap-4 bg-[#111] rounded-xl p-4 border border-[#222]">
                   <span className="text-[#C9A96E] text-lg shrink-0 mt-0.5">{icon}</span>
@@ -275,7 +275,7 @@ export default function Selskabslokale() {
           {/* 05 — Wireframes */}
           {/* <section id="wireframes" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] text-[#C9A96E] uppercase mb-3">05 — Wireframes</p>
-            <h2 className="text-2xl font-bold text-white mb-4">Low-Fidelity Screens</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">Low-Fidelity Screens</h2>
             <p className="text-[#9CA3AF] leading-7 mb-6 text-base">
               Lo-fi wireframes established navigation patterns, venue card layouts, and the enquiry form flow before any visual styling was applied.
             </p>
@@ -288,7 +288,7 @@ export default function Selskabslokale() {
           {/* 06 — Final Design */}
           {/* <section id="hifi" className="mb-20">
             <p className="text-xs font-mono tracking-[0.2em] text-[#C9A96E] uppercase mb-3">06 — Final Design</p>
-            <h2 className="text-2xl font-bold text-white mb-4">Hi-Fi Screens</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">Hi-Fi Screens</h2>
             <p className="text-[#9CA3AF] leading-7 mb-6 text-base">
               Final screens apply the complete design system — typography hierarchy, colour tokens, photography placement rules, and interactive states for forms and filters.
             </p>
@@ -311,8 +311,8 @@ export default function Selskabslokale() {
           {/* 07 — Key Learnings */}
           <section id="learnings" className="mb-8">
             <p className="text-xs font-mono tracking-[0.2em] text-[#C9A96E] uppercase mb-3">05 — Reflection</p>
-            <h2 className="text-2xl font-bold text-white mb-8">Key Learnings</h2>
-            <div className="grid grid-cols-3 gap-4 mb-12">
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-8">Key Learnings</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
               {LEARNINGS.map(({ num, title, desc }) => (
                 <div key={num} className="bg-[#111] rounded-xl p-6 border border-[#222]">
                   <p className="text-4xl font-bold text-[#374151]/50 font-mono mb-4 leading-none">{num}</p>

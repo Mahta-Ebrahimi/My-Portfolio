@@ -1,10 +1,10 @@
 const WorkHeader = ({ filter, setFilter, setActiveIndex }) => {
   return (
-    <div className='mb-8 md:mb-12'>
-      <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-none text-center mb-3'>My Work</h1>
+    <div className='mb-2 md:mb-4'>
+      <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-none text-center mb-0'>Selected Work</h1>
 
       {/* Visible hint */}
-      <p className='text-[#9CA3AF] text-base text-center mb-6 font-medium'>
+      <p className='text-[#9CA3AF] text-base text-center mb-2 font-medium'>
         Click a project to explore
       </p>
 
