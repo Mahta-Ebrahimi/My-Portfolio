@@ -25,6 +25,17 @@ html {
 .lg\:overflow-y-auto::-webkit-scrollbar-thumb  { background: #333; border-radius: 2px; }
 html.light .lg\:overflow-y-auto::-webkit-scrollbar-thumb { background: #c5c1bb; }
 
+/* Alternating section backgrounds so each section reads as its own block */
+html:not(.light) #about  { background-color: #1a1a1a !important; }
+html:not(.light) #skills { background-color: #111111 !important; }
+html:not(.light) #work   { background-color: #090909 !important; }
+html:not(.light) #footer { background-color: #1e1e1e !important; }
+
+html.light #about  { background-color: #edeae4 !important; }
+html.light #skills { background-color: #f8f7f4 !important; }
+html.light #work   { background-color: #f5f3ef !important; }
+html.light #footer { background-color: #e5e2db !important; }
+
 /* Dark mode — lift pure black to a softer near-black */
 html:not(.light) body {
   background-color: #111111;

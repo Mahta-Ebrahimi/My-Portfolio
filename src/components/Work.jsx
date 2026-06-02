@@ -268,7 +268,7 @@ const Work = () => {
 
   return (
     <div name='work' id='work' className='w-full min-h-screen bg-black pb-16'>
-      <div className='max-w-[1200px] mx-auto px-4 pt-8 pb-16'>
+      <div className='max-w-[1200px] mx-auto px-4 pt-20 pb-16'>
         <WorkHeader 
           filter={filter} 
           setFilter={setFilter} 
