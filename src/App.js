@@ -32,16 +32,16 @@ function App() {
             <Footer />
           </>
         } />
-        <Route path="/work/danske-bank" element={<DanskeBank />} />
-        <Route path="/work/pawpal" element={<PawPal />} />
-        <Route path="/work/novasol" element={<Novasol />} />
-        <Route path="/work/selskabslokale" element={<Selskabslokale />} />
-        <Route path="/work/secureflow" element={<SecureFlow />} />
-        <Route path="/work/matchme" element={<MatchMe />} />
-        <Route path="/work/glienke" element={<Glienke />} />
-        <Route path="/work/soulimous" element={<Soulimous />} />
-        <Route path="/work/portfolio" element={<Portfolio />} />
-        <Route path="/work/chatbot" element={<Chatbot />} />
+        <Route path="/work/danske-bank" element={<><DanskeBank /><Footer /></>} />
+        <Route path="/work/pawpal" element={<><PawPal /><Footer /></>} />
+        <Route path="/work/novasol" element={<><Novasol /><Footer /></>} />
+        <Route path="/work/selskabslokale" element={<><Selskabslokale /><Footer /></>} />
+        <Route path="/work/secureflow" element={<><SecureFlow /><Footer /></>} />
+        <Route path="/work/matchme" element={<><MatchMe /><Footer /></>} />
+        <Route path="/work/glienke" element={<><Glienke /><Footer /></>} />
+        <Route path="/work/soulimous" element={<><Soulimous /><Footer /></>} />
+        <Route path="/work/portfolio" element={<><Portfolio /><Footer /></>} />
+        <Route path="/work/chatbot" element={<><Chatbot /><Footer /></>} />
       </Routes>
     </div>
   );
