@@ -21,7 +21,7 @@ const WorkProjectList = ({ projects, activeIndex, setActiveIndex, cardHeight }) 
               className={`group flex items-center border border-[#555] border-t-0 cursor-pointer transition-all duration-150 ${
                 isActive
                   ? isGreen ? 'bg-[#051a0f]' : 'bg-[#1a0e00]'
-                  : isGreen ? 'bg-transparent hover:bg-[#0a3520]' : 'bg-transparent hover:bg-[#351800]'
+                  : isGreen ? 'bg-transparent hover:bg-[#1a5c38]' : 'bg-transparent hover:bg-[#5c2d00]'
               }`}
               style={{
                 borderLeft: `4px solid ${isActive ? accentColor : isDark ? '#2a2a2a' : '#d1d5db'}`,

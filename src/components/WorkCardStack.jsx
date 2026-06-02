@@ -15,13 +15,17 @@ const WorkCardStack = ({ activeProject, projects, activeIndex }) => {
     >
       <div className="relative w-full max-w-sm md:max-w-md">
 
-        {/* Background stacked cards */}
+        {/* Background stacked cards — tinted to match the active project's accent */}
         {projects.slice(0, 4).map((project, idx) =>
           idx !== activeIndex ? (
             <div
               key={project.id}
-              className="absolute w-full h-full bg-[#0D0D0D] border border-[#1E1E1E] p-5"
+              className="absolute w-full h-full border p-5 transition-colors duration-500"
               style={{
+                backgroundColor: isDark
+                  ? isAI ? '#061a0f' : '#1a0900'
+                  : isAI ? '#f0fdf8' : '#fff7f0',
+                borderColor: isDark ? '#1E1E1E' : isAI ? '#c6f0e4' : '#fde8cc',
                 transform: `translateY(${(idx - activeIndex) * 6}px) translateX(${(idx - activeIndex) * 5}px) rotate(${(idx - activeIndex) * 1.5}deg)`,
                 zIndex: idx,
                 opacity: idx < 3 ? 0.45 - idx * 0.12 : 0,
@@ -42,9 +46,12 @@ const WorkCardStack = ({ activeProject, projects, activeIndex }) => {
 
         {/* Active card — entire card is clickable */}
         <div
-          className="relative bg-[#111] p-6 cursor-pointer transition-all duration-300"
+          className="relative p-6 cursor-pointer transition-all duration-500"
           style={{
             zIndex: 10,
+            backgroundColor: isDark
+              ? isAI ? '#061a0f' : '#1a0900'
+              : isAI ? '#f0fdf8' : '#fff7f0',
             border: cardHovered
               ? `1.5px solid ${isAI ? '#00E5A0' : '#FF9533'}`
               : isDark ? "1.5px solid #555555" : "1.5px solid #d1d5db",

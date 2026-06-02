@@ -205,12 +205,11 @@ html.light .bg-\[\#1A1A1A\]       { background-color: #e5e7eb !important; }
 html.light .bg-\[\#1E1E1E\]       { background-color: #ece9e4 !important; }
 html.light .bg-\[\#051a0f\]       { background-color: #edfaf5 !important; }  /* active green row */
 html.light .bg-\[\#1a0e00\]       { background-color: #fff5eb !important; }  /* active orange row */
-html.light .bg-\[\#0a3520\]                        { background-color: #e0f5ec !important; }
-html.light .bg-\[\#351800\]                        { background-color: #fff0e0 !important; }
-/* Full accent on hover + white title text */
-html.light .hover\:bg-\[\#0a3520\]:hover           { background-color: #007a52 !important; }
-html.light .hover\:bg-\[\#351800\]:hover            { background-color: #c46200 !important; }
-html.light .group:hover .group-hover\:text-\[\#111111\] { color: #ffffff !important; }
+html.light .bg-\[\#1a5c38\]                        { background-color: #dcf7ee !important; }
+html.light .bg-\[\#5c2d00\]                        { background-color: #fde8cc !important; }
+/* Soft tint on hover — light mode */
+html.light .hover\:bg-\[\#1a5c38\]:hover           { background-color: #dcf7ee !important; }
+html.light .hover\:bg-\[\#5c2d00\]:hover            { background-color: #fde8cc !important; }
 html.light .text-\[\#1A1A1A\]     { color: #e0ddd8 !important; }
 html.light .text-\[\#555\]        { color: #4b5563 !important; }
 html.light .text-\[\#666\]        { color: #4b5563 !important; }
