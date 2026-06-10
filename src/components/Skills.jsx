@@ -59,9 +59,10 @@ const Pill = ({ label, accent, isDark }) => {
   const color = isDark ? accent : (LIGHT_ACCENT[accent] || accent);
   return (
     <span
-      className='text-xs px-3 py-1.5 border bg-[#0D0D0D] font-medium tracking-wide'
+      className='text-xs px-3 py-1.5 border font-medium tracking-wide'
       style={{
-        borderColor: color + (isDark ? '55' : 'aa'),
+        background: isDark ? '#0D0D0D' : '#ffffff',
+        borderColor: color + (isDark ? '55' : '88'),
         color,
       }}
     >
@@ -91,7 +92,13 @@ const Skills = () => {
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
 
           {/* Design */}
-          <div className='bg-[#0D0D0D] border border-[#2A2A2A] p-6'>
+          <div
+            className='border p-6'
+            style={{
+              background: isDark ? '#0D0D0D' : '#fff8f2',
+              borderColor: isDark ? '#2A2A2A' : '#fdd9b5',
+            }}
+          >
             <div className='flex items-center gap-2 mb-5'>
               <div className='w-1 h-5' style={{ background: orangeHeading }} />
               <p className='text-sm font-bold tracking-wider uppercase' style={{ color: orangeHeading }}>
@@ -136,7 +143,13 @@ const Skills = () => {
           </div>
 
           {/* Frontend */}
-          <div className='bg-[#0D0D0D] border border-[#2A2A2A] p-6'>
+          <div
+            className='border p-6'
+            style={{
+              background: isDark ? '#0D0D0D' : '#f5f5f8',
+              borderColor: isDark ? '#2A2A2A' : '#d4d4de',
+            }}
+          >
             <div className='flex items-center gap-2 mb-5'>
               <div className='w-1 h-5' style={{ background: grayHeading }} />
               <p className='text-sm font-bold tracking-wider uppercase' style={{ color: grayHeading }}>
@@ -152,14 +165,24 @@ const Skills = () => {
         </div>
 
         {/* Other Tools */}
-        <div className='mt-4 bg-[#0D0D0D] border border-[#2A2A2A] px-6 py-5'>
+        <div
+          className='mt-4 border px-6 py-5'
+          style={{
+            background: isDark ? '#0A0A0A' : '#f9f8f5',
+            borderColor: isDark ? '#2A2A2A' : '#e0ddd8',
+          }}
+        >
           <p className='text-[10px] uppercase tracking-widest text-[#b2a8a8] mb-3'>Other Tools</p>
           <div className='flex flex-wrap gap-2'>
             {OTHER.map(s => (
               <span
                 key={s}
-                className='text-xs px-3 py-1.5 border border-[#333] bg-[#0A0A0A]'
-                style={{ color: isDark ? '#9a9393' : '#4b5563' }}
+                className='text-xs px-3 py-1.5 border'
+                style={{
+                  background: isDark ? '#0A0A0A' : '#ffffff',
+                  borderColor: isDark ? '#333' : '#ccc9c3',
+                  color: isDark ? '#9a9393' : '#4b5563',
+                }}
               >
                 {s}
               </span>

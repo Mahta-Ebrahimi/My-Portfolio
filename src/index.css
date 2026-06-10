@@ -31,10 +31,10 @@ html:not(.light) #skills { background-color: #111111 !important; }
 html:not(.light) #work   { background-color: #090909 !important; }
 html:not(.light) #footer { background-color: #1e1e1e !important; }
 
-html.light #about  { background-color: #edeae4 !important; }
-html.light #skills { background-color: #f8f7f4 !important; }
-html.light #work   { background-color: #f5f3ef !important; }
-html.light #footer { background-color: #e5e2db !important; }
+html.light #about  { background-color: #f4f2ee !important; }
+html.light #skills { background-color: #faf9f7 !important; }
+html.light #work   { background-color: #f7f5f2 !important; }
+html.light #footer { background-color: #eeeae4 !important; }
 
 /* Dark mode — lift pure black to a softer near-black */
 html:not(.light) body {
@@ -146,12 +146,12 @@ canvas {
 ═══════════════════════════════════════════════════════════ */
 
 html.light body {
-  background-color: #f8f7f4;
+  background-color: #faf9f7;
   color: #0f0f0f;
 }
 
 /* ── Backgrounds ─────────────────────────────────────────── */
-html.light .bg-black              { background-color: #f8f7f4 !important; }
+html.light .bg-black              { background-color: #faf9f7 !important; }
 html.light .bg-\[\#111\]          { background-color: #ffffff !important; }
 html.light .bg-\[\#0D0D0D\]       { background-color: #f0ede7 !important; }
 html.light .bg-\[\#0A0A0A\]       { background-color: #f5f5f5 !important; }
@@ -231,3 +231,19 @@ html.light .border-\[\#1E1E1E\]   { border-color: #d1d5db !important; }
 html.light .border-\[\#444\]      { border-color: #b0aaa4 !important; }
 html.light .border-\[\#555\]      { border-color: #9ca3af !important; }
 html.light .text-gray-500         { color: #4b5563 !important; }
+
+/* ── Project page sidebar nav — light mode hover fixes ── */
+html.light .hover\:bg-\[\#0D0D0D\]:hover {
+  background-color: #e2dfd9 !important;
+}
+html.light .group:hover .group-hover\:text-\[\#9CA3AF\] {
+  color: #111827 !important;
+  font-weight: 700 !important;
+}
+html.light .hover\:text-white:hover {
+  color: #111111 !important;
+  font-weight: 700 !important;
+}
+html.light .hover\:border-white:hover {
+  border-color: #374151 !important;
+}

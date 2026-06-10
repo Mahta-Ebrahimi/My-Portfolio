@@ -1,14 +1,25 @@
+import { useState, useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
 
-const WorkProjectList = ({ projects, activeIndex, setActiveIndex, cardHeight }) => {
+const WorkProjectList = ({ projects, activeIndex, setActiveIndex, cardHeight, onHoverIndex }) => {
   const { isDark } = useTheme();
+  const [hoveredIdx, setHoveredIdx] = useState(null);
+  const [isMobile, setIsMobile] = useState(() => window.innerWidth < 1024);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 1024);
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
+
+  const listHeight = isMobile ? 220 : cardHeight;
 
   return (
     <div
       className='flex flex-col bg-[#111] overflow-y-auto'
-      style={cardHeight ? { height: `${cardHeight}px` } : undefined}
+      style={{ direction: 'rtl', ...(listHeight ? { height: `${listHeight}px` } : {}) }}
     >
-      <div className='flex flex-col border-t border-[#555]'>
+      <div className='flex flex-col border-t border-[#555]' style={{ direction: 'ltr' }}>
         {projects.map((project, idx) => {
           const isActive = idx === activeIndex;
           const accentColor = project.badgeColor === '#00E5A0' ? '#00E5A0' : '#FF9533';
@@ -18,6 +29,8 @@ const WorkProjectList = ({ projects, activeIndex, setActiveIndex, cardHeight }) 
             <div
               key={project.id}
               onClick={() => setActiveIndex(idx)}
+              onMouseEnter={() => { onHoverIndex?.(idx); setHoveredIdx(idx); }}
+              onMouseLeave={() => { onHoverIndex?.(null); setHoveredIdx(null); }}
               className={`group flex items-center border border-[#555] border-t-0 cursor-pointer transition-all duration-150 ${
                 isActive
                   ? isGreen ? 'bg-[#051a0f]' : 'bg-[#1a0e00]'
@@ -28,9 +41,9 @@ const WorkProjectList = ({ projects, activeIndex, setActiveIndex, cardHeight }) 
               }}
             >
               {/* Badge column */}
-              <div className='shrink-0 flex items-center justify-center px-2 py-4 w-[130px]'>
+              <div className='shrink-0 flex items-center justify-center px-2 py-3 w-[110px]'>
                 <span
-                  className='text-xs font-mono font-bold px-2 border w-full text-center leading-tight whitespace-normal flex items-center justify-center h-[40px]'
+                  className='text-[10px] font-mono font-bold px-1.5 border w-full text-center leading-tight whitespace-normal flex items-center justify-center h-[34px]'
                   style={{ color: accentColor, borderColor: accentColor + '55' }}
                 >
                   {project.badge}
@@ -38,8 +51,8 @@ const WorkProjectList = ({ projects, activeIndex, setActiveIndex, cardHeight }) 
               </div>
 
               {/* Title + category */}
-              <div className='flex-1 min-w-0 px-4 py-4'>
-                <h4 className={`text-base font-bold leading-tight truncate transition-colors duration-150 ${
+              <div className='flex-1 min-w-0 px-3 py-3'>
+                <h4 className={`text-sm font-bold leading-tight truncate transition-colors duration-150 ${
                   isActive
                     ? 'text-white'
                     : isDark
@@ -48,15 +61,19 @@ const WorkProjectList = ({ projects, activeIndex, setActiveIndex, cardHeight }) 
                 }`}>
                   {project.title}
                 </h4>
-                <p className='text-sm text-[#555] mt-0.5'>{project.category}</p>
+                <p className='text-xs text-[#555] mt-0.5'>{project.category}</p>
               </div>
 
-              {/* Active indicator */}
+              {/* Arrow indicator — always visible, accent on active/hover */}
               <span
-                className='shrink-0 px-4 text-sm'
-                style={{ color: isActive ? accentColor : isDark ? '#333' : '#bbb' }}
+                className='shrink-0 px-3 text-sm font-bold transition-colors duration-150'
+                style={{
+                  color: isActive || hoveredIdx === idx
+                    ? accentColor
+                    : isDark ? '#3a3a3a' : '#c0bbb5'
+                }}
               >
-                {isActive ? '●' : '○'}
+                ›
               </span>
             </div>
           );

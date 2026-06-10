@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 
-const WorkCardStack = ({ activeProject, projects, activeIndex }) => {
+const WorkCardStack = ({ activeProject, projects, activeIndex, isHinted }) => {
   const [cardHovered, setCardHovered] = useState(false);
   const navigate = useNavigate();
   const { isDark } = useTheme();
@@ -54,10 +54,14 @@ const WorkCardStack = ({ activeProject, projects, activeIndex }) => {
               : isAI ? '#f0fdf8' : '#fff7f0',
             border: cardHovered
               ? `1.5px solid ${isAI ? '#00E5A0' : '#FF9533'}`
-              : isDark ? "1.5px solid #555555" : "1.5px solid #d1d5db",
+              : isHinted
+                ? `1.5px solid ${isAI ? '#00E5A066' : '#FF953366'}`
+                : isDark ? "1.5px solid #555555" : "1.5px solid #d1d5db",
             boxShadow: cardHovered
               ? isAI ? "0 0 35px rgba(0, 229, 160, 0.30)" : "0 0 35px rgba(255, 149, 51, 0.25)"
-              : isAI ? "0 0 35px rgba(0, 229, 160, 0.22)" : isDark ? "0 0 35px rgba(255,255,255,0.04)" : "0 0 20px rgba(0,0,0,0.06)",
+              : isHinted
+                ? isAI ? "0 0 0 3px rgba(0,229,160,0.18), 0 0 25px rgba(0,229,160,0.10)" : "0 0 0 3px rgba(255,149,51,0.18), 0 0 25px rgba(255,149,51,0.10)"
+                : isAI ? "0 0 35px rgba(0, 229, 160, 0.22)" : isDark ? "0 0 35px rgba(255,255,255,0.04)" : "0 0 20px rgba(0,0,0,0.06)",
           }}
           onClick={() =>
             activeProject.external
@@ -100,7 +104,7 @@ const WorkCardStack = ({ activeProject, projects, activeIndex }) => {
 
             <div
               className="relative overflow-hidden"
-              style={{ height: "clamp(120px, 24vw, 180px)" }}
+              style={{ height: "clamp(90px, 16vw, 130px)" }}
             >
               <img
                 src={activeProject.image}
