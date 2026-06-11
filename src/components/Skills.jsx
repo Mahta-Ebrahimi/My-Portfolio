@@ -95,8 +95,8 @@ const Skills = () => {
           <div
             className='border p-6'
             style={{
-              background: isDark ? '#0D0D0D' : '#fff8f2',
-              borderColor: isDark ? '#2A2A2A' : '#fdd9b5',
+              background: isDark ? '#1A0E05' : '#fde0b0',
+              borderColor: isDark ? '#2A1A0A' : '#f5b860',
             }}
           >
             <div className='flex items-center gap-2 mb-5'>
@@ -116,8 +116,8 @@ const Skills = () => {
           <div
             className='border p-6'
             style={{
-              background: isDark ? '#040F0A' : '#f0fdf8',
-              borderColor: isDark ? '#00E5A044' : '#007a5244',
+              background: isDark ? '#061A0F' : '#ccf5e8',
+              borderColor: isDark ? '#00E5A066' : '#007a5266',
             }}
           >
             <div className='flex items-center gap-2 mb-5'>
@@ -146,8 +146,8 @@ const Skills = () => {
           <div
             className='border p-6'
             style={{
-              background: isDark ? '#0D0D0D' : '#f5f5f8',
-              borderColor: isDark ? '#2A2A2A' : '#d4d4de',
+              background: isDark ? '#0E0E1A' : '#e2e2f2',
+              borderColor: isDark ? '#2A2A3A' : '#b8b8d4',
             }}
           >
             <div className='flex items-center gap-2 mb-5'>
@@ -168,11 +168,11 @@ const Skills = () => {
         <div
           className='mt-4 border px-6 py-5'
           style={{
-            background: isDark ? '#0A0A0A' : '#f9f8f5',
-            borderColor: isDark ? '#2A2A2A' : '#e0ddd8',
+            background: isDark ? '#141414' : '#eeeae2',
+            borderColor: isDark ? '#2A2A2A' : '#d4d0c8',
           }}
         >
-          <p className='text-[10px] uppercase tracking-widest text-[#b2a8a8] mb-3'>Other Tools</p>
+          <p className='text-[10px] uppercase tracking-widest mb-3' style={{ color: isDark ? '#888' : '#666' }}>Other Tools</p>
           <div className='flex flex-wrap gap-2'>
             {OTHER.map(s => (
               <span
@@ -180,8 +180,8 @@ const Skills = () => {
                 className='text-xs px-3 py-1.5 border'
                 style={{
                   background: isDark ? '#0A0A0A' : '#ffffff',
-                  borderColor: isDark ? '#333' : '#ccc9c3',
-                  color: isDark ? '#9a9393' : '#4b5563',
+                  borderColor: isDark ? '#444' : '#b8b4ac',
+                  color: isDark ? '#c8c0c0' : '#374151',
                 }}
               >
                 {s}

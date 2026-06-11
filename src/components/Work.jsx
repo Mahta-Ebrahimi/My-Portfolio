@@ -265,42 +265,59 @@ const Work = () => {
     measure();
     window.addEventListener('resize', measure);
     return () => window.removeEventListener('resize', measure);
-  }, [activeIndex, filter]);
+  }, [filter]);
 
   return (
     <div name='work' id='work' className='w-full min-h-screen bg-black pb-16'>
-      <div className='max-w-[1200px] mx-auto px-4 pt-20 pb-16'>
+      <div className='max-w-[1200px] mx-auto px-4 pt-20 lg:pt-36 pb-16'>
         <WorkHeader />
 
         {/* Filter tabs + legend — full width, left-aligned, above both columns */}
-        <div className='flex items-center gap-3 mb-4 flex-wrap lg:pl-6'>
-          {['all', 'uiux', 'frontend'].map((f) => (
-            <button
-              key={f}
-              onClick={() => { setFilter(f); setActiveIndex(0); }}
-              className={`px-5 py-2 text-sm font-bold tracking-wider border transition-colors ${
-                filter === f
-                  ? 'bg-white text-black border-white'
-                  : 'bg-transparent text-[#666] border-[#2A2A2A] hover:border-[#555] hover:text-[#999]'
-              }`}
-            >
-              {f === 'all' ? 'All' : f === 'uiux' ? 'UI / UX' : 'Frontend'}
-            </button>
-          ))}
-          <div className='flex items-center gap-2 ml-1'>
-            <div className='w-2.5 h-2.5 rounded-full' style={{ background: '#00E5A0' }} />
-            <span className='text-sm text-[#9CA3AF]'>AI</span>
+        <div className='mb-4 lg:pl-6'>
+          {/* Buttons row */}
+          <div className='flex items-center gap-3 flex-wrap'>
+            {['all', 'uiux', 'frontend'].map((f) => (
+              <button
+                key={f}
+                onClick={() => { setFilter(f); setActiveIndex(0); }}
+                className={`px-5 py-2 text-sm font-bold tracking-wider border transition-colors ${
+                  filter === f
+                    ? 'bg-white text-black border-transparent'
+                    : 'bg-transparent text-[#666] border-[#2A2A2A] hover:border-[#555] hover:text-[#999]'
+                }`}
+              >
+                {f === 'all' ? 'All' : f === 'uiux' ? 'UI / UX' : 'Frontend'}
+              </button>
+            ))}
+            {/* Legend inline — desktop only */}
+            <div className='hidden lg:flex items-center gap-4 ml-1'>
+              <div className='flex items-center gap-2'>
+                <div className='w-2.5 h-2.5 rounded-full' style={{ background: '#00E5A0' }} />
+                <span className='text-sm text-[#9CA3AF]'>AI</span>
+              </div>
+              <div className='flex items-center gap-2'>
+                <div className='w-2.5 h-2.5 rounded-full' style={{ background: '#FF9533' }} />
+                <span className='text-sm text-[#9CA3AF]'>UI/UX & Frontend</span>
+              </div>
+            </div>
           </div>
-          <div className='flex items-center gap-2'>
-            <div className='w-2.5 h-2.5 rounded-full' style={{ background: '#FF9533' }} />
-            <span className='text-sm text-[#9CA3AF]'>UI/UX & Frontend</span>
+          {/* Legend below buttons — mobile only */}
+          <div className='flex lg:hidden items-center gap-4 mt-2'>
+            <div className='flex items-center gap-2'>
+              <div className='w-2.5 h-2.5 rounded-full' style={{ background: '#00E5A0' }} />
+              <span className='text-sm text-[#9CA3AF]'>AI</span>
+            </div>
+            <div className='flex items-center gap-2'>
+              <div className='w-2.5 h-2.5 rounded-full' style={{ background: '#FF9533' }} />
+              <span className='text-sm text-[#9CA3AF]'>UI/UX & Frontend</span>
+            </div>
           </div>
         </div>
 
         {/* Two Column Layout — no gap so list and card sit flush inline */}
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-0 items-start'>
           {/* LEFT COLUMN: Project List */}
-          <div className='order-1 lg:order-1 lg:pl-6'>
+          <div className='order-1 lg:order-1 lg:pl-6 relative z-20'>
             <WorkProjectList
               projects={filteredProjects}
               activeIndex={activeIndex}

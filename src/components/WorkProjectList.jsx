@@ -64,7 +64,7 @@ const WorkProjectList = ({ projects, activeIndex, setActiveIndex, cardHeight, on
                 <p className='text-xs text-[#555] mt-0.5'>{project.category}</p>
               </div>
 
-              {/* Arrow indicator — always visible, accent on active/hover */}
+              {/* Arrow indicator — points right on desktop, down on mobile (card is below) */}
               <span
                 className='shrink-0 px-3 text-sm font-bold transition-colors duration-150'
                 style={{
@@ -73,7 +73,7 @@ const WorkProjectList = ({ projects, activeIndex, setActiveIndex, cardHeight, on
                     : isDark ? '#3a3a3a' : '#c0bbb5'
                 }}
               >
-                ›
+                {isMobile ? '↓' : '›'}
               </span>
             </div>
           );
