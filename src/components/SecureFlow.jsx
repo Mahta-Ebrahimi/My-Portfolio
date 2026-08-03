@@ -387,7 +387,7 @@ export default function SecureFlow() {
                 </div>
               ))}
               <div className="px-6 py-4">
-                <div className="flex items-start gap-6">
+                <div className="flex items-start gap-12">
                   <p className="text-[13px] font-mono uppercase tracking-[0.15em] text-[#4B5563] shrink-0 w-28 pt-1">Responsibilities</p>
                   <div className="flex flex-wrap gap-2">
                     {['UX Research', 'Product Design', 'UI Design', 'Prototyping', 'Design System'].map(r => (
