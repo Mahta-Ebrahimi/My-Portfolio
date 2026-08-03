@@ -280,7 +280,7 @@ const Work = () => {
               <button
                 key={f}
                 onClick={() => { setFilter(f); setActiveIndex(0); }}
-                className={`px-5 py-2 text-sm font-bold tracking-wider border transition-colors ${
+                className={`px-5 py-2 text-[14px] font-semibold tracking-wider border transition-colors ${
                   filter === f
                     ? 'bg-white text-black border-transparent'
                     : 'bg-transparent text-[#666] border-[#2A2A2A] hover:border-[#555] hover:text-[#999]'
@@ -342,7 +342,7 @@ const Work = () => {
             <div className='flex items-center justify-center gap-4 mt-6'>
               <button
                 onClick={handlePrev}
-                className='px-5 py-2 text-xs font-bold tracking-wider border border-[#333] text-white hover:bg-white hover:text-black transition-colors'
+                className='px-5 py-2 text-[13px] font-semibold tracking-wider border border-[#333] text-white hover:bg-white hover:text-black transition-colors'
               >
                 ←
               </button>
@@ -357,7 +357,7 @@ const Work = () => {
               </div>
               <button
                 onClick={handleNext}
-                className='px-5 py-2 text-xs font-bold tracking-wider border border-[#333] text-white hover:bg-white hover:text-black transition-colors'
+                className='px-5 py-2 text-[13px] font-semibold tracking-wider border border-[#333] text-white hover:bg-white hover:text-black transition-colors'
               >
                 →
               </button>

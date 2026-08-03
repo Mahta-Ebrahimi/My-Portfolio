@@ -59,7 +59,7 @@ const Pill = ({ label, accent, isDark }) => {
   const color = isDark ? accent : (LIGHT_ACCENT[accent] || accent);
   return (
     <span
-      className='text-xs px-3 py-1.5 border font-medium tracking-wide'
+      className='text-[12px] px-3 py-1.5 border font-medium tracking-wide'
       style={{
         background: isDark ? '#0D0D0D' : '#ffffff',
         borderColor: color + (isDark ? '55' : '88'),
@@ -84,8 +84,8 @@ const Skills = () => {
 
         {/* Heading */}
         <div className='text-center mb-12'>
-          <p className='text-xs font-bold tracking-[0.3em] uppercase text-[#444] mb-2'>Capabilities</p>
-          <h2 className='text-3xl sm:text-4xl font-bold text-white'>Skills & Tools</h2>
+          <p className='text-[13px] font-semibold tracking-[0.25em] uppercase text-[#444] mb-2'>Capabilities</p>
+          <h2 className='text-[30px] sm:text-[36px] font-bold text-white leading-[1.2]'>Skills & Tools</h2>
         </div>
 
         {/* Three columns */}
@@ -101,7 +101,7 @@ const Skills = () => {
           >
             <div className='flex items-center gap-2 mb-5'>
               <div className='w-1 h-5' style={{ background: orangeHeading }} />
-              <p className='text-sm font-bold tracking-wider uppercase' style={{ color: orangeHeading }}>
+              <p className='text-[13px] font-semibold tracking-wider uppercase' style={{ color: orangeHeading }}>
                 Design
               </p>
             </div>
@@ -122,14 +122,14 @@ const Skills = () => {
           >
             <div className='flex items-center gap-2 mb-5'>
               <div className='w-1 h-5' style={{ background: greenHeading }} />
-              <p className='text-sm font-bold tracking-wider uppercase' style={{ color: greenHeading }}>
+              <p className='text-[13px] font-semibold tracking-wider uppercase' style={{ color: greenHeading }}>
                 AI Tools
               </p>
             </div>
 
             {CATEGORIES[1].sub.map(({ sublabel, skills }) => (
               <div key={sublabel} className='mb-4'>
-                <p className='text-[10px] uppercase tracking-widest mb-2'
+                <p className='text-[13px] font-medium uppercase tracking-[0.15em] mb-2'
                   style={{ color: isDark ? '#2A5A4A' : '#007a52' }}>
                   {sublabel}
                 </p>
@@ -152,7 +152,7 @@ const Skills = () => {
           >
             <div className='flex items-center gap-2 mb-5'>
               <div className='w-1 h-5' style={{ background: grayHeading }} />
-              <p className='text-sm font-bold tracking-wider uppercase' style={{ color: grayHeading }}>
+              <p className='text-[13px] font-semibold tracking-wider uppercase' style={{ color: grayHeading }}>
                 Frontend
               </p>
             </div>
@@ -172,12 +172,12 @@ const Skills = () => {
             borderColor: isDark ? '#2A2A2A' : '#d4d0c8',
           }}
         >
-          <p className='text-[10px] uppercase tracking-widest mb-3' style={{ color: isDark ? '#888' : '#666' }}>Other Tools</p>
+          <p className='text-[13px] font-medium uppercase tracking-[0.15em] mb-3' style={{ color: isDark ? '#888' : '#666' }}>Other Tools</p>
           <div className='flex flex-wrap gap-2'>
             {OTHER.map(s => (
               <span
                 key={s}
-                className='text-xs px-3 py-1.5 border'
+                className='text-[12px] font-medium px-3 py-1.5 border'
                 style={{
                   background: isDark ? '#0A0A0A' : '#ffffff',
                   borderColor: isDark ? '#444' : '#b8b4ac',

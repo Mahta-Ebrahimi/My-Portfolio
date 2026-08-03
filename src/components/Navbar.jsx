@@ -43,11 +43,11 @@ const Navbar = () => {
 
         {/* CENTER */}
         {isProject ? (
-          <span className={`hidden md:block text-xs font-medium tracking-[0.2em] uppercase ${isDark ? 'text-[#4B5563]' : 'text-gray-400'}`}>
+          <span className={`hidden md:block text-[13px] font-medium tracking-[0.18em] uppercase ${isDark ? 'text-[#4B5563]' : 'text-gray-400'}`}>
             {projectLabel}
           </span>
         ) : (
-          <ul className='hidden md:flex font-bold gap-6'>
+          <ul className='hidden md:flex font-semibold text-[15px] gap-6'>
             <li className='hover:text-[#FF9533] cursor-pointer'>
               <Link to='about' smooth={true} duration={500}>About</Link>
             </li>

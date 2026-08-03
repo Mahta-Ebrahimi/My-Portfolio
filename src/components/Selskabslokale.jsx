@@ -81,16 +81,16 @@ export default function Selskabslokale() {
               <span style={{ fontSize: '14px' }}>🏛️</span>
               <h2 className="text-white font-bold text-sm leading-tight">Selskabslokale</h2>
             </div>
-            <p className="text-[#4B5563] text-xs mb-3">Venue Platform · UI/UX</p>
+            <p className="text-[#4B5563] text-[13px] mb-3">Venue Platform · UI/UX</p>
             <div className="flex gap-2">
-              <span className="text-xs bg-[#1C1508] text-[#C9A96E] px-2 py-1 rounded-md border border-[#C9A96E]/20">Figma</span>
-              <span className="text-xs bg-[#0D0D0D] text-[#4B5563] px-2 py-1 rounded-md border border-[#1A1A1A]">2025</span>
+              <span className="text-[12px] bg-[#1C1508] text-[#C9A96E] px-2 py-1 rounded-md border border-[#C9A96E]/20">Figma</span>
+              <span className="text-[12px] bg-[#0D0D0D] text-[#4B5563] px-2 py-1 rounded-md border border-[#1A1A1A]">2025</span>
             </div>
           </div>
 
           {/* Table of contents */}
           <nav className="flex-1 px-4 py-5">
-            <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#1F2D1A] mb-3 px-1">
+            <p className="text-[13px] font-semibold tracking-[0.18em] uppercase text-[#1F2D1A] mb-3 px-1">
               Contents
             </p>
             <ul className="space-y-0.5">
@@ -102,10 +102,10 @@ export default function Selskabslokale() {
                       onClick={() => scrollTo(id)}
                       className={`w-full flex items-center gap-3 px-2 py-[7px] rounded-lg text-left transition-all duration-150 group ${on ? 'bg-[#111]' : 'hover:bg-[#0D0D0D]'}`}
                     >
-                      <span className={`font-mono text-xs shrink-0 tabular-nums ${on ? 'text-[#C9A96E]' : 'text-[#1F2D1A] group-hover:text-[#374151]'}`}>
+                      <span className={`font-mono text-[12px] shrink-0 tabular-nums ${on ? 'text-[#C9A96E]' : 'text-[#1F2D1A] group-hover:text-[#374151]'}`}>
                         {num}
                       </span>
-                      <span className={`text-xs font-medium leading-tight ${on ? 'text-white' : 'text-[#6B7280] group-hover:text-[#9CA3AF]'}`}>
+                      <span className={`text-[13px] font-medium leading-tight ${on ? 'text-white' : 'text-[#6B7280] group-hover:text-[#9CA3AF]'}`}>
                         {label}
                       </span>
                       {on && <div className="ml-auto w-[3px] h-4 bg-[#C9A96E] rounded-full shrink-0" />}
@@ -120,17 +120,17 @@ export default function Selskabslokale() {
           <div className="px-5 pt-4 pb-6 border-t border-[#1A1A1A] space-y-4">
             <div className="grid grid-cols-2 gap-x-3 gap-y-3">
               <div>
-                <p className="text-xs uppercase tracking-widest text-[#1F2D1A] mb-1">Role</p>
-                <p className="text-xs text-[#9CA3AF] leading-tight">UI/UX Designer</p>
+                <p className="text-[12px] font-medium uppercase tracking-widest text-[#1F2D1A] mb-1">Role</p>
+                <p className="text-[13px] text-[#9CA3AF] leading-tight">UI/UX Designer</p>
               </div>
               <div>
-                {/* <p className="text-xs uppercase tracking-widest text-[#1F2D1A] mb-1">Duration</p> */}
-                {/* <p className="text-xs text-[#9CA3AF] leading-tight">2 months</p> */}
+                {/* <p className="text-[12px] font-medium uppercase tracking-widest text-[#1F2D1A] mb-1">Duration</p> */}
+                {/* <p className="text-[13px] text-[#9CA3AF] leading-tight">2 months</p> */}
               </div>
             </div>
             <a
               href={selskabslokaleDoc} target="_blank" rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full bg-[#C9A96E] text-[#0D1117] text-xs font-bold py-2 rounded-lg hover:bg-[#B8944A] transition-colors"
+              className="flex items-center justify-center gap-2 w-full bg-[#C9A96E] text-[#0D1117] text-[13px] font-semibold py-2 rounded-lg hover:bg-[#B8944A] transition-colors"
             >
               <FaFileAlt style={{ fontSize: '9px' }} /> Design Document
             </a>
@@ -144,8 +144,8 @@ export default function Selskabslokale() {
 
           {/* 01 — Overview */}
           <section id="overview" className="mb-20">
-            <p className="text-xs font-mono tracking-[0.2em] text-[#C9A96E] uppercase mb-3">01 — Overview</p>
-            <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2 leading-tight">Selskabslokale</h1>
+            <p className="text-[13px] font-mono tracking-[0.18em] text-[#C9A96E] uppercase mb-3">01 — Overview</p>
+            <h1 className="text-[36px] sm:text-[44px] font-bold text-white mb-2 leading-[1.15]">Selskabslokale</h1>
             <p className="text-lg sm:text-xl text-[#6B7280] font-light mb-6">Venue Rental Platform · UI/UX Redesign</p>
             <div className="rounded-2xl overflow-hidden mb-8 bg-[#F0F0F0] p-3">
               <img src={selskaklocal} alt="Selskabslokale Redesign" className="w-full object-cover" />
@@ -157,7 +157,7 @@ export default function Selskabslokale() {
               {[{ value: 'Figma', label: 'Tool' }, { value: 'Danish', label: 'Language' }].map(({ value, label }) => (
                 <div key={label} className="bg-[#111] rounded-xl p-6 text-center border border-[#222]">
                   <p className="text-xl font-bold text-[#C9A96E] mb-2">{value}</p>
-                  <p className="text-xs uppercase tracking-wider text-[#6B7280]">{label}</p>
+                  <p className="text-[13px] uppercase tracking-wider text-[#6B7280]">{label}</p>
                 </div>
               ))}
             </div>
@@ -165,8 +165,8 @@ export default function Selskabslokale() {
 
           {/* 02 — Problem & Solution */}
           <section id="problem" className="mb-20">
-            <p className="text-xs font-mono tracking-[0.2em] text-[#C9A96E] uppercase mb-3">02 — The Problem &amp; Solution</p>
-            <h2 className="text-xl sm:text-2xl font-bold text-white mb-6 leading-snug">Finding the Perfect Venue Should Feel Special</h2>
+            <p className="text-[13px] font-mono tracking-[0.18em] text-[#C9A96E] uppercase mb-3">02 — The Problem &amp; Solution</p>
+            <h2 className="text-[22px] sm:text-[28px] font-bold text-white mb-6 leading-snug">Finding the Perfect Venue Should Feel Special</h2>
             <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               The existing platform had a cluttered layout, poor imagery presentation, and a confusing enquiry flow — making users lose confidence in the venues listed. The redesign centred on trust, elegance, and a clear path from discovery to enquiry.
             </p>
@@ -190,8 +190,8 @@ export default function Selskabslokale() {
 
           {/* 03 — Research */}
           <section id="research" className="mb-20">
-            <p className="text-xs font-mono tracking-[0.2em] text-[#C9A96E] uppercase mb-3">03 — Research</p>
-            <h2 className="text-xl sm:text-2xl font-bold text-white mb-6">Understanding the Event Planner</h2>
+            <p className="text-[13px] font-mono tracking-[0.18em] text-[#C9A96E] uppercase mb-3">03 — Research</p>
+            <h2 className="text-[22px] sm:text-[28px] font-bold text-white mb-6 leading-snug">Understanding the Event Planner</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
               {[
                 {
@@ -211,7 +211,7 @@ export default function Selskabslokale() {
                     <p className="text-[#C9A96E] text-sm mt-0.5">{role}</p>
                   </div>
                   <div className="mb-4">
-                    <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#374151] mb-2">Goals</p>
+                    <p className="text-[13px] font-semibold uppercase tracking-[0.15em] text-[#374151] mb-2">Goals</p>
                     <ul className="space-y-1.5">
                       {goals.map(g => (
                         <li key={g} className="text-base text-[#9CA3AF] flex gap-2 leading-snug">
@@ -221,7 +221,7 @@ export default function Selskabslokale() {
                     </ul>
                   </div>
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#374151] mb-2">Pain Points</p>
+                    <p className="text-[13px] font-semibold uppercase tracking-[0.15em] text-[#374151] mb-2">Pain Points</p>
                     <ul className="space-y-1.5">
                       {pain.map(p => (
                         <li key={p} className="text-base text-[#9CA3AF] flex gap-2 leading-snug">
@@ -234,7 +234,7 @@ export default function Selskabslokale() {
               ))}
             </div>
             <div className="bg-[#080808] border border-[#1A1A1A] rounded-xl p-6">
-              <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#C9A96E] mb-2">Key Design Insight</p>
+              <p className="text-[13px] font-semibold uppercase tracking-[0.15em] text-[#C9A96E] mb-2">Key Design Insight</p>
               <p className="text-[#D1D5DB] text-base leading-relaxed">
                 Photography is the highest-trust signal. Users decided within seconds whether a venue felt right — before reading any text. Leading with imagery was non-negotiable.
               </p>
@@ -243,8 +243,8 @@ export default function Selskabslokale() {
 
           {/* 04 — Visual Direction */}
           <section id="visual" className="mb-20">
-            <p className="text-xs font-mono tracking-[0.2em] text-[#C9A96E] uppercase mb-3">04 — Visual Direction</p>
-            <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">Design Approach</h2>
+            <p className="text-[13px] font-mono tracking-[0.18em] text-[#C9A96E] uppercase mb-3">04 — Visual Direction</p>
+            <h2 className="text-[22px] sm:text-[28px] font-bold text-white mb-4 leading-snug">Design Approach</h2>
             <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               Charcoal and gold carry a premium, celebratory feel without being ostentatious. Generous white space lets the venue imagery breathe and speak for itself.
             </p>
@@ -260,12 +260,12 @@ export default function Selskabslokale() {
               ))}
             </div>
             <div className="bg-[#111] rounded-xl p-6 border border-[#222]">
-              <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#374151] mb-4">Color Palette</p>
+              <p className="text-[13px] font-semibold uppercase tracking-[0.15em] text-[#374151] mb-4">Color Palette</p>
               <div className="flex gap-4">
                 {COLORS.map(({ hex, label }) => (
                   <div key={label} className="flex flex-col items-center gap-2">
                     <div className="w-12 h-12 rounded-xl border border-white/10" style={{ backgroundColor: hex }} />
-                    <p className="text-xs text-[#6B7280]">{label}</p>
+                    <p className="text-[13px] text-[#6B7280]">{label}</p>
                   </div>
                 ))}
               </div>
@@ -274,30 +274,30 @@ export default function Selskabslokale() {
 
           {/* 05 — Wireframes */}
           {/* <section id="wireframes" className="mb-20">
-            <p className="text-xs font-mono tracking-[0.2em] text-[#C9A96E] uppercase mb-3">05 — Wireframes</p>
-            <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">Low-Fidelity Screens</h2>
+            <p className="text-[13px] font-mono tracking-[0.18em] text-[#C9A96E] uppercase mb-3">05 — Wireframes</p>
+            <h2 className="text-[22px] sm:text-[28px] font-bold text-white mb-4 leading-snug">Low-Fidelity Screens</h2>
             <p className="text-[#9CA3AF] leading-7 mb-6 text-base">
               Lo-fi wireframes established navigation patterns, venue card layouts, and the enquiry form flow before any visual styling was applied.
             </p>
             <div className="bg-[#111] rounded-xl p-8 flex flex-col items-center justify-center text-center border border-[#222]" style={{ minHeight: '200px' }}>
               <p className="text-[#374151] text-sm mb-1">Low-fi wireframes</p>
-              <p className="text-[#2D3A4A] text-xs">Homepage · Listing · Detail · Enquiry</p>
+              <p className="text-[#2D3A4A] text-[13px]">Homepage · Listing · Detail · Enquiry</p>
             </div>
           </section> */}
 
           {/* 06 — Final Design */}
           {/* <section id="hifi" className="mb-20">
-            <p className="text-xs font-mono tracking-[0.2em] text-[#C9A96E] uppercase mb-3">06 — Final Design</p>
-            <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">Hi-Fi Screens</h2>
+            <p className="text-[13px] font-mono tracking-[0.18em] text-[#C9A96E] uppercase mb-3">06 — Final Design</p>
+            <h2 className="text-[22px] sm:text-[28px] font-bold text-white mb-4 leading-snug">Hi-Fi Screens</h2>
             <p className="text-[#9CA3AF] leading-7 mb-6 text-base">
               Final screens apply the complete design system — typography hierarchy, colour tokens, photography placement rules, and interactive states for forms and filters.
             </p>
             <div className="bg-[#111] rounded-xl p-8 flex flex-col items-center justify-center text-center mb-8 border border-[#222]" style={{ minHeight: '200px' }}>
               <p className="text-[#374151] text-sm mb-1">Final hi-fi screens</p>
-              <p className="text-[#2D3A4A] text-xs">Complete venue rental flow</p>
+              <p className="text-[#2D3A4A] text-[13px]">Complete venue rental flow</p>
             </div>
             <div className="bg-[#080808] border border-[#C9A96E]/25 rounded-xl p-8 text-center">
-              <p className="text-xs font-mono tracking-[0.2em] text-[#C9A96E] uppercase mb-2">Design Document</p>
+              <p className="text-[13px] font-mono tracking-[0.18em] text-[#C9A96E] uppercase mb-2">Design Document</p>
               <p className="text-[#6B7280] text-sm mb-6 leading-relaxed">Full process documentation — research, wireframes, and final screens</p>
               <a
                 href={selskabslokaleDoc} target="_blank" rel="noopener noreferrer"
@@ -310,8 +310,8 @@ export default function Selskabslokale() {
 
           {/* 07 — Key Learnings */}
           <section id="learnings" className="mb-8">
-            <p className="text-xs font-mono tracking-[0.2em] text-[#C9A96E] uppercase mb-3">05 — Reflection</p>
-            <h2 className="text-xl sm:text-2xl font-bold text-white mb-8">Key Learnings</h2>
+            <p className="text-[13px] font-mono tracking-[0.18em] text-[#C9A96E] uppercase mb-3">05 — Reflection</p>
+            <h2 className="text-[22px] sm:text-[28px] font-bold text-white mb-8 leading-snug">Key Learnings</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
               {LEARNINGS.map(({ num, title, desc }) => (
                 <div key={num} className="bg-[#111] rounded-xl p-6 border border-[#222]">

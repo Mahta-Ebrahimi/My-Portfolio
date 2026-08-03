@@ -19,6 +19,40 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ── Typography Scale ──────────────────────────────────────────────
+   Desktop-first. All sizes target 1440–1920px viewports.
+
+   Display         56–64px  700  lh:1.10
+   Page Title H1   40–48px  700  lh:1.15
+   Section H2      32–36px  700  lh:1.20
+   Subsection H3   24–28px  600  lh:1.25
+   Card Title H4   20–22px  600  lh:1.30
+   Large Body      18px     400  lh:1.65
+   Body            16px     400  lh:1.65
+   Secondary Body  15px     400  lh:1.65
+   Navigation      14–15px  500
+   Button          14–15px  500–600
+   Label           13px     600  uppercase + tracking
+   Caption         12px     500
+   ─────────────────────────────────────────────────────────────────── */
+:root {
+  --font-display:    clamp(44px, 4.5vw, 64px);
+  --font-h1:         clamp(36px, 3.5vw, 48px);
+  --font-h2:         clamp(26px, 2.5vw, 36px);
+  --font-h3:         clamp(22px, 2vw, 28px);
+  --font-h4:         20px;
+  --font-body-lg:    18px;
+  --font-body:       16px;
+  --font-body-sm:    15px;
+  --font-label:      13px;
+  --font-caption:    12px;
+
+  --lh-display:  1.1;
+  --lh-heading:  1.2;
+  --lh-subhead:  1.25;
+  --lh-body:     1.65;
+}
+
 /* Work list scrollbar */
 .lg\:overflow-y-auto::-webkit-scrollbar        { width: 4px; }
 .lg\:overflow-y-auto::-webkit-scrollbar-track  { background: transparent; }

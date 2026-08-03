@@ -43,7 +43,7 @@ const WorkProjectList = ({ projects, activeIndex, setActiveIndex, cardHeight, on
               {/* Badge column */}
               <div className='shrink-0 flex items-center justify-center px-2 py-3 w-[110px]'>
                 <span
-                  className='text-[10px] font-mono font-bold px-1.5 border w-full text-center leading-tight whitespace-normal flex items-center justify-center h-[34px]'
+                  className='text-[12px] font-mono font-semibold px-1.5 border w-full text-center leading-tight whitespace-normal flex items-center justify-center h-[34px]'
                   style={{ color: accentColor, borderColor: accentColor + '55' }}
                 >
                   {project.badge}
@@ -52,7 +52,7 @@ const WorkProjectList = ({ projects, activeIndex, setActiveIndex, cardHeight, on
 
               {/* Title + category */}
               <div className='flex-1 min-w-0 px-3 py-3'>
-                <h4 className={`text-sm font-bold leading-tight truncate transition-colors duration-150 ${
+                <h4 className={`text-[14px] font-semibold leading-tight truncate transition-colors duration-150 ${
                   isActive
                     ? 'text-white'
                     : isDark
@@ -61,12 +61,12 @@ const WorkProjectList = ({ projects, activeIndex, setActiveIndex, cardHeight, on
                 }`}>
                   {project.title}
                 </h4>
-                <p className='text-xs text-[#555] mt-0.5'>{project.category}</p>
+                <p className='text-[12px] text-[#555] mt-0.5'>{project.category}</p>
               </div>
 
               {/* Arrow indicator — points right on desktop, down on mobile (card is below) */}
               <span
-                className='shrink-0 px-3 text-sm font-bold transition-colors duration-150'
+                className='shrink-0 px-3 text-[14px] font-semibold transition-colors duration-150'
                 style={{
                   color: isActive || hoveredIdx === idx
                     ? accentColor

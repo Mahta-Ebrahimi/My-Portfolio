@@ -22,7 +22,7 @@ const About = () => {
         </div>
 
         {/* Bio text */}
-        <div className="leading-loose text-[#D1D5DB] text-base sm:text-lg space-y-6 text-justify">
+        <div className="text-[#D1D5DB] text-[16px] sm:text-[18px] leading-[1.75] space-y-6 text-justify">
 
           {/* Drop cap first paragraph */}
           <p>
@@ -65,7 +65,7 @@ const About = () => {
         <div style={{ clear: 'both' }} />
 
         {/* Role line */}
-        <p className="mt-8 text-sm sm:text-base font-bold tracking-[0.25em] uppercase text-[#6B7280]">
+        <p className="mt-8 text-[13px] font-semibold tracking-[0.2em] uppercase text-[#6B7280]">
           UI/UX Designer &nbsp;·&nbsp; Front-End Developer &nbsp;·&nbsp; AI Workflow Designer &nbsp;·&nbsp; Copenhagen
         </p>
 

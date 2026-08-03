@@ -32,14 +32,14 @@ const WorkCardStack = ({ activeProject, projects, activeIndex, isHinted }) => {
               }}
             >
               <div className="flex justify-between items-start mb-3">
-                <span className="text-xs px-2 py-1 border border-[#333] text-[#555]">
+                <span className="text-[12px] font-medium px-2 py-1 border border-[#333] text-[#555]">
                   {project.badge}
                 </span>
                 <span className="text-5xl font-bold text-[#1A1A1A]">
                   {String(project.id).padStart(2, "0")}
                 </span>
               </div>
-              <h3 className="text-lg font-bold text-[#444]">{project.title}</h3>
+              <h3 className="text-[18px] font-semibold text-[#444]">{project.title}</h3>
             </div>
           ) : null
         )}
@@ -74,7 +74,7 @@ const WorkCardStack = ({ activeProject, projects, activeIndex, isHinted }) => {
           {/* Badge */}
           <div className="mb-4">
             <span
-              className="text-xs px-2 py-1 border"
+              className="text-[12px] font-medium px-2 py-1 border"
               style={{
                 color: isAI ? "#00E5A0" : "#FF9533",
                 borderColor: isAI ? "#00E5A0" : "#FF9533",
@@ -85,12 +85,12 @@ const WorkCardStack = ({ activeProject, projects, activeIndex, isHinted }) => {
           </div>
 
           {/* Category */}
-          <p className="text-sm uppercase tracking-widest text-[#555] mb-2">
+          <p className="text-[13px] font-medium uppercase tracking-widest text-[#555] mb-2">
             {activeProject.category}
           </p>
 
           {/* Title */}
-          <h3 className="text-2xl font-bold text-white mb-4">
+          <h3 className="text-[22px] font-semibold text-white mb-4">
             {activeProject.title}
           </h3>
 
@@ -139,7 +139,7 @@ const WorkCardStack = ({ activeProject, projects, activeIndex, isHinted }) => {
             {activeProject.tools.map((tool, idx) => (
               <span
                 key={idx}
-                className="text-xs px-2.5 py-1 border border-[#333] text-[#888]"
+                className="text-[12px] font-medium px-2.5 py-1 border border-[#333] text-[#888]"
               >
                 {tool}
               </span>
