@@ -1,12 +1,16 @@
-const WorkHeader = () => {
+export default function WorkHeader() {
   return (
-    <div className='mb-6 md:mb-10 text-center'>
-      <h1 className='text-[36px] sm:text-[44px] md:text-[48px] font-bold text-white leading-[1.15] mb-0'>Selected Work</h1>
-      <p className='text-[#9CA3AF] text-[16px] mb-2 font-medium'>
-        Click a project to explore
-      </p>
-    </div>
+    <header style={{ marginBottom: 52, textAlign: 'center' }}>
+      <h1 style={{
+        fontSize: 'clamp(26px, 2.4vw, 38px)',
+        fontWeight: 700,
+        color: 'var(--g-text, #FFFFFF)',
+        lineHeight: 1.1,
+        letterSpacing: '-0.025em',
+        margin: 0,
+      }}>
+        Featured Works
+      </h1>
+    </header>
   );
-};
-
-export default WorkHeader;
+}

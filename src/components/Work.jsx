@@ -1,373 +1,253 @@
-import React, { useState, useRef, useEffect } from 'react';
-import danskeBank from '../assets/danskeBank.png';
-import pawpal from '../assets/HIFIPawpal.png';
-import novasolFigma from '../assets/NovaFigma.png';
-import selskaklocal from '../assets/UI1.png';
-import GlienkeScreen from '../assets/GlienkeScreen.png';
-import wordPress from '../assets/wordpress2.png';
-import newsbox from '../assets/newsbox.png';
-import OnlineShop from '../assets/OnlineShop.png';
-import search from '../assets/search.png';
-import portfolio1 from '../assets/portfolio1.png';
-import realEstate from '../assets/realestate.jpg';
-import iplay from '../assets/iplaymusic.png';
-import chat from '../assets/chat.png';
-import trainee from '../assets/trainee.png';
-import fruitApp from '../assets/fruitApp.png';
-import WorkHeader from './WorkHeader';
-import WorkCardStack from './WorkCardStack';
-import WorkProjectList from './WorkProjectList';
-import detectAI from '../assets/DashboardAI.png';
-import matchMeHIFI from '../assets/MatchMeHIFI.png';
-import chatbot from '../assets/Chatbot.png';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import WorkHeader          from './WorkHeader';
+import MeshBackground      from './MeshBackground';
+import ProjectIndex        from './ProjectIndex';
+import FeaturedProjectCard from './FeaturedProjectCard';
+import ProjectGrid         from './ProjectGrid';
 
-const projects = [
-  
+import matchMeHIFI    from '../assets/MatchMeHIFI.png';
+import detectAI       from '../assets/DashboardAI.png';
+import pawpal         from '../assets/HIFIPawpal.png';
+import chatbot        from '../assets/Chatbot.png';
+import portfolio1     from '../assets/portfolio1.png';
+import selskabslokale from '../assets/UI1.png';
+import danskeBank     from '../assets/danskeBank.png';
+import wordPress      from '../assets/wordpress2.png';
+
+export const PROJECTS = [
   {
     id: 1,
     title: 'MatchMe App',
-    category: 'AI Service Matchmaking- Desktop UX/UI ',
-    badge: 'AI Matchmaking',
-    badgeColor: '#00E5A0',
+    navCategory: 'AI · Desktop UX/UI',
+    category: 'AI Service Matchmaking',
+    filterCategory: 'AI/ML',
+    description: 'AI-assisted compatibility matching for local services. A preference quiz builds a user model; the platform surfaces ranked helpers with clear reasoning behind each result.',
+    year: '2025', role: 'UI/UX Designer',
+    badge: 'AI Matchmaking', badgeColor: '#00E5A0',
     tools: ['Figma', 'AI Features', 'UX Research', 'Prototyping'],
-    image: matchMeHIFI,
-    type: 'uiux',
-    route: '/work/matchme'
+    image: matchMeHIFI, type: 'uiux', route: '/work/matchme',
   },
   {
     id: 2,
     title: 'Detect AI Security',
-    category: 'AI Security Design- Desktop UX/UI ',
-    badge: 'AI Security',
-    badgeColor: '#00E5A0',
-    tools: ['Figma', 'AI Systems', 'Product Design','Automation Logic'],
-    image: detectAI,
-    type: 'uiux',
-    route: '/work/secureflow'
+    navCategory: 'AI · Desktop UX/UI',
+    category: 'AI Security Platform',
+    filterCategory: 'AI/ML',
+    description: 'AI-powered platform for SOC analysts. Threat signals correlate automatically, anomalies are flagged in context, and response workflows surface actionable alerts.',
+    year: '2025', role: 'UI/UX Designer',
+    badge: 'AI Security', badgeColor: '#00E5A0',
+    tools: ['Figma', 'AI Systems', 'Product Design', 'Automation'],
+    image: detectAI, type: 'uiux', route: '/work/secureflow',
   },
-   {
+  {
     id: 3,
     title: 'PawPal App',
-    category: 'Mobile- UX/UI',
-    badge: 'Mobile- UX/UI',
-    badgeColor: '#000',
+    navCategory: 'Mobile App',
+    category: 'Mobile UX/UI',
+    filterCategory: 'Mobile',
+    description: 'Mobile app connecting pet owners with trusted vets, groomers, and walkers. Designed around trust, location-based discovery, and frictionless booking.',
+    year: '2024', role: 'UI/UX Designer',
+    badge: 'Mobile UX/UI', badgeColor: '#A78BFA',
     tools: ['Figma', 'UX Research', 'Prototyping', 'UI Design'],
-    image: pawpal,
-    type: 'uiux',
-    route: '/work/pawpal'
+    image: pawpal, type: 'uiux', route: '/work/pawpal',
   },
-     {
+  {
     id: 4,
     title: 'AI Chatbot App',
-    category: 'UX/UI + Full-Stack + AI',
-    badge: 'AI + Full-Stack',
-    badgeColor: '#38BDF8',
+    navCategory: 'AI · Full-Stack',
+    category: 'AI + Full-Stack Development',
+    filterCategory: 'AI/ML',
+    description: 'Full-stack conversational AI built with React, Node.js, and OpenAI. Features context retention, session memory, and a custom-designed chat interface.',
+    year: '2024', role: 'Designer & Developer',
+    badge: 'AI + Full-Stack', badgeColor: '#38BDF8',
     tools: ['React', 'Node.js', 'OpenAI', 'Tailwind'],
-    image: chatbot,
-    type: ['uiux', 'frontend'],
-    route: '/work/chatbot'
+    image: chatbot, type: ['uiux', 'frontend'], route: '/work/chatbot',
   },
-   {
+  {
     id: 5,
     title: 'My Portfolio',
-    category: 'UX/UI + React',
-    badge: 'UX/UI + React',
-    badgeColor: '#A78BFA',
+    navCategory: 'UX/UI · React',
+    category: 'Portfolio Design & Development',
+    filterCategory: 'Web App',
+    description: 'Designed in Figma and built in React with a dark/light theme system and smooth scroll navigation. The portfolio itself is a design case study.',
+    year: '2025', role: 'Designer & Developer',
+    badge: 'UX/UI + React', badgeColor: '#A78BFA',
     tools: ['Figma', 'React', 'Tailwind'],
-    image: portfolio1,
-    type: ['uiux', 'frontend'],
-    route: '/work/portfolio'
+    image: portfolio1, type: ['uiux', 'frontend'], route: '/work/portfolio',
   },
- 
-   {
+  {
     id: 6,
     title: 'Selskabslokale',
-    category: 'UX Research-SEO Analysis-Heatmaps',
-    badge: 'UX Research',
-    badgeColor: '#000',
-    tools: ['Figma', 'Research','Test','SEO','AIHeatmap' ],
-    image: selskaklocal,
-    type: 'uiux',
-    route: '/work/selskabslokale'
+    navCategory: 'UX Research',
+    category: 'UX Research & SEO Analysis',
+    filterCategory: 'SaaS',
+    description: 'UX research, heatmap analysis, and SEO audit for a Danish venue booking platform. Identified high-drop points in the booking flow and proposed validated improvements.',
+    year: '2024', role: 'UX Researcher',
+    badge: 'UX Research', badgeColor: '#F59E0B',
+    tools: ['Figma', 'Research', 'Heatmaps', 'SEO'],
+    image: selskabslokale, type: 'uiux', route: '/work/selskabslokale',
   },
   {
     id: 7,
     title: 'Bank DevSec AI',
+    navCategory: 'AI Product',
     category: 'AI Product Design',
-    badge: 'AI Product Design',
-    badgeColor: '#00E5A0',
+    filterCategory: 'Banking',
+    description: 'AI-assisted DevSecOps dashboard for a banking environment. Surfaces CI/CD pipeline vulnerabilities in real time with prioritised, contextual remediation guidance.',
+    year: '2025', role: 'UI/UX Designer',
+    badge: 'AI Product', badgeColor: '#00E5A0',
     tools: ['Figma', 'React', 'TypeScript'],
-    image: danskeBank,
-    type: ['uiux', 'frontend'],
-    route: '/work/danske-bank'
+    image: danskeBank, type: ['uiux', 'frontend'], route: '/work/danske-bank',
   },
- 
-  // {
-  //   id: 7,
-  //   title: 'Novasol Travel',
-  //   category: 'UX Redesign',
-  //   badge: 'UX Redesign',
-  //   badgeColor: '#000',
-  //   tools: ['Figma', 'IA', 'Accessibility'],
-  //   image: novasolFigma,
-  //   type: 'uiux',
-  //   route: '/work/novasol'
-  // },
- 
-  
-  // {
-  //   id: 8,
-  //   title: 'Glienke Design',
-  //   category: 'Frontend Dev',
-  //   badge: 'Frontend Dev',
-  //   badgeColor: '#000',
-  //   tools: ['HTML', 'CSS', 'JavaScript'],
-  //   image: GlienkeScreen,
-  //   type: 'frontend',
-  //   route: '/work/glienke'
-  // },
   {
-    id: 9,
+    id: 8,
     title: 'Soulimous',
-    category: 'WordPress',
-    badge: 'WordPress',
-    badgeColor: '#000',
+    navCategory: 'WordPress',
+    category: 'Web Design & Development',
+    filterCategory: 'Web App',
+    description: 'Custom WordPress site designed and built for an artist. The visual identity, layout, and content structure all reflect the artist\'s personal aesthetic.',
+    year: '2024', role: 'Designer & Developer',
+    badge: 'WordPress', badgeColor: '#6B7280',
     tools: ['WordPress', 'CMS', 'UI Design'],
-    image: wordPress,
-    type: ['uiux', 'frontend'],
-    route: '/work/soulimous'
+    image: wordPress, type: ['uiux', 'frontend'], route: '/work/soulimous',
   },
-  // {
-  //   id: 8,
-  //   title: 'News Box',
-  //   category: 'React App',
-  //   badge: 'React',
-  //   badgeColor: '#000',
-  //   tools: ['React', 'JavaScript', 'CSS'],
-  //   image: newsbox,
-  //   type: 'frontend',
-  //   route: 'https://wonderful-beignet-22f3b4.netlify.app/',
-  //   external: true
-  // },
-  // {
-  //   id: 8,
-  //   title: 'Online Shop',
-  //   category: 'React App',
-  //   badge: 'React',
-  //   badgeColor: '#000',
-  //   tools: ['React', 'JavaScript', 'CSS'],
-  //   image: OnlineShop,
-  //   type: 'frontend',
-  //   route: 'https://melodic-cuchufli-f56ece.netlify.app/',
-  //   external: true
-  // },
-  // {
-  //   id: 9,
-  //   title: 'Google Search',
-  //   category: 'React App',
-  //   badge: 'React',
-  //   badgeColor: '#000',
-  //   tools: ['React', 'JavaScript', 'API'],
-  //   image: search,
-  //   type: 'frontend',
-  //   route: 'https://phenomenal-basbousa-c22dd3.netlify.app/',
-  //   external: true
-  // },
- 
-
-  // {
-  //   id: 11,
-  //   title: 'Real Estate – Vue.js',
-  //   category: 'Vue App',
-  //   badge: 'Vue.js',
-  //   badgeColor: '#000',
-  //   tools: ['Vue.js', 'JavaScript', 'CSS'],
-  //   image: realEstate,
-  //   type: 'frontend',
-  //   route: 'https://github.com/Rangeland5499/m-gler-vue',
-  //   external: true
-  // },
-  // {
-  //   id: 9,
-  //   title: 'iPlayMusic App',
-  //   category: 'React App',
-  //   badge: 'React',
-  //   badgeColor: '#000',
-  //   tools: ['React', 'JavaScript', 'CSS'],
-  //   image: iplay,
-  //   type: 'frontend',
-  //   route: 'https://github.com/rts-cmk-wu07/iplaymusic-uptempo-folk/tree/master',
-  //   external: true
-  // },
-  // {
-  //   id: 13,
-  //   title: 'Chat Interface',
-  //   category: 'React App',
-  //   badge: 'React',
-  //   badgeColor: '#000',
-  //   tools: ['React', 'JavaScript', 'CSS'],
-  //   image: chat,
-  //   type: 'frontend',
-  //   route: 'https://github.com/Mahta-Ebrahimi/chat-interface-main',
-  //   external: true
-  // },
-  // {
-  //   id: 10,
-  //   title: 'Trainee App',
-  //   category: 'React App',
-  //   badge: 'React',
-  //   badgeColor: '#000',
-  //   tools: ['React', 'JavaScript', 'CSS'],
-  //   image: trainee,
-  //   type: 'frontend',
-  //   route: 'https://github.com/Mahta-Ebrahimi/Trainee-app',
-  //   external: true
-  // },
-  // {
-  //   id: 11,
-  //   title: 'Fruit Shop App',
-  //   category: 'React App',
-  //   badge: 'React',
-  //   badgeColor: '#000',
-  //   tools: ['React', 'JavaScript', 'CSS'],
-  //   image: fruitApp,
-  //   type: 'frontend',
-  //   route: 'https://github.com/Mahta-Ebrahimi/FruitApp-site',
-  //   external: true
-  // },
 ];
 
-const Work = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [filter, setFilter] = useState('all');
-
-  const filteredProjects = filter === 'all' 
-    ? projects 
-    : projects.filter(p => Array.isArray(p.type) ? p.type.includes(filter) : p.type === filter);
-
-  const handlePrev = () => {
-    setActiveIndex(prev => (prev > 0 ? prev - 1 : filteredProjects.length - 1));
-  };
-
-  const handleNext = () => {
-    setActiveIndex(prev => (prev < filteredProjects.length - 1 ? prev + 1 : 0));
-  };
-
-  const activeProject = filteredProjects[activeIndex];
-  const cardRef = useRef(null);
-  const [cardHeight, setCardHeight] = useState(null);
-  const [hoveredListIndex, setHoveredListIndex] = useState(null);
-
-  useEffect(() => {
-    const measure = () => {
-      if (cardRef.current) setCardHeight(cardRef.current.offsetHeight);
-    };
-    measure();
-    window.addEventListener('resize', measure);
-    return () => window.removeEventListener('resize', measure);
-  }, [filter]);
+/* ── Mobile project card (< lg) ─────────────────────────────── */
+function MobileCard({ proj }) {
+  const navigate = useNavigate();
+  const [hov, setHov] = useState(false);
+  const go = () => proj.external ? window.open(proj.route, '_blank') : navigate(proj.route);
 
   return (
-    <div name='work' id='work' className='w-full min-h-screen bg-black pb-16'>
-      <div className='max-w-[1200px] mx-auto px-4 pt-20 lg:pt-36 pb-16'>
+    <article
+      onClick={go}
+      onMouseEnter={() => setHov(true)}
+      onMouseLeave={() => setHov(false)}
+      style={{
+        background: 'var(--g-surface, rgba(12,18,24,0.78))',
+        border: `1px solid ${hov ? 'rgba(20,241,217,0.22)' : 'var(--g-border, rgba(255,255,255,0.09))'}`,
+        borderRadius: 'var(--g-radius, 24px)',
+        overflow: 'hidden',
+        cursor: 'pointer',
+        backdropFilter: 'blur(12px)',
+        WebkitBackdropFilter: 'blur(12px)',
+        transition: 'border-color 0.28s ease, transform 0.28s ease',
+        transform: hov ? 'translateY(-4px)' : 'none',
+        marginBottom: 16,
+      }}
+    >
+      <div style={{ aspectRatio: '16/9', overflow: 'hidden' }}>
+        <img
+          src={proj.image} alt={proj.title} loading="lazy"
+          style={{
+            width: '100%', height: '100%', objectFit: 'cover',
+            objectPosition: 'top center',
+            transform: hov ? 'scale(1.03)' : 'scale(1)',
+            transition: 'transform 0.45s ease',
+          }}
+        />
+      </div>
+      <div style={{ padding: '22px 24px 26px' }}>
+        <p style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.3em', textTransform: 'uppercase', color: 'var(--g-accent, #14F1D9)', margin: '0 0 8px' }}>
+          {proj.category}
+        </p>
+        <h3 style={{ fontSize: 18, fontWeight: 700, color: 'var(--g-text, #FFFFFF)', margin: '0 0 10px', letterSpacing: '-0.02em' }}>
+          {proj.title}
+        </h3>
+        <p style={{ fontSize: 13, lineHeight: 1.65, color: 'var(--g-secondary, #A1A1AA)', margin: '0 0 18px' }}>
+          {proj.description}
+        </p>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 5, marginBottom: 18 }}>
+          {proj.tools.map(t => (
+            <span key={t} style={{
+              fontSize: 9, padding: '3px 8px', borderRadius: 5,
+              border: '1px solid var(--g-border, rgba(255,255,255,0.07))', color: 'var(--g-secondary, #A1A1AA)',
+              letterSpacing: '0.08em', textTransform: 'uppercase',
+            }}>{t}</span>
+          ))}
+        </div>
+        <button onClick={go} style={{
+          fontSize: 10, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase',
+          color: 'var(--g-accent, #14F1D9)', border: '1px solid var(--g-accent-border, rgba(20,241,217,0.22))', padding: '10px 22px',
+          borderRadius: 50, background: 'var(--g-accent-bg, rgba(20,241,217,0.05))', cursor: 'pointer',
+        }}>
+          View Case Study →
+        </button>
+      </div>
+    </article>
+  );
+}
+
+/* ── Projects Showcase ───────────────────────────────────────── */
+export default function Work() {
+  const [activeIndex,  setActiveIndex]  = useState(0);
+  const [previewIndex, setPreviewIndex] = useState(null);
+
+  const displayIndex = previewIndex ?? activeIndex;
+
+  return (
+    <div name="work" id="work" style={{ minHeight: '100vh', paddingBottom: 100 }}>
+      <div style={{ maxWidth: 1500, margin: '0 auto', padding: '80px 32px 0' }}>
         <WorkHeader />
 
-        {/* Filter tabs + legend — full width, left-aligned, above both columns */}
-        <div className='mb-4 lg:pl-6'>
-          {/* Buttons row */}
-          <div className='flex items-center gap-3 flex-wrap'>
-            {['all', 'uiux', 'frontend'].map((f) => (
-              <button
-                key={f}
-                onClick={() => { setFilter(f); setActiveIndex(0); }}
-                className={`px-5 py-2 text-[14px] font-semibold tracking-wider border transition-colors ${
-                  filter === f
-                    ? 'bg-white text-black border-transparent'
-                    : 'bg-transparent text-[#666] border-[#2A2A2A] hover:border-[#555] hover:text-[#999]'
-                }`}
-              >
-                {f === 'all' ? 'All' : f === 'uiux' ? 'UI / UX' : 'Frontend'}
-              </button>
-            ))}
-            {/* Legend inline — desktop only */}
-            <div className='hidden lg:flex items-center gap-4 ml-1'>
-              <div className='flex items-center gap-2'>
-                <div className='w-2.5 h-2.5 rounded-full' style={{ background: '#00E5A0' }} />
-                <span className='text-sm text-[#9CA3AF]'>AI</span>
-              </div>
-              <div className='flex items-center gap-2'>
-                <div className='w-2.5 h-2.5 rounded-full' style={{ background: '#FF9533' }} />
-                <span className='text-sm text-[#9CA3AF]'>UI/UX & Frontend</span>
-              </div>
-            </div>
-          </div>
-          {/* Legend below buttons — mobile only */}
-          <div className='flex lg:hidden items-center gap-4 mt-2'>
-            <div className='flex items-center gap-2'>
-              <div className='w-2.5 h-2.5 rounded-full' style={{ background: '#00E5A0' }} />
-              <span className='text-sm text-[#9CA3AF]'>AI</span>
-            </div>
-            <div className='flex items-center gap-2'>
-              <div className='w-2.5 h-2.5 rounded-full' style={{ background: '#FF9533' }} />
-              <span className='text-sm text-[#9CA3AF]'>UI/UX & Frontend</span>
-            </div>
-          </div>
-        </div>
+        {/* ── Desktop: Project Index + Featured Card (lg+) ──── */}
+        <div
+          className="hidden lg:flex"
+          style={{ position: 'relative', gap: 20, alignItems: 'stretch', maxWidth: '70%', margin: '0 auto' }}
+        >
+          {/* Mesh background — covers the featured area */}
+          <MeshBackground
+            maskPosition="65% 50%"
+            style={{ borderRadius: 28, zIndex: 0 }}
+          />
 
-        {/* Two Column Layout — no gap so list and card sit flush inline */}
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-0 items-start'>
-          {/* LEFT COLUMN: Project List */}
-          <div className='order-1 lg:order-1 lg:pl-6 relative z-20'>
-            <WorkProjectList
-              projects={filteredProjects}
+          {/* Project Index */}
+          <div style={{ position: 'relative', zIndex: 1, flexShrink: 0 }}>
+            <ProjectIndex
+              projects={PROJECTS}
               activeIndex={activeIndex}
               setActiveIndex={setActiveIndex}
-              cardHeight={cardHeight}
-              onHoverIndex={setHoveredListIndex}
+              previewIndex={previewIndex}
+              setPreviewIndex={setPreviewIndex}
             />
           </div>
 
-          {/* RIGHT COLUMN: Stack Card + Navigation */}
-          <div className='flex flex-col order-2 lg:order-2 lg:pl-10'>
-            <div ref={cardRef}>
-              <WorkCardStack
-                activeProject={activeProject}
-                projects={filteredProjects}
-                activeIndex={activeIndex}
-                isHinted={hoveredListIndex !== null && hoveredListIndex !== activeIndex}
-              />
-            </div>
-
-            {/* Navigation arrows + dots — below the card */}
-            <div className='flex items-center justify-center gap-4 mt-6'>
-              <button
-                onClick={handlePrev}
-                className='px-5 py-2 text-[13px] font-semibold tracking-wider border border-[#333] text-white hover:bg-white hover:text-black transition-colors'
-              >
-                ←
-              </button>
-              <div className='flex gap-2 items-center'>
-                {filteredProjects.map((_, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setActiveIndex(idx)}
-                    className={`w-2 h-2 rounded-full transition-all ${idx === activeIndex ? 'bg-white scale-125' : 'bg-[#444] hover:bg-[#666]'}`}
-                  />
-                ))}
-              </div>
-              <button
-                onClick={handleNext}
-                className='px-5 py-2 text-[13px] font-semibold tracking-wider border border-[#333] text-white hover:bg-white hover:text-black transition-colors'
-              >
-                →
-              </button>
-            </div>
+          {/* Featured Card */}
+          <div style={{ position: 'relative', zIndex: 1, flex: 1, minWidth: 0 }}>
+            <FeaturedProjectCard project={PROJECTS[displayIndex]} />
           </div>
         </div>
 
+        {/* ── Mobile (< lg) ──────────────────────────────────── */}
+        <div className="lg:hidden">
+          {/* Number selector pills */}
+          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 24 }}>
+            {PROJECTS.map((proj, idx) => (
+              <button
+                key={proj.id}
+                onClick={() => setActiveIndex(idx)}
+                style={{
+                  fontFamily: 'ui-monospace, monospace',
+                  fontSize: 10, fontWeight: 700, letterSpacing: '0.12em',
+                  padding: '7px 14px', borderRadius: 50,
+                  border: `1px solid ${idx === activeIndex ? 'rgba(20,241,217,0.35)' : 'rgba(255,255,255,0.09)'}`,
+                  background: idx === activeIndex ? 'rgba(20,241,217,0.07)' : 'transparent',
+                  color: idx === activeIndex ? '#14F1D9' : '#52526A',
+                  cursor: 'pointer', transition: 'all 0.22s ease',
+                }}
+              >
+                {String(idx + 1).padStart(2, '0')}
+              </button>
+            ))}
+          </div>
+          <MobileCard proj={PROJECTS[activeIndex]} />
+        </div>
+
+        {/* ── All Projects grid (all breakpoints) ─────────────── */}
+        <ProjectGrid projects={PROJECTS} />
       </div>
     </div>
   );
-};
-
-export default Work;
+}

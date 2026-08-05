@@ -59,10 +59,99 @@ html {
 .lg\:overflow-y-auto::-webkit-scrollbar-thumb  { background: #333; border-radius: 2px; }
 html.light .lg\:overflow-y-auto::-webkit-scrollbar-thumb { background: #c5c1bb; }
 
+/* ══ Work Gallery Design System ══════════════════════════════ */
+
+html:not(.light) #work {
+  --g-bg:               #07090D;
+  --g-surface:          rgba(12, 18, 24, 0.80);
+  --g-card:             rgba(10, 15, 21, 0.86);
+  --g-border:           rgba(255, 255, 255, 0.10);
+  --g-border-hov:       rgba(20, 241, 217, 0.22);
+  --g-project-card-bg:  rgba(22, 28, 39, 0.94);
+  --g-project-card-border: rgba(255, 255, 255, 0.14);
+  --g-project-card-border-hov: rgba(20, 241, 217, 0.28);
+  --g-divider:          rgba(255, 255, 255, 0.08);
+  --g-tag-bg:           rgba(255, 255, 255, 0.04);
+  --g-text:             #FFFFFF;
+  --g-text-dim:         #E4E4E7;
+  --g-secondary:        #A1A1AA;
+  --g-subtle:           #52526A;
+  --g-accent:           #14F1D9;
+  --g-accent-border:    rgba(20, 241, 217, 0.22);
+  --g-accent-bg:        rgba(20, 241, 217, 0.05);
+  --g-accent-glow:      rgba(20, 241, 217, 0.06);
+  --g-radius:           22px;
+  --g-radius-feat:      22px;
+  --g-radius-sm:        10px;
+  --g-pill:             50px;
+  --g-shadow-feat:      0 20px 60px rgba(0, 0, 0, 0.45);
+  --g-shadow-feat-hov:  0 36px 90px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(20, 241, 217, 0.06), 0 0 60px rgba(20, 241, 217, 0.04);
+  --g-shadow-card:      0 4px 20px rgba(0, 0, 0, 0.30);
+  --g-shadow-card-hov:  0 20px 48px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(20, 241, 217, 0.06);
+  --g-img-shadow:       0 28px 80px rgba(0, 0, 0, 0.65), 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+html.light #work {
+  --g-bg:               #F8F7F4;
+  --g-surface:          rgba(255, 255, 255, 0.88);
+  --g-card:             rgba(255, 255, 255, 0.94);
+  --g-border:           rgba(0, 0, 0, 0.08);
+  --g-border-hov:       rgba(8, 145, 178, 0.28);
+  --g-divider:          rgba(0, 0, 0, 0.06);
+  --g-tag-bg:           rgba(0, 0, 0, 0.03);
+  --g-text:             #111827;
+  --g-text-dim:         #374151;
+  --g-secondary:        #6B7280;
+  --g-subtle:           #9CA3AF;
+  --g-accent:           #0891B2;
+  --g-accent-border:    rgba(8, 145, 178, 0.28);
+  --g-accent-bg:        rgba(8, 145, 178, 0.05);
+  --g-accent-glow:      rgba(8, 145, 178, 0.05);
+  --g-radius:           22px;
+  --g-radius-feat:      22px;
+  --g-radius-sm:        10px;
+  --g-pill:             50px;
+  --g-shadow-feat:      0 8px 32px rgba(0, 0, 0, 0.09);
+  --g-shadow-feat-hov:  0 16px 48px rgba(0, 0, 0, 0.15);
+  --g-shadow-card:      0 2px 10px rgba(0, 0, 0, 0.07);
+  --g-shadow-card-hov:  0 8px 24px rgba(0, 0, 0, 0.13);
+  --g-img-shadow:       0 16px 40px rgba(0, 0, 0, 0.18), 0 4px 12px rgba(0, 0, 0, 0.10);
+}
+
+/* Mesh hidden in light mode — editorial look */
+html.light #work canvas[aria-hidden] { display: none; }
+
+/* Navigator scrollbar — hidden */
+.g-nav::-webkit-scrollbar { display: none; }
+.g-nav { scrollbar-width: none; -ms-overflow-style: none; }
+
+/* Mockup float */
+@keyframes mockupFloat {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
+/* All Projects responsive grid */
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+@media (max-width: 1100px) { .proj-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 680px)  { .proj-grid { grid-template-columns: 1fr; } }
+
+/* Honour prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .mockup-float  { animation: none !important; }
+  .g-transition  { transition: none !important; }
+}
+
 /* Alternating section backgrounds so each section reads as its own block */
 html:not(.light) #about  { background-color: #1a1a1a !important; }
 html:not(.light) #skills { background-color: #111111 !important; }
-html:not(.light) #work   { background-color: #090909 !important; }
+html:not(.light) #work   { background-color: #07090D !important; }
 html:not(.light) #footer { background-color: #1e1e1e !important; }
 
 html.light #about  { background-color: #f4f2ee !important; }

@@ -1,10 +1,11 @@
 import { useRef, useEffect, useState } from 'react';
 
 const ACCENT     = '#14F1D9';
-const ACCENT_DIM = 'rgba(20,241,217,0.5)';
+const ACCENT_40  = 'rgba(20,241,217,0.4)';
+const ACCENT_70  = 'rgba(20,241,217,0.7)';
+const ACCENT_BG  = 'rgba(20,241,217,0.04)';
 
-export default function WorkProjectList({ projects, activeIndex, setActiveIndex }) {
-  const listRef  = useRef(null);
+export default function WorkNav({ projects, activeIndex, setActiveIndex }) {
   const itemRefs = useRef([]);
   const [hov, setHov] = useState(null);
 
@@ -14,15 +15,28 @@ export default function WorkProjectList({ projects, activeIndex, setActiveIndex 
 
   return (
     <nav
-      ref={listRef}
-      className="gallery-nav"
+      className="g-nav"
+      aria-label="Project list"
       style={{
         height: '100%',
         overflowY: 'auto',
-        borderRight: '1px solid rgba(255,255,255,0.05)',
-        paddingTop: 4,
+        paddingRight: 4,
       }}
     >
+      {/* Label */}
+      <p style={{
+        fontSize: 9,
+        fontWeight: 700,
+        letterSpacing: '0.35em',
+        textTransform: 'uppercase',
+        color: ACCENT,
+        marginBottom: 20,
+        paddingBottom: 16,
+        borderBottom: '1px solid var(--g-border, rgba(255,255,255,0.08))',
+      }}>
+        Projects
+      </p>
+
       {projects.map((proj, idx) => {
         const active   = idx === activeIndex;
         const hovering = hov === idx;
@@ -34,34 +48,39 @@ export default function WorkProjectList({ projects, activeIndex, setActiveIndex 
             onClick={() => setActiveIndex(idx)}
             onMouseEnter={() => setHov(idx)}
             onMouseLeave={() => setHov(null)}
+            aria-current={active ? 'true' : undefined}
             style={{
               display: 'flex',
-              alignItems: 'flex-center',
+              alignItems: 'flex-start',
               width: '100%',
-              padding: '18px 20px 18px 20px',
-              borderLeft: `2px solid ${active ? ACCENT : 'transparent'}`,
-              borderBottom: '1px solid rgba(255,255,255,0.04)',
+              padding: '16px 0 16px 18px',
+              borderLeft: `2px solid ${
+                active   ? ACCENT :
+                hovering ? ACCENT_40 :
+                'transparent'
+              }`,
+              borderBottom: '1px solid var(--g-border, rgba(255,255,255,0.08))',
               background: active
-                ? 'rgba(20,241,217,0.03)'
+                ? `linear-gradient(90deg, ${ACCENT_BG} 0%, transparent 80%)`
                 : hovering ? 'rgba(255,255,255,0.015)' : 'transparent',
               cursor: 'pointer',
               textAlign: 'left',
-              transition: 'background 0.2s ease, border-color 0.2s ease',
               gap: 14,
+              transition: 'background 0.3s ease, border-color 0.3s ease',
+              outline: 'none',
             }}
           >
             {/* Index number */}
             <span style={{
-              fontFamily: 'monospace',
+              fontFamily: 'ui-monospace, monospace',
               fontSize: 10,
               fontWeight: 700,
-              letterSpacing: '0.18em',
-              color: active ? ACCENT : hovering ? ACCENT_DIM : '#2A2A2A',
-              transition: 'color 0.2s ease',
+              letterSpacing: '0.2em',
+              color: active ? ACCENT : hovering ? ACCENT_70 : '#383850',
+              transition: 'color 0.3s ease',
               flexShrink: 0,
               marginTop: 2,
               lineHeight: 1,
-              minWidth: 20,
             }}>
               {String(idx + 1).padStart(2, '0')}
             </span>
@@ -70,42 +89,39 @@ export default function WorkProjectList({ projects, activeIndex, setActiveIndex 
             <div style={{ flex: 1, minWidth: 0 }}>
               <p style={{
                 fontSize: 13,
-                fontWeight: 600,
+                fontWeight: active ? 600 : 500,
                 lineHeight: 1.3,
-                color: active ? '#ffffff' : hovering ? '#ffffff' : '#6B7280',
-                transition: 'color 0.2s ease',
-                marginBottom: 5,
+                color: active ? '#FFFFFF' : hovering ? '#E4E4E7' : '#71717A',
+                transition: 'color 0.3s ease',
+                margin: '0 0 4px',
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
                 whiteSpace: 'nowrap',
-                margin: '0 0 5px',
               }}>
                 {proj.title}
               </p>
               <p style={{
-                fontSize: 10,
-                letterSpacing: '0.12em',
+                fontSize: 9,
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
-                color: active ? ACCENT_DIM : '#2A2A2A',
-                transition: 'color 0.2s ease',
+                color: active ? ACCENT_70 : '#383850',
+                transition: 'color 0.3s ease',
                 margin: 0,
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
-                whiteSpace: 'nowrap',
               }}>
                 {proj.navCategory}
               </p>
             </div>
 
-            {/* Arrow */}
+            {/* Arrow indicator */}
             <span style={{
-              fontSize: 16,
+              fontSize: 15,
               lineHeight: 1,
-              color: active ? ACCENT : hovering ? ACCENT_DIM : 'transparent',
-              transition: 'color 0.2s ease, transform 0.2s ease',
+              color: active ? ACCENT : hovering ? ACCENT_40 : 'transparent',
+              transition: 'color 0.3s ease, transform 0.3s ease',
               transform: active || hovering ? 'translateX(0)' : 'translateX(-3px)',
               flexShrink: 0,
-              marginTop: 1,
+              marginTop: 2,
+              marginRight: 6,
             }}>
               ›
             </span>
