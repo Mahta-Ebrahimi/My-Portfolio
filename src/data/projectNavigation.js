@@ -5,6 +5,7 @@ export const projectOrder = [
   { id: 'novasol', path: '/work/novasol', title: 'Novasol Travel' },
   { id: 'selskabslokale', path: '/work/selskabslokale', title: 'Selskabslokale' },
   { id: 'secureflow', path: '/work/secureflow', title: 'DetectAI Security' },
+  { id: 'pharmaai', path: '/work/pharmaai', title: 'PharmaAI' },
   { id: 'glienke', path: '/work/glienke', title: 'Glienke Design' },
   { id: 'soulimous', path: '/work/soulimous', title: 'Soulimous' },
   { id: 'matchme', path: '/work/matchme', title: 'MatchMe App' },

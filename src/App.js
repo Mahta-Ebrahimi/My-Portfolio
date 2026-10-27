@@ -16,6 +16,7 @@ import SecureFlow from './components/SecureFlow';
 import MatchMe from './components/MatchMe';
 import Portfolio from './components/Portfolio';
 import Chatbot from './components/Chatbot';
+import PharmaAI from './components/PharmaAI';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
         <Route path="/work/soulimous" element={<><Soulimous /><Footer /></>} />
         <Route path="/work/portfolio" element={<><Portfolio /><Footer /></>} />
         <Route path="/work/chatbot" element={<><Chatbot /><Footer /></>} />
+        <Route path="/work/pharmaai" element={<><PharmaAI /><Footer /></>} />
       </Routes>
     </div>
   );

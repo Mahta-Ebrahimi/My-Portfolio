@@ -27,28 +27,33 @@ const About = () => {
           {/* Drop cap first paragraph */}
           <p>
             <span className="drop-cap">M</span>
-            ahta Ebrahimi is a UI/UX Designer, Front‑End Developer, and AI‑integrated workflow designer based in Copenhagen, Denmark.
-             I work at the intersection of design, code, and intelligent automation — creating products that not only look right but work smart.
+            ahta Ebrahimi is a Product Designer based in Copenhagen, Denmark, focused on
+            creating intuitive, meaningful, and visually refined digital products.
           </p>
 
           <p>
-           AI is part of my daily workflow, helping me accelerate research, explore design directions, and write clean, reliable code.
-            I also design the systems around AI: defining automation logic, shaping AI‑driven user journeys, and creating interfaces that make complex AI behavior feel simple and human‑centered
+            I specialize in end-to-end product design, from understanding user needs and
+            solving problems to crafting seamless experiences, high-fidelity interfaces, and scalable design systems.
           </p>
 
           <p className={`${expanded ? 'block' : 'hidden'} sm:block`}>
-            I studied front‑end development formally and hold three certified UI/UX design qualifications. This combination allows me to take a project from the first sketch to
-            a fully shipped product — including research, UX, UI, design systems, automation logic, and production‑ready code.
+            As a calligraphy artist, I've developed a strong eye for aesthetics, typography,
+            composition, and visual balance — bringing an artistic perspective and attention to detail to my design work.
           </p>
 
           <p className={`${expanded ? 'block' : 'hidden'} sm:block`}>
-            You can explore some of my projects here. Each one follows the same principle:<br/> understand the user,
-             design with intention, build cleanly, and let AI handle what it does best.
+            With a background in Front-End Development and three UI/UX design certifications, I combine
+            creative thinking with technical understanding.
           </p>
 
           <p className={`${expanded ? 'block' : 'hidden'} sm:block`}>
-           I take projects from discovery to delivery: leading UX, applying design systems,
-            designing the AI automation layer, and writing front‑end code. End‑to‑end ownership means faster results and fewer gaps between idea and product.
+            I also integrate AI-powered tools into my workflow to explore ideas, streamline
+            processes, and create smarter, human-centered experiences.
+          </p>
+
+          <p className={`${expanded ? 'block' : 'hidden'} sm:block`}>
+            My goal is to design products that solve real problems, balance user needs with business
+            goals, and feel as good as they look.
           </p>
 
         </div>

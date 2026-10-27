@@ -9,7 +9,8 @@ import ProjectGrid         from './ProjectGrid';
 import matchMeHIFI    from '../assets/MatchMeHIFI.png';
 import detectAI       from '../assets/DashboardAI.png';
 import pawpal         from '../assets/HIFIPawpal.png';
-import chatbot        from '../assets/Chatbot.png';
+import chatbot        from '../assets/aichatbot.png';
+import pharmaAI       from '../assets/pharma.png';
 import portfolio1     from '../assets/portfolio1.png';
 import selskabslokale from '../assets/UI1.png';
 import danskeBank     from '../assets/danskeBank.png';
@@ -29,6 +30,18 @@ export const PROJECTS = [
     image: matchMeHIFI, type: 'uiux', route: '/work/matchme',
   },
   {
+    id: 9,
+    title: 'PharmaAI',
+    navCategory: 'AI · Healthcare UI',
+    category: 'AI Pharmacy Assistant · Concept',
+    filterCategory: 'AI/ML',
+    description: 'UI design concept for an AI pharmacy assistant for healthcare professionals. A calm, clinical interface and design system where sources, safety warnings, and the pharmacist button have a visible place in every answer.',
+    year: '2026', role: 'UI Designer',
+    badge: 'AI Healthcare', badgeColor: '#3CC4B4',
+    tools: ['Figma', 'AI-assisted Design', 'UI Design', 'Design System'],
+    image: pharmaAI, type: 'uiux', route: '/work/pharmaai',
+  },
+  {
     id: 2,
     title: 'Detect AI Security',
     navCategory: 'AI · Desktop UX/UI',
@@ -41,30 +54,6 @@ export const PROJECTS = [
     image: detectAI, type: 'uiux', route: '/work/secureflow',
   },
   {
-    id: 3,
-    title: 'PawPal App',
-    navCategory: 'Mobile App',
-    category: 'Mobile UX/UI',
-    filterCategory: 'Mobile',
-    description: 'Mobile app connecting pet owners with trusted vets, groomers, and walkers. Designed around trust, location-based discovery, and frictionless booking.',
-    year: '2024', role: 'UI/UX Designer',
-    badge: 'Mobile UX/UI', badgeColor: '#A78BFA',
-    tools: ['Figma', 'UX Research', 'Prototyping', 'UI Design'],
-    image: pawpal, type: 'uiux', route: '/work/pawpal',
-  },
-  {
-    id: 4,
-    title: 'AI Chatbot App',
-    navCategory: 'AI · Full-Stack',
-    category: 'AI + Full-Stack Development',
-    filterCategory: 'AI/ML',
-    description: 'Full-stack conversational AI built with React, Node.js, and OpenAI. Features context retention, session memory, and a custom-designed chat interface.',
-    year: '2024', role: 'Designer & Developer',
-    badge: 'AI + Full-Stack', badgeColor: '#38BDF8',
-    tools: ['React', 'Node.js', 'OpenAI', 'Tailwind'],
-    image: chatbot, type: ['uiux', 'frontend'], route: '/work/chatbot',
-  },
-  {
     id: 5,
     title: 'My Portfolio',
     navCategory: 'UX/UI · React',
@@ -75,6 +64,30 @@ export const PROJECTS = [
     badge: 'UX/UI + React', badgeColor: '#A78BFA',
     tools: ['Figma', 'React', 'Tailwind'],
     image: portfolio1, type: ['uiux', 'frontend'], route: '/work/portfolio',
+  },
+  {
+    id: 4,
+    title: 'AI Chatbot App',
+    navCategory: 'AI · UI/UX',
+    category: 'AI Chat · UI/UX Design',
+    filterCategory: 'AI/ML',
+    description: 'Dual-assistant chat experience with a General AI and a Portfolio AI in one interface. Designed around clear assistant identity, suggested prompts, and a shared design system, then built with React and OpenAI.',
+    year: '2024', role: 'UI/UX Designer & Developer',
+    badge: 'AI · UI/UX', badgeColor: '#38BDF8',
+    tools: ['Figma', 'UI/UX Design', 'Design System', 'React'],
+    image: chatbot, type: ['uiux', 'frontend'], route: '/work/chatbot',
+  },
+  {
+    id: 3,
+    title: 'PawPal App',
+    navCategory: 'Mobile App',
+    category: 'Mobile UX/UI',
+    filterCategory: 'Mobile',
+    description: 'Mobile app connecting pet owners with trusted vets, groomers, and walkers. Designed around trust, location-based discovery, and frictionless booking.',
+    year: '2024', role: 'UI/UX Designer',
+    badge: 'Mobile UX/UI', badgeColor: '#A78BFA',
+    tools: ['Figma', 'UX Research', 'Prototyping', 'UI Design'],
+    image: pawpal, type: 'uiux', route: '/work/pawpal',
   },
   {
     id: 6,
