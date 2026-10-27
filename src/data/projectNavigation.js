@@ -6,6 +6,7 @@ export const projectOrder = [
   { id: 'selskabslokale', path: '/work/selskabslokale', title: 'Selskabslokale' },
   { id: 'secureflow', path: '/work/secureflow', title: 'DetectAI Security' },
   { id: 'pharmaai', path: '/work/pharmaai', title: 'PharmaAI' },
+  { id: 'atlas', path: '/work/atlas', title: 'ATLAS — Enterprise Design System' },
   { id: 'glienke', path: '/work/glienke', title: 'Glienke Design' },
   { id: 'soulimous', path: '/work/soulimous', title: 'Soulimous' },
   { id: 'matchme', path: '/work/matchme', title: 'MatchMe App' },

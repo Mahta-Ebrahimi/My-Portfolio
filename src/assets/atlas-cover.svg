@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#94A3B8" stroke-opacity="0.08"/>
+    </pattern>
+    <radialGradient id="glow" cx="0.8" cy="0.1" r="0.7">
+      <stop offset="0" stop-color="#7C3AED" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="area" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#7C3AED" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="220%">
+      <feDropShadow dx="0" dy="30" stdDeviation="30" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1000" fill="#0F172A"/>
+  <rect width="1600" height="1000" fill="url(#grid)"/>
+  <rect width="1600" height="1000" fill="url(#glow)"/>
+
+  <!-- Dashboard window -->
+  <g filter="url(#shadow)">
+    <rect x="250" y="150" width="1130" height="720" rx="18" fill="#F8FAFC"/>
+  </g>
+  <rect x="250" y="150" width="210" height="720" rx="18" fill="#FFFFFF"/>
+  <rect x="440" y="150" width="20" height="720" fill="#FFFFFF"/>
+  <line x1="460" y1="150" x2="460" y2="870" stroke="#E2E8F0"/>
+  <rect x="276" y="178" width="34" height="34" rx="9" fill="#7C3AED"/>
+  <path d="M293 186 302 195 293 204 284 195Z" fill="none" stroke="#fff" stroke-width="2"/>
+  <text x="322" y="201" font-size="18" font-weight="700" fill="#0F172A">ATLAS</text>
+  <rect x="270" y="244" width="170" height="38" rx="9" fill="#F5F3FF"/>
+  <rect x="286" y="258" width="14" height="12" rx="3" fill="#7C3AED"/>
+  <rect x="312" y="259" width="78" height="10" rx="5" fill="#6D28D9"/>
+  <g fill="#CBD5E1">
+    <rect x="286" y="304" width="14" height="12" rx="3"/><rect x="312" y="305" width="64" height="10" rx="5"/>
+    <rect x="286" y="346" width="14" height="12" rx="3"/><rect x="312" y="347" width="84" height="10" rx="5"/>
+    <rect x="286" y="388" width="14" height="12" rx="3"/><rect x="312" y="389" width="56" height="10" rx="5"/>
+    <rect x="286" y="430" width="14" height="12" rx="3"/><rect x="312" y="431" width="72" height="10" rx="5"/>
+  </g>
+
+  <text x="492" y="206" font-size="26" font-weight="700" fill="#0F172A">Revenue overview</text>
+  <rect x="492" y="222" width="230" height="10" rx="5" fill="#CBD5E1"/>
+  <rect x="1162" y="184" width="190" height="40" rx="10" fill="#F1F5F9" stroke="#E2E8F0"/>
+  <rect x="1230" y="188" width="60" height="32" rx="7" fill="#FFFFFF"/>
+
+  <!-- KPI cards -->
+  <g>
+    <rect x="492" y="260" width="200" height="110" rx="12" fill="#fff" stroke="#E2E8F0"/>
+    <rect x="512" y="282" width="110" height="9" rx="4.5" fill="#CBD5E1"/>
+    <text x="512" y="332" font-size="30" font-weight="700" fill="#0F172A"><tspan font-size="16" fill="#64748B">DKK </tspan>248.6k</text>
+    <rect x="512" y="346" width="58" height="14" rx="7" fill="#CCFBF1"/>
+    <rect x="712" y="260" width="200" height="110" rx="12" fill="#fff" stroke="#E2E8F0"/>
+    <rect x="732" y="282" width="90" height="9" rx="4.5" fill="#CBD5E1"/>
+    <text x="732" y="332" font-size="30" font-weight="700" fill="#0F172A">1,284</text>
+    <rect x="732" y="346" width="48" height="14" rx="7" fill="#CCFBF1"/>
+    <rect x="932" y="260" width="200" height="110" rx="12" fill="#fff" stroke="#E2E8F0"/>
+    <rect x="952" y="282" width="120" height="9" rx="4.5" fill="#CBD5E1"/>
+    <text x="952" y="332" font-size="30" font-weight="700" fill="#0F172A">112%</text>
+    <rect x="952" y="346" width="58" height="14" rx="7" fill="#CCFBF1"/>
+    <rect x="1152" y="260" width="200" height="110" rx="12" fill="#fff" stroke="#E2E8F0"/>
+    <rect x="1172" y="282" width="70" height="9" rx="4.5" fill="#CBD5E1"/>
+    <text x="1172" y="332" font-size="30" font-weight="700" fill="#0F172A">1.9%</text>
+    <rect x="1172" y="346" width="58" height="14" rx="7" fill="#CCFBF1"/>
+  </g>
+
+  <!-- Line chart card -->
+  <rect x="492" y="390" width="560" height="300" rx="12" fill="#fff" stroke="#E2E8F0"/>
+  <rect x="512" y="412" width="190" height="11" rx="5.5" fill="#334155"/>
+  <g stroke="#E2E8F0">
+    <line x1="512" y1="470" x2="1032" y2="470"/><line x1="512" y1="530" x2="1032" y2="530"/>
+    <line x1="512" y1="590" x2="1032" y2="590"/><line x1="512" y1="650" x2="1032" y2="650"/>
+  </g>
+  <path d="M520 600 L566 592 L612 585 L658 576 L704 571 L750 562 L796 552 L842 543 L888 532 L934 522 L980 510 L1024 498 L1024 650 L520 650Z" fill="url(#area)"/>
+  <path d="M520 600 L566 592 L612 585 L658 576 L704 571 L750 562 L796 552 L842 543 L888 532 L934 522 L980 510 L1024 498" fill="none" stroke="#7C3AED" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M520 636 L566 630 L612 625 L658 621 L704 614 L750 610 L796 603 L842 599 L888 593 L934 588 L980 582 L1024 574" fill="none" stroke="#94A3B8" stroke-width="2.5" stroke-dasharray="7 6"/>
+  <circle cx="1024" cy="498" r="6" fill="#7C3AED" stroke="#fff" stroke-width="3"/>
+
+  <!-- Donut card -->
+  <rect x="1072" y="390" width="280" height="300" rx="12" fill="#fff" stroke="#E2E8F0"/>
+  <g transform="rotate(-90 1212 540)" fill="none" stroke-width="26">
+    <circle cx="1212" cy="540" r="78" stroke="#7C3AED" stroke-dasharray="253 490"/>
+    <circle cx="1212" cy="540" r="78" stroke="#3B82F6" stroke-dasharray="148 490" stroke-dashoffset="-256"/>
+    <circle cx="1212" cy="540" r="78" stroke="#14B8A6" stroke-dasharray="80 490" stroke-dashoffset="-407"/>
+  </g>
+  <text x="1212" y="550" font-size="22" font-weight="700" fill="#0F172A" text-anchor="middle">DKK 249k</text>
+
+  <!-- Table -->
+  <rect x="492" y="710" width="860" height="140" rx="12" fill="#fff" stroke="#E2E8F0"/>
+  <rect x="493" y="711" width="858" height="38" rx="11" fill="#F8FAFC"/>
+  <g fill="#94A3B8">
+    <rect x="552" y="726" width="70" height="8" rx="4"/><rect x="800" y="726" width="50" height="8" rx="4"/><rect x="1000" y="726" width="60" height="8" rx="4"/>
+  </g>
+  <g>
+    <rect x="512" y="764" width="16" height="16" rx="4" fill="#7C3AED"/>
+    <rect x="552" y="767" width="150" height="10" rx="5" fill="#334155"/>
+    <rect x="800" y="767" width="80" height="10" rx="5" fill="#334155"/>
+    <rect x="1000" y="762" width="72" height="20" rx="10" fill="#CCFBF1"/>
+    <line x1="493" y1="796" x2="1351" y2="796" stroke="#F1F5F9"/>
+    <rect x="512" y="810" width="16" height="16" rx="4" fill="none" stroke="#94A3B8" stroke-width="1.5"/>
+    <rect x="552" y="813" width="130" height="10" rx="5" fill="#334155"/>
+    <rect x="800" y="813" width="64" height="10" rx="5" fill="#334155"/>
+    <rect x="1000" y="808" width="80" height="20" rx="10" fill="#FEF3C7"/>
+  </g>
+
+  <!-- Floating swatch card -->
+  <g filter="url(#shadow)">
+    <rect x="120" y="560" width="270" height="200" rx="16" fill="#FFFFFF"/>
+  </g>
+  <text x="144" y="598" font-size="16" font-weight="700" fill="#0F172A">Violet</text>
+  <g>
+    <rect x="144" y="616" width="22" height="64" fill="#F5F3FF"/><rect x="166" y="616" width="22" height="64" fill="#EDE9FE"/>
+    <rect x="188" y="616" width="22" height="64" fill="#DDD6FE"/><rect x="210" y="616" width="22" height="64" fill="#C4B5FD"/>
+    <rect x="232" y="616" width="22" height="64" fill="#A78BFA"/><rect x="254" y="616" width="22" height="64" fill="#8B5CF6"/>
+    <rect x="276" y="616" width="22" height="64" fill="#7C3AED"/><rect x="298" y="616" width="22" height="64" fill="#6D28D9"/>
+    <rect x="320" y="616" width="22" height="64" fill="#5B21B6"/><rect x="342" y="616" width="24" height="64" fill="#4C1D95"/>
+  </g>
+  <rect x="144" y="700" width="40" height="28" rx="7" fill="#7C3AED"/><rect x="190" y="700" width="40" height="28" rx="7" fill="#3B82F6"/>
+  <rect x="236" y="700" width="40" height="28" rx="7" fill="#14B8A6"/><rect x="282" y="700" width="40" height="28" rx="7" fill="#F43F5E"/>
+  <rect x="328" y="700" width="38" height="28" rx="7" fill="#0F172A"/>
+
+  <!-- Floating component card -->
+  <g filter="url(#shadow)">
+    <rect x="1250" y="80" width="280" height="150" rx="16" fill="#FFFFFF"/>
+  </g>
+  <rect x="1274" y="104" width="120" height="40" rx="9" fill="#7C3AED"/>
+  <text x="1334" y="130" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">+ Create</text>
+  <rect x="1404" y="104" width="102" height="40" rx="9" fill="#fff" stroke="#CBD5E1"/>
+  <text x="1455" y="130" font-size="15" font-weight="600" fill="#0F172A" text-anchor="middle">Export</text>
+  <rect x="1274" y="164" width="76" height="24" rx="12" fill="#F0FDFA" stroke="#99F6E4"/>
+  <circle cx="1290" cy="176" r="4" fill="#0F766E"/>
+  <text x="1300" y="181" font-size="13" font-weight="700" fill="#0F766E">Active</text>
+  <rect x="1466" y="164" width="40" height="24" rx="12" fill="#7C3AED"/>
+  <circle cx="1494" cy="176" r="9" fill="#fff"/>
+</svg>

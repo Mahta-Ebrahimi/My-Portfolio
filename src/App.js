@@ -17,7 +17,11 @@ import MatchMe from './components/MatchMe';
 import Portfolio from './components/Portfolio';
 import Chatbot from './components/Chatbot';
 import PharmaAI from './components/PharmaAI';
+import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
+
+// Loaded on demand so the large interactive case study doesn't weigh down the home page
+const Atlas = lazy(() => import('./components/Atlas'));
 
 function App() {
   return (
@@ -44,6 +48,7 @@ function App() {
         <Route path="/work/portfolio" element={<><Portfolio /><Footer /></>} />
         <Route path="/work/chatbot" element={<><Chatbot /><Footer /></>} />
         <Route path="/work/pharmaai" element={<><PharmaAI /><Footer /></>} />
+        <Route path="/work/atlas" element={<Suspense fallback={<div className="min-h-screen bg-black" />}><Atlas /><Footer /></Suspense>} />
       </Routes>
     </div>
   );

@@ -11,6 +11,7 @@ import detectAI       from '../assets/DashboardAI.png';
 import pawpal         from '../assets/HIFIPawpal.png';
 import chatbot        from '../assets/aichatbot.png';
 import pharmaAI       from '../assets/pharma.png';
+import atlasCover     from '../assets/atlas-cover.svg';
 import portfolio1     from '../assets/portfolio1.png';
 import selskabslokale from '../assets/UI1.png';
 import danskeBank     from '../assets/danskeBank.png';
@@ -40,6 +41,18 @@ export const PROJECTS = [
     badge: 'AI Healthcare', badgeColor: '#3CC4B4',
     tools: ['Figma', 'AI-assisted Design', 'UI Design', 'Design System'],
     image: pharmaAI, type: 'uiux', route: '/work/pharmaai',
+  },
+  {
+    id: 10,
+    title: 'ATLAS — Enterprise Design System',
+    navCategory: 'Design System · SaaS',
+    category: 'UI Design · Design Systems · SaaS',
+    filterCategory: 'SaaS',
+    description: 'A scalable design system exploring advanced color architecture, reusable components, and consistent interfaces for complex web applications.',
+    year: '2026', role: 'UI Designer',
+    badge: 'Design System', badgeColor: '#A78BFA',
+    tools: ['Figma', 'Design System', 'Design Tokens', 'UI Design'],
+    image: atlasCover, type: 'uiux', route: '/work/atlas',
   },
   {
     id: 2,
