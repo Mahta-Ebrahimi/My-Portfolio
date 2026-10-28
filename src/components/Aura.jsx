@@ -676,13 +676,6 @@ export default function Aura() {
               </a>
             </div>
 
-            <blockquote className="mb-16 max-w-[760px]">
-              <p className="text-[26px] sm:text-[36px] font-bold text-white leading-[1.2] tracking-[-0.02em]">
-                Expressive enough to feel premium.{' '}
-                <span style={{ color: ACCENT }}>Clear enough to shop in.</span>
-              </p>
-            </blockquote>
-
             <div className="pt-8 border-t border-[#1A1A1A]">
               <a href="/#work" className="flex items-center gap-2 text-[#6B7280] hover:text-white transition-colors text-[14px]">
                 <FaArrowLeft style={{ fontSize: '11px' }} /> Back to Work
