@@ -22,6 +22,7 @@ import { Routes, Route } from 'react-router-dom';
 
 // Loaded on demand so the large interactive case study doesn't weigh down the home page
 const Atlas = lazy(() => import('./components/Atlas'));
+const Aura = lazy(() => import('./components/Aura'));
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
         <Route path="/work/chatbot" element={<><Chatbot /><Footer /></>} />
         <Route path="/work/pharmaai" element={<><PharmaAI /><Footer /></>} />
         <Route path="/work/atlas" element={<Suspense fallback={<div className="min-h-screen bg-black" />}><Atlas /><Footer /></Suspense>} />
+        <Route path="/work/aura" element={<Suspense fallback={<div className="min-h-screen bg-black" />}><Aura /><Footer /></Suspense>} />
       </Routes>
     </div>
   );

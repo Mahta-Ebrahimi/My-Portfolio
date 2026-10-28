@@ -1,0 +1,8 @@
+/* AURA case study — page accent follows the portfolio theme.
+   Values come from AURA's own tokens: violet-400 on dark, violet-600 (text/accent light) on light. */
+.aura { --aura-accent: #9294FE; }
+html.light .aura { --aura-accent: #5949D8; }
+
+/* Prototype buttons: dark text on the light violet, white text on the deep violet */
+.aura .aura-cta { background: var(--aura-accent); color: #0D1117; }
+html.light .aura .aura-cta { color: #FFFFFF; }

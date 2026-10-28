@@ -12,6 +12,7 @@ import pawpal         from '../assets/HIFIPawpal.png';
 import chatbot        from '../assets/aichatbot.png';
 import pharmaAI       from '../assets/pharma.png';
 import atlasCover     from '../assets/atlas-cover.svg';
+import auraCover      from '../assets/aura/00-Cover.svg';
 import portfolio1     from '../assets/portfolio1.png';
 import selskabslokale from '../assets/UI1.png';
 import danskeBank     from '../assets/danskeBank.png';
@@ -53,6 +54,18 @@ export const PROJECTS = [
     badge: 'Design System', badgeColor: '#A78BFA',
     tools: ['Figma', 'Design System', 'Design Tokens', 'UI Design'],
     image: atlasCover, type: 'uiux', route: '/work/atlas',
+  },
+  {
+    id: 11,
+    title: 'AURA — Premium Audio Shopping Experience',
+    navCategory: 'E-commerce · UI Design',
+    category: 'UI Design · E-commerce · Design System',
+    filterCategory: 'Web App',
+    description: 'A premium headphone online store: a dark, cinematic visual language carried through landing, product, comparison and cart screens, built on a component library and design foundations.',
+    year: '2026', role: 'UI Designer',
+    badge: 'E-commerce UI', badgeColor: '#9294FE',
+    tools: ['Figma', 'UI Design', 'Design System', 'Responsive Design'],
+    image: auraCover, type: 'uiux', route: '/work/aura',
   },
   {
     id: 2,
@@ -199,7 +212,7 @@ function MobileCard({ proj }) {
           color: 'var(--g-accent, #14F1D9)', border: '1px solid var(--g-accent-border, rgba(20,241,217,0.22))', padding: '10px 22px',
           borderRadius: 50, background: 'var(--g-accent-bg, rgba(20,241,217,0.05))', cursor: 'pointer',
         }}>
-          View Case Study →
+          View Project →
         </button>
       </div>
     </article>

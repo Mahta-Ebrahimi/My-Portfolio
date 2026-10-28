@@ -347,7 +347,7 @@ export default function WorkFeatured({ project, index }) {
 
             {/* CTA */}
             <PillButton onClick={handleCTA}>
-              View Case Study
+              View Project
             </PillButton>
           </div>
         </div>

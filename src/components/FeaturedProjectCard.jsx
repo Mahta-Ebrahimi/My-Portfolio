@@ -150,7 +150,7 @@ export default function FeaturedProjectCard({ project }) {
                 transition: 'background 0.3s ease, border-color 0.3s ease',
               }}
             >
-              View Case Study
+              View Project
               <span style={{
                 fontSize: 15,
                 display: 'inline-block',
