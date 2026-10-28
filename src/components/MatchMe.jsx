@@ -86,13 +86,6 @@ const SubLabel = ({ children }) => (
   </p>
 );
 
-const Placeholder = ({ label }) => (
-  <div className="rounded-xl border border-dashed border-[#1C1C1C] bg-[#080808] px-6 py-8 text-center">
-    <p className="text-[12px] font-mono text-[#272727] tracking-[0.2em] uppercase mb-1">{label}</p>
-    <p className="text-[#242424] text-[13px]">Content to be refined in the next pass.</p>
-  </div>
-);
-
 const FeatureCard = ({ icon, title, desc }) => (
   <div className="bg-[#111] rounded-xl p-5 flex gap-4 items-start border border-[#222]">
     <span className="text-2xl shrink-0 mt-0.5">{icon}</span>
@@ -214,9 +207,19 @@ export default function MatchMe() {
             <h1 className="text-[36px] sm:text-[44px] font-bold text-white mb-2 leading-[1.15]">MatchMe</h1>
             <p className="text-lg sm:text-xl text-[#6B7280] font-light mb-6">Local service help is scattered across platforms and hard to evaluate.</p>
 
-            <div className="rounded-2xl overflow-hidden mb-8 bg-[#F0F0F0] p-3">
+            <a
+              href="https://www.figma.com/proto/cGnfgwa8uCDZeKk6yCyURy/Match-Me?node-id=1-2208&viewport=1060%2C-1165%2C0.19&t=xOfO6RXWl1PniIrH-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2208&page-id=0%3A1&show-proto-sidebar=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative block rounded-2xl overflow-hidden mb-8 bg-[#F0F0F0] p-3"
+            >
               <img src={MatchMeHIFI} alt="MatchMe Desktop Interface" className="w-full object-cover" />
-            </div>
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/60">
+                <span className="flex items-center gap-2 text-white font-bold text-sm tracking-wide">
+                  <FaExternalLinkAlt style={{ fontSize: '12px' }} /> Prototype in Figma
+                </span>
+              </div>
+            </a>
 
             <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
               MatchMe is a desktop web marketplace where people find local service providers — babysitters, cleaners, personal trainers, and more — with AI-assisted compatibility matching. The design challenge was making the right choice feel obvious before a user reads a single profile: surfacing ranked helpers with clear reasoning behind each result. Delivered as a full end-to-end Figma prototype from problem framing to high-fidelity screens.
@@ -472,8 +475,6 @@ export default function MatchMe() {
                 </li>
               ))}
             </ol>
-
-            <Placeholder label="Journey map visual" />
           </section>
 
           {/* ── 06 DESIGN PROCESS ───────────────────────────────────── */}
@@ -484,16 +485,6 @@ export default function MatchMe() {
             </h2>
 
             <div className="space-y-8">
-              <div>
-                <SubLabel>Information Architecture</SubLabel>
-                <Placeholder label="IA diagram or sitemap" />
-              </div>
-
-              <div>
-                <SubLabel>Wireframes</SubLabel>
-                <Placeholder label="Low-fidelity screens" />
-              </div>
-
               <div>
                 <SubLabel>Core Feature Set</SubLabel>
                 <p className="text-[#9CA3AF] leading-7 mb-4 text-base">
@@ -559,7 +550,7 @@ export default function MatchMe() {
               Key Learnings
             </h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
               {LEARNINGS.map(({ num, title, desc }) => (
                 <div key={num} className="bg-[#111] rounded-xl p-6 border border-[#222]">
                   <p className="text-4xl font-bold text-[#374151]/50 font-mono mb-4 leading-none">{num}</p>
@@ -567,21 +558,6 @@ export default function MatchMe() {
                   <p className="text-[#6B7280] text-base leading-relaxed">{desc}</p>
                 </div>
               ))}
-            </div>
-
-            <div className="space-y-4 mb-12">
-              <div>
-                <SubLabel>Limitations</SubLabel>
-                <Placeholder label="Known limitations of this project" />
-              </div>
-              <div>
-                <SubLabel>Future Validation</SubLabel>
-                <Placeholder label="Next steps for testing and iteration" />
-              </div>
-              <div>
-                <SubLabel>Closing Reflection</SubLabel>
-                <Placeholder label="Closing reflection" />
-              </div>
             </div>
 
             <div className="pt-8 border-t border-[#1A1A1A]">
