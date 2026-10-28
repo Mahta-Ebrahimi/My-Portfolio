@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from 'react';
 let uid = 0;   // React 17 has no useId — stable per-instance id for SVG gradients
 
 // Chart coordinate width follows the rendered width, so 11px labels stay 11px on phones
-function useWidth(fallback) {
+function useWidth(fallback, min = 280) {
   const ref = useRef(null);
   const [w, setW] = useState(fallback);
   useEffect(() => {
@@ -12,7 +12,7 @@ function useWidth(fallback) {
     ro.observe(ref.current);
     return () => ro.disconnect();
   }, []);
-  return [ref, Math.max(280, w)];
+  return [ref, Math.max(min, w)];
 }
 
 const INK = { primary: '#0F172A', secondary: '#64748B', grid: '#E2E8F0', surface: '#FFFFFF' };
@@ -284,15 +284,19 @@ export function DonutChart({ data, size = 200, thickness = 26, fmt = v => `DKK $
 }
 
 // ── Sparkline for KPI tiles (single series → no legend) ───────────────────────
+// Shrinks to the space left beside the KPI value (up to `width`), so it never spills out of the card
 export function Sparkline({ values, color = '#7C3AED', width = 96, height = 32 }) {
+  const [wrap, w] = useWidth(width, 32);
   const min = Math.min(...values), max = Math.max(...values);
-  const x = i => (i * (width - 4)) / (values.length - 1) + 2;
-  const y = v => height - 3 - ((v - min) / (max - min || 1)) * (height - 6);
+  const x = i => (i * (w - 8)) / (values.length - 1) + 4;
+  const y = v => height - 4 - ((v - min) / (max - min || 1)) * (height - 8);
   const d = values.map((v, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join('');
   return (
-    <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`} aria-hidden="true" style={{ display: 'block', overflow: 'visible' }}>
-      <path d={d} fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx={x(values.length - 1)} cy={y(values[values.length - 1])} r="3" fill={color} stroke="#fff" strokeWidth="1.5" />
-    </svg>
+    <div ref={wrap} style={{ flex: '1 1 0', minWidth: 32, maxWidth: width }}>
+      <svg width={w} height={height} viewBox={`0 0 ${w} ${height}`} aria-hidden="true" style={{ display: 'block', marginLeft: 'auto' }}>
+        <path d={d} fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx={x(values.length - 1)} cy={y(values[values.length - 1])} r="3" fill={color} stroke="#fff" strokeWidth="1.5" />
+      </svg>
+    </div>
   );
 }

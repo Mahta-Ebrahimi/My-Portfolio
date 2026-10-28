@@ -78,7 +78,7 @@ const Footer = () => {
         </a>
 
         <a
-          href="https://www.instagram.com/mahta.creative/"
+          href="https://www.instagram.com/calligraphy.mahta/"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 hover:text-[#c13584]"

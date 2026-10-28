@@ -12,7 +12,7 @@ export function KpiCard({ label, value, delta, up, good, note, spark, compact = 
     <div className={`at-card ${compact ? 'p-4' : 'p-5'}`}>
       <p className="text-[13px] font-medium" style={{ color: 'var(--text-secondary)' }}>{label}</p>
       <div className="flex items-end justify-between gap-3 mt-2">
-        <p className="font-bold tabular-nums" style={{ fontSize: compact ? 24 : 28, lineHeight: 1.1, letterSpacing: '-0.02em', color: 'var(--text-primary)' }}>
+        <p className="font-bold tabular-nums whitespace-nowrap shrink-0" style={{ fontSize: compact ? 24 : 28, lineHeight: 1.1, letterSpacing: '-0.02em', color: 'var(--text-primary)' }}>
           {unit && <span style={{ fontSize: '0.5em', fontWeight: 600, color: 'var(--text-secondary)', marginRight: 4, letterSpacing: 0 }}>{unit}</span>}
           {num}
         </p>
