@@ -406,9 +406,6 @@ export default function Aura() {
                 Premium audio is bought partly on emotion and partly on facts. The landing page has to make the product feel desirable; the product page and comparison have to make specifications, prices and differences easy to read. The interface needs to hold both modes without one undermining the other.
               </Lead>
             </div>
-            <Note>
-              Specification values shown in [brackets] in the designs are deliberate placeholders. I chose not to invent battery life, driver sizes or other figures that could be read as real product claims.
-            </Note>
           </section>
 
           {/* ── 03 DESIGN CHALLENGE ─────────────────────────────────── */}

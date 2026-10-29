@@ -20,6 +20,18 @@ import wordPress      from '../assets/wordpress2.png';
 
 export const PROJECTS = [
   {
+    id: 11,
+    title: 'AURA — Premium Audio Shopping Experience',
+    navCategory: 'E-commerce · UI Design',
+    category: 'UI Design · E-commerce · Design System',
+    filterCategory: 'Web App',
+    description: 'A premium headphone online store: a dark, cinematic visual language carried through landing, product, comparison and cart screens, built on a component library and design foundations.',
+    year: '2026', role: 'UI Designer',
+    badge: 'E-commerce UI', badgeColor: '#9294FE',
+    tools: ['Figma', 'UI Design', 'Design System', 'Responsive Design'],
+    image: auraCover, type: 'uiux', route: '/work/aura',
+  },
+  {
     id: 1,
     title: 'MatchMe App',
     navCategory: 'AI · Desktop UX/UI',
@@ -54,18 +66,6 @@ export const PROJECTS = [
     badge: 'Design System', badgeColor: '#A78BFA',
     tools: ['Figma', 'Design System', 'Design Tokens', 'UI Design'],
     image: atlasCover, type: 'uiux', route: '/work/atlas',
-  },
-  {
-    id: 11,
-    title: 'AURA — Premium Audio Shopping Experience',
-    navCategory: 'E-commerce · UI Design',
-    category: 'UI Design · E-commerce · Design System',
-    filterCategory: 'Web App',
-    description: 'A premium headphone online store: a dark, cinematic visual language carried through landing, product, comparison and cart screens, built on a component library and design foundations.',
-    year: '2026', role: 'UI Designer',
-    badge: 'E-commerce UI', badgeColor: '#9294FE',
-    tools: ['Figma', 'UI Design', 'Design System', 'Responsive Design'],
-    image: auraCover, type: 'uiux', route: '/work/aura',
   },
   {
     id: 2,
