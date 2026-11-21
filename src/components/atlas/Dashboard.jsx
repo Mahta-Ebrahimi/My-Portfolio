@@ -3,6 +3,7 @@ import { Icon, Logo, ScaledFrame, SectionHeader, SampleNote, Reveal } from './ui
 import { LineChart, BarChart, DonutChart } from './Charts';
 import { KpiCard, DataTable, ChartCard, StatusBadge } from './DataComponents';
 import { KPIS, REVENUE, NEW_ACCOUNTS, PLAN_MIX, ACCOUNTS, REGIONS, money } from './data';
+import { tr } from '../../context/LanguageContext';
 
 const NAV = [
   ['overview', 'Overview'], ['chart', 'Reports'], ['users', 'Accounts', 128], ['billing', 'Billing'], ['plug', 'Integrations'],
@@ -267,54 +268,54 @@ function MobileDashboard() {
 }
 
 const ADAPT = [
-  { el: 'Navigation', d: 'Sidebar with labels', t: 'Icon rail (68px)', m: 'Bottom tab bar + menu' },
-  { el: 'KPI cards', d: '4 across with sparklines', t: '2 × 2, compact', m: '2 × 2, value + delta only' },
-  { el: 'Filters', d: 'Inline toolbar', t: 'Preset + filter button', m: 'Preset + filter sheet' },
-  { el: 'Charts', d: 'Line + donut side by side', t: 'Full-width line', m: 'Single series, taller' },
-  { el: 'Data table', d: 'Full table, 8 columns', t: '3 priority columns', m: 'Stacked account cards' },
+  { el: 'Navigation', d: tr("Sidebar with labels", "Sidebar med labels"), t: tr("Icon rail (68px)", "Ikonbjælke (68px)"), m: tr("Bottom tab bar + menu", "Fanebjælke i bunden + menu") },
+  { el: tr("KPI cards", "KPI-kort"), d: tr("4 across with sparklines", "4 på række med sparklines"), t: tr("2 × 2, compact", "2 × 2, kompakt"), m: tr("2 × 2, value + delta only", "2 × 2, kun værdi + ændring") },
+  { el: tr("Filters", "Filtre"), d: tr("Inline toolbar", "Indlejret værktøjslinje"), t: tr("Preset + filter button", "Forvalg + filterknap"), m: tr("Preset + filter sheet", "Forvalg + filterark") },
+  { el: tr("Charts", "Diagrammer"), d: tr("Line + donut side by side", "Linje + donut side om side"), t: tr("Full-width line", "Linje i fuld bredde"), m: tr("Single series, taller", "Én serie, højere") },
+  { el: tr("Data table", "Datatabel"), d: tr("Full table, 8 columns", "Fuld tabel, 8 kolonner"), t: tr("3 priority columns", "3 prioriterede kolonner"), m: tr("Stacked account cards", "Stablede kontokort") },
 ];
 
 export default function DashboardSection() {
   return (
     <section id="dashboard" className="mb-28 md:mb-36 scroll-mt-24">
-      <SectionHeader num="08" label="Design System in Action" title="One system, one analytics dashboard">
+      <SectionHeader num="08" label={tr("Design System in Action", "Designsystemet i brug")} title={tr("One system, one analytics dashboard", "Ét system, ét analysedashboard")}>
         <p>
-          To test whether the system holds together, ATLAS is applied to a revenue analytics dashboard: sidebar navigation, header and toolbar, date-range and filter controls, KPI cards, charts, an activity feed, and a full data table, all built only from the components and tokens above.
+          {tr("To test whether the system holds together, ATLAS is applied to a revenue analytics dashboard: sidebar navigation, header and toolbar, date-range and filter controls, KPI cards, charts, an activity feed, and a full data table, all built only from the components and tokens above.", "For at teste, om systemet hænger sammen, er ATLAS anvendt på et dashboard til omsætningsanalyse: navigation i sidebar, header og værktøjslinje, kontroller til datointerval og filtre, KPI-kort, diagrammer, et aktivitetsfeed og en komplet datatabel – alt sammen bygget udelukkende af komponenterne og tokens ovenfor.")}
         </p>
       </SectionHeader>
 
       <Reveal>
-        <ScaledFrame width={1320} label="ATLAS analytics dashboard, desktop layout">
+        <ScaledFrame width={1320} label={tr("ATLAS analytics dashboard, desktop layout", "ATLAS-analysedashboard, desktoplayout")}>
           <DesktopDashboard />
         </ScaledFrame>
         <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
-          <p className="text-[13px] text-[#6B7280]">Desktop · 1320px frame, scaled to fit. The controls, chart tooltips and table are live.</p>
+          <p className="text-[13px] text-[#6B7280]">{tr("Desktop · 1320px frame, scaled to fit. The controls, chart tooltips and table are live.", "Desktop · 1320px-ramme, skaleret til at passe. Kontrollerne, diagrammernes tooltips og tabellen er live.")}</p>
           <SampleNote dark />
         </div>
       </Reveal>
 
       <div className="mt-16 md:mt-20">
         <Reveal className="max-w-[760px] mb-10">
-          <h3 className="text-white text-[22px] md:text-[26px] font-bold tracking-[-0.02em] mb-3">Adapting to tablet and mobile</h3>
+          <h3 className="text-white text-[22px] md:text-[26px] font-bold tracking-[-0.02em] mb-3">{tr("Adapting to tablet and mobile", "Tilpasning til tablet og mobil")}</h3>
           <p className="text-[#9CA3AF] text-[16px] leading-[1.7]">
-            The same components reflow rather than being redesigned. Navigation condenses, KPI cards regroup, and the table gives way to priority columns and then to stacked cards.
+            {tr("The same components reflow rather than being redesigned. Navigation condenses, KPI cards regroup, and the table gives way to priority columns and then to stacked cards.", "De samme komponenter omorganiseres i stedet for at blive redesignet. Navigationen bliver mere kompakt, KPI-kortene grupperes om, og tabellen giver plads til prioriterede kolonner og siden til stablede kort.")}
           </p>
         </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-[1.75fr_1fr] gap-8 md:gap-10 items-start">
           <Reveal>
-            <ScaledFrame width={788} label="Tablet layout"><TabletDashboard /></ScaledFrame>
+            <ScaledFrame width={788} label={tr("Tablet layout", "Tabletlayout")}><TabletDashboard /></ScaledFrame>
             <p className="text-[13px] text-[#6B7280] mt-3 text-center">Tablet · 768px</p>
           </Reveal>
           <Reveal delay={120} className="max-w-[300px] w-full mx-auto">
-            <ScaledFrame width={395} label="Mobile layout"><MobileDashboard /></ScaledFrame>
-            <p className="text-[13px] text-[#6B7280] mt-3 text-center">Mobile · 375px</p>
+            <ScaledFrame width={395} label={tr("Mobile layout", "Mobillayout")}><MobileDashboard /></ScaledFrame>
+            <p className="text-[13px] text-[#6B7280] mt-3 text-center">{tr("Mobile · 375px", "Mobil · 375px")}</p>
           </Reveal>
         </div>
 
         <Reveal className="mt-12 overflow-x-auto rounded-[16px]" style={{ border: '1px solid var(--page-line)' }}>
           <table className="w-full min-w-[640px] text-left text-[14px]">
-            <caption className="at-sr">How dashboard elements adapt per breakpoint</caption>
+            <caption className="at-sr">{tr("How dashboard elements adapt per breakpoint", "Sådan tilpasser dashboardets elementer sig ved hvert breakpoint")}</caption>
             <thead>
               <tr className="bg-[#0D0D0D]">
                 {['Element', 'Desktop', 'Tablet', 'Mobile'].map(h => (

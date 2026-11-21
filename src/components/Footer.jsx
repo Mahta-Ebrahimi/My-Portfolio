@@ -8,6 +8,7 @@ import {
 } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
+import { tr } from '../context/LanguageContext';
 
 const Footer = () => {
   return (
@@ -16,18 +17,18 @@ const Footer = () => {
     id="footer"
     className="w-full bg-black text-gray-100 py-12 md:py-20 px-4 sm:px-6">
       <div className="max-w-[640px] mx-auto text-center mb-14">
-        <p className="text-[#FF9533] font-semibold text-[24px] leading-snug mb-4">Let's Work Together</p>
+        <p className="text-[#FF9533] font-semibold text-[24px] leading-snug mb-4">{tr("Let's Work Together", 'Lad os arbejde sammen')}</p>
         <p className="text-[#9CA3AF] text-[16px] leading-[1.65] mb-2">
-          I'm currently available for new projects and would love to hear what you're building.
-          Whether it's a product redesign, a new digital experience, or a front-end build from scratch,
-          reach out with as much detail as you can about the scope, timeline, and budget,
-          and let's find out if we're a good fit.
+          {tr(
+            "I'm currently available for new projects and would love to hear what you're building. Whether it's a product redesign, a new digital experience, or a front-end build from scratch, reach out with as much detail as you can about the scope, timeline, and budget, and let's find out if we're a good fit.",
+            'Jeg er klar til nye projekter og vil meget gerne høre, hvad du arbejder på. Uanset om det er et redesign af et produkt, en ny digital oplevelse eller en frontend bygget fra bunden, så skriv gerne med så mange detaljer som muligt om omfang, tidsplan og budget – så finder vi ud af, om vi er et godt match.'
+          )}
         </p>
         <a
           href="mailto:mahta.ir@gmail.com"
           className="inline-block mt-6 px-8 py-3 text-[14px] font-semibold border border-[#FF9533] text-[#FF9533] hover:bg-[#FF9533] hover:text-black transition-colors tracking-wider"
         >
-          Get In Touch
+          {tr('Get In Touch', 'Kontakt mig')}
         </a>
       </div>
 
@@ -65,7 +66,7 @@ const Footer = () => {
           rel="noopener noreferrer"
           className="flex items-center gap-2 hover:text-[#FAC813]"
         >
-          <BsFillPersonLinesFill size={24} /> Resume
+          <BsFillPersonLinesFill size={24} /> {tr('Resume', 'CV')}
         </a>
 
         <a
@@ -88,7 +89,7 @@ const Footer = () => {
       </div>
 
       <p className="text-center text-[13px] text-gray-500">
-        © {new Date().getFullYear()} Mahta Ebrahimi. All rights reserved.
+        © {new Date().getFullYear()} Mahta Ebrahimi. {tr('All rights reserved.', 'Alle rettigheder forbeholdes.')}
       </p>
     </div>
   );

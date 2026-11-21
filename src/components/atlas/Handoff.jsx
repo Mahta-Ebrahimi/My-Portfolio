@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Board, SectionHeader, SpecLabel, Icon, Reveal } from './ui';
+import { tr } from '../../context/LanguageContext';
 
 const TOKEN_PARTS = [
-  { seg: 'color', role: 'Category', c: '#7C3AED' },
+  { seg: 'color', role: tr("Category", "Kategori"), c: '#7C3AED' },
   { seg: 'action', role: 'Concept', c: '#2563EB' },
   { seg: 'primary', role: 'Variant', c: '#0D9488' },
   { seg: 'hover', role: 'State', c: '#E11D48' },
@@ -135,7 +136,7 @@ function CodeBlock() {
   };
   return (
     <Reveal className="at-code">
-      <div className="flex items-center gap-1 px-3 pt-3" style={{ borderBottom: '1px solid #1E293B' }} role="tablist" aria-label="Code files">
+      <div className="flex items-center gap-1 px-3 pt-3" style={{ borderBottom: '1px solid #1E293B' }} role="tablist" aria-label={tr("Code files", "Kodefiler")}>
         {files.map(f => (
           <button
             key={f} type="button" role="tab" aria-selected={file === f} onClick={() => setFile(f)}
@@ -146,7 +147,7 @@ function CodeBlock() {
           </button>
         ))}
         <button type="button" onClick={copy} className="ml-auto mb-2 flex items-center gap-1.5 text-[12px] font-medium px-2.5 py-1.5 rounded-[6px] transition-colors hover:bg-white/5" style={{ color: copied ? '#5EEAD4' : '#94A3B8' }}>
-          <Icon name={copied ? 'check' : 'copy'} size={14} />{copied ? 'Copied' : 'Copy'}
+          <Icon name={copied ? 'check' : 'copy'} size={14} />{copied ? tr("Copied", "Kopieret") : tr("Copy", "Kopiér")}
         </button>
       </div>
       <pre tabIndex={0} aria-label={`${file} code example`}>
@@ -184,15 +185,15 @@ const SpecTable = ({ head, rows, mono = [] }) => (
 export default function Handoff() {
   return (
     <section id="handoff" className="mb-28 md:mb-36 scroll-mt-24">
-      <SectionHeader num="09" label="Developer Handoff" title="Specifications that translate one‑to‑one">
+      <SectionHeader num="09" label={tr("Developer Handoff", "Overlevering til udviklere")} title={tr("Specifications that translate one‑to‑one", "Specifikationer, der kan oversættes én til én")}>
         <p>
-          Good handoff removes guesswork. Figma names, design variables and code share the same structure, so a property in a component panel maps directly to a prop or token in code.
+          {tr("Good handoff removes guesswork. Figma names, design variables and code share the same structure, so a property in a component panel maps directly to a prop or token in code.", "God overlevering fjerner gætteri. Navne i Figma, designvariabler og kode deler samme struktur, så en egenskab i et komponentpanel svarer direkte til en prop eller et token i koden.")}
         </p>
-        <p className="text-[14px] text-[#6B7280]">These are documentation examples written for the concept. They show how ATLAS could be handed off, not code running in a production product.</p>
+        <p className="text-[14px] text-[#6B7280]">{tr("These are documentation examples written for the concept. They show how ATLAS could be handed off, not code running in a production product.", "Dette er dokumentationseksempler skrevet til konceptet. De viser, hvordan ATLAS kunne overleveres – ikke kode, der kører i et produkt i produktion.")}</p>
       </SectionHeader>
 
       <div className="space-y-6">
-        <Board title="Naming conventions" meta="One structure from Figma to code">
+        <Board title={tr("Naming conventions", "Navngivningskonventioner")} meta={tr("One structure from Figma to code", "Én struktur fra Figma til kode")}>
           <Reveal className="flex flex-wrap items-end gap-y-4 mb-10">
             {TOKEN_PARTS.map(({ seg, role, c }, i) => (
               <React.Fragment key={seg}>
@@ -214,33 +215,33 @@ export default function Handoff() {
           </ul>
         </Board>
 
-        <Board title="Button · specification" meta="Handoff sheet · v1.0 (concept)">
+        <Board title={tr("Button · specification", "Knap · specifikation")} meta={tr("Handoff sheet · v1.0 (concept)", "Overleveringsark · v1.0 (koncept)")}>
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-x-10 gap-y-8">
-            <div><SpecLabel className="mb-2">Properties</SpecLabel><SpecTable head={['Prop', 'Type', 'Default', 'Figma property']} rows={PROPS} mono={[1, 2]} /></div>
-            <div><SpecLabel className="mb-2">States</SpecLabel><SpecTable head={['State', 'Trigger', 'Visual', 'Token']} rows={STATES} mono={[3]} /></div>
-            <div className="xl:col-span-2"><SpecLabel className="mb-2">Spacing · px</SpecLabel><SpecTable head={['Size', 'Height', 'Padding', 'Gap', 'Icon', 'Type']} rows={SIZES} /></div>
+            <div><SpecLabel className="mb-2">{tr("Properties", "Egenskaber")}</SpecLabel><SpecTable head={['Prop', 'Type', 'Default', 'Figma property']} rows={PROPS} mono={[1, 2]} /></div>
+            <div><SpecLabel className="mb-2">{tr("States", "Tilstande")}</SpecLabel><SpecTable head={['State', 'Trigger', 'Visual', 'Token']} rows={STATES} mono={[3]} /></div>
+            <div className="xl:col-span-2"><SpecLabel className="mb-2">{tr("Spacing · px", "Afstande · px")}</SpecLabel><SpecTable head={['Size', 'Height', 'Padding', 'Gap', 'Icon', 'Type']} rows={SIZES} /></div>
           </div>
         </Board>
 
         <div className="grid grid-cols-1 xl:grid-cols-[1.25fr_1fr] gap-6 items-start">
           <CodeBlock />
           <div>
-            <Board title="Behaviour & accessibility notes">
+            <Board title={tr("Behaviour & accessibility notes", "Noter om adfærd & tilgængelighed")}>
               <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 gap-6">
                 <div>
-                  <SpecLabel className="mb-3">Responsive</SpecLabel>
+                  <SpecLabel className="mb-3">{tr("Responsive", "Responsivt")}</SpecLabel>
                   <ul className="space-y-2 text-[13px] leading-[1.55]" style={{ color: '#475569' }}>
-                    <li>Below 480px, buttons in forms and modal footers become full width and stack, with the primary action first.</li>
-                    <li>Touch layouts use size lg, so targets are 48px tall.</li>
-                    <li>Labels never truncate. Long labels wrap the button group, not the text.</li>
+                    <li>{tr("Below 480px, buttons in forms and modal footers become full width and stack, with the primary action first.", "Under 480px får knapper i formularer og modal-footere fuld bredde og stables med den primære handling først.")}</li>
+                    <li>{tr("Touch layouts use size lg, so targets are 48px tall.", "Touch-layouts bruger størrelse lg, så klikfladerne er 48px høje.")}</li>
+                    <li>{tr("Labels never truncate. Long labels wrap the button group, not the text.", "Labels afkortes aldrig. Lange labels ombryder knapgruppen, ikke teksten.")}</li>
                   </ul>
                 </div>
                 <div>
-                  <SpecLabel className="mb-3">Accessibility</SpecLabel>
+                  <SpecLabel className="mb-3">{tr("Accessibility", "Tilgængelighed")}</SpecLabel>
                   <ul className="space-y-2 text-[13px] leading-[1.55]" style={{ color: '#475569' }}>
-                    <li>Use a native &lt;button&gt;. Links that look like buttons stay &lt;a&gt;.</li>
-                    <li>Icon-only buttons require aria-label. Loading sets aria-busy.</li>
-                    <li>Focus ring shows only on :focus-visible and meets 3:1 against every surface.</li>
+                    <li>{tr("Use a native <button>. Links that look like buttons stay <a>.", "Brug en native <button>. Links, der ligner knapper, forbliver <a>.")}</li>
+                    <li>{tr("Icon-only buttons require aria-label. Loading sets aria-busy.", "Knapper med kun ikon kræver aria-label. Loading sætter aria-busy.")}</li>
+                    <li>{tr("Focus ring shows only on :focus-visible and meets 3:1 against every surface.", "Fokusringen vises kun ved :focus-visible og opfylder 3:1 mod alle flader.")}</li>
                   </ul>
                 </div>
               </div>

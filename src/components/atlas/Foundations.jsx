@@ -1,6 +1,7 @@
 import React from 'react';
 import { Board, SectionHeader, SpecLabel, Reveal } from './ui';
 import { TYPE_SCALE, SPACING, RADII, ELEVATION } from './tokens';
+import { tr } from '../../context/LanguageContext';
 
 const GRIDS = [
   { name: 'Desktop', width: 1440, cols: 12, margin: 32, gutter: 24, ratio: '16 / 9', pad: '2.2%', gap: '1.7%', range: '≥ 1280px' },
@@ -13,20 +14,20 @@ const BREAKPOINTS = [['sm', 640], ['md', 768], ['lg', 1024], ['xl', 1280], ['2xl
 export default function Foundations() {
   return (
     <section id="foundations" className="mb-28 md:mb-36 scroll-mt-24">
-      <SectionHeader num="04" label="Typography & Layout" title="Foundations that make density readable">
+      <SectionHeader num="04" label={tr("Typography & Layout", "Typografi & layout")} title={tr("Foundations that make density readable", "Et fundament, der gør tæthed læsbar")}>
         <p>
-          Data-heavy screens rely on rhythm more than decoration. ATLAS pairs a ten-step type scale with a 4px spacing system, a small set of radii, responsive column grids and five elevation levels, all documented as tokens.
+          {tr("Data-heavy screens rely on rhythm more than decoration. ATLAS pairs a ten-step type scale with a 4px spacing system, a small set of radii, responsive column grids and five elevation levels, all documented as tokens.", "Datatunge skærme bygger mere på rytme end på dekoration. ATLAS kombinerer en typografiskala med ti trin med et afstandssystem på 4px, et lille sæt radier, responsive kolonnegrids og fem elevationsniveauer – alt sammen dokumenteret som tokens.")}
         </p>
       </SectionHeader>
 
       <div className="space-y-6">
         {/* Typography */}
-        <Board title="Type scale" meta="Plus Jakarta Sans · 10 styles · size / line-height">
+        <Board title={tr("Type scale", "Typografiskala")} meta={tr("Plus Jakarta Sans · 10 styles · size / line-height", "Plus Jakarta Sans · 10 stilarter · størrelse / linjehøjde")}>
           <Reveal className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-6 md:gap-12 items-center pb-8 mb-2" style={{ borderBottom: '1px solid #E2E8F0' }}>
             <p className="font-bold leading-none tracking-[-0.04em]" style={{ fontSize: 'clamp(88px, 14vw, 148px)', color: '#7C3AED' }} aria-hidden="true">Aa</p>
             <div className="space-y-4">
               <div>
-                <SpecLabel>Typeface</SpecLabel>
+                <SpecLabel>{tr("Typeface", "Skrifttype")}</SpecLabel>
                 <p className="text-[22px] font-semibold tracking-[-0.01em]">Plus Jakarta Sans</p>
               </div>
               <div className="flex flex-wrap gap-x-6 gap-y-2 text-[15px]">
@@ -37,7 +38,7 @@ export default function Foundations() {
               </div>
               <p className="text-[18px] tabular-nums tracking-[0.02em]" style={{ color: '#475569' }}>0 1 2 3 4 5 6 7 8 9 · DKK 248.6k · 112% · −0.3 pt</p>
               <p className="text-[13px] leading-[1.6]" style={{ color: '#64748B' }}>
-                Tabular figures are switched on in tables, KPI tiles and chart labels, so numbers line up in columns.
+                {tr("Tabular figures are switched on in tables, KPI tiles and chart labels, so numbers line up in columns.", "Tabeltal er slået til i tabeller, KPI-felter og diagramlabels, så tallene står på linje i kolonner.")}
               </p>
             </div>
           </Reveal>
@@ -69,7 +70,7 @@ export default function Foundations() {
 
         {/* Spacing + radius */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <Board title="Spacing scale" meta="4px base unit · 11 steps">
+          <Board title={tr("Spacing scale", "Afstandsskala")} meta="4px base unit · 11 steps">
             <ul className="space-y-2.5">
               {SPACING.map(({ token, px }, i) => (
                 <Reveal as="li" key={token} delay={i * 25} className="grid grid-cols-[96px_40px_1fr] items-center gap-3">
@@ -84,7 +85,7 @@ export default function Foundations() {
             </p>
           </Board>
 
-          <Board title="Corner radius" meta="6 tokens · nested radius = outer − padding">
+          <Board title={tr("Corner radius", "Hjørneradius")} meta={tr("6 tokens · nested radius = outer − padding", "6 tokens · indre radius = ydre − padding")}>
             <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               {RADII.map(({ token, px, use }, i) => (
                 <Reveal as="li" key={token} delay={i * 40}>
@@ -103,7 +104,7 @@ export default function Foundations() {
         </div>
 
         {/* Layout grid */}
-        <Board title="Responsive layout grid" meta="12 / 8 / 4 columns · fluid columns, fixed gutters">
+        <Board title={tr("Responsive layout grid", "Responsivt layoutgrid")} meta={tr("12 / 8 / 4 columns · fluid columns, fixed gutters", "12 / 8 / 4 kolonner · flydende kolonner, faste mellemrum")}>
           <div className="grid grid-cols-1 md:grid-cols-[2.6fr_1.3fr_0.75fr] gap-6 md:gap-8 items-end">
             {GRIDS.map(({ name, width, cols, margin, gutter, ratio, pad, gap, range }, i) => (
               <Reveal key={name} delay={i * 80}>
@@ -127,7 +128,7 @@ export default function Foundations() {
             ))}
           </div>
           <div className="mt-8 pt-6 flex flex-wrap items-center gap-x-6 gap-y-3" style={{ borderTop: '1px solid #E2E8F0' }}>
-            <SpecLabel>Breakpoints</SpecLabel>
+            <SpecLabel>{tr("Breakpoints", "Breakpoints")}</SpecLabel>
             {BREAKPOINTS.map(([k, v]) => (
               <span key={k} className="text-[13px]"><code className="font-mono font-semibold" style={{ color: '#5B21B6' }}>{k}</code> <span style={{ color: '#64748B' }}>{v}px</span></span>
             ))}
@@ -135,7 +136,7 @@ export default function Foundations() {
         </Board>
 
         {/* Elevation */}
-        <Board title="Elevation & shadows" meta="5 levels · navy-tinted shadows, never pure black">
+        <Board title={tr("Elevation & shadows", "Elevation & skygger")} meta={tr("5 levels · navy-tinted shadows, never pure black", "5 niveauer · marineblå skygger, aldrig rent sort")}>
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-7 rounded-[14px] p-6 sm:p-10 lg:p-12" style={{ background: '#F1F5F9' }}>
             {ELEVATION.map(({ token, shadow, use, value }, i) => (
               <Reveal as="li" key={token} delay={i * 60}

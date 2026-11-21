@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { tr } from '../context/LanguageContext';
 
 export default function FeaturedProjectCard({ project }) {
   const navigate = useNavigate();
@@ -81,7 +82,7 @@ export default function FeaturedProjectCard({ project }) {
               color: 'var(--g-accent, #14F1D9)',
               margin: '0 0 28px',
             }}>
-              Featured Project
+              {tr('Featured Project', 'Udvalgt projekt')}
             </p>
 
             {/* Title */}
@@ -150,7 +151,7 @@ export default function FeaturedProjectCard({ project }) {
                 transition: 'background 0.3s ease, border-color 0.3s ease',
               }}
             >
-              View Project
+              {tr('View Project', 'Se projekt')}
               <span style={{
                 fontSize: 15,
                 display: 'inline-block',

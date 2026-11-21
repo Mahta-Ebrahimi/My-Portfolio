@@ -4,6 +4,7 @@ import { LineChart, Legend } from './Charts';
 import { KpiCard, StatusBadge } from './DataComponents';
 import { KPIS, REVENUE, ACCOUNTS, money } from './data';
 import { PALETTES } from './tokens';
+import { tr } from '../../context/LanguageContext';
 
 // Compact dashboard used as the hero's centrepiece (920px design width)
 function MiniDashboard() {
@@ -31,7 +32,7 @@ function MiniDashboard() {
             <p className="text-[14px] font-semibold">Monthly recurring revenue</p>
             <Legend items={REVENUE.series} />
           </div>
-          <LineChart data={REVENUE} height={210} caption="Hero preview: monthly recurring revenue" interactive={false} />
+          <LineChart data={REVENUE} height={210} caption={tr("Hero preview: monthly recurring revenue", "Forhåndsvisning: månedlig tilbagevendende omsætning")} interactive={false} />
         </div>
         <div className="at-card overflow-hidden">
           {ACCOUNTS.slice(0, 3).map((r, i) => (
@@ -98,7 +99,7 @@ const TypeCard = () => (
 
 export default function HeroComposition() {
   return (
-    <div className="relative lg:h-[650px]" aria-label="ATLAS design system preview: dashboard, colour palette, components and typography" role="img">
+    <div className="relative lg:h-[650px]" aria-label={tr("ATLAS design system preview: dashboard, colour palette, components and typography", "Forhåndsvisning af ATLAS-designsystemet: dashboard, farvepalet, komponenter og typografi")} role="img">
       <div className="lg:absolute lg:left-[14%] lg:right-[8%] lg:top-[92px]" aria-hidden="true">
         <ScaledFrame width={920}><MiniDashboard /></ScaledFrame>
       </div>

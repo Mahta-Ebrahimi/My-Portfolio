@@ -5,6 +5,7 @@ import MeshBackground      from './MeshBackground';
 import ProjectIndex        from './ProjectIndex';
 import FeaturedProjectCard from './FeaturedProjectCard';
 import ProjectGrid         from './ProjectGrid';
+import { tr, localizeProject } from '../context/LanguageContext';
 
 import matchMeHIFI    from '../assets/MatchMeHIFI.png';
 import detectAI       from '../assets/DashboardAI.png';
@@ -18,7 +19,7 @@ import selskabslokale from '../assets/UI1.png';
 import danskeBank     from '../assets/danskeBank.png';
 import wordPress      from '../assets/wordpress2.png';
 
-export const PROJECTS = [
+const PROJECT_DATA = [
   {
     id: 11,
     title: 'AURA — Premium Audio Shopping Experience',
@@ -30,6 +31,12 @@ export const PROJECTS = [
     badge: 'E-commerce UI', badgeColor: '#9294FE',
     tools: ['Figma', 'UI Design', 'Design System', 'Responsive Design'],
     image: auraCover, type: 'uiux', route: '/work/aura',
+    da: {
+      title: 'AURA — Premium shoppingoplevelse for lyd',
+      category: 'UI-design · E-handel · Designsystem',
+      filterCategory: 'Webapp',
+      description: 'En premium webshop for hovedtelefoner: et mørkt, filmisk visuelt sprog gennem landingsside, produkt-, sammenlignings- og kurvskærme, bygget på et komponentbibliotek og designfundament.',
+    },
   },
   {
     id: 1,
@@ -42,6 +49,10 @@ export const PROJECTS = [
     badge: 'AI Matchmaking', badgeColor: '#00E5A0',
     tools: ['Figma', 'AI Features', 'UX Research', 'Prototyping'],
     image: matchMeHIFI, type: 'uiux', route: '/work/matchme',
+    da: {
+      category: 'AI-baseret servicematchmaking',
+      description: 'AI-assisteret kompatibilitetsmatchning for lokale serviceydelser. En præferencequiz opbygger en brugermodel, og platformen viser rangerede hjælpere med en klar begrundelse bag hvert resultat.',
+    },
   },
   {
     id: 9,
@@ -54,6 +65,10 @@ export const PROJECTS = [
     badge: 'AI Healthcare', badgeColor: '#3CC4B4',
     tools: ['Figma', 'AI-assisted Design', 'UI Design', 'Design System'],
     image: pharmaAI, type: 'uiux', route: '/work/pharmaai',
+    da: {
+      category: 'AI-apotekerassistent · Koncept',
+      description: 'UI-designkoncept for en AI-apotekerassistent til sundhedsprofessionelle. Et roligt, klinisk interface og designsystem, hvor kilder, sikkerhedsadvarsler og farmaceut-knappen har en synlig plads i hvert svar.',
+    },
   },
   {
     id: 10,
@@ -66,6 +81,11 @@ export const PROJECTS = [
     badge: 'Design System', badgeColor: '#A78BFA',
     tools: ['Figma', 'Design System', 'Design Tokens', 'UI Design'],
     image: atlasCover, type: 'uiux', route: '/work/atlas',
+    da: {
+      title: 'ATLAS — Designsystem til virksomheder',
+      category: 'UI-design · Designsystemer · SaaS',
+      description: 'Et skalerbart designsystem, der udforsker avanceret farvearkitektur, genanvendelige komponenter og konsistente interfaces til komplekse webapplikationer.',
+    },
   },
   {
     id: 2,
@@ -78,6 +98,10 @@ export const PROJECTS = [
     badge: 'AI Security', badgeColor: '#00E5A0',
     tools: ['Figma', 'AI Systems', 'Product Design', 'Automation'],
     image: detectAI, type: 'uiux', route: '/work/secureflow',
+    da: {
+      category: 'AI-sikkerhedsplatform',
+      description: 'AI-drevet platform til SOC-analytikere. Trusselssignaler korreleres automatisk, anomalier markeres i kontekst, og responsworkflows fremhæver handlingsrettede alarmer.',
+    },
   },
   {
     id: 4,
@@ -90,6 +114,11 @@ export const PROJECTS = [
     badge: 'AI · UI/UX', badgeColor: '#38BDF8',
     tools: ['Figma', 'UI/UX Design', 'Design System', 'React'],
     image: chatbot, type: ['uiux', 'frontend'], route: '/work/chatbot',
+    da: {
+      title: 'AI-chatbot-app',
+      category: 'AI-chat · UI/UX-design',
+      description: 'En chatoplevelse med to assistenter – en generel AI og en portfolio-AI – i ét interface. Designet omkring tydelig assistentidentitet, foreslåede prompts og et fælles designsystem og derefter bygget med React og OpenAI.',
+    },
   },
   {
     id: 5,
@@ -102,6 +131,12 @@ export const PROJECTS = [
     badge: 'UX/UI + React', badgeColor: '#A78BFA',
     tools: ['Figma', 'React', 'Tailwind'],
     image: portfolio1, type: ['uiux', 'frontend'], route: '/work/portfolio',
+    da: {
+      title: 'Min portfolio',
+      category: 'Portfoliodesign & -udvikling',
+      filterCategory: 'Webapp',
+      description: 'Designet i Figma og bygget i React med et mørkt/lyst temasystem og glidende scroll-navigation. Selve portfolioen er et designcase.',
+    },
   },
   {
     id: 3,
@@ -114,6 +149,11 @@ export const PROJECTS = [
     badge: 'Mobile UX/UI', badgeColor: '#A78BFA',
     tools: ['Figma', 'UX Research', 'Prototyping', 'UI Design'],
     image: pawpal, type: 'uiux', route: '/work/pawpal',
+    da: {
+      category: 'Mobil UX/UI',
+      filterCategory: 'Mobil',
+      description: 'Mobilapp, der forbinder kæledyrsejere med betroede dyrlæger, groomere og hundeluftere. Designet omkring tillid, lokationsbaseret søgning og gnidningsfri booking.',
+    },
   },
   {
     id: 6,
@@ -126,6 +166,10 @@ export const PROJECTS = [
     badge: 'UX Research', badgeColor: '#F59E0B',
     tools: ['Figma', 'Research', 'Heatmaps', 'SEO'],
     image: selskabslokale, type: 'uiux', route: '/work/selskabslokale',
+    da: {
+      category: 'UX-research & SEO-analyse',
+      description: 'UX-research, heatmap-analyse og SEO-audit for en dansk platform til booking af selskabslokaler. Identificerede punkter med højt frafald i bookingflowet og foreslog validerede forbedringer.',
+    },
   },
   {
     id: 7,
@@ -138,6 +182,11 @@ export const PROJECTS = [
     badge: 'AI Product', badgeColor: '#00E5A0',
     tools: ['Figma', 'React', 'TypeScript'],
     image: danskeBank, type: ['uiux', 'frontend'], route: '/work/danske-bank',
+    da: {
+      category: 'AI-produktdesign',
+      filterCategory: 'Bank',
+      description: 'AI-assisteret DevSecOps-dashboard til et bankmiljø. Viser sårbarheder i CI/CD-pipelines i realtid med prioriteret, kontekstuel vejledning til udbedring.',
+    },
   },
   {
     id: 8,
@@ -150,8 +199,15 @@ export const PROJECTS = [
     badge: 'WordPress', badgeColor: '#6B7280',
     tools: ['WordPress', 'CMS', 'UI Design'],
     image: wordPress, type: ['uiux', 'frontend'], route: '/work/soulimous',
+    da: {
+      category: 'Webdesign & -udvikling',
+      filterCategory: 'Webapp',
+      description: 'Skræddersyet WordPress-site designet og bygget til en kunstner. Den visuelle identitet, layoutet og indholdsstrukturen afspejler kunstnerens personlige æstetik.',
+    },
   },
 ];
+
+export const PROJECTS = PROJECT_DATA.map(localizeProject);
 
 /* ── Mobile project card (< lg) ─────────────────────────────── */
 function MobileCard({ proj }) {
@@ -212,7 +268,7 @@ function MobileCard({ proj }) {
           color: 'var(--g-accent, #14F1D9)', border: '1px solid var(--g-accent-border, rgba(20,241,217,0.22))', padding: '10px 22px',
           borderRadius: 50, background: 'var(--g-accent-bg, rgba(20,241,217,0.05))', cursor: 'pointer',
         }}>
-          View Project →
+          {tr('View Project', 'Se projekt')} →
         </button>
       </div>
     </article>

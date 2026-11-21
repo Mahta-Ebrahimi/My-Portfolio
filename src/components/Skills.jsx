@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTheme } from '../context/ThemeContext';
+import { lang, tr } from '../context/LanguageContext';
 
 const CATEGORIES = [
   {
@@ -9,7 +10,7 @@ const CATEGORIES = [
       'Figma',
       'Design Systems',
       'UI/UX Design',
-      'Usability testsing',
+      'Usability Testing',
       'SEO Analyses',
       'AI Heatmaps',
       'Wireframing',
@@ -55,6 +56,18 @@ const LIGHT_ACCENT = {
   '#9CA3AF': '#374151',
 };
 
+/* Danish labels for skills that aren't product names */
+const SKILLS_DA = {
+  'Design Systems': 'Designsystemer',
+  'UI/UX Design': 'UI/UX-design',
+  'Usability Testing': 'Brugertest',
+  'SEO Analyses': 'SEO-analyser',
+  'AI Heatmaps': 'AI-heatmaps',
+  'Responsive Design': 'Responsivt design',
+  'AI Design': 'AI-design',
+  'AI Development': 'AI-udvikling',
+};
+
 const Pill = ({ label, accent, isDark }) => {
   const color = isDark ? accent : (LIGHT_ACCENT[accent] || accent);
   return (
@@ -66,7 +79,7 @@ const Pill = ({ label, accent, isDark }) => {
         color,
       }}
     >
-      {label}
+      {lang === 'da' ? (SKILLS_DA[label] || label) : label}
     </span>
   );
 };
@@ -84,8 +97,8 @@ const Skills = () => {
 
         {/* Heading */}
         <div className='text-center mb-12'>
-          <p className='text-[13px] font-semibold tracking-[0.25em] uppercase text-[#444] mb-2'>Capabilities</p>
-          <h2 className='text-[30px] sm:text-[36px] font-bold text-white leading-[1.2]'>Skills & Tools</h2>
+          <p className='text-[13px] font-semibold tracking-[0.25em] uppercase text-[#444] mb-2'>{tr('Capabilities', 'Kompetencer')}</p>
+          <h2 className='text-[30px] sm:text-[36px] font-bold text-white leading-[1.2]'>{tr('Skills & Tools', 'Færdigheder & værktøjer')}</h2>
         </div>
 
         {/* Three columns */}
@@ -123,7 +136,7 @@ const Skills = () => {
             <div className='flex items-center gap-2 mb-5'>
               <div className='w-1 h-5' style={{ background: greenHeading }} />
               <p className='text-[13px] font-semibold tracking-wider uppercase' style={{ color: greenHeading }}>
-                AI Tools
+                {tr('AI Tools', 'AI-værktøjer')}
               </p>
             </div>
 
@@ -131,7 +144,7 @@ const Skills = () => {
               <div key={sublabel} className='mb-4'>
                 <p className='text-[13px] font-medium uppercase tracking-[0.15em] mb-2'
                   style={{ color: isDark ? '#2A5A4A' : '#007a52' }}>
-                  {sublabel}
+                  {lang === 'da' ? SKILLS_DA[sublabel] : sublabel}
                 </p>
                 <div className='flex flex-wrap gap-2'>
                   {skills.map(s => (
@@ -172,7 +185,7 @@ const Skills = () => {
             borderColor: isDark ? '#2A2A2A' : '#d4d0c8',
           }}
         >
-          <p className='text-[13px] font-medium uppercase tracking-[0.15em] mb-3' style={{ color: isDark ? '#888' : '#666' }}>Other Tools</p>
+          <p className='text-[13px] font-medium uppercase tracking-[0.15em] mb-3' style={{ color: isDark ? '#888' : '#666' }}>{tr('Other Tools', 'Andre værktøjer')}</p>
           <div className='flex flex-wrap gap-2'>
             {OTHER.map(s => (
               <span

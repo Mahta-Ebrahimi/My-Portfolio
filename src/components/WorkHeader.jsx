@@ -1,3 +1,5 @@
+import { tr } from '../context/LanguageContext';
+
 export default function WorkHeader() {
   return (
     <header style={{ marginBottom: 52, textAlign: 'center' }}>
@@ -9,7 +11,7 @@ export default function WorkHeader() {
         letterSpacing: '-0.025em',
         margin: 0,
       }}>
-        Featured Works
+        {tr('Featured Works', 'Udvalgte projekter')}
       </h1>
     </header>
   );

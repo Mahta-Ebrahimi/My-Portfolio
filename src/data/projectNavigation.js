@@ -1,3 +1,4 @@
+import { tr } from '../context/LanguageContext';
 // Project order for navigation
 export const projectOrder = [
   { id: 'danske-bank', path: '/work/danske-bank', title: 'Danske Bank DevSecAI' },
@@ -6,13 +7,13 @@ export const projectOrder = [
   { id: 'selskabslokale', path: '/work/selskabslokale', title: 'Selskabslokale' },
   { id: 'secureflow', path: '/work/secureflow', title: 'DetectAI Security' },
   { id: 'pharmaai', path: '/work/pharmaai', title: 'PharmaAI' },
-  { id: 'atlas', path: '/work/atlas', title: 'ATLAS — Enterprise Design System' },
-  { id: 'aura', path: '/work/aura', title: 'AURA — Premium Audio Shopping Experience' },
+  { id: 'atlas', path: '/work/atlas', title: tr("ATLAS — Enterprise Design System", "ATLAS — Designsystem til virksomheder") },
+  { id: 'aura', path: '/work/aura', title: tr("AURA — Premium Audio Shopping Experience", "AURA — Premium shoppingoplevelse for lyd") },
   { id: 'glienke', path: '/work/glienke', title: 'Glienke Design' },
   { id: 'soulimous', path: '/work/soulimous', title: 'Soulimous' },
   { id: 'matchme', path: '/work/matchme', title: 'MatchMe App' },
-  { id: 'portfolio', path: '/work/portfolio', title: 'My Portfolio' },
-  { id: 'chatbot', path: '/work/chatbot', title: 'AI Chatbot App' }
+  { id: 'portfolio', path: '/work/portfolio', title: tr("My Portfolio", "Min portfolio") },
+  { id: 'chatbot', path: '/work/chatbot', title: tr("AI Chatbot App", "AI-chatbot-app") }
 ];
 
 // Helper to get prev/next project

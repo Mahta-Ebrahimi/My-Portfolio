@@ -4,43 +4,44 @@ import { FaArrowLeft, FaExternalLinkAlt, FaFileAlt } from 'react-icons/fa';
 import novasolFigma from '../assets/NovaFigma.png';
 import NovaDoc from '../assets/novasol.pdf';
 import { getProjectNavigation } from '../data/projectNavigation';
+import { tr } from '../context/LanguageContext';
 
 const SECTIONS = [
-  { id: 'overview',   num: '01', label: 'Overview' },
-  { id: 'problem',    num: '02', label: 'Problem & Solution' },
+  { id: 'overview',   num: '01', label: tr("Overview", "Oversigt") },
+  { id: 'problem',    num: '02', label: tr("Problem & Solution", "Problem & løsning") },
   { id: 'research',   num: '03', label: 'Research' },
-  { id: 'visual',     num: '04', label: 'Visual Direction' },
+  { id: 'visual',     num: '04', label: tr("Visual Direction", "Visuel retning") },
   { id: 'wireframes', num: '05', label: 'Wireframes' },
-  { id: 'hifi',       num: '06', label: 'Final Design' },
-  { id: 'learnings',  num: '07', label: 'Key Learnings' },
+  { id: 'hifi',       num: '06', label: tr("Final Design", "Endeligt design") },
+  { id: 'learnings',  num: '07', label: tr("Key Learnings", "Vigtigste læringer") },
 ];
 
 const PRINCIPLES = [
-  { icon: '✦', title: 'Simplicity',       desc: 'Reduce cognitive load in booking flow' },
-  { icon: '◎', title: 'Trust signals',    desc: 'Reviews, photos, clear pricing' },
-  { icon: '♡', title: 'Visual appeal',    desc: 'Destinations as the hero' },
-  { icon: '⊞', title: 'Consistency',      desc: '4pt grid, unified component system' },
+  { icon: '✦', title: tr("Simplicity", "Enkelhed"),       desc: tr("Reduce cognitive load in booking flow", "Mindre kognitiv belastning i bookingflowet") },
+  { icon: '◎', title: tr("Trust signals", "Tillidssignaler"),    desc: tr("Reviews, photos, clear pricing", "Anmeldelser, billeder, tydelige priser") },
+  { icon: '♡', title: tr("Visual appeal", "Visuel appel"),    desc: tr("Destinations as the hero", "Feriestederne i centrum") },
+  { icon: '⊞', title: tr("Consistency", "Konsistens"),      desc: tr("4pt grid, unified component system", "4pt-grid, samlet komponentsystem") },
 ];
 
 const FEATURES = [
-  { icon: '🗺️', title: 'Destination Showcase', desc: 'Immersive imagery-first layout' },
-  { icon: '🔍', title: 'Smart Search',          desc: 'Filters by date, size, location' },
-  { icon: '📋', title: 'Streamlined Booking',   desc: 'Fewer steps to confirmation' },
-  { icon: '⭐', title: 'Trust & Reviews',        desc: 'Verified ratings, host profiles' },
+  { icon: '🗺️', title: tr("Destination Showcase", "Præsentation af feriesteder"), desc: tr("Immersive imagery-first layout", "Billeddrevet layout, man kan fordybe sig i") },
+  { icon: '🔍', title: tr("Smart Search", "Smart søgning"),          desc: tr("Filters by date, size, location", "Filtre for dato, størrelse og beliggenhed") },
+  { icon: '📋', title: tr("Streamlined Booking", "Strømlinet booking"),   desc: tr("Fewer steps to confirmation", "Færre trin til bekræftelse") },
+  { icon: '⭐', title: tr("Trust & Reviews", "Tillid & anmeldelser"),        desc: tr("Verified ratings, host profiles", "Verificerede bedømmelser, værtsprofiler") },
 ];
 
 const COLORS = [
-  { hex: '#1B3A5C', label: 'Navy' },
-  { hex: '#E8A84C', label: 'Gold' },
-  { hex: '#F5F1EB', label: 'Sand' },
-  { hex: '#2E7D5B', label: 'Green' },
-  { hex: '#FFFFFF', label: 'White' },
+  { hex: '#1B3A5C', label: tr("Navy", "Marineblå") },
+  { hex: '#E8A84C', label: tr("Gold", "Guld") },
+  { hex: '#F5F1EB', label: tr("Sand", "Sand") },
+  { hex: '#2E7D5B', label: tr("Green", "Grøn") },
+  { hex: '#FFFFFF', label: tr("White", "Hvid") },
 ];
 
 const LEARNINGS = [
-  { num: '01', title: 'Imagery drives conversion', desc: 'High-quality destination visuals reduced bounce rate in user tests by focusing attention on the destination, not the UI.' },
-  { num: '02', title: 'Booking steps must be obvious', desc: 'Users abandoned multi-step forms. Breaking the flow into clear micro-steps with progress indicators kept them on track.' },
-  { num: '03', title: 'Mobile-first, desktop second', desc: '68% of test users reached the site on mobile. Starting from the smallest screen forced the most important decisions first.' },
+  { num: '01', title: tr("Imagery drives conversion", "Billeder driver konvertering"), desc: tr("High-quality destination visuals reduced bounce rate in user tests by focusing attention on the destination, not the UI.", "Billeder i høj kvalitet af feriestederne mindskede bounce-raten i brugertestene, fordi opmærksomheden blev rettet mod feriestedet og ikke mod UI'et.") },
+  { num: '02', title: tr("Booking steps must be obvious", "Bookingtrinene skal være tydelige"), desc: tr("Users abandoned multi-step forms. Breaking the flow into clear micro-steps with progress indicators kept them on track.", "Brugerne opgav formularer med mange trin. Ved at dele flowet op i tydelige mikrotrin med fremdriftsindikatorer blev brugerne fastholdt.") },
+  { num: '03', title: tr("Mobile-first, desktop second", "Mobil først, desktop bagefter"), desc: tr("68% of test users reached the site on mobile. Starting from the smallest screen forced the most important decisions first.", "68 % af testbrugerne besøgte sitet på mobilen. Ved at starte med den mindste skærm blev de vigtigste beslutninger truffet først.") },
 ];
 
 export default function Novasol() {
@@ -81,7 +82,7 @@ export default function Novasol() {
               <span style={{ fontSize: '14px' }}>🌊</span>
               <h2 className="text-white font-bold text-[14px] leading-tight">Novasol</h2>
             </div>
-            <p className="text-[#4B5563] text-[13px] mb-3">Travel Agency · UI/UX</p>
+            <p className="text-[#4B5563] text-[13px] mb-3">{tr("Travel Agency · UI/UX", "Rejsebureau · UI/UX")}</p>
             <div className="flex gap-2">
               <span className="text-[12px] bg-[#0F1B2D] text-[#60A5FA] px-2 py-1 rounded-md border border-[#60A5FA]/20">Figma</span>
               <span className="text-[12px] bg-[#0D0D0D] text-[#4B5563] px-2 py-1 rounded-md border border-[#1A1A1A]">2024</span>
@@ -91,7 +92,7 @@ export default function Novasol() {
           {/* Table of contents */}
           <nav className="flex-1 px-4 py-5">
             <p className="text-[13px] font-semibold tracking-[0.18em] uppercase text-[#1F2D1A] mb-3 px-1">
-              Contents
+              {tr("Contents", "Indhold")}
             </p>
             <ul className="space-y-0.5">
               {SECTIONS.map(({ id, num, label }) => {
@@ -120,12 +121,12 @@ export default function Novasol() {
           <div className="px-5 pt-4 pb-6 border-t border-[#1A1A1A] space-y-4">
             <div className="grid grid-cols-2 gap-x-3 gap-y-3">
               <div>
-                <p className="text-[12px] font-medium uppercase tracking-widest text-[#1F2D1A] mb-1">Role</p>
-                <p className="text-[13px] text-[#9CA3AF] leading-tight">UI/UX Designer</p>
+                <p className="text-[12px] font-medium uppercase tracking-widest text-[#1F2D1A] mb-1">{tr("Role", "Rolle")}</p>
+                <p className="text-[13px] text-[#9CA3AF] leading-tight">{tr("UI/UX Designer", "UI/UX-designer")}</p>
               </div>
               <div>
-                <p className="text-[12px] font-medium uppercase tracking-widest text-[#1F2D1A] mb-1">Duration</p>
-                <p className="text-[13px] text-[#9CA3AF] leading-tight">3 months</p>
+                <p className="text-[12px] font-medium uppercase tracking-widest text-[#1F2D1A] mb-1">{tr("Duration", "Varighed")}</p>
+                <p className="text-[13px] text-[#9CA3AF] leading-tight">{tr("3 months", "3 måneder")}</p>
               </div>
             </div>
             <div className="flex flex-col gap-2">
@@ -134,13 +135,13 @@ export default function Novasol() {
                 target="_blank" rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full bg-[#60A5FA] text-[#0D1117] text-[13px] font-semibold py-2 rounded-lg hover:bg-[#3B82F6] transition-colors"
               >
-                <FaExternalLinkAlt style={{ fontSize: '9px' }} /> View Prototype
+                <FaExternalLinkAlt style={{ fontSize: '9px' }} /> {tr("View Prototype", "Se prototype")}
               </a>
               <a
                 href={NovaDoc} target="_blank" rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full bg-[#111] text-[#9CA3AF] text-[13px] font-semibold py-2 rounded-lg hover:bg-[#374151] transition-colors border border-[#374151]"
               >
-                <FaFileAlt style={{ fontSize: '9px' }} /> Design Doc
+                <FaFileAlt style={{ fontSize: '9px' }} /> {tr("Design Doc", "Designdokument")}
               </a>
             </div>
           </div>
@@ -153,17 +154,17 @@ export default function Novasol() {
 
           {/* 01 — Overview */}
           <section id="overview" className="mb-20">
-            <p className="text-[13px] font-mono tracking-[0.18em] text-[#60A5FA] uppercase mb-3">01 — Overview</p>
+            <p className="text-[13px] font-mono tracking-[0.18em] text-[#60A5FA] uppercase mb-3">{tr("01 — Overview", "01 — Oversigt")}</p>
             <h1 className="text-[36px] sm:text-[44px] font-bold text-white mb-2 leading-[1.15]">Novasol</h1>
-            <p className="text-lg sm:text-xl text-[#6B7280] font-light mb-6">Travel Agency Redesign</p>
+            <p className="text-lg sm:text-xl text-[#6B7280] font-light mb-6">{tr("Travel Agency Redesign", "Redesign af rejsebureau")}</p>
             <div className="rounded-2xl overflow-hidden mb-8 bg-[#F0F0F0] p-3">
-              <img src={novasolFigma} alt="Novasol Redesign" className="w-full object-cover" />
+              <img src={novasolFigma} alt={tr("Novasol Redesign", "Novasol-redesign")} className="w-full object-cover" />
             </div>
             <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
-              A complete UI/UX redesign for Novasol travel agency — modernising the booking experience and visual identity to better match how users actually discover and book holiday destinations.
+              {tr("A complete UI/UX redesign for Novasol travel agency — modernising the booking experience and visual identity to better match how users actually discover and book holiday destinations.", "Et komplet UI/UX-redesign for rejsebureauet Novasol – med en moderniseret bookingoplevelse og visuel identitet, der passer bedre til, hvordan brugerne faktisk finder og booker feriesteder.")}
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              {[{ value: 'Figma', label: 'Tool' }, { value: '3 mo', label: 'Duration' }, { value: 'UI/UX', label: 'Discipline' }].map(({ value, label }) => (
+              {[{ value: 'Figma', label: tr("Tool", "Værktøj") }, { value: tr("3 mo", "3 mdr."), label: tr("Duration", "Varighed") }, { value: 'UI/UX', label: tr("Discipline", "Disciplin") }].map(({ value, label }) => (
                 <div key={label} className="bg-[#111] rounded-xl p-6 text-center border border-[#222]">
                   <p className="text-xl font-bold text-[#60A5FA] mb-2">{value}</p>
                   <p className="text-[13px] uppercase tracking-wider text-[#6B7280]">{label}</p>
@@ -174,10 +175,10 @@ export default function Novasol() {
 
           {/* 02 — Problem & Solution */}
           <section id="problem" className="mb-20">
-            <p className="text-[13px] font-mono tracking-[0.18em] text-[#60A5FA] uppercase mb-3">02 — The Problem &amp; Solution</p>
-            <h2 className="text-[22px] sm:text-[28px] font-bold text-white mb-6 leading-snug">Booking a Holiday Shouldn't Feel Like Work</h2>
+            <p className="text-[13px] font-mono tracking-[0.18em] text-[#60A5FA] uppercase mb-3">{tr("02 — The Problem & Solution", "02 — Problemet & løsningen")}</p>
+            <h2 className="text-[22px] sm:text-[28px] font-bold text-white mb-6 leading-snug">{tr("Booking a Holiday Shouldn't Feel Like Work", "Det skal ikke føles som arbejde at booke en ferie")}</h2>
             <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
-              The original Novasol site had an outdated visual identity and a fragmented booking flow that caused users to drop off before completing a reservation. The redesign aimed to make destination discovery beautiful and conversion frictionless.
+              {tr("The original Novasol site had an outdated visual identity and a fragmented booking flow that caused users to drop off before completing a reservation. The redesign aimed to make destination discovery beautiful and conversion frictionless.", "Det oprindelige Novasol-site havde en forældet visuel identitet og et fragmenteret bookingflow, der fik brugerne til at falde fra, før de gennemførte en reservation. Redesignet skulle gøre det smukt at opdage feriesteder og gnidningsfrit at booke.")}
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               {FEATURES.map(({ icon, title, desc }) => (
@@ -192,26 +193,26 @@ export default function Novasol() {
             </div>
             <blockquote className="border-l-[3px] border-[#60A5FA] pl-6 py-1">
               <p className="text-[#D1D5DB] text-[17px] italic leading-relaxed">
-                "Users don't book holidays — they book feelings. The design needed to sell the destination, not the form."
+                {tr("\"Users don't book holidays — they book feelings. The design needed to sell the destination, not the form.\"", "\"Brugerne booker ikke ferier – de booker følelser. Designet skulle sælge feriestedet, ikke formularen.\"")}
               </p>
             </blockquote>
           </section>
 
           {/* 03 — Research */}
           <section id="research" className="mb-20">
-            <p className="text-[13px] font-mono tracking-[0.18em] text-[#60A5FA] uppercase mb-3">03 — Research</p>
-            <h2 className="text-[22px] sm:text-[28px] font-bold text-white mb-6 leading-snug">Understanding the Traveller</h2>
+            <p className="text-[13px] font-mono tracking-[0.18em] text-[#60A5FA] uppercase mb-3">{tr("03 — Research", "03 — Research")}</p>
+            <h2 className="text-[22px] sm:text-[28px] font-bold text-white mb-6 leading-snug">{tr("Understanding the Traveller", "Forståelse af den rejsende")}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
               {[
                 {
-                  name: 'The Family Planner', role: '35–50 · Group travel',
-                  goals: ['Easy cabin/house comparison', 'Clear pricing for groups', 'Kid-friendly location filters'],
-                  pain: ['Too many options, no smart filtering', 'Hidden costs discovered late', 'Long booking flows on mobile'],
+                  name: 'The Family Planner', role: tr("35–50 · Group travel", "35–50 · Grupperejser"),
+                  goals: [tr("Easy cabin/house comparison", "Nem sammenligning af hytter og huse"), tr("Clear pricing for groups", "Tydelige priser for grupper"), tr("Kid-friendly location filters", "Filtre for børnevenlige beliggenheder")],
+                  pain: [tr("Too many options, no smart filtering", "For mange muligheder, ingen smart filtrering"), tr("Hidden costs discovered late", "Skjulte omkostninger opdages sent"), tr("Long booking flows on mobile", "Lange bookingflows på mobilen")],
                 },
                 {
-                  name: 'The Spontaneous Couple', role: '28–38 · Short trips',
-                  goals: ['Last-minute availability', 'Quick checkout', 'Inspiring destination pages'],
-                  pain: ['Slow search results', 'Cluttered listing pages', 'No clear trust signals'],
+                  name: 'The Spontaneous Couple', role: tr("28–38 · Short trips", "28–38 · Korte ture"),
+                  goals: [tr("Last-minute availability", "Ledighed i sidste øjeblik"), tr("Quick checkout", "Hurtig checkout"), tr("Inspiring destination pages", "Inspirerende sider om feriesteder")],
+                  pain: [tr("Slow search results", "Langsomme søgeresultater"), tr("Cluttered listing pages", "Rodede boligsider"), tr("No clear trust signals", "Ingen tydelige tillidssignaler")],
                 },
               ].map(({ name, role, goals, pain }) => (
                 <div key={name} className="bg-[#111] rounded-xl p-6 border border-[#222]">
@@ -220,7 +221,7 @@ export default function Novasol() {
                     <p className="text-[#60A5FA] text-sm mt-0.5">{role}</p>
                   </div>
                   <div className="mb-4">
-                    <p className="text-[13px] font-semibold uppercase tracking-[0.15em] text-[#374151] mb-2">Goals</p>
+                    <p className="text-[13px] font-semibold uppercase tracking-[0.15em] text-[#374151] mb-2">{tr("Goals", "Mål")}</p>
                     <ul className="space-y-1.5">
                       {goals.map(g => (
                         <li key={g} className="text-base text-[#9CA3AF] flex gap-2 leading-snug">
@@ -230,7 +231,7 @@ export default function Novasol() {
                     </ul>
                   </div>
                   <div>
-                    <p className="text-[13px] font-semibold uppercase tracking-[0.15em] text-[#374151] mb-2">Pain Points</p>
+                    <p className="text-[13px] font-semibold uppercase tracking-[0.15em] text-[#374151] mb-2">{tr("Pain Points", "Udfordringer")}</p>
                     <ul className="space-y-1.5">
                       {pain.map(p => (
                         <li key={p} className="text-base text-[#9CA3AF] flex gap-2 leading-snug">
@@ -243,19 +244,19 @@ export default function Novasol() {
               ))}
             </div>
             <div className="bg-[#080808] border border-[#1A1A1A] rounded-xl p-6">
-              <p className="text-[13px] font-semibold uppercase tracking-[0.15em] text-[#60A5FA] mb-2">Key Design Insight</p>
+              <p className="text-[13px] font-semibold uppercase tracking-[0.15em] text-[#60A5FA] mb-2">{tr("Key Design Insight", "Vigtigste designindsigt")}</p>
               <p className="text-[#D1D5DB] text-base leading-relaxed">
-                Both personas abandon at the same point: when the booking form becomes complex. Reducing steps and showing progress was the highest-impact improvement.
+                {tr("Both personas abandon at the same point: when the booking form becomes complex. Reducing steps and showing progress was the highest-impact improvement.", "Begge personaer falder fra samme sted: når bookingformularen bliver kompleks. At skære trin væk og vise fremdrift var den forbedring, der havde størst effekt.")}
               </p>
             </div>
           </section>
 
           {/* 04 — Visual Direction */}
           <section id="visual" className="mb-20">
-            <p className="text-[13px] font-mono tracking-[0.18em] text-[#60A5FA] uppercase mb-3">04 — Visual Direction</p>
-            <h2 className="text-[22px] sm:text-[28px] font-bold text-white mb-4 leading-snug">Design Approach</h2>
+            <p className="text-[13px] font-mono tracking-[0.18em] text-[#60A5FA] uppercase mb-3">{tr("04 — Visual Direction", "04 — Visuel retning")}</p>
+            <h2 className="text-[22px] sm:text-[28px] font-bold text-white mb-4 leading-snug">{tr("Design Approach", "Designtilgang")}</h2>
             <p className="text-[#9CA3AF] leading-7 mb-8 text-lg">
-              Navy and gold convey heritage and trust, while sand tones bring warmth. Full-bleed destination photography replaces dense text, letting visuals do the selling.
+              {tr("Navy and gold convey heritage and trust, while sand tones bring warmth. Full-bleed destination photography replaces dense text, letting visuals do the selling.", "Marineblå og guld signalerer tradition og tillid, mens sandfarver giver varme. Store billeder af feriestederne afløser tunge tekstblokke og lader det visuelle sælge.")}
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
               {PRINCIPLES.map(({ icon, title, desc }) => (
@@ -269,7 +270,7 @@ export default function Novasol() {
               ))}
             </div>
             <div className="bg-[#111] rounded-xl p-6 border border-[#222]">
-              <p className="text-[13px] font-semibold uppercase tracking-[0.15em] text-[#374151] mb-4">Color Palette</p>
+              <p className="text-[13px] font-semibold uppercase tracking-[0.15em] text-[#374151] mb-4">{tr("Color Palette", "Farvepalet")}</p>
               <div className="flex gap-4">
                 {COLORS.map(({ hex, label }) => (
                   <div key={label} className="flex flex-col items-center gap-2">
@@ -283,45 +284,45 @@ export default function Novasol() {
 
           {/* 05 — Wireframes */}
           <section id="wireframes" className="mb-20">
-            <p className="text-[13px] font-mono tracking-[0.18em] text-[#60A5FA] uppercase mb-3">05 — Wireframes</p>
-            <h2 className="text-[22px] sm:text-[28px] font-bold text-white mb-4 leading-snug">Low-Fidelity Screens</h2>
+            <p className="text-[13px] font-mono tracking-[0.18em] text-[#60A5FA] uppercase mb-3">{tr("05 — Wireframes", "05 — Wireframes")}</p>
+            <h2 className="text-[22px] sm:text-[28px] font-bold text-white mb-4 leading-snug">{tr("Low-Fidelity Screens", "Low-fidelity-skærme")}</h2>
             <p className="text-[#9CA3AF] leading-7 mb-6 text-lg">
-              Lo-fi wireframes established the information hierarchy before any visual polish. Homepage, search results, listing detail, and checkout flow were mapped first.
+              {tr("Lo-fi wireframes established the information hierarchy before any visual polish. Homepage, search results, listing detail, and checkout flow were mapped first.", "Lo-fi-wireframes fastlagde informationshierarkiet før den visuelle finpudsning. Forside, søgeresultater, boligdetaljer og checkout-flow blev kortlagt først.")}
             </p>
             <div className="bg-[#111] rounded-xl p-8 flex flex-col items-center justify-center text-center border border-[#222]" style={{ minHeight: '200px' }}>
-              <p className="text-[#374151] text-sm mb-1">Low-fi wireframes</p>
-              <p className="text-[#2D3A4A] text-[13px]">Homepage · Search · Listing · Checkout</p>
+              <p className="text-[#374151] text-sm mb-1">{tr("Low-fi wireframes", "Lo-fi-wireframes")}</p>
+              <p className="text-[#2D3A4A] text-[13px]">{tr("Homepage · Search · Listing · Checkout", "Forside · Søgning · Bolig · Checkout")}</p>
             </div>
           </section>
 
           {/* 06 — Final Design */}
           <section id="hifi" className="mb-20">
-            <p className="text-[13px] font-mono tracking-[0.18em] text-[#60A5FA] uppercase mb-3">06 — Final Design</p>
-            <h2 className="text-[22px] sm:text-[28px] font-bold text-white mb-4 leading-snug">Hi-Fi Screens &amp; Prototype</h2>
+            <p className="text-[13px] font-mono tracking-[0.18em] text-[#60A5FA] uppercase mb-3">{tr("06 — Final Design", "06 — Endeligt design")}</p>
+            <h2 className="text-[22px] sm:text-[28px] font-bold text-white mb-4 leading-snug">{tr("Hi-Fi Screens & Prototype", "Hi-fi-skærme & prototype")}</h2>
             <p className="text-[#9CA3AF] leading-7 mb-6 text-lg">
-              High-fidelity screens applied the full design system — typography, colour tokens, photography guidelines, and interactive states. The Figma prototype covers the complete booking journey.
+              {tr("High-fidelity screens applied the full design system — typography, colour tokens, photography guidelines, and interactive states. The Figma prototype covers the complete booking journey.", "High-fidelity-skærmene anvendte hele designsystemet – typografi, farvetokens, retningslinjer for fotografi og interaktive tilstande. Figma-prototypen dækker hele bookingrejsen.")}
             </p>
             <div className="bg-[#111] rounded-xl p-8 flex flex-col items-center justify-center text-center mb-8 border border-[#222]" style={{ minHeight: '200px' }}>
-              <p className="text-[#374151] text-sm mb-1">Final hi-fi screens</p>
-              <p className="text-[#2D3A4A] text-[13px]">Complete booking flow</p>
+              <p className="text-[#374151] text-sm mb-1">{tr("Final hi-fi screens", "Endelige hi-fi-skærme")}</p>
+              <p className="text-[#2D3A4A] text-[13px]">{tr("Complete booking flow", "Komplet bookingflow")}</p>
             </div>
             <div className="bg-[#080808] border border-[#60A5FA]/25 rounded-xl p-8 text-center">
-              <p className="text-[13px] font-mono tracking-[0.18em] text-[#60A5FA] uppercase mb-2">View in Figma</p>
-              <p className="text-[#6B7280] text-base mb-6 leading-relaxed">Interactive prototype with full booking flow</p>
+              <p className="text-[13px] font-mono tracking-[0.18em] text-[#60A5FA] uppercase mb-2">{tr("View in Figma", "Se i Figma")}</p>
+              <p className="text-[#6B7280] text-base mb-6 leading-relaxed">{tr("Interactive prototype with full booking flow", "Interaktiv prototype med hele bookingflowet")}</p>
               <a
                 href="https://www.figma.com/proto/PEZSnKDt63mPmeIKPUEbTB/Din-m%C3%83%C2%A6gler--2-?page-id=63%3A0&node-id=420-23&starting-point-node-id=420%3A23&t=COlUHCgSLO1qCgTY-1"
                 target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[#60A5FA] text-[#0D1117] font-bold px-8 py-3 rounded-lg hover:bg-[#3B82F6] transition-colors text-sm"
               >
-                <FaExternalLinkAlt style={{ fontSize: '11px' }} /> Open Prototype
+                <FaExternalLinkAlt style={{ fontSize: '11px' }} /> {tr("Open Prototype", "Åbn prototype")}
               </a>
             </div>
           </section>
 
           {/* 07 — Key Learnings */}
           <section id="learnings" className="mb-8">
-            <p className="text-[13px] font-mono tracking-[0.18em] text-[#60A5FA] uppercase mb-3">07 — Reflection</p>
-            <h2 className="text-[22px] sm:text-[28px] font-bold text-white mb-8 leading-snug">Key Learnings</h2>
+            <p className="text-[13px] font-mono tracking-[0.18em] text-[#60A5FA] uppercase mb-3">{tr("07 — Reflection", "07 — Refleksion")}</p>
+            <h2 className="text-[22px] sm:text-[28px] font-bold text-white mb-8 leading-snug">{tr("Key Learnings", "Vigtigste læringer")}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
               {LEARNINGS.map(({ num, title, desc }) => (
                 <div key={num} className="bg-[#111] rounded-xl p-6 border border-[#222]">
@@ -333,7 +334,7 @@ export default function Novasol() {
             </div>
             <div className="pt-8 border-t border-[#1A1A1A]">
               <a href="/#work" className="flex items-center gap-2 text-[#6B7280] hover:text-white transition-colors text-sm">
-                <FaArrowLeft style={{ fontSize: '11px' }} /> Back to Work
+                <FaArrowLeft style={{ fontSize: '11px' }} /> {tr("Back to Work", "Tilbage til projekter")}
               </a>
             </div>
           </section>

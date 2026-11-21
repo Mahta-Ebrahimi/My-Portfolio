@@ -1,7 +1,9 @@
+import { tr } from '../context/LanguageContext';
+
 export default function ProjectIndex({ projects, activeIndex, setActiveIndex, previewIndex, setPreviewIndex }) {
   return (
     <nav
-      aria-label="Project index"
+      aria-label={tr('Project index', 'Projektoversigt')}
       style={{
         display: 'flex',
         flexDirection: 'column',
@@ -17,7 +19,7 @@ export default function ProjectIndex({ projects, activeIndex, setActiveIndex, pr
         return (
           <button
             key={proj.id}
-            aria-label={`Project ${idx + 1}: ${proj.title}`}
+            aria-label={`${tr('Project', 'Projekt')} ${idx + 1}: ${proj.title}`}
             aria-current={isActive ? 'true' : undefined}
             onClick={() => { setActiveIndex(idx); setPreviewIndex(null); }}
             onMouseEnter={() => setPreviewIndex(idx)}

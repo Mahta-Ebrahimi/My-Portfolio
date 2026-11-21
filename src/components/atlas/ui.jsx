@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { tr } from '../../context/LanguageContext';
 
 // Secondary violet on the dark page, deeper violet in the portfolio's light mode (see atlas.css)
 export const ACCENT = 'var(--page-accent)';
@@ -109,7 +110,7 @@ export const SpecLabel = ({ children, className = '' }) => (
   <p className={`at-spec-label ${className}`}>{children}</p>
 );
 
-export const SampleNote = ({ children = 'Illustrative sample data — not real customers or results', dark = false }) => (
+export const SampleNote = ({ children = tr("Illustrative sample data — not real customers or results", "Illustrative eksempeldata – ikke rigtige kunder eller resultater"), dark = false }) => (
   <p className="font-mono text-[11px] tracking-[0.06em] uppercase" style={{ color: dark ? '#6B7280' : '#64748B' }}>
     {children}
   </p>

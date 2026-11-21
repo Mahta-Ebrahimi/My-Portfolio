@@ -1,6 +1,7 @@
 import React from 'react';
 import { Board, SectionHeader, SpecLabel, Icon, Reveal } from './ui';
 import { PALETTES, AMBER, SEMANTIC, hexOf } from './tokens';
+import { tr } from '../../context/LanguageContext';
 
 const isDark = hex => {
   const [r, g, b] = [1, 3, 5].map(i => parseInt(hex.substr(i, 2), 16) / 255)
@@ -50,7 +51,7 @@ const Ramp = ({ name, role, steps, anchor, delay }) => (
 const ThemePreview = ({ dark }) => (
   <div className={`${dark ? 'at-theme-dark' : ''} rounded-[16px] p-5 sm:p-6 h-full`} style={{ background: 'var(--bg-default)', border: '1px solid var(--border)' }}>
     <div className="flex items-center justify-between mb-4">
-      <span className="font-mono text-[11px] tracking-[0.08em] uppercase" style={{ color: 'var(--text-secondary)' }}>{dark ? 'Dark mode' : 'Light mode'}</span>
+      <span className="font-mono text-[11px] tracking-[0.08em] uppercase" style={{ color: 'var(--text-secondary)' }}>{dark ? tr("Dark mode", "Mørk tilstand") : tr("Light mode", "Lys tilstand")}</span>
       <span className="font-mono text-[11px]" style={{ color: 'var(--text-secondary)' }}>background/default</span>
     </div>
     <div className="at-card p-5" style={{ boxShadow: dark ? 'none' : undefined }}>
@@ -82,36 +83,36 @@ const ThemePreview = ({ dark }) => (
 );
 
 const CONTRAST = [
-  { pair: 'text/primary on surface/primary', mode: 'Light', ratio: '17.85:1', level: 'AAA' },
-  { pair: 'text/secondary on surface/primary', mode: 'Light', ratio: '4.76:1', level: 'AA' },
-  { pair: 'white on action/primary', mode: 'Light', ratio: '5.70:1', level: 'AA' },
-  { pair: 'text/secondary on surface/primary', mode: 'Dark', ratio: '5.71:1', level: 'AA' },
-  { pair: 'navy on action/primary', mode: 'Dark', ratio: '6.56:1', level: 'AA' },
-  { pair: 'status/success icon on surface', mode: 'Light', ratio: '3.74:1', level: 'UI ≥ 3:1' },
+  { pair: 'text/primary on surface/primary', mode: tr("Light", "Lys"), ratio: '17.85:1', level: 'AAA' },
+  { pair: 'text/secondary on surface/primary', mode: tr("Light", "Lys"), ratio: '4.76:1', level: 'AA' },
+  { pair: 'white on action/primary', mode: tr("Light", "Lys"), ratio: '5.70:1', level: 'AA' },
+  { pair: 'text/secondary on surface/primary', mode: tr("Dark", "Mørk"), ratio: '5.71:1', level: 'AA' },
+  { pair: 'navy on action/primary', mode: tr("Dark", "Mørk"), ratio: '6.56:1', level: 'AA' },
+  { pair: 'status/success icon on surface', mode: tr("Light", "Lys"), ratio: '3.74:1', level: 'UI ≥ 3:1' },
 ];
 
 export default function ColorArchitecture() {
   return (
     <section id="color" className="mb-28 md:mb-36 scroll-mt-24">
-      <SectionHeader num="03" label="Color Architecture" title="Two layers of colour: primitives and meaning">
+      <SectionHeader num="03" label={tr("Color Architecture", "Farvearkitektur")} title={tr("Two layers of colour: primitives and meaning", "To lag af farve: primitiver og betydning")}>
         <p>
-          ATLAS separates <em>what a colour is</em> from <em>what a colour does</em>. Five primitive ramps hold every raw value from 50 to 900. Semantic tokens then give those values a job: background, surface, text, border, action and status.
+          {tr("ATLAS separates", "ATLAS adskiller")} <em>{tr("what a colour is", "hvad en farve er")}</em> {tr("from", "fra")} <em>{tr("what a colour does", "hvad en farve gør")}</em>{tr(". Five primitive ramps hold every raw value from 50 to 900. Semantic tokens then give those values a job: background, surface, text, border, action and status.", ". Fem primitive farveskalaer indeholder alle rå værdier fra 50 til 900. Semantiske tokens giver derefter værdierne en opgave: baggrund, overflade, tekst, kant, handling og status.")}
         </p>
         <p>
-          Components only ever reference semantic tokens. That is what makes dark mode, theming and accessibility fixes possible without touching a single component.
+          {tr("Components only ever reference semantic tokens. That is what makes dark mode, theming and accessibility fixes possible without touching a single component.", "Komponenterne refererer udelukkende til semantiske tokens. Det er det, der gør mørk tilstand, temaer og rettelser af tilgængelighed mulige uden at røre en eneste komponent.")}
         </p>
       </SectionHeader>
 
       <div className="space-y-6">
         {/* Primitive ramps */}
-        <Board title="Primitive palettes" meta="Layer 1 · 5 ramps × 10 steps">
+        <Board title={tr("Primitive palettes", "Primitive paletter")} meta={tr("Layer 1 · 5 ramps × 10 steps", "Lag 1 · 5 skalaer × 10 trin")}>
           <div className="space-y-8 md:space-y-10">
             {PALETTES.map((p, i) => <Ramp key={p.key} {...p} delay={i * 70} />)}
           </div>
           <div className="mt-10 pt-6 grid grid-cols-1 lg:grid-cols-[170px_1fr] gap-3 lg:gap-6 items-center" style={{ borderTop: '1px dashed #CBD5E1' }}>
             <div>
-              <p className="text-[14px] font-bold">Amber · support</p>
-              <p className="text-[12px]" style={{ color: '#64748B' }}>Reserved for warning states only</p>
+              <p className="text-[14px] font-bold">{tr("Amber · support", "Ravgul · støttefarve")}</p>
+              <p className="text-[12px]" style={{ color: '#64748B' }}>{tr("Reserved for warning states only", "Kun reserveret til advarselstilstande")}</p>
             </div>
             <ul className="flex flex-wrap gap-3">
               {AMBER.map(({ step, hex }) => (
@@ -125,9 +126,9 @@ export default function ColorArchitecture() {
         </Board>
 
         {/* Mapping */}
-        <Board title="Primitive → semantic mapping" meta="Layer 2 · 10 core tokens · light & dark">
+        <Board title={tr("Primitive → semantic mapping", "Primitiv → semantisk kobling")} meta={tr("Layer 2 · 10 core tokens · light & dark", "Lag 2 · 10 kernetokens · lys & mørk")}>
           <div className="hidden md:grid grid-cols-[1.3fr_1fr_24px_1fr_1fr] gap-4 pb-3 mb-1" style={{ borderBottom: '1px solid #E2E8F0' }}>
-            {['Semantic token', 'Light value', '', 'Dark value', 'Used for'].map((h, i) => <SpecLabel key={i}>{h}</SpecLabel>)}
+            {[tr("Semantic token", "Semantisk token"), tr("Light value", "Lys værdi"), '', tr("Dark value", "Mørk værdi"), tr("Used for", "Bruges til")].map((h, i) => <SpecLabel key={i}>{h}</SpecLabel>)}
           </div>
           <ul>
             {SEMANTIC.map(({ token, light, dark, use }, i) => (
@@ -154,13 +155,13 @@ export default function ColorArchitecture() {
         </Board>
 
         {/* Light & dark */}
-        <Board title="One component, two themes" meta="Same markup · semantic tokens swapped at the theme root">
+        <Board title={tr("One component, two themes", "Én komponent, to temaer")} meta={tr("Same markup · semantic tokens swapped at the theme root", "Samme markup · semantiske tokens skiftes ved temaets rod")}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <ThemePreview />
             <ThemePreview dark />
           </div>
           <div className="mt-8">
-            <SpecLabel className="mb-3">Contrast checks · WCAG 2.2</SpecLabel>
+            <SpecLabel className="mb-3">{tr("Contrast checks · WCAG 2.2", "Kontrasttjek · WCAG 2.2")}</SpecLabel>
             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {CONTRAST.map(({ pair, mode, ratio, level }) => (
                 <li key={pair + mode} className="flex items-center justify-between gap-3 rounded-[10px] px-4 py-3" style={{ background: '#fff', border: '1px solid #E2E8F0' }}>

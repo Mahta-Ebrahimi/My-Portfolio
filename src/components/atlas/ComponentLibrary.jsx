@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Board, SectionHeader, SpecLabel, Icon, Reveal } from './ui';
 import { REGIONS } from './data';
+import { tr } from '../../context/LanguageContext';
 
 const VARIANTS = [
   { key: 'primary', label: 'Primary', icon: 'plus', text: 'Create report' },
@@ -85,16 +86,16 @@ export default function ComponentLibrary() {
 
   return (
     <section id="components" className="mb-28 md:mb-36 scroll-mt-24">
-      <SectionHeader num="05" label="Component Library" title="Components built from tokens, documented by state">
+      <SectionHeader num="05" label={tr("Component Library", "Komponentbibliotek")} title={tr("Components built from tokens, documented by state", "Komponenter bygget af tokens, dokumenteret efter tilstand")}>
         <p>
-          Every component is assembled from semantic tokens and documented with its variants, sizes and interaction states. In Figma they are built as component sets with variant properties. Here they are recreated in HTML and CSS so they can be explored directly.
+          {tr("Every component is assembled from semantic tokens and documented with its variants, sizes and interaction states. In Figma they are built as component sets with variant properties. Here they are recreated in HTML and CSS so they can be explored directly.", "Hver komponent er sat sammen af semantiske tokens og dokumenteret med sine varianter, størrelser og interaktionstilstande. I Figma er de bygget som komponentsæt med variantegenskaber. Her er de genskabt i HTML og CSS, så de kan udforskes direkte.")}
         </p>
       </SectionHeader>
 
       <div className="space-y-6">
         {/* ── Buttons ─────────────────────────────────────────────── */}
-        <Board title="Buttons" meta="Button · 4 variants × 5 states × 3 sizes">
-          <SubTitle>Variants × interaction states</SubTitle>
+        <Board title={tr("Buttons", "Knapper")} meta={tr("Button · 4 variants × 5 states × 3 sizes", "Knap · 4 varianter × 5 tilstande × 3 størrelser")}>
+          <SubTitle>{tr("Variants × interaction states", "Varianter × interaktionstilstande")}</SubTitle>
           <div className="overflow-x-auto -mx-2 px-2 pb-2">
             <table className="w-full min-w-[680px] border-separate" style={{ borderSpacing: '0 10px' }}>
               <thead>
@@ -122,7 +123,7 @@ export default function ComponentLibrary() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8 pt-8" style={{ borderTop: '1px solid #E2E8F0' }}>
             <div>
-              <SubTitle>Sizes · 32 / 40 / 48</SubTitle>
+              <SubTitle>{tr("Sizes · 32 / 40 / 48", "Størrelser · 32 / 40 / 48")}</SubTitle>
               <div className="flex flex-wrap items-end gap-3">
                 <button type="button" className="at-btn at-btn--primary at-btn--sm">Small</button>
                 <button type="button" className="at-btn at-btn--primary">Medium</button>
@@ -132,7 +133,7 @@ export default function ComponentLibrary() {
               </div>
             </div>
             <div>
-              <SubTitle>Live · hover, press and tab through</SubTitle>
+              <SubTitle>{tr("Live · hover, press and tab through", "Live · hover, klik og tab dig igennem")}</SubTitle>
               <div className="flex flex-wrap items-center gap-3">
                 <button type="button" className="at-btn at-btn--primary"><Icon name="plus" />New dashboard</button>
                 <button type="button" className="at-btn at-btn--secondary">Share<Icon name="chevDown" /></button>
@@ -144,10 +145,10 @@ export default function ComponentLibrary() {
         </Board>
 
         {/* ── Form controls ───────────────────────────────────────── */}
-        <Board title="Inputs, search & select" meta="Input · Search · Select · Menu">
+        <Board title={tr("Inputs, search & select", "Inputfelter, søgning & valg")} meta={tr("Input · Search · Select · Menu", "Input · Søgning · Valg · Menu")}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <div>
-              <SubTitle>Text input states</SubTitle>
+              <SubTitle>{tr("Text input states", "Tilstande for tekstfelter")}</SubTitle>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-6">
                 <label className="at-field">
                   <span className="at-label">Workspace name</span>
@@ -215,7 +216,7 @@ export default function ComponentLibrary() {
         </Board>
 
         {/* ── Selection controls ──────────────────────────────────── */}
-        <Board title="Selection controls" meta="Checkbox · Radio · Switch">
+        <Board title={tr("Selection controls", "Valgkontroller")} meta={tr("Checkbox · Radio · Switch", "Checkbox · Radio · Toggle")}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <fieldset>
               <legend className="mb-4"><SpecLabel>Checkbox</SpecLabel></legend>
@@ -229,7 +230,7 @@ export default function ComponentLibrary() {
               </div>
             </fieldset>
             <fieldset>
-              <legend className="mb-4"><SpecLabel>Radio group</SpecLabel></legend>
+              <legend className="mb-4"><SpecLabel>{tr("Radio group", "Radiogruppe")}</SpecLabel></legend>
               <div className="space-y-4">
                 {[['Monthly', 'Billed every month'], ['Annual', 'Two months free'], ['Custom', 'Contact sales']].map(([l, d], i) => (
                   <label key={l} className="at-choice">
@@ -252,12 +253,12 @@ export default function ComponentLibrary() {
         </Board>
 
         {/* ── Navigation ─────────────────────────────────────────── */}
-        <Board title="Navigation" meta="Tabs · Segmented · Breadcrumb · Sidebar · Pagination">
+        <Board title="Navigation" meta={tr("Tabs · Segmented · Breadcrumb · Sidebar · Pagination", "Faner · Segmenteret · Brødkrummesti · Sidebar · Paginering")}>
           <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-10">
             <div className="space-y-8 min-w-0">
-              <div><SubTitle>Tabs · keyboard accessible</SubTitle><Tabs /></div>
+              <div><SubTitle>{tr("Tabs · keyboard accessible", "Faner · tilgængelige med tastatur")}</SubTitle><Tabs /></div>
               <div className="flex flex-wrap gap-8">
-                <div><SubTitle>Segmented control</SubTitle><Segmented options={['7D', '30D', '90D', '12M']} initial={2} label="Time range" /></div>
+                <div><SubTitle>{tr("Segmented control", "Segmenteret kontrol")}</SubTitle><Segmented options={['7D', '30D', '90D', '12M']} initial={2} label="Time range" /></div>
                 <div><SubTitle>Pagination</SubTitle>
                   <nav className="at-pager" aria-label="Pagination example">
                     <button type="button" disabled aria-label="Previous page"><Icon name="chevLeft" /></button>
@@ -281,7 +282,7 @@ export default function ComponentLibrary() {
               </div>
             </div>
             <div>
-              <SubTitle>Sidebar items · default, hover, active</SubTitle>
+              <SubTitle>{tr("Sidebar items · default, hover, active", "Sidebar-punkter · default, hover, active")}</SubTitle>
               <div className="at-card p-2 max-w-[280px]">
                 <span className="at-nav-item is-active"><Icon name="overview" />Overview</span>
                 <span className="at-nav-item is-hover"><Icon name="chart" />Reports</span>
@@ -295,8 +296,8 @@ export default function ComponentLibrary() {
         </Board>
 
         {/* ── Feedback ───────────────────────────────────────────── */}
-        <Board title="Badges, alerts & toasts" meta="Badge · Alert · Toast">
-          <SubTitle>Badges · colour plus text, dot for status</SubTitle>
+        <Board title={tr("Badges, alerts & toasts", "Badges, beskeder & toasts")} meta={tr("Badge · Alert · Toast", "Badge · Besked · Toast")}>
+          <SubTitle>{tr("Badges · colour plus text, dot for status", "Badges · farve plus tekst, prik for status")}</SubTitle>
           <div className="flex flex-wrap gap-2 mb-10">
             <span className="at-badge at-badge--neutral">Draft</span>
             <span className="at-badge at-badge--violet">Enterprise</span>
@@ -308,7 +309,7 @@ export default function ComponentLibrary() {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-8">
             <div>
-              <SubTitle>Inline alerts</SubTitle>
+              <SubTitle>{tr("Inline alerts", "Indlejrede beskeder")}</SubTitle>
               <div className="space-y-3">
                 <div className="at-alert at-alert--info" role="note"><Icon name="info" /><div><strong>Data refreshes every 15 minutes</strong><p>Figures may differ slightly from your billing provider.</p></div></div>
                 <div className="at-alert at-alert--success" role="note"><Icon name="success" /><div><strong>Report scheduled</strong><p>Q2 revenue review will be sent every Monday at 09:00.</p></div></div>
@@ -317,7 +318,7 @@ export default function ComponentLibrary() {
               </div>
             </div>
             <div>
-              <SubTitle>Toast notifications</SubTitle>
+              <SubTitle>{tr("Toast notifications", "Toast-notifikationer")}</SubTitle>
               <div className="space-y-3 rounded-[14px] p-4 sm:p-5" style={{ background: '#E2E8F0' }}>
                 {toast ? (
                   <div className="at-toast" role="status">
@@ -342,13 +343,13 @@ export default function ComponentLibrary() {
                   <button type="button">Retry</button>
                 </div>
               </div>
-              <p className="text-[12px] mt-3" style={{ color: '#64748B' }}>Toasts sit bottom-right, use elevation/4 and auto-dismiss after 5s unless they contain an action.</p>
+              <p className="text-[12px] mt-3" style={{ color: '#64748B' }}>{tr("Toasts sit bottom-right, use elevation/4 and auto-dismiss after 5s unless they contain an action.", "Toasts placeres nederst til højre, bruger elevation/4 og forsvinder automatisk efter 5 sek., medmindre de indeholder en handling.")}</p>
             </div>
           </div>
         </Board>
 
         {/* ── Cards & modal ──────────────────────────────────────── */}
-        <Board title="Cards & modal" meta="Card · Modal · Avatar group">
+        <Board title={tr("Cards & modal", "Kort & modal")} meta={tr("Card · Modal · Avatar group", "Kort · Modal · Avatargruppe")}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             <div className="space-y-4">
               <SubTitle>Cards</SubTitle>
@@ -385,7 +386,7 @@ export default function ComponentLibrary() {
             </div>
 
             <div>
-              <SubTitle>Modal dialog</SubTitle>
+              <SubTitle>{tr("Modal dialog", "Modal dialog")}</SubTitle>
               <div className="rounded-[14px] p-4 sm:p-8 grid place-items-center" style={{ background: 'rgba(15,23,42,.55)', backgroundImage: 'radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px)', backgroundSize: '14px 14px' }}>
                 <div className="at-modal" role="dialog" aria-modal="false" aria-labelledby="at-modal-title">
                   <div className="flex items-start justify-between gap-4 p-5 pb-0">

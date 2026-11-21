@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useTheme } from "../context/ThemeContext";
+import { tr } from "../context/LanguageContext";
 
 const Home = () => {
   const canvasRef = useRef(null);
@@ -158,10 +159,10 @@ const Home = () => {
       >
         <p className={`text-base sm:text-xl font-medium ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>Mahta Ebrahimi</p>
         <p className={`text-base sm:text-xl font-medium ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
-          UI/UX Designer &nbsp;·&nbsp; Frontend Developer &nbsp;·&nbsp; AI Workflow Designer
+          {tr('UI/UX Designer', 'UI/UX-designer')} &nbsp;·&nbsp; {tr('Frontend Developer', 'Frontend-udvikler')} &nbsp;·&nbsp; {tr('AI Workflow Designer', 'AI-workflowdesigner')}
         </p>
         <p className="mt-2 text-[#FF9533] text-lg sm:text-2xl font-semibold italic">
-          Where design meets intelligence.
+          {tr('Where design meets intelligence.', 'Hvor design møder intelligens.')}
         </p>
       </div>
 

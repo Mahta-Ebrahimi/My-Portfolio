@@ -1,6 +1,7 @@
 import React from 'react';
 import { Board, SectionHeader, SpecLabel, Icon, ScaledFrame, Reveal } from './ui';
 import { StatusBadge } from './DataComponents';
+import { tr } from '../../context/LanguageContext';
 
 const Marker = ({ n, x, y }) => (
   <span className="at-marker at-marker--abs" style={{ left: x - 11, top: y - 11 }} aria-hidden="true">{n}</span>
@@ -55,35 +56,35 @@ const TABLE_PARTS = [
 ];
 
 const GUIDELINES = [
-  { title: 'When to use', icon: 'check', tone: 'success', items: [
-    'Comparing many records across the same set of attributes.',
-    'Users need to sort, filter, select or act on records in bulk.',
-    'Exact values matter more than the overall trend.',
+  { title: tr("When to use", "Hvornår den skal bruges"), icon: 'check', tone: 'success', items: [
+    tr("Comparing many records across the same set of attributes.", "Når mange poster skal sammenlignes på tværs af de samme egenskaber."),
+    tr("Users need to sort, filter, select or act on records in bulk.", "Når brugerne skal sortere, filtrere, vælge eller handle på flere poster ad gangen."),
+    tr("Exact values matter more than the overall trend.", "Når præcise værdier betyder mere end den overordnede tendens."),
   ] },
-  { title: 'When not to use', icon: 'x', tone: 'error', items: [
-    'Fewer than ~5 rows or attributes. Use a list or cards instead.',
-    'The goal is to show a trend or proportion. Use a chart.',
-    'Content is long-form or highly visual.',
+  { title: tr("When not to use", "Hvornår den ikke skal bruges"), icon: 'x', tone: 'error', items: [
+    tr("Fewer than ~5 rows or attributes. Use a list or cards instead.", "Færre end ~5 rækker eller egenskaber. Brug i stedet en liste eller kort."),
+    tr("The goal is to show a trend or proportion. Use a chart.", "Målet er at vise en tendens eller en fordeling. Brug et diagram."),
+    tr("Content is long-form or highly visual.", "Indholdet er langt eller meget visuelt."),
   ] },
-  { title: 'Accessibility', icon: 'info', tone: 'info', items: [
-    'Native <table> with a <caption>, scoped headers and aria-sort on sortable columns.',
-    'Status is communicated with text and dots, not colour alone.',
-    'Text and key UI meet WCAG 2.2 AA contrast. Targets are at least 32 × 32px.',
+  { title: tr("Accessibility", "Tilgængelighed"), icon: 'info', tone: 'info', items: [
+    tr("Native <table> with a <caption>, scoped headers and aria-sort on sortable columns.", "Native <table> med en <caption>, headers med scope og aria-sort på sorterbare kolonner."),
+    tr("Status is communicated with text and dots, not colour alone.", "Status kommunikeres med tekst og prikker, ikke kun med farve."),
+    tr("Text and key UI meet WCAG 2.2 AA contrast. Targets are at least 32 × 32px.", "Tekst og vigtige UI-elementer opfylder WCAG 2.2 AA-kontrast. Klikflader er mindst 32 × 32px."),
   ] },
-  { title: 'Keyboard focus', icon: 'layers', tone: 'violet', items: [
-    'Tab order: toolbar → header sort buttons → row checkboxes → row actions → pager.',
-    'Every interactive element shows the 2px violet focus ring.',
-    'Bulk-action bar replaces the toolbar title while focus stays in place.',
+  { title: tr("Keyboard focus", "Tastaturfokus"), icon: 'layers', tone: 'violet', items: [
+    tr("Tab order: toolbar → header sort buttons → row checkboxes → row actions → pager.", "Tab-rækkefølge: værktøjslinje → sorteringsknapper i header → checkbokse i rækker → rækkehandlinger → paginering."),
+    tr("Every interactive element shows the 2px violet focus ring.", "Hvert interaktivt element viser den violette fokusring på 2px."),
+    tr("Bulk-action bar replaces the toolbar title while focus stays in place.", "Bjælken med massehandlinger erstatter værktøjslinjens titel, mens fokus bliver, hvor det er."),
   ] },
-  { title: 'Responsive behaviour', icon: 'overview', tone: 'info', items: [
-    '≥ 1024px: full table. 768–1023px: low-priority columns (Seats, Owner) hide.',
-    '< 768px: rows become stacked cards with the name, status and MRR.',
-    'Toolbar filters wrap below search. The table itself scrolls within its container.',
+  { title: tr("Responsive behaviour", "Responsiv adfærd"), icon: 'overview', tone: 'info', items: [
+    tr("≥ 1024px: full table. 768–1023px: low-priority columns (Seats, Owner) hide.", "≥ 1024px: fuld tabel. 768–1023px: kolonner med lav prioritet (Seats, Owner) skjules."),
+    tr("< 768px: rows become stacked cards with the name, status and MRR.", "< 768px: rækkerne bliver til stablede kort med navn, status og MRR."),
+    tr("Toolbar filters wrap below search. The table itself scrolls within its container.", "Filtrene i værktøjslinjen ombrydes under søgefeltet. Selve tabellen scroller inden for sin container."),
   ] },
-  { title: 'Developer specs', icon: 'copy', tone: 'violet', items: [
+  { title: tr("Developer specs", "Specifikationer til udviklere"), icon: 'copy', tone: 'violet', items: [
     'Props: columns, rows, sort, selection, pageSize, density, emptyState.',
-    'Density tokens: table/row-height/default 52, table/row-height/dense 40.',
-    'Emits onSortChange, onSelectionChange and onPageChange.',
+    tr("Density tokens: table/row-height/default 52, table/row-height/dense 40.", "Tæthedstokens: table/row-height/default 52, table/row-height/dense 40."),
+    tr("Emits onSortChange, onSelectionChange and onPageChange.", "Udsender onSortChange, onSelectionChange og onPageChange."),
   ] },
 ];
 
@@ -106,7 +107,7 @@ const PartsList = ({ parts, cols = 1 }) => (
 // ── Button drawing at 200% (fixed coordinates, scaled to fit) ─────────────────
 function ButtonDrawing() {
   return (
-    <ScaledFrame width={520} label="Annotated primary button drawn at 200 percent">
+    <ScaledFrame width={520} label={tr("Annotated primary button drawn at 200 percent", "Annoteret primær knap tegnet i 200 procent")}>
       <div className="relative" style={{ width: 520, height: 260, backgroundImage: 'radial-gradient(#CBD5E1 1px, transparent 1px)', backgroundSize: '16px 16px' }}>
         <div
           className="absolute flex items-center"
@@ -135,7 +136,7 @@ function ButtonDrawing() {
         <Marker n={6} x={240} y={170} />
         <Marker n={7} x={398} y={90} />
         <Marker n={8} x={404} y={176} />
-        <span className="absolute font-mono text-[11px]" style={{ right: 12, bottom: 10, color: '#64748B' }}>Drawn at 200% · values in px</span>
+        <span className="absolute font-mono text-[11px]" style={{ right: 12, bottom: 10, color: '#64748B' }}>{tr("Drawn at 200% · values in px", "Tegnet i 200 % · værdier i px")}</span>
       </div>
     </ScaledFrame>
   );
@@ -149,7 +150,7 @@ function TableDrawing() {
     { name: 'Brightline Co.', mrr: 'DKK 4,200', status: 'Trial' },
   ];
   return (
-    <ScaledFrame width={780} label="Annotated data table">
+    <ScaledFrame width={780} label={tr("Annotated data table", "Annoteret datatabel")}>
       <div className="relative p-6" style={{ width: 780, backgroundImage: 'radial-gradient(#CBD5E1 1px, transparent 1px)', backgroundSize: '16px 16px' }}>
         <div className="at-card relative" style={{ overflow: 'visible' }}>
           {/* Toolbar */}
@@ -213,19 +214,19 @@ function TableDrawing() {
 export default function Anatomy() {
   return (
     <section id="anatomy" className="mb-28 md:mb-36 scroll-mt-24">
-      <SectionHeader num="07" label="Component Anatomy" title="Documentation precise enough to build from">
+      <SectionHeader num="07" label={tr("Component Anatomy", "Komponentanatomi")} title={tr("Documentation precise enough to build from", "Dokumentation præcis nok til at bygge efter")}>
         <p>
-          Each component page in ATLAS breaks the component into numbered parts, links every part to a token, and pairs it with usage and accessibility guidance. Below are two examples: a simple primitive and a complex pattern.
+          {tr("Each component page in ATLAS breaks the component into numbered parts, links every part to a token, and pairs it with usage and accessibility guidance. Below are two examples: a simple primitive and a complex pattern.", "Hver komponentside i ATLAS deler komponenten op i nummererede dele, kobler hver del til et token og ledsager den med vejledning i brug og tilgængelighed. Nedenfor er to eksempler: et simpelt grundelement og et komplekst mønster.")}
         </p>
       </SectionHeader>
 
       <div className="space-y-6">
-        <Board title="Button · anatomy" meta="Button / Primary / Medium">
+        <Board title={tr("Button · anatomy", "Knap · anatomi")} meta="Button / Primary / Medium">
           <div className="grid grid-cols-1 xl:grid-cols-[1.25fr_1fr] gap-8 items-start">
             <div>
               <ButtonDrawing />
               <div className="mt-6">
-                <SpecLabel className="mb-3">State tokens</SpecLabel>
+                <SpecLabel className="mb-3">{tr("State tokens", "Tilstandstokens")}</SpecLabel>
                 <ul className="grid grid-cols-2 sm:grid-cols-5 gap-3">
                   {BUTTON_STATES.map(s => (
                     <li key={s.label} className="flex flex-col items-start gap-2">
@@ -238,31 +239,31 @@ export default function Anatomy() {
               </div>
             </div>
             <div>
-              <SpecLabel className="mb-1">Legend</SpecLabel>
+              <SpecLabel className="mb-1">{tr("Legend", "Forklaring")}</SpecLabel>
               <PartsList parts={BUTTON_PARTS} />
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-5">
                 <div className="rounded-[10px] p-4" style={{ background: '#F0FDFA', border: '1px solid #99F6E4' }}>
-                  <p className="flex items-center gap-1.5 text-[13px] font-semibold" style={{ color: '#0F766E' }}><Icon name="check" size={14} />Do</p>
-                  <p className="text-[13px] mt-1 leading-[1.5]" style={{ color: '#334155' }}>Use one primary button per view, for the main action.</p>
+                  <p className="flex items-center gap-1.5 text-[13px] font-semibold" style={{ color: '#0F766E' }}><Icon name="check" size={14} />{tr("Do", "Gør")}</p>
+                  <p className="text-[13px] mt-1 leading-[1.5]" style={{ color: '#334155' }}>{tr("Use one primary button per view, for the main action.", "Brug én primær knap pr. visning til hovedhandlingen.")}</p>
                 </div>
                 <div className="rounded-[10px] p-4" style={{ background: '#FFF1F2', border: '1px solid #FECDD3' }}>
-                  <p className="flex items-center gap-1.5 text-[13px] font-semibold" style={{ color: '#BE123C' }}><Icon name="x" size={14} />Don't</p>
-                  <p className="text-[13px] mt-1 leading-[1.5]" style={{ color: '#334155' }}>Place two primary buttons side by side, or use destructive for non-destructive actions.</p>
+                  <p className="flex items-center gap-1.5 text-[13px] font-semibold" style={{ color: '#BE123C' }}><Icon name="x" size={14} />{tr("Don't", "Gør ikke")}</p>
+                  <p className="text-[13px] mt-1 leading-[1.5]" style={{ color: '#334155' }}>{tr("Place two primary buttons side by side, or use destructive for non-destructive actions.", "Placér ikke to primære knapper side om side, og brug ikke destructive til handlinger, der ikke er destruktive.")}</p>
                 </div>
               </div>
             </div>
           </div>
         </Board>
 
-        <Board title="Data table · anatomy" meta="Table / Accounts / Default density">
+        <Board title={tr("Data table · anatomy", "Datatabel · anatomi")} meta="Table / Accounts / Default density">
           <TableDrawing />
           <div className="mt-6">
-            <SpecLabel className="mb-1">Legend</SpecLabel>
+            <SpecLabel className="mb-1">{tr("Legend", "Forklaring")}</SpecLabel>
             <PartsList parts={TABLE_PARTS} cols={2} />
           </div>
         </Board>
 
-        <Board title="Data table · usage guidelines" meta="Guidance shipped with every component">
+        <Board title={tr("Data table · usage guidelines", "Datatabel · retningslinjer for brug")} meta={tr("Guidance shipped with every component", "Vejledning, der følger med hver komponent")}>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
             {GUIDELINES.map(({ title, icon, tone, items }, i) => (
               <Reveal key={title} delay={i * 60} className="rounded-[14px] p-5" style={{ background: '#fff', border: '1px solid #E2E8F0' }}>

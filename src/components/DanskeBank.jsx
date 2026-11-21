@@ -2,26 +2,27 @@ import React from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import { FaArrowLeft, FaGithub, FaExternalLinkAlt, FaCode, FaUser, FaCalendar, FaTag } from 'react-icons/fa';
 import danskeBank from '../assets/danskeBank.png';
+import { tr } from '../context/LanguageContext';
 
 const projectData = {
   title: 'Danske Bank DevSecAI',
-  subtitle: 'Workflow Automation Platform',
-  description: 'A comprehensive workflow automation platform built for Bank, featuring DevSecAI integration for secure and efficient business process management.',
+  subtitle: tr("Workflow Automation Platform", "Platform til workflowautomatisering"),
+  description: tr("A comprehensive workflow automation platform built for Bank, featuring DevSecAI integration for secure and efficient business process management.", "En omfattende platform til workflowautomatisering bygget til en bank med DevSecAI-integration for sikker og effektiv styring af forretningsprocesser."),
   fullDescription: `This project demonstrates a modern approach to workflow automation in the banking sector.
   The application provides a seamless interface for managing complex business processes while maintaining
   strict security standards required in the financial industry.`,
   image: danskeBank,
   demoLink: 'https://danske-bank-workflow-demo.vercel.app/',
   codeLink: 'https://github.com/Mahta-Ebrahimi/Danske-Bank-Workflow-Demo',
-  technologies: ['React', 'JavaScript', 'Tailwind CSS', 'API Integration'],
+  technologies: ['React', 'JavaScript', 'Tailwind CSS', tr("API Integration", "API-integration")],
   // role: 'Lead Developer',
   // duration: '3 months',
   features: [
-    'Workflow automation with drag-and-drop interface',
-    'DevSecAI integration for security scanning',
-    'Real-time process monitoring',
-    'Role-based access control',
-    'Audit logging and compliance tracking'
+    tr("Workflow automation with drag-and-drop interface", "Workflowautomatisering med drag-and-drop-interface"),
+    tr("DevSecAI integration for security scanning", "DevSecAI-integration til sikkerhedsscanning"),
+    tr("Real-time process monitoring", "Procesovervågning i realtid"),
+    tr("Role-based access control", "Rollebaseret adgangsstyring"),
+    tr("Audit logging and compliance tracking", "Auditlogning og compliance-sporing")
   ]
 };
 
@@ -46,7 +47,7 @@ const DanskeBank = () => {
             onClick={() => navigate(-1)}
             className="flex items-center gap-2 text-[#FF9533] hover:text-white transition-colors"
           >
-            <FaArrowLeft /> Back to Work
+            <FaArrowLeft /> {tr("Back to Work", "Tilbage til projekter")}
           </button>
         </div>
       </div>
@@ -73,7 +74,7 @@ const DanskeBank = () => {
             </div>
             <div className="flex items-center gap-2">
               <FaTag className="text-[#FF9533]" />
-              <span>Front-end</span>
+              <span>{tr("Front-end", "Frontend")}</span>
             </div>
           </div>
         </div>
@@ -86,7 +87,7 @@ const DanskeBank = () => {
             rel="noopener noreferrer"
             className="flex items-center gap-2 bg-[#FF9533] text-white px-6 py-3 rounded-lg font-bold hover:bg-[#e6852a] transition-colors"
           >
-            <FaExternalLinkAlt /> Live Demo
+            <FaExternalLinkAlt /> {tr("Live Demo", "Live demo")}
           </a>
           <a
             href={projectData.codeLink}
@@ -94,19 +95,19 @@ const DanskeBank = () => {
             rel="noopener noreferrer"
             className="flex items-center gap-2 bg-[#1e3a8a] text-white px-6 py-3 rounded-lg font-bold hover:bg-[#2d4a9a] transition-colors"
           >
-            <FaGithub /> View Code
+            <FaGithub /> {tr("View Code", "Se koden")}
           </a>
         </div>
 
         {/* Description */}
         <div className="bg-[#111] rounded-lg p-8 mb-8 shadow-xl">
-          <h2 className="text-[22px] sm:text-[28px] font-bold text-white mb-4 leading-snug">Project Overview</h2>
+          <h2 className="text-[22px] sm:text-[28px] font-bold text-white mb-4 leading-snug">{tr("Project Overview", "Projektoversigt")}</h2>
           <p className="leading-relaxed">{projectData.fullDescription}</p>
         </div>
 
         {/* Technologies */}
         <div className="bg-[#111] rounded-lg p-8 mb-8 shadow-xl">
-          <h2 className="text-[22px] sm:text-[28px] font-bold text-white mb-4 leading-snug">Technologies Used</h2>
+          <h2 className="text-[22px] sm:text-[28px] font-bold text-white mb-4 leading-snug">{tr("Technologies Used", "Anvendte teknologier")}</h2>
           <div className="flex flex-wrap gap-3">
             {projectData.technologies.map((tech, index) => (
               <span
@@ -121,7 +122,7 @@ const DanskeBank = () => {
 
         {/* Features */}
         <div className="bg-[#111] rounded-lg p-8 mb-8 shadow-xl">
-          <h2 className="text-[22px] sm:text-[28px] font-bold text-white mb-4 leading-snug">Key Features</h2>
+          <h2 className="text-[22px] sm:text-[28px] font-bold text-white mb-4 leading-snug">{tr("Key Features", "Nøglefunktioner")}</h2>
           <ul className="space-y-3">
             {projectData.features.map((feature, index) => (
               <li key={index} className="flex items-start gap-3">

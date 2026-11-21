@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react';
 // import ProjectFilters from './ProjectFilters';
 import ProjectCard from './ProjectCard';
+import { tr } from '../context/LanguageContext';
 
 export default function ProjectGrid({ projects }) {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -16,7 +17,7 @@ export default function ProjectGrid({ projects }) {
 
   return (
     <section
-      aria-label="Project Library"
+      aria-label={tr('Project Library', 'Projektbibliotek')}
       style={{
         marginTop: 100,
         paddingTop: 72,
@@ -42,7 +43,7 @@ export default function ProjectGrid({ projects }) {
           letterSpacing: '-0.02em',
           margin: 0,
         }}>
-          Project Library
+          {tr('Project Library', 'Projektbibliotek')}
         </h2>
         {/* <ProjectFilters active={activeFilter} setActive={setActiveFilter} /> */}
       </div>
@@ -61,7 +62,7 @@ export default function ProjectGrid({ projects }) {
           fontSize: 14,
           padding: '60px 0',
         }}>
-          No projects in this category.
+          {tr('No projects in this category.', 'Ingen projekter i denne kategori.')}
         </p>
       )}
     </section>

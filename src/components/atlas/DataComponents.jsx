@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Icon, Board, SectionHeader, SampleNote, SpecLabel, Reveal } from './ui';
 import { LineChart, BarChart, DonutChart, Sparkline, Legend } from './Charts';
 import { ACCOUNTS, KPIS, REVENUE, NEW_ACCOUNTS, PLAN_MIX, STATUS_BADGE, initials, money } from './data';
+import { tr } from '../../context/LanguageContext';
 
 // ── KPI card ──────────────────────────────────────────────────────────────────
 export function KpiCard({ label, value, delta, up, good, note, spark, compact = false }) {
@@ -232,24 +233,24 @@ export const ChartCard = ({ title, subtitle, legend, action, children, className
 
 // ── Section 06 ────────────────────────────────────────────────────────────────
 const LEGEND_SPECS = [
-  { title: 'Categorical order', desc: 'Series take violet → blue → teal in a fixed order. A filter never repaints the remaining series.' },
-  { title: 'Never colour alone', desc: 'Every multi-series chart has a legend, selective direct labels and a screen-reader data table.' },
-  { title: 'Comparison is neutral', desc: 'Previous-period lines use dashed neutral-400, so the current period always leads.' },
-  { title: 'Status is reserved', desc: 'Teal, amber and rose status tokens always come with an icon or label — never as “series 4”.' },
+  { title: tr("Categorical order", "Fast rækkefølge"), desc: tr("Series take violet → blue → teal in a fixed order. A filter never repaints the remaining series.", "Serierne får violet → blå → turkis i en fast rækkefølge. Et filter farver aldrig de resterende serier om.") },
+  { title: tr("Never colour alone", "Aldrig kun farve"), desc: tr("Every multi-series chart has a legend, selective direct labels and a screen-reader data table.", "Hvert diagram med flere serier har en forklaring, udvalgte direkte labels og en datatabel til skærmlæsere.") },
+  { title: tr("Comparison is neutral", "Sammenligning er neutral"), desc: tr("Previous-period lines use dashed neutral-400, so the current period always leads.", "Linjer for forrige periode bruger stiplet neutral-400, så den aktuelle periode altid fører an.") },
+  { title: tr("Status is reserved", "Status er reserveret"), desc: tr("Teal, amber and rose status tokens always come with an icon or label — never as “series 4”.", "Statustokens i turkis, ravgul og rosa kommer altid med et ikon eller en label – aldrig som “serie 4”.") },
 ];
 
 export default function DataComponentsSection() {
   return (
     <section id="data" className="mb-28 md:mb-36 scroll-mt-24">
-      <SectionHeader num="06" label="Advanced Data Components" title="Patterns for data-dense screens">
+      <SectionHeader num="06" label={tr("Advanced Data Components", "Avancerede datakomponenter")} title={tr("Patterns for data-dense screens", "Mønstre til datatætte skærme")}>
         <p>
           Enterprise products live in tables and charts. These components combine the foundations into working patterns: a data table with search, filters, sorting, selection and pagination; KPI tiles; and a chart set with shared legend rules.
         </p>
-        <p className="text-[14px] text-[#6B7280]">Every example here is interactive. Try sorting the table, selecting rows or hovering the charts.</p>
+        <p className="text-[14px] text-[#6B7280]">{tr("Every example here is interactive. Try sorting the table, selecting rows or hovering the charts.", "Alle eksempler her er interaktive. Prøv at sortere tabellen, vælge rækker eller holde musen over diagrammerne.")}</p>
       </SectionHeader>
 
       <div className="space-y-6">
-        <Board title="KPI cards" meta="Card / Metric · 4 variants">
+        <Board title={tr("KPI cards", "KPI-kort")} meta={tr("Card / Metric · 4 variants", "Card / Metric · 4 varianter")}>
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
             {KPIS.map(k => <KpiCard key={k.label} {...k} />)}
           </div>
@@ -259,15 +260,15 @@ export default function DataComponentsSection() {
           </div>
         </Board>
 
-        <Board title="Data table" meta="Table / Accounts · toolbar · bulk actions · pagination" bodyClass="!p-3 sm:!p-6">
+        <Board title={tr("Data table", "Datatabel")} meta={tr("Table / Accounts · toolbar · bulk actions · pagination", "Table / Accounts · værktøjslinje · massehandlinger · paginering")} bodyClass="!p-3 sm:!p-6">
           <DataTable />
           <div className="mt-4 flex flex-wrap items-center justify-between gap-3 px-1">
-            <SpecLabel>Row 52px · header 40px · cell padding 16px · numeric columns right-aligned, tabular figures</SpecLabel>
+            <SpecLabel>{tr("Row 52px · header 40px · cell padding 16px · numeric columns right-aligned, tabular figures", "Række 52px · header 40px · cellepadding 16px · numeriske kolonner højrejusteret, tabeltal")}</SpecLabel>
             <SampleNote />
           </div>
         </Board>
 
-        <Board title="Charts & legends" meta="Chart / Line · Bar · Donut">
+        <Board title={tr("Charts & legends", "Diagrammer & forklaringer")} meta={tr("Chart / Line · Bar · Donut", "Chart / Line · Bar · Donut")}>
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
             <ChartCard
               className="lg:col-span-3" title="Monthly recurring revenue" subtitle="Jul 2025 – Jun 2026 · in thousands"
